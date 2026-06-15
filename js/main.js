@@ -605,6 +605,61 @@
   }
 
   /* ----------------------------------------------------------
+     Cookie consent banner
+     Tasteful fixed bottom banner; persists the choice in
+     localStorage so it never reappears once decided. Injected
+     into every page so no per-page HTML is required.
+     ---------------------------------------------------------- */
+  function initCookieConsent() {
+    var KEY = "tn_cookie_consent";
+    var stored = null;
+    try { stored = localStorage.getItem(KEY); } catch (e) {}
+    if (stored === "accepted" || stored === "declined") return;
+
+    var banner = document.createElement("aside");
+    banner.className = "cookie-banner";
+    banner.setAttribute("role", "dialog");
+    banner.setAttribute("aria-live", "polite");
+    banner.setAttribute("aria-label", t("cookie_aria", currentLang) || "Cookie consent");
+
+    var text = t("cookie_text", currentLang) ||
+      "We use cookies to keep 2NIGHT working and to understand how the site is used.";
+    var privacyLabel = t("cookie_privacy_link", currentLang) || "Privacy & Cookies";
+    var acceptLabel = t("cookie_accept", currentLang) || "Accept";
+    var declineLabel = t("cookie_decline", currentLang) || "Essential only";
+
+    // Resolve the privacy link relative to where we are (root vs sub-pages
+    // are all flat here, so privacy.html is fine everywhere).
+    banner.innerHTML =
+      '<p class="cookie-text"><strong>2NIGHT</strong> · ' + escapeHtml(text) +
+        ' <a href="privacy.html#cookies">' + escapeHtml(privacyLabel) + "</a></p>" +
+      '<div class="cookie-actions">' +
+        '<button type="button" class="btn btn-cookie-ghost" data-cookie="declined">' + escapeHtml(declineLabel) + "</button>" +
+        '<button type="button" class="btn btn-gold" data-cookie="accepted"><span>' + escapeHtml(acceptLabel) + "</span></button>" +
+      "</div>";
+
+    document.body.appendChild(banner);
+    // reveal next frame so the transition runs
+    raf(function () { raf(function () { banner.classList.add("show"); }); });
+
+    function decide(choice) {
+      try { localStorage.setItem(KEY, choice); } catch (e) {}
+      banner.classList.remove("show");
+      setTimeout(function () { if (banner.parentNode) banner.parentNode.removeChild(banner); }, 600);
+    }
+
+    banner.querySelectorAll("[data-cookie]").forEach(function (b) {
+      b.addEventListener("click", function () { decide(b.getAttribute("data-cookie")); });
+    });
+  }
+
+  function escapeHtml(s) {
+    return String(s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  }
+
+  /* ----------------------------------------------------------
      Year in footer
      ---------------------------------------------------------- */
   function initYear() {
@@ -648,6 +703,7 @@
     initCities();
     initParticles();
     initWaitlist();
+    initCookieConsent();
     initYear();
     watchReducedMotion();
   }
