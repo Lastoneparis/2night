@@ -325,6 +325,11 @@ body.cursor-hover .cursor-dot { width: 4px; height: 4px; }
 .nav-links a:hover { color: var(--text); }
 .nav-links a:hover::after { width: 100%; }
 
+/* About / Safety / Support / Contact live ONLY in the footer (translated in all 34 langs).
+   Keep them out of the top bar so they never crowd or overlap the logo + Download + language
+   switcher on phones/tablets. Footer carries them on every page. */
+.nav-links, .nav-toggle { display: none !important; }
+
 /* language switcher */
 .lang {
   position: relative;
