@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2NIGHT — Ping. Match. Meet.</title>
+  <meta name="description" content="2NIGHT — Ping. Match. Meet. The location-based social app for tonight, anywhere on earth. Choose your radius. Find who's near you, now. Tonight, not tomorrow." />
+  <meta name="theme-color" content="#0D0D0D" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="2NIGHT — Ping. Match. Meet." />
+  <meta property="og:description" content="Tonight, not tomorrow. The social app for right now — anywhere on earth, with people near you." />
+  <meta property="og:image" content="assets/icon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="2NIGHT — Ping. Match. Meet." />
+  <meta name="twitter:description" content="Tonight, not tomorrow. The social app for right now." />
+  <meta name="twitter:image" content="assets/icon.png" />
+
+  <link rel="icon" type="image/png" href="assets/icon.png" />
+  <link rel="apple-touch-icon" href="assets/icon.png" />
+  <link rel="preload" as="image" href="assets/screens/tonight.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <canvas id="bg-field" aria-hidden="true"></canvas>
+  <div class="field-glow" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <!-- ============================ NAV ============================ -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="2NIGHT home">
+        <img src="assets/icon.png" alt="" />
+        <span class="brand-name">2<span class="lit">NIGHT</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a class="navlink" href="#how">How it works</a>
+        <a class="navlink" href="#radius">Worldwide</a>
+        <a class="navlink" href="#screens">The app</a>
+        <a class="navlink" href="#pricing">Membership</a>
+      </nav>
+      <div class="nav-right">
+        <a class="btn btn-gold btn-pill btn-magnetic" href="#connect"><span>Connect now</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================ HERO ============================ -->
+    <section class="hero" id="top">
+      <div class="hero-aurora" aria-hidden="true"></div>
+      <div class="hero-vignette" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero-copy">
+          <div class="hero-badge reveal">
+            <span class="dot-pulse" aria-hidden="true"></span>
+            <span><strong id="count" data-target="4218">4,218</strong>&nbsp;out near you, right now</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="line"><span class="silver-text">Ping.</span></span>
+            <span class="line"><span class="gold-text">Match.</span></span>
+            <span class="line"><span>Meet.</span></span>
+          </h1>
+
+          <p class="hero-sub reveal" data-delay="220">
+            <span class="accent">Tonight, not tomorrow.</span>
+            The social app for right now — anywhere on earth, with the people nearest you.
+          </p>
+
+          <div class="hero-ctas reveal" data-delay="320">
+            <a class="btn btn-light btn-magnetic" href="#connect">
+              <svg width="16" height="19" viewBox="0 0 17 20" fill="currentColor" aria-hidden="true"><path d="M14.18 10.6c-.02-2.07 1.69-3.06 1.77-3.11-.96-1.41-2.46-1.6-2.99-1.62-1.27-.13-2.48.75-3.13.75-.65 0-1.64-.73-2.7-.71-1.39.02-2.67.81-3.38 2.05-1.44 2.5-.37 6.2 1.04 8.23.69 1 1.51 2.11 2.58 2.07 1.04-.04 1.43-.67 2.68-.67 1.25 0 1.6.67 2.7.65 1.11-.02 1.82-1.01 2.5-2.01.79-1.15 1.11-2.27 1.13-2.33-.02-.01-2.17-.83-2.19-3.29zM12.13 4.36c.57-.69.96-1.65.85-2.61-.83.03-1.83.55-2.42 1.24-.53.61-1 1.59-.87 2.53.92.07 1.87-.47 2.44-1.16z"/></svg>
+              <span>Download for iPhone</span>
+            </a>
+            <a class="btn btn-ghost btn-magnetic" href="#connect"><span>Connect now</span></a>
+          </div>
+
+          <ul class="hero-tiers reveal" data-delay="400">
+            <li><span class="tdot silver" aria-hidden="true"></span><strong>Silver</strong> Free</li>
+            <li><span class="tdot gold" aria-hidden="true"></span><strong>Gold</strong> $12.99/mo</li>
+            <li><span class="tdot platinum" aria-hidden="true"></span><strong>Platinum Black</strong> $29.99/mo</li>
+          </ul>
+        </div>
+
+        <div class="hero-stage" id="hero-stage" aria-hidden="true">
+          <div class="device-halo"></div>
+          <div class="device" id="device">
+            <div class="device-screen">
+              <div class="device-notch"></div>
+              <img src="assets/screens/tonight.png" alt="2NIGHT Tonight feed" class="active" />
+              <img src="assets/screens/matches.png" alt="2NIGHT matches" loading="lazy" />
+              <img src="assets/screens/chat.png" alt="2NIGHT chat" loading="lazy" />
+              <img src="assets/screens/plans.png" alt="2NIGHT plans" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#how" aria-label="Scroll down"><span class="mouse" aria-hidden="true"></span></a>
+    </section>
+
+    <!-- ============================ MARQUEE ============================ -->
+    <div class="marquee-band" aria-hidden="true">
+      <div class="marquee">
+        <span><span class="lit">Tonight</span></span><span>Not tomorrow</span><span><span class="lit">Ping</span></span><span>Match</span><span><span class="lit">Meet</span></span><span>Anywhere</span>
+        <span><span class="lit">Tonight</span></span><span>Not tomorrow</span><span><span class="lit">Ping</span></span><span>Match</span><span><span class="lit">Meet</span></span><span>Anywhere</span>
+      </div>
+    </div>
+
+    <!-- ============================ HOW IT WORKS ============================ -->
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">How it works</p>
+          <h2 class="section-title">Three steps<br />to <span class="gold-text">tonight.</span></h2>
+        </div>
+
+        <div class="how-steps">
+          <article class="how-step reveal">
+            <div class="hs-num">01</div>
+            <div class="hs-body">
+              <h3><span class="verb">Ping</span> someone near you.</h3>
+              <p>Set your radius, see who's out and free right now, and send a ping. One tap — no endless swiping, no waiting for "someday."</p>
+            </div>
+            <span class="hs-tag">Set your radius</span>
+          </article>
+
+          <article class="how-step reveal" data-delay="80">
+            <div class="hs-num">02</div>
+            <div class="hs-body">
+              <h3><span class="verb">Match</span> when it's mutual.</h3>
+              <p>They ping back, you match instantly. Real people near you, wanting the same night out — verified, in the moment, ready to go.</p>
+            </div>
+            <span class="hs-tag">Mutual & instant</span>
+          </article>
+
+          <article class="how-step reveal" data-delay="160">
+            <div class="hs-num">03</div>
+            <div class="hs-body">
+              <h3><span class="verb">Meet</span> — tonight.</h3>
+              <p>Chat, pick a spot, make the plan. From phone to face in minutes, not weeks. Tonight, not tomorrow.</p>
+            </div>
+            <span class="hs-tag">Phone to face</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ WORLDWIDE / RADIUS ============================ -->
+    <section class="section radius" id="radius">
+      <div class="container">
+        <div class="radius-copy reveal">
+          <p class="kicker">Worldwide</p>
+          <h2 class="section-title">Works anywhere.<br />Finds <span class="gold-text">who's near.</span></h2>
+          <p class="section-sub">2NIGHT works on every continent — no launch list, no waitlist for your city. Wherever you stand on earth, you choose how far the night reaches. Set your radius in kilometres and 2NIGHT surfaces the people inside it.</p>
+
+          <ul class="radius-list">
+            <li class="silver reveal" data-delay="60">
+              <span class="rl-dot" aria-hidden="true"></span>
+              <span class="rl-name">Silver <em>Free</em></span>
+              <span class="rl-km">5 km</span>
+            </li>
+            <li class="gold reveal" data-delay="120">
+              <span class="rl-dot" aria-hidden="true"></span>
+              <span class="rl-name">Gold <em>$12.99/mo</em></span>
+              <span class="rl-km">15 km</span>
+            </li>
+            <li class="platinum reveal" data-delay="180">
+              <span class="rl-dot" aria-hidden="true"></span>
+              <span class="rl-name">Platinum Black <em>$29.99/mo</em></span>
+              <span class="rl-km">50 km</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="rings reveal" data-delay="100" aria-hidden="true">
+          <svg viewBox="0 0 400 400" role="presentation">
+            <defs>
+              <radialGradient id="rg" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="rgba(255,215,0,.10)" />
+                <stop offset="100%" stop-color="rgba(255,215,0,0)" />
+              </radialGradient>
+            </defs>
+            <circle cx="200" cy="200" r="190" fill="url(#rg)" />
+            <circle class="ring-circle" cx="200" cy="200" r="62"  stroke="rgba(192,192,192,.55)" />
+            <circle class="ring-circle" cx="200" cy="200" r="120" stroke="rgba(255,215,0,.55)" />
+            <circle class="ring-circle" cx="200" cy="200" r="186" stroke="rgba(229,228,226,.45)" />
+          </svg>
+          <span class="ring-label l-silver" style="top:50%;left:81%"><strong>5 km</strong></span>
+          <span class="ring-label l-gold" style="top:21%;left:65%"><strong>15 km</strong></span>
+          <span class="ring-label l-platinum" style="top:6%;left:50%"><strong>50 km</strong></span>
+          <span class="pin">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1a1400" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ SCREENS ============================ -->
+    <section class="section" id="screens">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">The app</p>
+          <h2 class="section-title">Built for the <span class="gold-text">night.</span></h2>
+          <p class="section-sub">Editorial, dark, and designed for people who decide at 7pm that they want to do something. Every screen is made to move you from your phone to the night, fast.</p>
+        </div>
+
+        <div class="screens-grid">
+          <figure class="screen-card reveal">
+            <div class="phone"><div class="phone-screen"><img src="assets/screens/tonight.png" alt="2NIGHT Tonight feed" loading="lazy" /></div></div>
+            <figcaption class="screen-cap">Tonight feed</figcaption>
+          </figure>
+          <figure class="screen-card reveal" data-delay="100">
+            <div class="phone"><div class="phone-screen"><img src="assets/screens/matches.png" alt="2NIGHT matches" loading="lazy" /></div></div>
+            <figcaption class="screen-cap">Matches</figcaption>
+          </figure>
+          <figure class="screen-card reveal" data-delay="200">
+            <div class="phone"><div class="phone-screen"><img src="assets/screens/chat.png" alt="2NIGHT chat" loading="lazy" /></div></div>
+            <figcaption class="screen-cap">Chat & plan</figcaption>
+          </figure>
+          <figure class="screen-card reveal" data-delay="300">
+            <div class="phone"><div class="phone-screen"><img src="assets/screens/plans.png" alt="2NIGHT plans" loading="lazy" /></div></div>
+            <figcaption class="screen-cap">Plans</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ PRICING ============================ -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">Membership</p>
+          <h2 class="section-title">Choose your tier.<br />Own the <span class="gold-text">night.</span></h2>
+          <p class="section-sub">Start free. Upgrade when the night gets bigger. Cancel anytime — billed monthly.</p>
+        </div>
+
+        <div class="pricing-grid">
+
+          <!-- Silver -->
+          <article class="price-card silver reveal">
+            <div class="pc-top"><h3 class="pc-name">Silver</h3></div>
+            <p class="pc-tag">Start here</p>
+            <p class="pc-price"><span class="amt">Free</span></p>
+            <p class="pc-sub">Free forever</p>
+            <ul class="pc-feats">
+              <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><strong>5&nbsp;km</strong> radius</span></li>
+              <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>5 pings a day</span></li>
+              <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>1 active plan</span></li>
+            </ul>
+            <div class="pc-cta"><a class="btn btn-outline btn-magnetic" href="#connect">Get started</a></div>
+          </article>
+
+          <!-- Gold -->
+          <article class="price-card gold reveal" data-delay="100">
+            <div class="pc-top"><h3 class="pc-name">Gold</h3><span class="pc-popular">Most popular</span></div>
+            <p class="pc-tag">Go further</p>
+            <p class="pc-price"><span class="amt">$12.99</span><span class="per">/ month</span></p>
+            <p class="pc-sub">Billed monthly · cancel anytime</p>
+            <ul class="pc-feats">
+              <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><strong>15&nbsp;km</strong> radius</span></li>
+              <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Unlimited pings</span></li>
+              <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Travel Mode + weekly Boost</span></li>
+            </ul>
+            <div class="pc-cta"><a class="btn btn-gold btn-magnetic" href="#connect">Go Gold</a></div>
+          </article>
+
+          <!-- Platinum Black -->
+          <article class="price-card platinum reveal" data-delay="200">
+            <div class="pc-top"><h3 class="pc-name">Platinum Black</h3></div>
+            <p class="pc-tag">Own the night</p>
+            <p class="pc-price"><span class="amt">$29.99</span><span class="per">/ month</span></p>
+            <p class="pc-sub">Billed monthly · cancel anytime</p>
+            <ul class="pc-feats">
+              <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><strong>50&nbsp;km</strong> radius</span></li>
+              <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Frontline — appear first</span></li>
+              <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Black Events + verified badge</span></li>
+            </ul>
+            <div class="pc-cta"><a class="btn btn-outline btn-magnetic" href="#connect">Go Platinum</a></div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ CONNECT NOW ============================ -->
+    <section class="section connect" id="connect">
+      <div class="connect-aura" aria-hidden="true"></div>
+      <div class="container">
+        <h2 class="reveal">Connect <span class="gold-text">now.</span></h2>
+        <p class="ph reveal" data-delay="80">Ping. Match. Meet.</p>
+        <p class="tagline reveal" data-delay="140">Tonight, not tomorrow.</p>
+        <div class="connect-ctas reveal" data-delay="220">
+          <a class="btn btn-gold btn-magnetic" href="#" aria-label="Download 2NIGHT on the App Store">
+            <svg width="16" height="19" viewBox="0 0 17 20" fill="currentColor" aria-hidden="true"><path d="M14.18 10.6c-.02-2.07 1.69-3.06 1.77-3.11-.96-1.41-2.46-1.6-2.99-1.62-1.27-.13-2.48.75-3.13.75-.65 0-1.64-.73-2.7-.71-1.39.02-2.67.81-3.38 2.05-1.44 2.5-.37 6.2 1.04 8.23.69 1 1.51 2.11 2.58 2.07 1.04-.04 1.43-.67 2.68-.67 1.25 0 1.6.67 2.7.65 1.11-.02 1.82-1.01 2.5-2.01.79-1.15 1.11-2.27 1.13-2.33-.02-.01-2.17-.83-2.19-3.29zM12.13 4.36c.57-.69.96-1.65.85-2.61-.83.03-1.83.55-2.42 1.24-.53.61-1 1.59-.87 2.53.92.07 1.87-.47 2.44-1.16z"/></svg>
+            <span>Download 2NIGHT</span>
+          </a>
+          <a class="btn btn-ghost btn-magnetic" href="about.html"><span>Learn more</span></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="2NIGHT home">
+            <img src="assets/icon.png" alt="" />
+            <span class="brand-name">2<span class="lit">NIGHT</span></span>
+          </a>
+          <p>The social app for right now. Ping someone near you, match when it's mutual, and meet — anywhere on earth.</p>
+          <p class="tagline">Tonight, not tomorrow.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="#how">How it works</a>
+          <a href="#radius">Worldwide</a>
+          <a href="#screens">The app</a>
+          <a href="#pricing">Membership</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="support.html">Support</a>
+          <a href="../terms.html">Terms</a>
+          <a href="../privacy.html">Privacy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 2NIGHT. All rights reserved.</span>
+        <span class="badges"><span>Ping. Match. Meet.</span></span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
