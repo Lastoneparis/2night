@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" class="no-js">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,17 +12,31 @@
   <meta property="og:title" content="2NIGHT — Who's out tonight?" />
   <meta property="og:description" content="Meet people for real plans, right now. Tonight, not someday." />
   <meta property="og:image" content="assets/icon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="2NIGHT — Who's out tonight?" />
+  <meta name="twitter:description" content="Meet people for real plans, right now. Tonight, not someday." />
+  <meta name="twitter:image" content="assets/icon.png" />
 
   <link rel="icon" type="image/png" href="assets/icon.png" />
   <link rel="apple-touch-icon" href="assets/icon.png" />
   <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="preload" as="image" href="assets/screens/tonight.png" />
   <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- de-flicker: drop no-js immediately so reveal logic can take over -->
+  <script>document.documentElement.classList.remove("no-js");</script>
 
   <!-- translations.js created by another worker; main.js degrades gracefully if absent -->
   <script src="js/translations.js" defer></script>
   <script src="js/main.js" defer></script>
 </head>
 <body>
+
+  <!-- grain, scroll progress, custom cursor (JS gates them) -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
 
   <!-- ============================ NAV ============================ -->
   <header class="nav" id="nav">
@@ -47,7 +61,7 @@
           <div class="lang-menu" role="menu"></div>
         </div>
 
-        <a class="btn btn-gold btn-pill" href="#download" data-i18n="nav_download">Download</a>
+        <a class="btn btn-gold btn-pill btn-magnetic" href="#download" data-i18n="nav_download"><span>Download</span></a>
 
         <button class="nav-toggle" type="button" aria-label="Menu"><span></span></button>
       </div>
@@ -59,48 +73,87 @@
     <!-- ============================ HERO ============================ -->
     <section class="hero" id="top">
       <canvas id="particles" aria-hidden="true"></canvas>
+      <div class="hero-aurora" aria-hidden="true"></div>
       <div class="hero-glow" aria-hidden="true"></div>
       <div class="hero-vignette" aria-hidden="true"></div>
 
       <div class="container">
-        <div class="hero-badge reveal">
-          <span class="dot-pulse" aria-hidden="true"></span>
-          <span><strong id="count" data-target="247">247</strong>
-            <span data-i18n="hero_badge">people going out in</span>
-            <span class="city-wrap"><span id="city">Zürich</span></span> tonight</span>
+        <div class="hero-copy">
+          <div class="hero-badge reveal">
+            <span class="dot-pulse" aria-hidden="true"></span>
+            <span><strong id="count" data-target="247">247</strong>
+              <span data-i18n="hero_badge">people going out in</span>
+              <span class="city-wrap"><span id="city">Zürich</span></span> tonight</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="line"><span class="gold-text-off" data-i18n="hero_title1">Who's</span></span>
+            <span class="line"><span class="gold-text" data-i18n="hero_title2">out</span></span>
+            <span class="line"><span data-i18n="hero_title3">tonight?</span></span>
+          </h1>
+
+          <p class="hero-sub reveal" data-delay="220">
+            <span class="accent" data-i18n="hero_sub1">Meet people for real plans, right now.</span>
+            <span data-i18n="hero_sub2">Not tomorrow. Not “maybe next week.”</span>
+          </p>
+
+          <div class="hero-ctas reveal" data-delay="300">
+            <a class="btn btn-light btn-magnetic" href="#download">
+              <svg width="17" height="20" viewBox="0 0 17 20" fill="currentColor" aria-hidden="true">
+                <path d="M14.18 10.6c-.02-2.07 1.69-3.06 1.77-3.11-0.96-1.41-2.46-1.6-2.99-1.62-1.27-.13-2.48.75-3.13.75-.65 0-1.64-.73-2.7-.71-1.39.02-2.67.81-3.38 2.05-1.44 2.5-.37 6.2 1.04 8.23.69 1 1.51 2.11 2.58 2.07 1.04-.04 1.43-.67 2.68-.67 1.25 0 1.6.67 2.7.65 1.11-.02 1.82-1.01 2.5-2.01.79-1.15 1.11-2.27 1.13-2.33-.02-.01-2.17-.83-2.19-3.29zM12.13 4.36c.57-.69.96-1.65.85-2.61-.83.03-1.83.55-2.42 1.24-.53.61-1 1.59-.87 2.53.92.07 1.87-.47 2.44-1.16z"/>
+              </svg>
+              <span data-i18n="hero_cta_download">Download for iPhone</span>
+            </a>
+            <button class="btn btn-ghost btn-magnetic" type="button" data-open-waitlist>
+              <span data-i18n="hero_cta_waitlist">Join the waitlist</span>
+            </button>
+          </div>
+
+          <ul class="tier-legend reveal" data-delay="380">
+            <li><span class="tdot silver" aria-hidden="true"></span><strong data-i18n="tier_silver">Silver</strong> <em data-i18n="tier_silver_price">Free forever</em></li>
+            <li><span class="tdot gold" aria-hidden="true"></span><strong data-i18n="tier_gold">Gold</strong> <em data-i18n="tier_gold_price">$12.99 / month</em></li>
+            <li><span class="tdot platinum" aria-hidden="true"></span><strong data-i18n="tier_platinum">Platinum Black</strong> <em data-i18n="tier_platinum_price">$29.99 / month</em></li>
+          </ul>
         </div>
 
-        <h1 class="hero-title">
-          <span class="reveal" data-i18n="hero_title1">Who's</span>
-          <span class="reveal gold-text" data-delay="80" data-i18n="hero_title2">out</span>
-          <span class="reveal" data-delay="160" data-i18n="hero_title3">tonight?</span>
-        </h1>
-
-        <p class="hero-sub reveal" data-delay="220">
-          <span class="accent" data-i18n="hero_sub1">Meet people for real plans, right now.</span>
-          <span data-i18n="hero_sub2">Not tomorrow. Not “maybe next week.”</span>
-        </p>
-
-        <div class="hero-ctas reveal" data-delay="300">
-          <a class="btn btn-light" href="#download">
-            <svg width="17" height="20" viewBox="0 0 17 20" fill="currentColor" aria-hidden="true">
-              <path d="M14.18 10.6c-.02-2.07 1.69-3.06 1.77-3.11-0.96-1.41-2.46-1.6-2.99-1.62-1.27-.13-2.48.75-3.13.75-.65 0-1.64-.73-2.7-.71-1.39.02-2.67.81-3.38 2.05-1.44 2.5-.37 6.2 1.04 8.23.69 1 1.51 2.11 2.58 2.07 1.04-.04 1.43-.67 2.68-.67 1.25 0 1.6.67 2.7.65 1.11-.02 1.82-1.01 2.5-2.01.79-1.15 1.11-2.27 1.13-2.33-.02-.01-2.17-.83-2.19-3.29zM12.13 4.36c.57-.69.96-1.65.85-2.61-.83.03-1.83.55-2.42 1.24-.53.61-1 1.59-.87 2.53.92.07 1.87-.47 2.44-1.16z"/>
-            </svg>
-            <span data-i18n="hero_cta_download">Download for iPhone</span>
-          </a>
-          <button class="btn btn-ghost" type="button" data-open-waitlist data-i18n="hero_cta_waitlist">Join the waitlist</button>
+        <!-- Signature interactive phone: auto-cycles real screens + 3D tilt -->
+        <div class="hero-stage" id="hero-stage" aria-hidden="true">
+          <div class="device-halo"></div>
+          <div class="device" id="device">
+            <div class="device-screen">
+              <img src="assets/screens/tonight.png" alt="2NIGHT — Tonight Feed" class="active" />
+              <img src="assets/screens/matches.png" alt="2NIGHT — Matches" loading="lazy" />
+              <img src="assets/screens/chat.png" alt="2NIGHT — Chat" loading="lazy" />
+              <img src="assets/screens/paywall.png" alt="2NIGHT — Membership" loading="lazy" />
+            </div>
+          </div>
+          <div class="device-shadow"></div>
         </div>
-
-        <ul class="tier-legend reveal" data-delay="380">
-          <li><span class="tdot silver" aria-hidden="true"></span><strong data-i18n="tier_silver">Silver</strong> <em data-i18n="tier_silver_price">Free forever</em></li>
-          <li><span class="tdot gold" aria-hidden="true"></span><strong data-i18n="tier_gold">Gold</strong> <em data-i18n="tier_gold_price">$12.99 / month</em></li>
-          <li><span class="tdot platinum" aria-hidden="true"></span><strong data-i18n="tier_platinum">Platinum Black</strong> <em data-i18n="tier_platinum_price">$29.99 / month</em></li>
-        </ul>
       </div>
 
-      <a class="scroll-cue" href="#how" aria-label="Scroll down">
+      <a class="scroll-cue" href="#stats" aria-label="Scroll down">
         <span class="mouse" aria-hidden="true"></span>
       </a>
+    </section>
+
+    <!-- ============================ STATS BAND ============================ -->
+    <section class="stats" id="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat reveal">
+            <div class="num"><span class="count-up" data-target="6">6</span></div>
+            <p class="label" data-i18n="cities_kicker">Cities</p>
+          </div>
+          <div class="stat reveal" data-delay="120">
+            <div class="num"><span class="count-up" data-target="34">34</span></div>
+            <p class="label" data-i18n="screens_kicker">Languages</p>
+          </div>
+          <div class="stat reveal" data-delay="240">
+            <div class="num"><span class="count-up" data-target="3422">3,422</span></div>
+            <p class="label" data-i18n="hero_badge">Out tonight</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- ============================ HOW IT WORKS ============================ -->
@@ -141,7 +194,7 @@
 
         <div class="tier-grid">
           <!-- Silver -->
-          <article class="tier-card silver reveal">
+          <article class="tier-card silver reveal" data-tilt-glow>
             <h3 class="tier-name" data-i18n="tier_silver">Silver</h3>
             <p class="tier-tag" data-i18n="tier_silver_tag">Start here</p>
             <p class="tier-price" data-i18n="tier_silver_price">Free forever</p>
@@ -162,7 +215,7 @@
           </article>
 
           <!-- Gold (popular) -->
-          <article class="tier-card gold reveal" data-delay="100">
+          <article class="tier-card gold reveal" data-delay="100" data-tilt-glow>
             <span class="tier-popular" data-i18n="tier_popular">Most popular</span>
             <h3 class="tier-name" data-i18n="tier_gold">Gold</h3>
             <p class="tier-tag" data-i18n="tier_gold_tag">Go further</p>
@@ -184,7 +237,7 @@
           </article>
 
           <!-- Platinum Black -->
-          <article class="tier-card platinum reveal" data-delay="200">
+          <article class="tier-card platinum reveal" data-delay="200" data-tilt-glow>
             <h3 class="tier-name" data-i18n="tier_platinum">Platinum Black</h3>
             <p class="tier-tag" data-i18n="tier_platinum_tag">Own the night</p>
             <p class="tier-price" data-i18n="tier_platinum_price">$29.99 / month</p>
@@ -248,13 +301,31 @@
           <h2 class="section-title reveal" data-delay="80" data-i18n="cities_title">Launching in your city.</h2>
           <p class="section-sub reveal" data-delay="160" data-i18n="cities_sub">Density first. We open a city, build the night, then move to the next.</p>
         </div>
-        <ul class="city-list">
-          <li class="reveal">Zürich</li>
-          <li class="reveal" data-delay="80">Geneva</li>
-          <li class="reveal" data-delay="160">Paris</li>
-          <li class="reveal" data-delay="240">London</li>
-          <li class="reveal" data-delay="320">Dubai</li>
-          <li class="reveal" data-delay="400">New York</li>
+      </div>
+
+      <!-- Kinetic marquee (motion). Static list below is the reduced-motion fallback. -->
+      <div class="city-marquee reveal" aria-hidden="true" data-marquee>
+        <div class="city-track">
+          <span class="city"><span class="city-name">Zürich</span><span class="dot"></span><span class="city-count">247 <em>out</em></span></span>
+          <span class="city"><span class="city-name">Geneva</span><span class="dot"></span><span class="city-count">189 <em>out</em></span></span>
+          <span class="city"><span class="city-name">Paris</span><span class="dot"></span><span class="city-count">612 <em>out</em></span></span>
+          <span class="city"><span class="city-name">London</span><span class="dot"></span><span class="city-count">938 <em>out</em></span></span>
+          <span class="city"><span class="city-name">Dubai</span><span class="dot"></span><span class="city-count">421 <em>out</em></span></span>
+          <span class="city"><span class="city-name">New York</span><span class="dot"></span><span class="city-count">1204 <em>out</em></span></span>
+        </div>
+        <div class="city-track" aria-hidden="true">
+          <span class="city"><span class="city-name">Zürich</span><span class="dot"></span><span class="city-count">247 <em>out</em></span></span>
+          <span class="city"><span class="city-name">Geneva</span><span class="dot"></span><span class="city-count">189 <em>out</em></span></span>
+          <span class="city"><span class="city-name">Paris</span><span class="dot"></span><span class="city-count">612 <em>out</em></span></span>
+          <span class="city"><span class="city-name">London</span><span class="dot"></span><span class="city-count">938 <em>out</em></span></span>
+          <span class="city"><span class="city-name">Dubai</span><span class="dot"></span><span class="city-count">421 <em>out</em></span></span>
+          <span class="city"><span class="city-name">New York</span><span class="dot"></span><span class="city-count">1204 <em>out</em></span></span>
+        </div>
+      </div>
+
+      <div class="container">
+        <ul class="city-list" data-static-cities hidden>
+          <li>Zürich</li><li>Geneva</li><li>Paris</li><li>London</li><li>Dubai</li><li>New York</li>
         </ul>
       </div>
     </section>
@@ -265,7 +336,7 @@
         <h2 class="final-title reveal gold-text" data-i18n="cta_title">Tonight, not someday.</h2>
         <p class="final-sub reveal" data-delay="100" data-i18n="cta_sub">The app for people who don’t want to wait.</p>
         <div class="reveal" data-delay="200">
-          <a class="btn btn-gold" href="#" aria-label="Download 2NIGHT">
+          <a class="btn btn-gold btn-magnetic" href="#" aria-label="Download 2NIGHT">
             <svg width="17" height="20" viewBox="0 0 17 20" fill="currentColor" aria-hidden="true">
               <path d="M14.18 10.6c-.02-2.07 1.69-3.06 1.77-3.11-0.96-1.41-2.46-1.6-2.99-1.62-1.27-.13-2.48.75-3.13.75-.65 0-1.64-.73-2.7-.71-1.39.02-2.67.81-3.38 2.05-1.44 2.5-.37 6.2 1.04 8.23.69 1 1.51 2.11 2.58 2.07 1.04-.04 1.43-.67 2.68-.67 1.25 0 1.6.67 2.7.65 1.11-.02 1.82-1.01 2.5-2.01.79-1.15 1.11-2.27 1.13-2.33-.02-.01-2.17-.83-2.19-3.29zM12.13 4.36c.57-.69.96-1.65.85-2.61-.83.03-1.83.55-2.42 1.24-.53.61-1 1.59-.87 2.53.92.07 1.87-.47 2.44-1.16z"/>
             </svg>

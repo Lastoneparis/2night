@@ -1,14 +1,23 @@
 /* ============================================================
    2NIGHT — main.js
-   Particle hero, scroll reveals, counter, city rotator,
-   mobile nav, i18n + language switcher, waitlist modal.
-   No frameworks. Vanilla JS.
+   Cinematic hero (particles + drifting parallax), signature
+   interactive phone (auto-cycle + 3D cursor tilt), scroll
+   reveals + parallax, stats count-up, kinetic cities, magnetic
+   buttons, custom cursor, scroll progress, condensing nav,
+   counter, city rotator, mobile nav, i18n + language switcher,
+   waitlist modal. No frameworks. Vanilla JS.
    ============================================================ */
 (function () {
   "use strict";
 
-  var prefersReduced = window.matchMedia &&
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var mqReduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)");
+  var prefersReduced = mqReduce && mqReduce.matches;
+  var mqFine = window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)");
+  var canHover = mqFine ? mqFine.matches : false;
+  var canMotion = !prefersReduced;
+  var enableRichUI = canHover && canMotion; /* cursor, tilt, magnetic */
+
+  function raf(fn) { return (window.requestAnimationFrame || function (cb) { return setTimeout(cb, 16); })(fn); }
 
   /* ----------------------------------------------------------
      i18n
@@ -18,22 +27,28 @@
   var I18N = window.TN_I18N || { en: {} };
   var DEFAULT_LANG = "en";
 
+  // Human-readable names. Prefer each locale's own `lang_name` from
+  // translations.js so every shipped language is labelled correctly.
   function langNames() {
-    // Optional human-readable names; falls back to the code uppercased.
-    return {
+    var fallback = {
       en: "English", fr: "Français", de: "Deutsch", es: "Español",
       it: "Italiano", pt: "Português", nl: "Nederlands", ru: "Русский",
       ar: "العربية", zh: "中文", ja: "日本語", ko: "한국어",
       tr: "Türkçe", pl: "Polski", sv: "Svenska", da: "Dansk",
-      no: "Norsk", fi: "Suomi", cs: "Čeština", el: "Ελληνικά",
+      no: "Norsk", nb: "Norsk", fi: "Suomi", cs: "Čeština", el: "Ελληνικά",
       he: "עברית", hi: "हिन्दी", th: "ไทย", id: "Bahasa Indonesia",
-      vi: "Tiếng Việt", uk: "Українська", ro: "Română", hu: "Magyar"
+      ms: "Bahasa Melayu", vi: "Tiếng Việt", uk: "Українська",
+      ro: "Română", hu: "Magyar", bn: "বাংলা", ur: "اردو", sw: "Kiswahili"
     };
+    var names = {};
+    Object.keys(I18N).forEach(function (code) {
+      var ln = I18N[code] && I18N[code].lang_name;
+      names[code] = ln || fallback[code] || code.toUpperCase();
+    });
+    return names;
   }
 
-  function availableLangs() {
-    return Object.keys(I18N);
-  }
+  function availableLangs() { return Object.keys(I18N); }
 
   function getStoredLang() {
     var params = new URLSearchParams(window.location.search);
@@ -64,7 +79,6 @@
     document.documentElement.setAttribute("lang", lang);
     document.documentElement.setAttribute("dir", rtl ? "rtl" : "ltr");
 
-    // textContent for elements with data-i18n
     var nodes = document.querySelectorAll("[data-i18n]");
     nodes.forEach(function (el) {
       var key = el.getAttribute("data-i18n");
@@ -72,7 +86,6 @@
       if (val != null) el.textContent = val;
     });
 
-    // placeholder for inputs with data-i18n-placeholder
     var phs = document.querySelectorAll("[data-i18n-placeholder]");
     phs.forEach(function (el) {
       var key = el.getAttribute("data-i18n-placeholder");
@@ -96,7 +109,6 @@
 
     var names = langNames();
     var codes = availableLangs();
-    // English first, then alphabetical by display name
     codes.sort(function (a, b) {
       if (a === "en") return -1;
       if (b === "en") return 1;
@@ -120,6 +132,7 @@
     langBtn.addEventListener("click", function (e) {
       e.stopPropagation();
       langEl.classList.toggle("open");
+      langBtn.setAttribute("aria-expanded", langEl.classList.contains("open") ? "true" : "false");
     });
     document.addEventListener("click", function (e) {
       if (!langEl.contains(e.target)) closeLang();
@@ -129,10 +142,12 @@
     });
   }
 
-  function closeLang() { if (langEl) langEl.classList.remove("open"); }
+  function closeLang() {
+    if (langEl) langEl.classList.remove("open");
+    if (langBtn) langBtn.setAttribute("aria-expanded", "false");
+  }
 
   function updateLangUI(lang) {
-    var names = langNames();
     if (langCurrentEl) langCurrentEl.textContent = lang.toUpperCase();
     if (langMenu) {
       langMenu.querySelectorAll("button").forEach(function (b) {
@@ -142,49 +157,72 @@
   }
 
   /* ----------------------------------------------------------
-     Sticky nav background on scroll
+     Sticky / condensing nav on scroll
      ---------------------------------------------------------- */
   function initNav() {
     var nav = document.querySelector(".nav");
     var toggle = document.querySelector(".nav-toggle");
     if (!nav) return;
 
-    function onScroll() {
-      nav.classList.toggle("scrolled", window.scrollY > 24);
-    }
+    function onScroll() { nav.classList.toggle("scrolled", window.scrollY > 24); }
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
 
     if (toggle) {
-      toggle.addEventListener("click", function () {
-        nav.classList.toggle("menu-open");
-      });
+      toggle.addEventListener("click", function () { nav.classList.toggle("menu-open"); });
     }
   }
 
   /* ----------------------------------------------------------
-     Animated counter (hero badge)
+     Hero badge animated counter
      ---------------------------------------------------------- */
+  function animateNumber(el, target, duration, formatThousands) {
+    var start = null;
+    var from = Math.max(0, Math.round(target * 0.35));
+    function fmt(n) { return formatThousands ? n.toLocaleString("en-US") : String(n); }
+    function step(ts) {
+      if (start === null) start = ts;
+      var p = Math.min((ts - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - p, 3); // easeOutCubic
+      el.textContent = fmt(Math.round(from + (target - from) * eased));
+      if (p < 1) raf(step);
+      else el.textContent = fmt(target);
+    }
+    raf(step);
+  }
+
   function initCounter() {
     var el = document.getElementById("count");
     if (!el) return;
     var target = parseInt(el.getAttribute("data-target") || el.textContent, 10) || 247;
     if (prefersReduced) { el.textContent = target; return; }
+    animateNumber(el, target, 1600, false);
+  }
 
-    var start = null;
-    var duration = 1600;
-    var from = Math.max(0, Math.round(target * 0.35));
-
-    function step(ts) {
-      if (start === null) start = ts;
-      var p = Math.min((ts - start) / duration, 1);
-      // easeOutCubic
-      var eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(from + (target - from) * eased);
-      if (p < 1) requestAnimationFrame(step);
-      else el.textContent = target;
+  /* ----------------------------------------------------------
+     Stats band count-up (fires when visible)
+     ---------------------------------------------------------- */
+  function initStats() {
+    var nums = document.querySelectorAll(".count-up");
+    if (!nums.length) return;
+    if (prefersReduced || !("IntersectionObserver" in window)) {
+      nums.forEach(function (el) {
+        var tgt = parseInt(el.getAttribute("data-target"), 10) || 0;
+        el.textContent = tgt.toLocaleString("en-US");
+      });
+      return;
     }
-    requestAnimationFrame(step);
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          var el = en.target;
+          var tgt = parseInt(el.getAttribute("data-target"), 10) || 0;
+          animateNumber(el, tgt, 1700, tgt >= 1000);
+          io.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    nums.forEach(function (el) { io.observe(el); });
   }
 
   /* ----------------------------------------------------------
@@ -204,6 +242,7 @@
     if (prefersReduced) return;
     var i = 0;
     setInterval(function () {
+      if (document.hidden) return;
       i = (i + 1) % cities.length;
       el.classList.add("fading");
       setTimeout(function () {
@@ -215,7 +254,20 @@
   }
 
   /* ----------------------------------------------------------
+     Hero title — per-line staggered reveal on load
+     ---------------------------------------------------------- */
+  function initHeroTitle() {
+    var title = document.querySelector(".hero-title");
+    if (!title) return;
+    if (prefersReduced) { title.classList.add("in"); return; }
+    // next frame so the CSS initial state is committed first
+    raf(function () { raf(function () { title.classList.add("in"); }); });
+  }
+
+  /* ----------------------------------------------------------
      Scroll reveal via IntersectionObserver
+     (also a safety net for the native scroll-driven CSS so
+      nothing can ever stay permanently hidden)
      ---------------------------------------------------------- */
   function initReveal() {
     var els = document.querySelectorAll(".reveal");
@@ -234,12 +286,190 @@
         }
       });
     }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
-
     els.forEach(function (el) { io.observe(el); });
   }
 
   /* ----------------------------------------------------------
-     Particle hero canvas
+     Signature interactive phone:
+       - auto-cycles real screenshots (crossfade ~2.8s)
+       - tilts in 3D toward the cursor (desktop + motion only)
+     ---------------------------------------------------------- */
+  function initDevice() {
+    var device = document.getElementById("device");
+    var stage = document.getElementById("hero-stage");
+    if (!device) return;
+
+    // auto-cycle
+    var imgs = device.querySelectorAll(".device-screen img");
+    if (imgs.length > 1 && canMotion) {
+      var idx = 0;
+      setInterval(function () {
+        if (document.hidden) return;
+        imgs[idx].classList.remove("active");
+        idx = (idx + 1) % imgs.length;
+        imgs[idx].classList.add("active");
+      }, 2800);
+    }
+
+    // 3D cursor tilt — desktop + non-reduced-motion only
+    if (!enableRichUI || !stage) return;
+    var rect = null, targetRX = 0, targetRY = 0, curRX = 0, curRY = 0, ticking = false;
+
+    function measure() { rect = stage.getBoundingClientRect(); }
+    measure();
+    window.addEventListener("resize", measure, { passive: true });
+    window.addEventListener("scroll", measure, { passive: true });
+
+    function loop() {
+      curRX += (targetRX - curRX) * 0.12;
+      curRY += (targetRY - curRY) * 0.12;
+      device.style.setProperty("--rx", curRX.toFixed(2) + "deg");
+      device.style.setProperty("--ry", curRY.toFixed(2) + "deg");
+      if (Math.abs(targetRX - curRX) > 0.01 || Math.abs(targetRY - curRY) > 0.01) {
+        raf(loop);
+      } else { ticking = false; }
+    }
+    function kick() { if (!ticking) { ticking = true; raf(loop); } }
+
+    stage.addEventListener("mousemove", function (e) {
+      if (!rect) measure();
+      var px = (e.clientX - rect.left) / rect.width - 0.5;  // -0.5..0.5
+      var py = (e.clientY - rect.top) / rect.height - 0.5;
+      targetRY = px * 16;   // rotateY from horizontal
+      targetRX = -py * 14;  // rotateX from vertical
+      kick();
+    });
+    stage.addEventListener("mouseleave", function () {
+      targetRX = 0; targetRY = 0; kick();
+    });
+  }
+
+  /* ----------------------------------------------------------
+     Lightweight scroll parallax for hero layers (rAF-throttled)
+     ---------------------------------------------------------- */
+  function initParallax() {
+    if (!canMotion) return;
+    var layers = [
+      { el: document.querySelector(".hero-aurora"), k: 0.18 },
+      { el: document.querySelector(".hero-glow"), k: 0.10 },
+      { el: document.querySelector(".hero-copy"), k: 0.06 },
+      { el: document.querySelector(".cities-bg"), k: 0.08, base: true }
+    ].filter(function (l) { return l.el; });
+    if (!layers.length) return;
+
+    var ticking = false;
+    function update() {
+      var y = window.scrollY || window.pageYOffset;
+      layers.forEach(function (l) {
+        if (l.base) {
+          // parallax against the section, not the page top
+          var r = l.el.parentElement.getBoundingClientRect();
+          var off = (window.innerHeight - r.top) * l.k;
+          l.el.style.transform = "translate3d(0," + (-off * 0.12).toFixed(1) + "px,0)";
+        } else {
+          l.el.style.transform = "translate3d(0," + (y * l.k).toFixed(1) + "px,0)";
+        }
+      });
+      ticking = false;
+    }
+    window.addEventListener("scroll", function () {
+      if (!ticking) { ticking = true; raf(update); }
+    }, { passive: true });
+    update();
+  }
+
+  /* ----------------------------------------------------------
+     Magnetic buttons (desktop + motion only)
+     ---------------------------------------------------------- */
+  function initMagnetic() {
+    if (!enableRichUI) return;
+    var els = document.querySelectorAll(".btn-magnetic");
+    els.forEach(function (el) {
+      var inner = el.querySelector("span");
+      el.addEventListener("mousemove", function (e) {
+        var r = el.getBoundingClientRect();
+        var mx = e.clientX - (r.left + r.width / 2);
+        var my = e.clientY - (r.top + r.height / 2);
+        el.style.transform = "translate(" + (mx * 0.18).toFixed(1) + "px," + (my * 0.28).toFixed(1) + "px)";
+        if (inner) inner.style.transform = "translate(" + (mx * 0.10).toFixed(1) + "px," + (my * 0.14).toFixed(1) + "px)";
+      });
+      el.addEventListener("mouseleave", function () {
+        el.style.transform = "";
+        if (inner) inner.style.transform = "";
+      });
+    });
+  }
+
+  /* ----------------------------------------------------------
+     Tier cards — gold glow follows the cursor
+     ---------------------------------------------------------- */
+  function initTiltGlow() {
+    if (!enableRichUI) return;
+    var cards = document.querySelectorAll("[data-tilt-glow]");
+    cards.forEach(function (card) {
+      card.addEventListener("mousemove", function (e) {
+        var r = card.getBoundingClientRect();
+        card.style.setProperty("--mx", ((e.clientX - r.left) / r.width * 100).toFixed(1) + "%");
+        card.style.setProperty("--my", ((e.clientY - r.top) / r.height * 100).toFixed(1) + "%");
+      });
+    });
+  }
+
+  /* ----------------------------------------------------------
+     Custom minimal cursor (desktop + non-reduced-motion only)
+     ---------------------------------------------------------- */
+  function initCursor() {
+    var dot = document.querySelector(".cursor-dot");
+    var ring = document.querySelector(".cursor-ring");
+    if (!dot || !ring || !enableRichUI) return;
+
+    document.body.classList.add("cursor-on");
+    var mx = window.innerWidth / 2, my = window.innerHeight / 2;
+    var rx = mx, ry = my;
+    var first = true;
+
+    window.addEventListener("mousemove", function (e) {
+      mx = e.clientX; my = e.clientY;
+      dot.style.transform = "translate(" + mx + "px," + my + "px) translate(-50%,-50%)";
+      if (first) { rx = mx; ry = my; first = false; }
+    }, { passive: true });
+
+    (function ring_loop() {
+      rx += (mx - rx) * 0.18;
+      ry += (my - ry) * 0.18;
+      ring.style.transform = "translate(" + rx.toFixed(1) + "px," + ry.toFixed(1) + "px) translate(-50%,-50%)";
+      raf(ring_loop);
+    })();
+
+    var interactive = "a, button, input, [data-magnetic], [data-open-waitlist], .city, .screen-item, .tier-card";
+    document.addEventListener("mouseover", function (e) {
+      if (e.target.closest && e.target.closest(interactive)) document.body.classList.add("cursor-hover");
+    });
+    document.addEventListener("mouseout", function (e) {
+      if (e.target.closest && e.target.closest(interactive)) document.body.classList.remove("cursor-hover");
+    });
+    // hide when leaving the window
+    document.addEventListener("mouseleave", function () { document.body.classList.remove("cursor-on"); });
+    document.addEventListener("mouseenter", function () { document.body.classList.add("cursor-on"); });
+  }
+
+  /* ----------------------------------------------------------
+     Cities marquee fallback toggle
+     If reduced-motion, hide the moving marquee and show the
+     static list so the city names are always present.
+     ---------------------------------------------------------- */
+  function initCities() {
+    var marquee = document.querySelector("[data-marquee]");
+    var staticList = document.querySelector("[data-static-cities]");
+    if (!marquee || !staticList) return;
+    if (prefersReduced) {
+      marquee.style.display = "none";
+      staticList.hidden = false;
+    }
+  }
+
+  /* ----------------------------------------------------------
+     Particle hero canvas (with subtle pointer drift)
      ---------------------------------------------------------- */
   function initParticles() {
     var canvas = document.getElementById("particles");
@@ -251,13 +481,9 @@
     var COUNT = 150;
     var running = true;
     var rafId = null;
+    var px = 0, py = 0; // pointer offset
 
-    var palette = [
-      "255,215,0",   // gold
-      "255,240,160", // gold-light
-      "192,192,192", // silver
-      "245,245,245"  // white
-    ];
+    var palette = ["255,215,0", "255,240,160", "192,192,192", "245,245,245"];
 
     function resize() {
       var rect = canvas.getBoundingClientRect();
@@ -266,26 +492,21 @@
       canvas.height = Math.round(h * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     }
-
     function rand(a, b) { return a + Math.random() * (b - a); }
 
     function makeParticle() {
       var color = palette[Math.floor(Math.random() * palette.length)];
-      // gold-ish weighted brighter, others dimmer
       var baseAlpha = (color.indexOf("255,215") === 0) ? rand(0.18, 0.6) : rand(0.06, 0.3);
       return {
         x: rand(0, w), y: rand(0, h),
         r: rand(0.5, 1.9),
         vx: rand(-0.12, 0.12),
-        vy: rand(-0.18, 0.05), // slight upward drift
-        color: color,
-        a: baseAlpha,
-        // gentle twinkle
-        tw: rand(0.002, 0.01),
-        tp: Math.random() * Math.PI * 2
+        vy: rand(-0.18, 0.05),
+        depth: rand(0.3, 1),
+        color: color, a: baseAlpha,
+        tw: rand(0.002, 0.01), tp: Math.random() * Math.PI * 2
       };
     }
-
     function build() {
       particles = [];
       var count = w < 600 ? 80 : COUNT;
@@ -299,8 +520,9 @@
         p.x += p.vx; p.y += p.vy;
         p.tp += p.tw;
         var flicker = p.a * (0.7 + 0.3 * Math.sin(p.tp));
+        var dx = p.x + px * p.depth;
+        var dy = p.y + py * p.depth;
 
-        // wrap-around
         if (p.x < -5) p.x = w + 5;
         if (p.x > w + 5) p.x = -5;
         if (p.y < -5) p.y = h + 5;
@@ -308,39 +530,38 @@
 
         ctx.beginPath();
         ctx.fillStyle = "rgba(" + p.color + "," + flicker.toFixed(3) + ")";
-        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.arc(dx, dy, p.r, 0, Math.PI * 2);
         ctx.fill();
-        // soft glow for the brighter gold dots
         if (p.r > 1.3) {
           ctx.beginPath();
           ctx.fillStyle = "rgba(" + p.color + "," + (flicker * 0.15).toFixed(3) + ")";
-          ctx.arc(p.x, p.y, p.r * 3, 0, Math.PI * 2);
+          ctx.arc(dx, dy, p.r * 3, 0, Math.PI * 2);
           ctx.fill();
         }
       }
-      if (running) rafId = requestAnimationFrame(draw);
+      if (running) rafId = raf(draw);
     }
-
-    function start() { if (!running) { running = true; rafId = requestAnimationFrame(draw); } }
+    function start() { if (!running) { running = true; rafId = raf(draw); } }
     function stop() { running = false; if (rafId) cancelAnimationFrame(rafId); }
 
     resize(); build();
 
-    if (prefersReduced) {
-      // draw a single static frame, no animation
-      running = false;
-      draw();
-      return;
-    }
+    if (prefersReduced) { running = false; draw(); return; }
 
-    rafId = requestAnimationFrame(draw);
+    rafId = raf(draw);
+
+    if (enableRichUI) {
+      window.addEventListener("mousemove", function (e) {
+        px = (e.clientX / window.innerWidth - 0.5) * 26;
+        py = (e.clientY / window.innerHeight - 0.5) * 18;
+      }, { passive: true });
+    }
 
     var rt;
     window.addEventListener("resize", function () {
       clearTimeout(rt);
       rt = setTimeout(function () { resize(); build(); }, 200);
     });
-
     document.addEventListener("visibilitychange", function () {
       if (document.hidden) stop(); else start();
     });
@@ -369,16 +590,12 @@
     openers.forEach(function (b) { b.addEventListener("click", open); });
     if (overlay) overlay.addEventListener("click", close);
     if (closeBtn) closeBtn.addEventListener("click", close);
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") close();
-    });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
 
     if (form) {
       form.addEventListener("submit", function (e) {
         e.preventDefault();
         if (done) {
-          done.textContent = "✓";
-          // localized confirmation if a key exists, else a sensible default
           var msg = t("waitlist_done", currentLang) || "You're on the list. See you tonight.";
           done.textContent = msg;
         }
@@ -396,18 +613,43 @@
   }
 
   /* ----------------------------------------------------------
+     React if the user flips the reduced-motion preference live.
+     ---------------------------------------------------------- */
+  function watchReducedMotion() {
+    if (!mqReduce || !mqReduce.addEventListener) return;
+    mqReduce.addEventListener("change", function () {
+      // simplest, safest path: reload-free best-effort — ensure content visible
+      if (mqReduce.matches) {
+        document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
+        var title = document.querySelector(".hero-title");
+        if (title) title.classList.add("in");
+        document.body.classList.remove("cursor-on", "cursor-hover");
+      }
+    });
+  }
+
+  /* ----------------------------------------------------------
      Boot
      ---------------------------------------------------------- */
   function boot() {
     buildLangMenu();
     applyLang(currentLang);
     initNav();
+    initHeroTitle();
     initCounter();
+    initStats();
     initCityRotator();
     initReveal();
+    initDevice();
+    initParallax();
+    initMagnetic();
+    initTiltGlow();
+    initCursor();
+    initCities();
     initParticles();
     initWaitlist();
     initYear();
+    watchReducedMotion();
   }
 
   if (document.readyState === "loading") {

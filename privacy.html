@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" class="no-js">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,10 +9,16 @@
   <link rel="icon" type="image/png" href="assets/icon.png" />
   <link rel="apple-touch-icon" href="assets/icon.png" />
   <link rel="stylesheet" href="css/styles.css" />
+  <script>document.documentElement.classList.remove("no-js");</script>
   <script src="js/translations.js" defer></script>
   <script src="js/main.js" defer></script>
 </head>
 <body>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
 
   <header class="nav scrolled" id="nav">
     <div class="container nav-inner">
@@ -32,7 +38,7 @@
           </button>
           <div class="lang-menu" role="menu"></div>
         </div>
-        <a class="btn btn-gold btn-pill" href="index.html#download" data-i18n="nav_download">Download</a>
+        <a class="btn btn-gold btn-pill btn-magnetic" href="index.html#download" data-i18n="nav_download"><span>Download</span></a>
         <button class="nav-toggle" type="button" aria-label="Menu"><span></span></button>
       </div>
     </div>
