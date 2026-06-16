@@ -7,7 +7,7 @@
 //  · liquid-wipe page transitions (transitions.js)
 // All motion respects prefers-reduced-motion.
 // =========================================================
-import { setupTransitions } from "./transitions.js?v=20260616b";
+import { setupTransitions } from "./transitions.js?v=20260616d";
 
 const gsap = window.gsap;
 const ScrollTrigger = window.ScrollTrigger;
@@ -17,14 +17,11 @@ const Lenis = window.Lenis;
 const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const finePointer = window.matchMedia("(pointer: fine)").matches;
 
-// "lite mode" — skip the heavy WebGL city (and never even download three.js) on
-// low-power / data-saving / small-screen devices. They get the static city
-// poster instead, which keeps the page fast (good Lighthouse performance).
+// Only fully skip the WebGL scene (→ static poster) for users who opt out of
+// motion or data. Phones / low-core devices STILL get the animated scene —
+// night.js scales its own quality down for them.
 const _conn = navigator.connection || {};
-const lite = reduce
-  || _conn.saveData === true
-  || (navigator.hardwareConcurrency || 8) <= 4
-  || window.matchMedia("(max-width: 860px)").matches;
+const lite = reduce || _conn.saveData === true;
 
 if (gsap && ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
 
@@ -80,7 +77,7 @@ async function initSceneField() {
   if (!canvas) return;
   if (lite) { canvas.style.display = "none"; return; }     // static poster only
   try {
-    const { initCity } = await import("./city.js?v=20260616b");
+    const { initCity } = await import("./night.js?v=20260616d");
     particles = initCity(canvas);
     attachSceneScroll();
   } catch (e) {

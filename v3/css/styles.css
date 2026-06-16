@@ -538,7 +538,7 @@ section { isolation: isolate; }
 .lang-current { font-weight: 600; letter-spacing: .05em; }
 .lang-caret { transition: transform .25s var(--ease); }
 .lang.open .lang-caret { transform: rotate(180deg); }
-.lang-menu { position: absolute; top: calc(100% + 10px); right: 0; min-width: 200px; max-height: 360px; overflow-y: auto; background: rgba(12,12,18,.97); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid var(--border); border-radius: 14px; padding: 6px; opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity .22s var(--ease), transform .22s var(--ease); z-index: 95; box-shadow: 0 24px 60px rgba(0,0,0,.6); }
+.lang-menu { position: absolute; top: calc(100% + 10px); right: 0; min-width: 200px; max-height: min(360px, 65vh); overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; background: rgba(12,12,18,.97); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid var(--border); border-radius: 14px; padding: 6px; opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity .22s var(--ease), transform .22s var(--ease); z-index: 95; box-shadow: 0 24px 60px rgba(0,0,0,.6); }
 .lang.open .lang-menu { opacity: 1; visibility: visible; transform: translateY(0); }
 .lang-menu button { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 9px 12px; border-radius: 9px; font-size: 13.5px; color: #C9C9C9; gap: 10px; text-align: left; }
 .lang-menu button:hover { background: rgba(255,255,255,.05); color: #fff; }
