@@ -623,7 +623,7 @@
     banner.setAttribute("aria-label", t("cookie_aria", currentLang) || "Cookie consent");
 
     var text = t("cookie_text", currentLang) ||
-      "We use cookies to keep 2NIGHT working and to understand how the site is used.";
+      "2NIGHT uses only the cookies needed to make this site work and remember your preferences. We don't load advertising or third-party tracking cookies.";
     var privacyLabel = t("cookie_privacy_link", currentLang) || "Privacy & Cookies";
     var acceptLabel = t("cookie_accept", currentLang) || "Accept";
     var declineLabel = t("cookie_decline", currentLang) || "Essential only";

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title data-blog-i18n="bx_meta_title">2NIGHT Blog — Meeting people, going out &amp; nightlife, tonight</title>
+  <meta name="description" data-blog-i18n="bx_meta_desc" data-blog-attr="content" content="Practical guides on meeting people near you tonight, making spontaneous plans, going out solo, staying safe, and making friends in a new city — from the team behind 2NIGHT." />
+  <meta name="keywords" content="meet people near you tonight, going out solo, spontaneous plans, social discovery app, make friends in a new city, nightlife safety, dating tonight, who's out tonight" />
+  <meta name="theme-color" content="#050505" />
+  <link rel="canonical" href="https://2night.co/blog/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="2NIGHT" />
+  <meta property="og:url" content="https://2night.co/blog/" />
+  <meta property="og:title" data-blog-i18n="bx_og_title" data-blog-attr="content" content="2NIGHT Blog — Go out tonight, not someday" />
+  <meta property="og:description" data-blog-i18n="bx_og_desc" data-blog-attr="content" content="Guides on meeting people near you, spontaneous plans, nightlife safety and making friends in a new city." />
+  <meta property="og:image" content="https://2night.co/assets/og-card.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" data-blog-i18n="bx_og_title" data-blog-attr="content" content="2NIGHT Blog" />
+  <meta name="twitter:description" data-blog-i18n="bx_og_desc" data-blog-attr="content" content="Go out tonight, not someday." />
+  <meta name="twitter:image" content="https://2night.co/assets/og-card.png" />
+
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="author" content="2NIGHT" />
+  <meta property="og:locale" content="en_US" />
+
+  <link rel="icon" type="image/png" href="/assets/icon.png" />
+  <link rel="apple-touch-icon" href="/assets/icon.png" />
+  <link rel="stylesheet" href="/v3/css/styles.css?v=20260616b" />
+  <link rel="stylesheet" href="/blog/blog.css?v=20260616b" />
+  <script>document.documentElement.classList.remove("no-js");</script>
+  <script type="importmap">
+  { "imports": { "three": "https://unpkg.com/three@0.160.1/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.1/examples/jsm/" } }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": "https://2night.co/blog/#blog",
+    "name": "2NIGHT Blog",
+    "description": "Practical guides on meeting people near you tonight, going out solo, nightlife safety and making friends in a new city.",
+    "url": "https://2night.co/blog/",
+    "inLanguage": "en",
+    "publisher": {
+      "@type": "Organization",
+      "name": "2NIGHT",
+      "url": "https://2night.co/",
+      "logo": "https://2night.co/assets/icon.png"
+    },
+    "blogPost": [
+      {
+        "@type": "BlogPosting",
+        "headline": "How to Meet People Near You Tonight (Without Waiting for the Weekend)",
+        "url": "https://2night.co/blog/meet-people-near-you-tonight.html",
+        "image": "https://2night.co/blog/img/tonight.jpg",
+        "author": { "@type": "Organization", "name": "2NIGHT" }
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Radius-Based Social Discovery vs. Traditional Dating Apps",
+        "url": "https://2night.co/blog/radius-based-social-discovery-vs-dating-apps.html",
+        "image": "https://2night.co/blog/img/membership.jpg",
+        "author": { "@type": "Organization", "name": "2NIGHT" }
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Making Friends in a New City: A Guide to Going Out Solo (and Staying Safe)",
+        "url": "https://2night.co/blog/making-friends-new-city-nightlife-safety.html",
+        "image": "https://2night.co/blog/img/plans.jpg",
+        "author": { "@type": "Organization", "name": "2NIGHT" }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <div class="city-poster" aria-hidden="true"></div>
+  <canvas id="gl" class="gl-canvas" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="transition" aria-hidden="true"><div class="transition-strip"></div><div class="transition-strip"></div><div class="transition-strip"></div><div class="transition-strip"></div><div class="transition-strip"></div></div>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/" aria-label="2NIGHT home"><img src="/assets/icon.png" alt="" /><span class="brand-name">2NIGHT</span></a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/blog/" data-blog-i18n="bc_blog">Blog</a>
+        <a href="/about" data-i18n="nav_about">About</a>
+        <a href="/safety" data-i18n="nav_safety">Safety</a>
+        <a href="/support" data-i18n="nav_support">Support</a>
+      </nav>
+      <div class="lang" aria-label="Language selector">
+        <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span class="lang-current">EN</span>
+          <svg class="lang-caret" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="lang-menu" role="menu"></div>
+      </div>
+      <a class="btn btn-gold magnetic" href="/#download" data-i18n="nav_download"><span class="magnetic-inner">Download</span></a>
+    </div>
+  </header>
+
+  <main>
+    <div class="blog-wrap blog-index-wrap">
+      <div class="blog-index-head">
+        <p class="blog-kicker" data-blog-i18n="bx_kicker">The 2NIGHT Blog</p>
+        <h1 class="gold-text" data-reveal data-blog-i18n="bx_title">Go out tonight, not someday.</h1>
+        <p data-reveal data-blog-i18n="bx_lead">Real, practical guides on meeting people near you, making plans that actually happen, going out solo, and staying safe while you do it. Written by the team building 2NIGHT.</p>
+      </div>
+
+      <div class="blog-grid">
+        <article class="blog-card" data-reveal>
+          <a class="blog-card-link" href="/blog/meet-people-near-you-tonight.html" aria-label="How to Meet People Near You Tonight"></a>
+          <div class="blog-card-media"><img loading="lazy" decoding="async" src="/blog/img/tonight.jpg" alt="2NIGHT Tonight feed — people out near you right now" width="640" height="400" /></div>
+          <div class="blog-card-body">
+            <span class="blog-card-tag" data-blog-i18n="bx_c1_tag">Meeting people</span>
+            <h2 data-blog-i18n="bx_c1_title">How to Meet People Near You Tonight (Without Waiting for the Weekend)</h2>
+            <p data-blog-i18n="bx_c1_excerpt">A step-by-step playbook for turning a free evening into real plans with real people who are out right now.</p>
+            <span class="blog-card-more" data-blog-i18n="bx_card_more">Read the guide</span>
+          </div>
+        </article>
+
+        <article class="blog-card" data-reveal>
+          <a class="blog-card-link" href="/blog/radius-based-social-discovery-vs-dating-apps.html" aria-label="Radius-Based Social Discovery vs. Traditional Dating Apps"></a>
+          <div class="blog-card-media"><img loading="lazy" decoding="async" src="/blog/img/membership.jpg" alt="2NIGHT membership and radius selection screen" width="640" height="400" /></div>
+          <div class="blog-card-body">
+            <span class="blog-card-tag" data-blog-i18n="bx_c2_tag">Dating apps vs. discovery</span>
+            <h2 data-blog-i18n="bx_c2_title">Radius-Based Social Discovery vs. Traditional Dating Apps</h2>
+            <p data-blog-i18n="bx_c2_excerpt">Why “who's out near me tonight” beats endless swiping toward “maybe next week” — and when each approach actually works.</p>
+            <span class="blog-card-more" data-blog-i18n="bx_card_more">Read the guide</span>
+          </div>
+        </article>
+
+        <article class="blog-card" data-reveal>
+          <a class="blog-card-link" href="/blog/making-friends-new-city-nightlife-safety.html" aria-label="Making Friends in a New City"></a>
+          <div class="blog-card-media"><img loading="lazy" decoding="async" src="/blog/img/plans.jpg" alt="2NIGHT plans near you — join something tonight" width="640" height="400" /></div>
+          <div class="blog-card-body">
+            <span class="blog-card-tag" data-blog-i18n="bx_c3_tag">New city · Safety</span>
+            <h2 data-blog-i18n="bx_c3_title">Making Friends in a New City: A Guide to Going Out Solo (and Staying Safe)</h2>
+            <p data-blog-i18n="bx_c3_excerpt">Just moved somewhere new? Here's how to build a real social circle from zero — plus a practical safety checklist for meeting new people.</p>
+            <span class="blog-card-more" data-blog-i18n="bx_card_more">Read the guide</span>
+          </div>
+        </article>
+      </div>
+
+      <a class="blog-back" href="/" data-blog-i18n="bc_back_home">← Back to home</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a class="brand" href="/"><img src="/assets/icon.png" alt="" /><span class="brand-name">2NIGHT</span></a>
+      <nav class="footer-links">
+        <a href="/blog/" data-blog-i18n="bc_blog">Blog</a>
+        <a href="/about" data-i18n="footer_about">About</a>
+        <a href="/safety" data-i18n="footer_safety">Safety</a>
+        <a href="/support" data-i18n="footer_support">Support</a>
+        <a href="/terms" data-i18n="footer_terms">Terms</a>
+        <a href="/privacy" data-i18n="footer_privacy">Privacy</a>
+        <a href="/mentions-legales" data-i18n="footer_legal">Legal notice</a>
+      </nav>
+      <p class="footer-copy" data-i18n="footer_rights">© 2NIGHT. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/split-type@0.3.4/umd/index.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="/js/translations.js?v=20260616b"></script>
+  <script type="module" src="/v3/js/main.js?v=20260616b"></script>
+  <script src="/blog/blog-i18n.js?v=20260616b"></script>
+  <script src="/blog/blog.js?v=20260616b"></script>
+</body>
+</html>

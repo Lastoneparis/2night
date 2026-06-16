@@ -1,0 +1,7 @@
+# 2night.co — open to all engines (Google, Bing, Brave, DuckDuckGo…)
+# /v3/ holds the homepage CSS/JS — must stay crawlable for rendering.
+User-agent: *
+Allow: /
+Disallow: /classic.html
+
+Sitemap: https://2night.co/sitemap.xml

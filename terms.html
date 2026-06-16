@@ -4,103 +4,143 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terms — 2NIGHT</title>
-  <meta name="description" content="2NIGHT Terms of Service." />
+  <meta name="description" content="The 2NIGHT Terms of Service — eligibility, acceptable use, meeting people, Silver, Gold and Platinum Black memberships, payments, content and your responsibilities." />
   <meta name="theme-color" content="#0D0D0D" />
+  <link rel="canonical" href="https://2night.co/terms" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="2NIGHT" />
+  <meta property="og:url" content="https://2night.co/terms" />
+  <meta property="og:title" content="Terms — 2NIGHT" />
+  <meta property="og:description" content="The 2NIGHT Terms of Service — eligibility, acceptable use, memberships, payments and your responsibilities." />
+  <meta property="og:image" content="https://2night.co/assets/og-card.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Terms — 2NIGHT" />
+  <meta name="twitter:description" content="The 2NIGHT Terms of Service — eligibility, acceptable use, memberships, payments and your responsibilities." />
+  <meta name="twitter:image" content="https://2night.co/assets/og-card.png" />
+
   <link rel="icon" type="image/png" href="assets/icon.png" />
   <link rel="apple-touch-icon" href="assets/icon.png" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="/v3/css/styles.css?v=20260616b" />
   <script>document.documentElement.classList.remove("no-js");</script>
-  <script src="js/translations.js" defer></script>
-  <script src="js/main.js" defer></script>
+  <script type="importmap">
+  { "imports": { "three": "https://unpkg.com/three@0.160.1/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.1/examples/jsm/" } }
+  </script>
 </head>
 <body>
 
+  <div class="city-poster" aria-hidden="true"></div>
+  <canvas id="gl" class="gl-canvas" aria-hidden="true"></canvas>
   <div class="grain" aria-hidden="true"></div>
-  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
   <div class="cursor-ring" aria-hidden="true"></div>
   <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="transition" aria-hidden="true"><div class="transition-strip"></div><div class="transition-strip"></div><div class="transition-strip"></div><div class="transition-strip"></div><div class="transition-strip"></div></div>
 
-  <header class="nav scrolled" id="nav">
-    <div class="container nav-inner">
-      <a class="brand" href="index.html" aria-label="2NIGHT home">
-        <img src="assets/icon.png" alt="2NIGHT" />
-        <span class="brand-name">2NIGHT</span>
-      </a>
-      <div class="nav-right">
-        <div class="lang" aria-label="Language selector">
-          <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-            </svg>
-            <span class="lang-current">EN</span>
-            <svg class="lang-caret" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="lang-menu" role="menu"></div>
-        </div>
-        <a class="btn btn-gold btn-pill btn-magnetic" href="index.html#download" data-i18n="nav_download"><span>Download</span></a>
-        <button class="nav-toggle" type="button" aria-label="Menu"><span></span></button>
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/" aria-label="2NIGHT home"><img src="/assets/icon.png" alt="" /><span class="brand-name">2NIGHT</span></a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/about" data-i18n="nav_about">About</a>
+        <a href="/safety" data-i18n="nav_safety">Safety</a>
+        <a href="/support" data-i18n="nav_support">Support</a>
+        <a href="/support#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
+      <div class="lang" aria-label="Language selector">
+        <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span class="lang-current">EN</span>
+          <svg class="lang-caret" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="lang-menu" role="menu"></div>
       </div>
+      <a class="btn btn-gold magnetic" href="/#download" data-i18n="nav_download"><span class="magnetic-inner">Download</span></a>
     </div>
   </header>
 
   <main>
     <section class="legal">
       <div class="container">
-        <h1>Terms of Service</h1>
-        <p class="updated">Last updated: <span data-year>2026</span></p>
+        <h1 class="page-title">Terms of Service</h1>
+        <p class="updated">Last updated: 15 June 2026</p>
 
-        <p>Welcome to 2NIGHT. By creating an account or using the app, you agree to these Terms. Please read them carefully.</p>
+        <p>Welcome to 2NIGHT. These Terms of Service ("Terms") are a binding agreement between you and the operator of 2NIGHT ("2NIGHT", "we", "us"). By creating an account or using the app or this website, you agree to these Terms. Please read them carefully — they include important limitations of our liability and a release relating to meeting other members in person.</p>
 
-        <h2>Eligibility</h2>
-        <p>You must be of legal age in your jurisdiction and able to enter into a binding agreement to use 2NIGHT. You are responsible for keeping your account credentials secure.</p>
+        <h2>Eligibility — adults only (18+)</h2>
+        <p>2NIGHT is strictly for adults. <strong>You must be at least 18 years old</strong> (or older, if the age of majority where you live is higher) to create an account or use 2NIGHT. By using 2NIGHT you represent and warrant that you are 18 or older, that you are not required to register as a sex offender with any government entity, and that you have the legal capacity to enter into this agreement. We may suspend or terminate your account immediately if we believe you are under 18 or have misrepresented your eligibility.</p>
 
-        <h2>Acceptable use</h2>
-        <p>Be real and be respectful. You agree not to harass, impersonate, spam, or post unlawful, harmful, or deceptive content. We may suspend or terminate accounts that violate these Terms or put others at risk.</p>
+        <h2>Your account</h2>
+        <p>You are responsible for the information you provide, for keeping your account credentials secure, and for all activity that happens under your account. Tell us promptly at <a href="mailto:support@2night.co">support@2night.co</a> if you suspect any unauthorised use.</p>
 
-        <h2>Meeting people</h2>
-        <p>2NIGHT helps you discover people and make plans, but we do not conduct background checks. You are solely responsible for your interactions. Meet in public, tell a friend your plans, and use good judgment when meeting anyone in person.</p>
+        <h2>Acceptable use and prohibited conduct</h2>
+        <p>Be real and be respectful. You agree not to, and not to attempt to: harass, threaten, stalk, defame, or impersonate anyone; post or share unlawful, hateful, or sexually exploitative content; use 2NIGHT for any commercial, escort, prostitution, solicitation, or fundraising purpose; request, send, or solicit money, gift cards, crypto, or financial information from other members; share another person's private information without consent ("doxxing"); record, photograph, or share images of another member without their consent; promote violence, weapons, illegal drugs, or self-harm; use bots, scrapers, or automated means; create accounts for anyone under 18; or do anything that endangers the safety of another member. We may remove content and suspend or permanently terminate any account, with or without notice, for any conduct we determine, in our sole discretion, violates these Terms or puts others at risk.</p>
 
-        <h2>Memberships and payments</h2>
-        <p>2NIGHT offers Silver (free), Gold, and Platinum Black tiers. Paid memberships are billed through your app store and renew automatically until cancelled. You can manage or cancel a subscription in your app store account settings. Except where required by law, payments are non-refundable.</p>
+        <h2>Meeting people — assumption of risk; no background or identity checks</h2>
+        <p>2NIGHT helps you discover people and make plans, but <strong>we do not conduct criminal background checks, identity verification, or any screening of members</strong> unless explicitly and separately stated for a specific feature, and any "verified" badge confirms only limited self-submitted information — it is not a safety guarantee. <strong>You are solely responsible for your interactions with other members, online and in person.</strong> Meeting strangers carries inherent risks. <strong>You voluntarily assume all risks</strong> associated with communicating with and meeting other members, including the risk of physical harm, and you agree to take reasonable safety precautions (meet in public, tell a friend your plans, arrange your own transport, and use good judgment). To the fullest extent permitted by law, <strong>you release 2NIGHT and its operators, owners, employees and agents from any and all claims, demands, damages and liabilities of every kind arising out of or in any way connected with any interaction with, or conduct of, other members, whether online or in person.</strong> If you are a California resident, you waive California Civil Code §1542, which states: "A general release does not extend to claims that the creditor or releasing party does not know or suspect to exist in his or her favor at the time of executing the release and that, if known by him or her, would have materially affected his or her settlement with the debtor or released party."</p>
 
-        <h2>Content</h2>
-        <p>You retain rights to the content you create. By posting, you grant us a limited licence to host and display that content to operate the service. You are responsible for the content you share.</p>
+        <h2>Memberships, billing and auto-renewal</h2>
+        <p>2NIGHT offers Silver (free), Gold (USD 12.99 / month) and Platinum Black (USD 29.99 / month) tiers; prices may vary by region and over time and are shown in the app before purchase. <strong>Paid memberships are sold through and billed by the Apple App Store and renew automatically each period until cancelled.</strong> Your account will be charged for renewal within 24 hours prior to the end of the current period, at the then-current price, unless you cancel at least 24 hours before the period ends. <strong>You manage and cancel subscriptions in your App Store account settings; deleting the app does not cancel a subscription.</strong> You keep your benefits until the end of the current billing period. <strong>All payments are processed by Apple, and refunds, where available, are handled by Apple under its terms — we do not control and cannot issue App Store refunds.</strong> Except where required by law (including mandatory EU consumer-withdrawal rights), payments are non-refundable.</p>
 
-        <h2>Disclaimers</h2>
-        <p>2NIGHT is provided “as is” without warranties of any kind. To the maximum extent permitted by law, we are not liable for indirect or consequential damages arising from your use of the app or your interactions with other members.</p>
+        <h2>Your content</h2>
+        <p>You retain ownership of the content you create. By posting, uploading, or sharing content on 2NIGHT, you grant us a worldwide, non-exclusive, royalty-free, sublicensable and transferable licence to host, store, reproduce, adapt, and display that content <strong>solely as needed to operate, secure, promote and improve the service</strong>, for as long as you keep the content on 2NIGHT and for a reasonable period afterward for backup and legal purposes. You represent and warrant that you own or have all rights to the content you share, that it does not infringe anyone's rights, and that it complies with these Terms. Any feedback or suggestions you give us may be used by us without restriction or obligation to you.</p>
+
+        <h2>Disclaimer of warranties</h2>
+        <p>2NIGHT is provided <strong>"AS IS" and "AS AVAILABLE", without warranties of any kind</strong>, whether express, implied or statutory. To the fullest extent permitted by law, we disclaim all implied warranties, including merchantability, fitness for a particular purpose, title and non-infringement, and we do not warrant that the service will be uninterrupted, secure, error-free, or that any member is who they claim to be. Some jurisdictions do not allow certain warranty exclusions, so some of the above may not apply to you, and nothing here limits mandatory consumer rights you may have under EU or other applicable law.</p>
+
+        <h2>Limitation of liability</h2>
+        <p>To the fullest extent permitted by law, <strong>in no event will 2NIGHT or its operators, owners, employees or agents be liable for any indirect, incidental, special, consequential, exemplary or punitive damages, or for any loss of profits, data or goodwill,</strong> arising out of or related to your use of (or inability to use) 2NIGHT or to any interaction with another member, whether based in contract, tort, negligence, strict liability or otherwise, even if we have been advised of the possibility of such damages. <strong>Our total aggregate liability for all claims relating to the service will not exceed the greater of (a) the total amount you paid us in the twelve (12) months before the event giving rise to the claim, or (b) EUR 100.</strong> Nothing in these Terms excludes or limits liability that cannot be excluded or limited under applicable law (including liability for death or personal injury caused by our negligence, fraud, or any other liability that may not be excluded under mandatory consumer law).</p>
+
+        <h2>Indemnification</h2>
+        <p>You agree to indemnify, defend and hold harmless 2NIGHT and its operators, owners, employees and agents from and against any claims, liabilities, damages, losses and expenses, including reasonable legal fees, arising out of or in any way connected with: (a) your use of 2NIGHT; (b) your content; (c) your interactions with or conduct toward any other member, online or in person; (d) your breach of these Terms; or (e) your violation of any law or the rights of any third party.</p>
+
+        <h2>Apple App Store terms</h2>
+        <p>If you download 2NIGHT from the Apple App Store, the following also applies: these Terms are between you and the operator of 2NIGHT only, not Apple, and <strong>Apple is not responsible for the app or its content.</strong> Apple has no obligation to provide any maintenance or support for the app. Apple is not responsible for any product warranties, whether express or implied; in the event of any failure of the app to conform to any applicable warranty, you may notify Apple and Apple will refund the purchase price (if any), and to the maximum extent permitted by law Apple has no other warranty obligation. Apple is not responsible for addressing any claims relating to the app, including product-liability, legal/regulatory or intellectual-property claims. You represent that you are not located in a country subject to a U.S. Government embargo or designated as "terrorist-supporting", and are not on any U.S. Government restricted-parties list. <strong>Apple and its subsidiaries are third-party beneficiaries of these Terms and may enforce them against you.</strong> Your use of the app must also comply with the Apple Media Services Terms and Apple's standard Licensed Application End User License Agreement.</p>
+
+        <h2>Termination</h2>
+        <p>You may stop using 2NIGHT and delete your account at any time. We may suspend or terminate your account or access at any time, with or without notice, if you violate these Terms, create risk or legal exposure for us or others, or for any other reason permitted by law. Sections that by their nature should survive termination — including Your content, Meeting people, Disclaimer of warranties, Limitation of liability, Indemnification and Governing law — survive.</p>
+
+        <h2>Governing law and disputes</h2>
+        <p>These Terms are governed by the laws of <strong>France</strong>, without regard to conflict-of-laws rules. The competent courts of France have exclusive jurisdiction over any dispute, <strong>except that, if you are a consumer, you may also bring proceedings — and may be sued — in the courts of your country of residence within the EU, and you keep the benefit of any mandatory consumer-protection rules of that country.</strong> EU consumers may also use the European Commission's Online Dispute Resolution platform at <a href="https://ec.europa.eu/consumers/odr" rel="noopener" target="_blank">ec.europa.eu/consumers/odr</a>.</p>
 
         <h2>Changes</h2>
-        <p>We may update these Terms from time to time. We will post the updated version here and, where appropriate, notify you in the app. Continued use after changes means you accept the updated Terms.</p>
+        <p>We may update these Terms from time to time. We will post the updated version here with a new "Last updated" date and, for material changes, notify you in the app or by email before they take effect. Continued use after changes take effect means you accept the updated Terms.</p>
+
+        <h2>General</h2>
+        <p>If any provision of these Terms is found unenforceable, the remaining provisions stay in effect. These Terms, together with our <a href="/privacy">Privacy Policy</a>, are the entire agreement between you and us regarding 2NIGHT. Our failure to enforce any provision is not a waiver. You may not assign these Terms; we may assign them in connection with a merger, acquisition or sale of assets.</p>
 
         <h2>Contact</h2>
-        <p>Questions about these Terms? Reach us at <a href="mailto:hello@2night.app">hello@2night.app</a>.</p>
+        <p>Questions about these Terms? Reach us at <a href="mailto:support@2night.co">support@2night.co</a>.</p>
 
-        <p style="margin-top:48px"><a href="index.html">&larr; Back to home</a></p>
+        <p style="margin-top:48px"><a href="/">&larr; Back to home</a></p>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a class="brand" href="index.html" aria-label="2NIGHT home">
-          <img src="assets/icon.png" alt="2NIGHT" />
-          <span class="brand-name">2NIGHT</span>
-        </a>
-        <p data-i18n="footer_tagline">Who’s out? Who’s in? 2Night.</p>
-      </div>
-      <nav class="footer-links" aria-label="Footer">
-        <a href="about.html" data-i18n="footer_about">About</a>
-        <a href="safety.html" data-i18n="footer_safety">Safety</a>
-        <a href="support.html" data-i18n="footer_support">Support</a>
-        <a href="support.html#contact" data-i18n="footer_contact">Contact</a>
-        <a href="terms.html" data-i18n="footer_terms">Terms</a>
-        <a href="privacy.html" data-i18n="footer_privacy">Privacy</a>
-        <span class="footer-copy" data-i18n="footer_rights">© 2NIGHT. All rights reserved.</span>
+    <div class="footer-inner">
+      <a class="brand" href="/"><img src="/assets/icon.png" alt="" /><span class="brand-name">2NIGHT</span></a>
+      <nav class="footer-links">
+        <a class="footer-login" href="/login" data-i18n-auth="auth_login">Log in</a>
+        <a href="/about" data-i18n="footer_about">About</a>
+        <a href="/blog/">Blog</a>
+        <a href="/safety" data-i18n="footer_safety">Safety</a>
+        <a href="/support" data-i18n="footer_support">Support</a>
+        <a href="/terms" data-i18n="footer_terms">Terms</a>
+        <a href="/privacy" data-i18n="footer_privacy">Privacy</a>
+        <a href="/mentions-legales" data-i18n="footer_legal">Legal notice</a>
       </nav>
+      <p class="footer-copy" data-i18n="footer_rights">© 2026 2NIGHT. All rights reserved.</p>
     </div>
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/split-type@0.3.4/umd/index.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="/js/translations.js?v=20260616b"></script>
+  <script type="module" src="/v3/js/main.js?v=20260616b"></script>
 
 </body>
 </html>

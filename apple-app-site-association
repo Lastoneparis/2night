@@ -1,0 +1,30 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "X3T3KRUQU8.com.twonightapp.ios",
+        "appIDs": ["X3T3KRUQU8.com.twonightapp.ios"],
+        "paths": [
+          "/app",
+          "/app/*",
+          "/open",
+          "/open/*",
+          "/auth/callback",
+          "/auth/callback/*"
+        ],
+        "components": [
+          { "/": "/app" },
+          { "/": "/app/*" },
+          { "/": "/open" },
+          { "/": "/open/*" },
+          { "/": "/auth/callback" },
+          { "/": "/auth/callback/*" }
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": ["X3T3KRUQU8.com.twonightapp.ios"]
+  }
+}

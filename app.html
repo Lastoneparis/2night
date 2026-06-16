@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Open 2NIGHT</title>
+  <meta name="description" content="Opening the 2NIGHT app — tonight, not tomorrow." />
+  <meta name="theme-color" content="#050505" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="https://2night.co/app" />
+  <link rel="icon" type="image/png" href="/assets/icon.png" />
+  <!-- Smart App Banner: surfaces "OPEN/GET" chip in Safari. Replace id once live. -->
+  <meta name="apple-itunes-app" content="app-argument=https://2night.co/app" />
+  <style>
+    :root {
+      --black: #050505;
+      --panel: #0d0d0f;
+      --line: rgba(255, 255, 255, .08);
+      --text: #f4f1ea;
+      --muted: #9b968c;
+      --gold: #d8b15a;
+      --gold-2: #f0d692;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      background:
+        radial-gradient(1200px 600px at 50% -10%, rgba(216, 177, 90, .12), transparent 60%),
+        var(--black);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      display: flex; flex-direction: column;
+      min-height: 100%;
+    }
+    .wrap {
+      flex: 1;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center;
+      padding: 32px 22px 56px;
+      gap: 22px;
+    }
+    .logo {
+      width: 78px; height: 78px; border-radius: 20px;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, .6), 0 0 0 1px var(--line);
+    }
+    h1 {
+      font-size: clamp(26px, 7vw, 40px);
+      font-weight: 700; letter-spacing: -.02em; line-height: 1.05;
+    }
+    h1 .gold {
+      background: linear-gradient(120deg, var(--gold), var(--gold-2));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    p.lead { color: var(--muted); font-size: clamp(15px, 4vw, 17px); max-width: 30ch; }
+    .card {
+      width: 100%; max-width: 380px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 22px;
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      width: 100%;
+      padding: 15px 18px; border-radius: 14px;
+      font-size: 16px; font-weight: 650; letter-spacing: -.01em;
+      text-decoration: none; border: 1px solid transparent; cursor: pointer;
+      transition: transform .12s ease, opacity .12s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .btn:active { transform: scale(.985); }
+    .btn-gold { background: linear-gradient(120deg, var(--gold), var(--gold-2)); color: #1a1206; }
+    .btn-ghost { background: transparent; color: var(--text); border-color: var(--line); }
+    .btn[disabled] { opacity: .55; pointer-events: none; }
+    .stores { display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 380px; }
+    .stores a { font-size: 14px; }
+    .status {
+      min-height: 20px; font-size: 13.5px; color: var(--muted);
+    }
+    .status.ok { color: var(--gold-2); }
+    .spinner {
+      width: 16px; height: 16px; border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, .25); border-top-color: var(--gold);
+      animation: spin .7s linear infinite; display: inline-block; vertical-align: -3px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) { .spinner { animation: none; } }
+    .soon { font-size: 12px; color: var(--muted); opacity: .8; }
+    footer {
+      text-align: center; padding: 20px; color: var(--muted); font-size: 12px;
+      border-top: 1px solid var(--line);
+    }
+    footer a { color: var(--muted); }
+    a { color: var(--gold-2); }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <img class="logo" src="/assets/icon.png" alt="2NIGHT" />
+    <h1><span data-i18n="app_open_h1a">Continue in</span> <span class="gold">2NIGHT</span></h1>
+    <p class="lead" data-i18n="app_open_lead">Tonight's already moving. We'll open the app and sign you in.</p>
+
+    <div class="card">
+      <button id="openBtn" class="btn btn-gold" type="button" data-i18n="app_open_cta">Open 2NIGHT</button>
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+    </div>
+
+    <div class="stores">
+      <a id="appStore" class="btn btn-ghost" href="https://apps.apple.com/app/2night/id0000000000" data-i18n="app_open_appstore">Get it on the App Store</a>
+      <p class="soon" data-i18n="app_open_android">Android — coming soon.</p>
+    </div>
+  </main>
+
+  <footer>
+    <a href="/" data-i18n="app_open_back">← Back to 2night.co</a>
+  </footer>
+
+  <!-- Scoped i18n: this interstitial carries its own small dictionary so it
+       stays decoupled from the main site's translations.js. Falls back to EN. -->
+  <script>
+    (function () {
+      var I18N = {
+        en: {
+          app_open_h1a: "Continue in", app_open_lead: "Tonight's already moving. We'll open the app and sign you in.",
+          app_open_cta: "Open 2NIGHT", app_open_appstore: "Get it on the App Store",
+          app_open_android: "Android — coming soon.", app_open_back: "← Back to 2night.co",
+          st_opening: "Opening the app…", st_emailed: "Check your email — we sent a secure link that opens 2NIGHT signed in.",
+          st_store: "Send to the App Store…", st_nosess: "Opening 2NIGHT — sign in inside the app.",
+          st_default: "Tap Open 2NIGHT to continue."
+        },
+        fr: {
+          app_open_h1a: "Continuer dans", app_open_lead: "La soirée a déjà commencé. On ouvre l'app et on te connecte.",
+          app_open_cta: "Ouvrir 2NIGHT", app_open_appstore: "Télécharger sur l'App Store",
+          app_open_android: "Android — bientôt disponible.", app_open_back: "← Retour sur 2night.co",
+          st_opening: "Ouverture de l'app…", st_emailed: "Vérifie tes e-mails — on t'a envoyé un lien sécurisé qui ouvre 2NIGHT déjà connecté.",
+          st_store: "Redirection vers l'App Store…", st_nosess: "Ouverture de 2NIGHT — connecte-toi dans l'app.",
+          st_default: "Touche Ouvrir 2NIGHT pour continuer."
+        },
+        de: {
+          app_open_h1a: "Weiter in", app_open_lead: "Der Abend läuft schon. Wir öffnen die App und melden dich an.",
+          app_open_cta: "2NIGHT öffnen", app_open_appstore: "Im App Store laden",
+          app_open_android: "Android — bald verfügbar.", app_open_back: "← Zurück zu 2night.co",
+          st_opening: "App wird geöffnet…", st_emailed: "Prüfe deine E-Mails — wir haben dir einen sicheren Link geschickt, der 2NIGHT angemeldet öffnet.",
+          st_store: "Weiter zum App Store…", st_nosess: "2NIGHT wird geöffnet — melde dich in der App an.",
+          st_default: "Tippe auf 2NIGHT öffnen, um fortzufahren."
+        },
+        es: {
+          app_open_h1a: "Continúa en", app_open_lead: "La noche ya se mueve. Abrimos la app y te conectamos.",
+          app_open_cta: "Abrir 2NIGHT", app_open_appstore: "Conseguir en el App Store",
+          app_open_android: "Android — muy pronto.", app_open_back: "← Volver a 2night.co",
+          st_opening: "Abriendo la app…", st_emailed: "Revisa tu correo — te enviamos un enlace seguro que abre 2NIGHT con la sesión iniciada.",
+          st_store: "Redirigiendo al App Store…", st_nosess: "Abriendo 2NIGHT — inicia sesión en la app.",
+          st_default: "Toca Abrir 2NIGHT para continuar."
+        }
+      };
+      var lang = "en";
+      try {
+        var q = new URLSearchParams(location.search).get("lang");
+        var ls = localStorage.getItem("tn_lang");
+        var nav = (navigator.language || "en").slice(0, 2).toLowerCase();
+        lang = [q, ls, nav].find(function (l) { return l && I18N[l]; }) || "en";
+      } catch (e) {}
+      var dict = I18N[lang] || I18N.en;
+      function t(k) { return dict[k] || I18N.en[k] || k; }
+      document.documentElement.setAttribute("lang", lang);
+      document.querySelectorAll("[data-i18n]").forEach(function (el) {
+        var v = t(el.getAttribute("data-i18n")); if (v) el.textContent = v;
+      });
+      window.__TN_APP_T = t; // expose translator for the handoff status messages
+      window.__TN_APP_LANG = lang;
+    })();
+  </script>
+
+  <!-- Optional Supabase UMD: lets app.html read the web session directly so it
+       can mint a handoff code. If login/auth-web already created a client and
+       exposed it on window.TN_SUPABASE, that one is reused instead. -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="/js/app-handoff.js?v=20260616"></script>
+  <script>
+    (function () {
+      var t = window.__TN_APP_T || function (k) { return k; };
+      var statusEl = document.getElementById("status");
+      var btn = document.getElementById("openBtn");
+
+      function setStatus(state) {
+        statusEl.classList.remove("ok");
+        switch (state) {
+          case "opening":
+            statusEl.innerHTML = '<span class="spinner" aria-hidden="true"></span> ' + t("st_opening");
+            break;
+          case "emailed":
+            statusEl.textContent = t("st_emailed"); statusEl.classList.add("ok"); break;
+          case "store":
+            statusEl.textContent = t("st_store"); break;
+          case "no-session":
+            statusEl.textContent = t("st_nosess"); break;
+          default:
+            statusEl.textContent = t("st_default");
+        }
+      }
+
+      function go() {
+        if (!window.TwoNightHandoff) { setStatus("default"); return; }
+        setStatus("opening");
+        window.TwoNightHandoff.continueInApp({
+          onStatus: setStatus,
+          storeURL: document.getElementById("appStore").getAttribute("href")
+        });
+      }
+
+      btn.addEventListener("click", go);
+
+      // Auto-attempt once on load for iOS visitors (best handoff UX), but only
+      // from a same-tab navigation — never spam the store on desktop.
+      if (window.TwoNightHandoff && window.TwoNightHandoff.isiOS()) {
+        setTimeout(go, 250);
+      } else {
+        setStatus("default");
+      }
+    })();
+  </script>
+</body>
+</html>

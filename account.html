@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>My account — 2NIGHT</title>
+  <meta name="description" content="Manage your 2NIGHT account, membership and profile." />
+  <meta name="theme-color" content="#050505" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/png" href="/assets/icon.png" />
+  <link rel="apple-touch-icon" href="/assets/icon.png" />
+  <link rel="stylesheet" href="/v3/css/styles.css?v=20260616b" />
+  <link rel="stylesheet" href="/css/auth.css?v=20260616b" />
+  <script>document.documentElement.classList.remove("no-js");</script>
+</head>
+
+<body class="auth-body">
+  <div class="auth-grain" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/" aria-label="2NIGHT home"><img src="/assets/icon.png" alt="" /><span class="brand-name">2NIGHT</span></a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/about" data-i18n="nav_about">About</a>
+        <a href="/safety" data-i18n="nav_safety">Safety</a>
+        <a href="/support" data-i18n="nav_support">Support</a>
+        <a href="/support#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
+      <div class="lang" aria-label="Language selector">
+        <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span class="lang-current">EN</span>
+          <svg class="lang-caret" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="lang-menu" role="menu"></div>
+      </div>
+      <button class="btn btn-ghost magnetic" id="navSignOut" type="button"><span class="magnetic-inner" data-i18n-auth="account_signout">Sign out</span></button>
+    </div>
+  </header>
+
+  <!-- ============ MAIN ============ -->
+  <main class="auth-main">
+    <section class="account-shell" aria-labelledby="accTitle">
+
+      <!-- loading -->
+      <div class="account-loading" id="accLoading">
+        <span class="btn-spinner"></span>
+        <p data-i18n-auth="account_loading">Loading your account…</p>
+      </div>
+
+      <!-- content -->
+      <div id="accContent" class="is-hidden">
+        <div class="account-greeting">
+          <p class="auth-kicker" data-i18n-auth="account_kicker">Your account</p>
+          <h1 class="auth-title" id="accTitle"><span id="greeting" data-i18n-auth="account_hello_plain">Your profile</span></h1>
+        </div>
+
+        <div class="auth-error is-hidden" id="errorBox" role="alert"></div>
+        <div class="auth-success is-hidden" id="successBox" role="status"></div>
+
+        <!-- profile summary -->
+        <div class="profile-card">
+          <div class="profile-avatar" id="avatar">2N</div>
+          <div class="profile-id">
+            <div class="profile-name">
+              <span id="profileName">—</span>
+              <span class="tier-pill silver is-hidden" id="tierPill"></span>
+              <span class="verified-mark is-hidden" id="verifiedMark">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n-auth="account_verified">Verified</span>
+              </span>
+            </div>
+            <div class="profile-city" id="profileCity"></div>
+            <div class="status-line" id="statusLine"><span class="status-dot"></span><span id="statusText"></span></div>
+          </div>
+        </div>
+
+        <!-- details -->
+        <div class="detail-grid" id="detailGrid">
+          <div class="detail-cell">
+            <div class="detail-k" data-i18n-auth="account_field_name">First name</div>
+            <div class="detail-v" id="dName">—</div>
+          </div>
+          <div class="detail-cell">
+            <div class="detail-k" data-i18n-auth="account_field_city">City</div>
+            <div class="detail-v" id="dCity">—</div>
+          </div>
+          <div class="detail-cell">
+            <div class="detail-k" data-i18n-auth="account_field_tier">Membership</div>
+            <div class="detail-v" id="dTier">—</div>
+          </div>
+          <div class="detail-cell">
+            <div class="detail-k" data-i18n-auth="account_field_photos">Photos</div>
+            <div class="detail-v" id="dPhotos">—</div>
+          </div>
+        </div>
+
+        <p class="auth-note is-hidden" id="noProfileNote" data-i18n-auth="account_no_profile">We couldn't find a profile yet. Open the app to finish setting up.</p>
+
+        <!-- actions -->
+        <p class="actions-title" data-i18n-auth="account_actions">Account</p>
+
+        <a class="action-row primary" id="continueApp" href="https://2night.co/app">
+          <span class="action-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12" y2="18"/></svg></span>
+          <span class="action-txt"><strong data-i18n-auth="account_continue_app">Continue in the app</strong><span data-i18n-auth="account_continue_app_sub">Pick up where you left off on your iPhone.</span></span>
+          <span class="action-chev"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </a>
+
+        <a class="action-row" id="manageSub" href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">
+          <span class="action-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></span>
+          <span class="action-txt"><strong data-i18n-auth="account_manage_sub">Manage subscription</strong><span data-i18n-auth="account_manage_sub_sub">Billed by Apple. Cancel anytime in the App Store.</span></span>
+          <span class="action-chev"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </a>
+
+        <button class="action-row" id="signOutBtn" type="button">
+          <span class="action-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg></span>
+          <span class="action-txt"><strong data-i18n-auth="account_signout">Sign out</strong><span data-i18n-auth="account_signout_sub">Sign out of this browser.</span></span>
+          <span class="action-chev"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </button>
+
+        <button class="action-row danger" id="deleteBtn" type="button">
+          <span class="action-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg></span>
+          <span class="action-txt"><strong data-i18n-auth="account_delete">Delete account</strong><span data-i18n-auth="account_delete_sub">Permanently delete your account and data.</span></span>
+          <span class="action-chev"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ DELETE MODAL ============ -->
+  <div class="modal-scrim" id="deleteModal" role="dialog" aria-modal="true" aria-labelledby="delTitle">
+    <div class="modal-box">
+      <h3 id="delTitle" data-i18n-auth="delete_confirm_title">Delete your account?</h3>
+      <p data-i18n-auth="delete_confirm_body">This permanently deletes your 2NIGHT account, profile, matches, messages and plans. This cannot be undone.</p>
+      <div class="auth-field">
+        <label class="auth-label" for="delConfirmInput" id="delHint" data-i18n-auth="delete_confirm_hint">Type DELETE to confirm.</label>
+        <input class="auth-input" id="delConfirmInput" type="text" autocomplete="off" autocapitalize="characters" spellcheck="false" />
+      </div>
+      <div class="auth-error is-hidden" id="delError" role="alert"></div>
+      <div class="modal-actions">
+        <button class="auth-btn auth-btn-ghost" id="delCancel" type="button" data-i18n-auth="delete_cancel">Cancel</button>
+        <button class="auth-btn auth-btn-danger" id="delConfirm" type="button" disabled>
+          <span class="btn-label" data-i18n-auth="delete_confirm_btn">Delete forever</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <a class="brand" href="/"><img src="/assets/icon.png" alt="" /><span class="brand-name">2NIGHT</span></a>
+      <nav class="footer-links">
+        <a href="/about" data-i18n="footer_about">About</a>
+        <a href="/blog/">Blog</a>
+        <a href="/safety" data-i18n="footer_safety">Safety</a>
+        <a href="/support" data-i18n="footer_support">Support</a>
+        <a href="/terms" data-i18n="footer_terms">Terms</a>
+        <a href="/privacy" data-i18n="footer_privacy">Privacy</a>
+        <a href="/mentions-legales" data-i18n="footer_legal">Legal notice</a>
+      </nav>
+      <p class="footer-copy" data-i18n="footer_rights">© 2NIGHT. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ============ LIBS + APP ============ -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+  <script src="/js/translations.js?v=20260616b"></script>
+  <script src="/js/auth-i18n.js?v=20260616b"></script>
+  <script src="/js/auth-web.js?v=20260616b"></script>
+  <script src="/js/app-handoff.js?v=20260616b" onerror="this.dataset.missing=1"></script>
+
+  <script>
+  (function () {
+    "use strict";
+
+    var SITE = window.TN_I18N || { en: {} };
+    var AUTH = window.TN_AUTH_I18N || { en: {} };
+    var RTL = { ar: 1, he: 1, fa: 1, ur: 1 };
+    var DEFAULT = "en";
+
+    function langName(code) { return (SITE[code] && SITE[code].lang_name) || code.toUpperCase(); }
+    function availableLangs() { return Object.keys(SITE).length ? Object.keys(SITE) : Object.keys(AUTH); }
+    function getStoredLang() {
+      var p = new URLSearchParams(location.search).get("lang");
+      if (p && (SITE[p] || AUTH[p])) return p;
+      try { var s = localStorage.getItem("tn_lang"); if (s && (SITE[s] || AUTH[s])) return s; } catch (e) {}
+      var nav = (navigator.language || "en");
+      if (SITE[nav] || AUTH[nav]) return nav;
+      var two = nav.slice(0, 2).toLowerCase();
+      if (SITE[two] || AUTH[two]) return two;
+      return DEFAULT;
+    }
+    function tSite(key, lang) {
+      var L = SITE[lang] || {};
+      if (L[key] != null) return L[key];
+      return (SITE[DEFAULT] && SITE[DEFAULT][key] != null) ? SITE[DEFAULT][key] : null;
+    }
+    function tAuth(key, lang) {
+      var L = AUTH[lang] || {};
+      if (L[key] != null) return L[key];
+      return (AUTH[DEFAULT] && AUTH[DEFAULT][key] != null) ? AUTH[DEFAULT][key] : key;
+    }
+    window.__lang = getStoredLang();
+    function T(key) { return tAuth(key, window.__lang); }
+    window.__T = T;
+
+    function applyLang(lang) {
+      window.__lang = lang;
+      document.documentElement.setAttribute("lang", lang);
+      document.documentElement.setAttribute("dir", RTL[lang] ? "rtl" : "ltr");
+      document.querySelectorAll("[data-i18n]").forEach(function (el) {
+        var v = tSite(el.getAttribute("data-i18n"), lang); if (v != null) el.textContent = v;
+      });
+      document.querySelectorAll("[data-i18n-auth]").forEach(function (el) {
+        el.textContent = tAuth(el.getAttribute("data-i18n-auth"), lang);
+      });
+      var titleEl = document.querySelector("title");
+      if (titleEl) titleEl.textContent = tAuth("account_meta_title", lang);
+      try { localStorage.setItem("tn_lang", lang); } catch (e) {}
+      updateLangUI(lang);
+      if (window.__renderProfile) window.__renderProfile();
+    }
+
+    var langEl = document.querySelector(".lang"),
+        langBtn = document.querySelector(".lang-btn"),
+        langMenu = document.querySelector(".lang-menu"),
+        langCurrent = document.querySelector(".lang-current");
+    function buildMenu() {
+      if (!langMenu) return;
+      var codes = availableLangs().slice().sort(function (a, b) {
+        if (a === "en") return -1; if (b === "en") return 1;
+        return langName(a).localeCompare(langName(b));
+      });
+      var tick = '<svg class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+      langMenu.innerHTML = codes.map(function (c) {
+        return '<button type="button" data-lang="' + c + '"><span>' + langName(c) + "</span>" + tick + "</button>";
+      }).join("");
+      langMenu.querySelectorAll("button").forEach(function (b) {
+        b.addEventListener("click", function () { applyLang(b.getAttribute("data-lang")); closeLang(); });
+      });
+    }
+    function closeLang() { if (langEl) langEl.classList.remove("open"); if (langBtn) langBtn.setAttribute("aria-expanded", "false"); }
+    function updateLangUI(lang) {
+      if (langCurrent) langCurrent.textContent = lang.toUpperCase();
+      if (langMenu) langMenu.querySelectorAll("button").forEach(function (b) {
+        b.classList.toggle("active", b.getAttribute("data-lang") === lang);
+      });
+    }
+    if (langBtn) langBtn.addEventListener("click", function (e) {
+      e.stopPropagation(); langEl.classList.toggle("open");
+      langBtn.setAttribute("aria-expanded", langEl.classList.contains("open") ? "true" : "false");
+    });
+    document.addEventListener("click", function (e) { if (langEl && !langEl.contains(e.target)) closeLang(); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLang(); });
+    window.addEventListener("scroll", function () {
+      document.getElementById("nav").classList.toggle("is-scrolled", window.scrollY > 24);
+    });
+    buildMenu();
+    applyLang(window.__lang);
+
+    /* ====================================================================
+     * ACCOUNT LOGIC
+     * ================================================================== */
+    var Auth = window.TNAuth;
+    var profile = null;
+    var hasProfileRow = false;
+
+    var el = {
+      loading: document.getElementById("accLoading"),
+      content: document.getElementById("accContent"),
+      greeting: document.getElementById("greeting"),
+      avatar: document.getElementById("avatar"),
+      profileName: document.getElementById("profileName"),
+      profileCity: document.getElementById("profileCity"),
+      tierPill: document.getElementById("tierPill"),
+      verifiedMark: document.getElementById("verifiedMark"),
+      statusLine: document.getElementById("statusLine"),
+      statusText: document.getElementById("statusText"),
+      dName: document.getElementById("dName"),
+      dCity: document.getElementById("dCity"),
+      dTier: document.getElementById("dTier"),
+      dPhotos: document.getElementById("dPhotos"),
+      noProfileNote: document.getElementById("noProfileNote"),
+      errorBox: document.getElementById("errorBox"),
+      successBox: document.getElementById("successBox"),
+      signOutBtn: document.getElementById("signOutBtn"),
+      navSignOut: document.getElementById("navSignOut"),
+      deleteBtn: document.getElementById("deleteBtn"),
+      continueApp: document.getElementById("continueApp"),
+      modal: document.getElementById("deleteModal"),
+      delInput: document.getElementById("delConfirmInput"),
+      delConfirm: document.getElementById("delConfirm"),
+      delCancel: document.getElementById("delCancel"),
+      delError: document.getElementById("delError")
+    };
+
+    function tierName(tier) {
+      if (tier === "gold") return T("tier_gold");
+      if (tier === "platinum") return T("tier_platinum");
+      return T("tier_silver");
+    }
+    function fmtTime(iso) {
+      try {
+        var d = new Date(iso);
+        return d.toLocaleTimeString(window.__lang, { hour: "2-digit", minute: "2-digit" });
+      } catch (e) { return ""; }
+    }
+
+    function renderProfile() {
+      if (!profile) return;
+      var name = (profile.first_name || "").trim();
+      var city = (profile.city || "").trim();
+      var tier = (profile.tier || "silver");
+
+      // greeting
+      el.greeting.textContent = name ? T("account_hello").replace("{name}", name) : T("account_hello_plain");
+      // avatar — first photo if any, else initial
+      var photos = Array.isArray(profile.photos) ? profile.photos.filter(Boolean) : [];
+      if (photos.length && /^https?:\/\//.test(photos[0])) {
+        el.avatar.innerHTML = '<img src="' + photos[0].replace(/"/g, "&quot;") + '" alt="" referrerpolicy="no-referrer" />';
+      } else {
+        el.avatar.textContent = (name ? name.charAt(0) : "2").toUpperCase();
+      }
+      el.profileName.textContent = name || "—";
+      el.profileCity.textContent = city || "";
+
+      // tier pill
+      el.tierPill.textContent = tierName(tier);
+      el.tierPill.className = "tier-pill " + (tier === "gold" ? "gold" : tier === "platinum" ? "platinum" : "silver");
+      el.tierPill.classList.remove("is-hidden");
+
+      // verified
+      el.verifiedMark.classList.toggle("is-hidden", !profile.is_verified);
+
+      // status
+      var until = profile.available_until ? new Date(profile.available_until) : null;
+      var live = until && until.getTime() > Date.now();
+      el.statusLine.classList.toggle("is-live", !!live);
+      if (live) el.statusText.textContent = T("account_status_until").replace("{time}", fmtTime(profile.available_until));
+      else el.statusText.textContent = T("account_status_offline");
+
+      // details
+      el.dName.textContent = name || "—";
+      el.dCity.textContent = city || "—";
+      el.dTier.textContent = tierName(tier);
+      el.dPhotos.textContent = T("account_photos_count").replace("{n}", String(photos.length));
+    }
+    window.__renderProfile = function () { if (hasProfileRow) renderProfile(); };
+
+    function showError(code) {
+      var map = { network: "err_network", no_client: "err_no_client" };
+      el.errorBox.textContent = T(map[code] || "err_generic");
+      el.errorBox.classList.remove("is-hidden");
+    }
+
+    function boot() {
+      if (!Auth || !Auth.ready) {
+        // Without a client we can't verify a session — send to login.
+        location.replace("/login.html");
+        return;
+      }
+      Auth.getSession().then(function (session) {
+        if (!session || !session.user) {
+          location.replace("/login.html");
+          return;
+        }
+        // Wire the App Store fallback for "Get the app".
+        Auth.fetchProfile(session.user.id).then(function (p) {
+          el.loading.classList.add("is-hidden");
+          el.content.classList.remove("is-hidden");
+          if (p) {
+            hasProfileRow = true;
+            profile = p;
+            renderProfile();
+          } else {
+            // Signed in, but no public.users row yet (e.g. brand-new web signup).
+            hasProfileRow = false;
+            el.greeting.textContent = T("account_hello_plain");
+            el.noProfileNote.classList.remove("is-hidden");
+            document.getElementById("detailGrid").classList.add("is-hidden");
+            el.statusLine.classList.add("is-hidden");
+          }
+        });
+      });
+    }
+
+    /* ----- sign out ----- */
+    function doSignOut(btn) {
+      if (btn) btn.disabled = true;
+      Auth.signOut().then(function () { location.replace("/login.html"); });
+    }
+    el.signOutBtn.addEventListener("click", function () { doSignOut(el.signOutBtn); });
+    el.navSignOut.addEventListener("click", function () { doSignOut(el.navSignOut); });
+
+    /* ----- continue in the app (delegate to app-handoff.js if present) ----- */
+    el.continueApp.addEventListener("click", function (e) {
+      // The sibling handoff module (another agent owns it) exposes
+      // window.TwoNightHandoff.continueInApp(): it mints a one-time handoff code
+      // from the live session and opens the universal link, falling back to the
+      // App Store. Prefer it when present.
+      if (window.TwoNightHandoff && typeof window.TwoNightHandoff.continueInApp === "function") {
+        e.preventDefault();
+        el.continueApp.classList.add("is-busy");
+        window.TwoNightHandoff.continueInApp({
+          storeURL: (window.TNAuth && window.TNAuth.APP_STORE_URL) || undefined,
+          onStatus: function () {}
+        });
+        return;
+      }
+      // Otherwise the href (https://2night.co/app universal link) handles it and
+      // should fall back to the App Store. No JS needed.
+    });
+
+    /* ----- delete account ----- */
+    el.deleteBtn.addEventListener("click", function () {
+      el.delError.classList.add("is-hidden");
+      el.delInput.value = "";
+      el.delConfirm.disabled = true;
+      el.modal.classList.add("open");
+      setTimeout(function () { el.delInput.focus(); }, 60);
+    });
+    el.delCancel.addEventListener("click", function () { el.modal.classList.remove("open"); });
+    el.modal.addEventListener("click", function (e) { if (e.target === el.modal) el.modal.classList.remove("open"); });
+    el.delInput.addEventListener("input", function () {
+      var word = T("delete_confirm_word");
+      el.delConfirm.disabled = el.delInput.value.trim().toUpperCase() !== String(word).toUpperCase();
+    });
+    el.delConfirm.addEventListener("click", function () {
+      var label = el.delConfirm.querySelector(".btn-label");
+      el.delConfirm.disabled = true;
+      el.delCancel.disabled = true;
+      el.delError.classList.add("is-hidden");
+      label.innerHTML = '<span class="btn-spinner"></span> ' + T("delete_working");
+      Auth.deleteAccount().then(function (res) {
+        if (!res.ok) {
+          el.delError.textContent = T("delete_error");
+          el.delError.classList.remove("is-hidden");
+          el.delConfirm.disabled = false;
+          el.delCancel.disabled = false;
+          label.textContent = T("delete_confirm_btn");
+          return;
+        }
+        // Clear local session, then bounce home with a confirmation.
+        Auth.signOut().then(function () {
+          el.modal.classList.remove("open");
+          el.content.innerHTML = '<div class="auth-success" style="display:block">' + T("delete_done") + '</div>';
+          setTimeout(function () { location.replace("/"); }, 2200);
+        });
+      });
+    });
+
+    boot();
+  })();
+  </script>
+</body>
+</html>

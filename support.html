@@ -2,189 +2,117 @@
 <html lang="en" dir="ltr" class="no-js">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Support — 2NIGHT</title>
-  <meta name="description" content="2NIGHT support and FAQ — how it works, membership tiers and pricing, choosing your radius, safety, account, subscriptions and privacy. Contact support@2night.co." />
-  <meta name="theme-color" content="#0D0D0D" />
-
-  <!-- Open Graph -->
+  <meta name="description" content="2NIGHT support — answers about the app, membership and safety, and a real human at the other end when you need one." />
+  <meta name="theme-color" content="#050505" />
+  <link rel="canonical" href="https://2night.co/support" />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="2NIGHT" />
+  <meta property="og:url" content="https://2night.co/support" />
   <meta property="og:title" content="Support — 2NIGHT" />
-  <meta property="og:description" content="Answers about 2NIGHT — how it works, tiers, your radius, safety, subscriptions and privacy." />
-  <meta property="og:image" content="assets/icon.png" />
+  <meta property="og:description" content="How can we help?" />
+  <meta property="og:image" content="https://2night.co/assets/og-card.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Support — 2NIGHT" />
-  <meta name="twitter:description" content="Answers about 2NIGHT — how it works, tiers, your radius, safety, subscriptions and privacy." />
-  <meta name="twitter:image" content="assets/icon.png" />
-
-  <link rel="icon" type="image/png" href="assets/icon.png" />
-  <link rel="apple-touch-icon" href="assets/icon.png" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="icon" type="image/png" href="/assets/icon.png" />
+  <link rel="stylesheet" href="/v3/css/styles.css?v=20260616b" />
   <script>document.documentElement.classList.remove("no-js");</script>
-  <script src="js/translations.js" defer></script>
-  <script src="js/main.js" defer></script>
+  <script type="importmap">
+  { "imports": { "three": "https://unpkg.com/three@0.160.1/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.1/examples/jsm/" } }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Is 2NIGHT free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Silver tier is free forever — go live, browse the Tonight Feed, match and chat. Gold and Platinum Black add more reach and features." } },
+      { "@type": "Question", "name": "Who can see that I'm out?", "acceptedAnswer": { "@type": "Answer", "text": "Only people inside the radius and audience you choose, and only while you're live. Go offline and you disappear." } },
+      { "@type": "Question", "name": "How does matching work on 2NIGHT?", "acceptedAnswer": { "@type": "Answer", "text": "Ping someone you'd like to meet. If they ping back, it's a match and a chat opens — so you can make a plan for tonight." } },
+      { "@type": "Question", "name": "How do memberships work?", "acceptedAnswer": { "@type": "Answer", "text": "Gold and Platinum Black are billed through the Apple App Store and renew automatically until cancelled. Manage or cancel anytime in your App Store settings." } },
+      { "@type": "Question", "name": "How do I delete my account or data?", "acceptedAnswer": { "@type": "Answer", "text": "You can export or delete your account and data anytime from Settings, or email support@2night.co and we'll take care of it." } }
+    ]
+  }
+  </script>
 </head>
 <body>
-
+  <div class="city-poster" aria-hidden="true"></div>
+  <canvas id="gl" class="gl-canvas" aria-hidden="true"></canvas>
   <div class="grain" aria-hidden="true"></div>
-  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
   <div class="cursor-ring" aria-hidden="true"></div>
   <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="transition" aria-hidden="true"><div class="transition-strip"></div><div class="transition-strip"></div><div class="transition-strip"></div><div class="transition-strip"></div><div class="transition-strip"></div></div>
 
-  <!-- ============================ NAV ============================ -->
-  <header class="nav scrolled" id="nav">
-    <div class="container nav-inner">
-      <a class="brand" href="index.html" aria-label="2NIGHT home">
-        <img src="assets/icon.png" alt="2NIGHT" />
-        <span class="brand-name">2NIGHT</span>
-      </a>
-      <div class="nav-right">
-        <nav class="nav-links" aria-label="Primary">
-          <a href="about.html" data-i18n="nav_about">About</a>
-          <a href="safety.html" data-i18n="nav_safety">Safety</a>
-          <a href="support.html" data-i18n="nav_support">Support</a>
-          <a href="#contact" data-i18n="nav_contact">Contact</a>
-        </nav>
-        <div class="lang" aria-label="Language selector">
-          <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-            </svg>
-            <span class="lang-current">EN</span>
-            <svg class="lang-caret" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="lang-menu" role="menu"></div>
-        </div>
-        <a class="btn btn-gold btn-pill btn-magnetic" href="index.html#download" data-i18n="nav_download"><span>Download</span></a>
-        <button class="nav-toggle" type="button" aria-label="Menu"><span></span></button>
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/" aria-label="2NIGHT home"><img src="/assets/icon.png" alt="" /><span class="brand-name">2NIGHT</span></a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/about" data-i18n="nav_about">About</a>
+        <a href="/safety" data-i18n="nav_safety">Safety</a>
+        <a href="/support" data-i18n="nav_support">Support</a>
+        <a href="/support#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
+      <div class="lang" aria-label="Language selector">
+        <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span class="lang-current">EN</span>
+          <svg class="lang-caret" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="lang-menu" role="menu"></div>
       </div>
+      <a class="btn btn-gold magnetic" href="/#download" data-i18n="nav_download"><span class="magnetic-inner">Download</span></a>
     </div>
   </header>
 
   <main>
-    <section class="page" id="support">
-      <div class="container">
+    <article class="page">
+      <p class="page-kicker" data-i18n="support_kicker">Support</p>
+      <h1 class="page-title gold-text" data-reveal data-i18n="support_title">How can we help?</h1>
+      <p class="page-lead" data-reveal data-i18n="support_lead">Everything you need to know about 2NIGHT — and a real human at the other end when you need one.</p>
 
-        <div class="page-hero">
-          <p class="kicker reveal" data-i18n="support_kicker">Support</p>
-          <h1 class="reveal" data-delay="80" data-i18n="support_title">How can we help?</h1>
-          <p class="lead reveal" data-delay="160" data-i18n="support_lead">Everything you need to know about 2NIGHT — and a real human at the other end when you need one.</p>
-        </div>
-
-        <div class="faq reveal">
-
-          <div class="faq-item">
-            <button class="faq-q" type="button" aria-expanded="false">
-              <span data-i18n="faq_q1">How does 2NIGHT work?</span>
-              <span class="faq-icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq-a"><div class="faq-a-inner"><p data-i18n="faq_a1">Set your status in one line — what you’re up for tonight. You go live, see who’s out near you in the Tonight Feed, ping the people you like, and match. From there you make a plan and meet — tonight, not tomorrow.</p></div></div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-q" type="button" aria-expanded="false">
-              <span data-i18n="faq_q2">What do the tiers cost?</span>
-              <span class="faq-icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq-a"><div class="faq-a-inner"><p data-i18n="faq_a2">Silver is free forever. Gold is $12.99 per month and unlocks unlimited pings, a 15 km radius, Travel Mode and a weekly Boost. Platinum Black is $29.99 per month and adds a 50 km radius, Frontline visibility, exclusive Black Events and a verified badge.</p></div></div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-q" type="button" aria-expanded="false">
-              <span data-i18n="faq_q3">How do I choose my radius?</span>
-              <span class="faq-icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq-a"><div class="faq-a-inner"><p data-i18n="faq_a3">2NIGHT shows you people within the distance you set — from your street to the whole city. Your tier sets how far the night can reach: Silver 5 km, Gold 15 km, Platinum Black 50 km. It works anywhere in the world, with the people near you wherever you are tonight.</p></div></div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-q" type="button" aria-expanded="false">
-              <span data-i18n="faq_q4">Is 2NIGHT safe?</span>
-              <span class="faq-icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq-a"><div class="faq-a-inner"><p data-i18n="faq_a4">You control when you’re live and what you share. Meet in public, tell a friend your plans, and use good judgement when meeting anyone new. You can block and report anyone in a tap, and our team reviews reports. We don’t run background checks, so your own judgement matters.</p></div></div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-q" type="button" aria-expanded="false">
-              <span data-i18n="faq_q5">How do I manage my account?</span>
-              <span class="faq-icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq-a"><div class="faq-a-inner"><p data-i18n="faq_a5">Edit your profile, status and visibility any time in the app. To go invisible, simply go offline. You can export or delete your account and data from Settings — when you delete, we remove or anonymise your personal data within a reasonable period.</p></div></div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-q" type="button" aria-expanded="false">
-              <span data-i18n="faq_q6">How do subscriptions and cancellation work?</span>
-              <span class="faq-icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq-a"><div class="faq-a-inner"><p data-i18n="faq_a6">Gold and Platinum Black are billed through your App Store account and renew automatically until cancelled. Manage or cancel any time in your App Store subscription settings — you’ll keep your benefits until the end of the current billing period. Except where required by law, payments are non-refundable.</p></div></div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-q" type="button" aria-expanded="false">
-              <span data-i18n="faq_q7">How do you handle my privacy?</span>
-              <span class="faq-icon" aria-hidden="true"></span>
-            </button>
-            <div class="faq-a"><div class="faq-a-inner"><p data-i18n="faq_a7">We collect only what’s needed to help you meet people tonight, and we never sell your personal data. You choose what’s visible to others and when you share location. Read the full details in our <a href="privacy.html" data-i18n="faq_a7_link">Privacy Policy</a>.</p></div></div>
-          </div>
-
-        </div>
-
-        <!-- ============================ CONTACT ============================ -->
-        <div class="contact-panel reveal" id="contact">
-          <p class="kicker" style="justify-content:center" data-i18n="contact_kicker">Contact us</p>
-          <h2 data-i18n="support_contact_t">Still need a hand?</h2>
-          <p data-i18n="support_contact_p">Email us and a real person will get back to you. We read every message.</p>
-          <a class="contact-email" href="mailto:support@2night.co">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/>
-            </svg>
-            support@2night.co
-          </a>
-        </div>
-
+      <div class="faq">
+        <div class="faq-item" data-reveal><h3 data-i18n="faq_q1">Is 2NIGHT free?</h3><p data-i18n="faq_a1">Yes. The Silver tier is free forever — go live, browse the Tonight Feed, match and chat. Gold and Platinum Black add more reach and features.</p></div>
+        <div class="faq-item" data-reveal><h3 data-i18n="faq_q2">Who can see that I'm out?</h3><p data-i18n="faq_a2">Only people inside the radius and audience you choose, and only while you're live. Go offline and you disappear.</p></div>
+        <div class="faq-item" data-reveal><h3 data-i18n="faq_q3">How does matching work?</h3><p data-i18n="faq_a3">Ping someone you'd like to meet. If they ping back, it's a match and a chat opens — so you can make a plan for tonight.</p></div>
+        <div class="faq-item" data-reveal><h3 data-i18n="faq_q4">How do memberships work?</h3><p data-i18n="faq_a4">Gold and Platinum Black are billed through the App Store and renew automatically until cancelled. Manage or cancel anytime in your App Store settings.</p></div>
+        <div class="faq-item" data-reveal><h3 data-i18n="faq_q5">How do I delete my account or data?</h3><p data-i18n="faq_a5">You can export or delete your account and data anytime from Settings, or email us and we'll take care of it.</p></div>
       </div>
-    </section>
+
+      <div class="panel" id="contact" data-reveal>
+        <p class="page-kicker" data-i18n="contact_kicker">Contact</p>
+        <h2 data-i18n="support_contact_t">Still need a hand?</h2>
+        <p data-i18n="support_contact_p">Email us and a real person will get back to you. We read every message.</p>
+        <a class="email" href="mailto:support@2night.co">support@2night.co</a>
+      </div>
+
+      <a class="page-back" href="/" data-i18n="home_back">← Back to home</a>
+    </article>
   </main>
 
-  <!-- ============================ FOOTER ============================ -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a class="brand" href="index.html" aria-label="2NIGHT home">
-          <img src="assets/icon.png" alt="2NIGHT" />
-          <span class="brand-name">2NIGHT</span>
-        </a>
-        <p data-i18n="footer_tagline">Who’s out? Who’s in? 2Night.</p>
-      </div>
-      <nav class="footer-links" aria-label="Footer">
-        <a href="about.html" data-i18n="footer_about">About</a>
-        <a href="safety.html" data-i18n="footer_safety">Safety</a>
-        <a href="support.html" data-i18n="footer_support">Support</a>
-        <a href="support.html#contact" data-i18n="footer_contact">Contact</a>
-        <a href="terms.html" data-i18n="footer_terms">Terms</a>
-        <a href="privacy.html" data-i18n="footer_privacy">Privacy</a>
-        <span class="footer-copy" data-i18n="footer_rights">© 2NIGHT. All rights reserved.</span>
+    <div class="footer-inner">
+      <a class="brand" href="/"><img src="/assets/icon.png" alt="" /><span class="brand-name">2NIGHT</span></a>
+      <nav class="footer-links">
+        <a class="footer-login" href="/login" data-i18n-auth="auth_login">Log in</a>
+        <a href="/about" data-i18n="footer_about">About</a>
+        <a href="/blog/">Blog</a>
+        <a href="/safety" data-i18n="footer_safety">Safety</a>
+        <a href="/support" data-i18n="footer_support">Support</a>
+        <a href="/terms" data-i18n="footer_terms">Terms</a>
+        <a href="/privacy" data-i18n="footer_privacy">Privacy</a>
+        <a href="/mentions-legales" data-i18n="footer_legal">Legal notice</a>
       </nav>
+      <p class="footer-copy" data-i18n="footer_rights">© 2026 2NIGHT. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- FAQ accordion (progressive enhancement; items are open-by-default without JS via .open) -->
-  <script>
-    (function () {
-      var items = document.querySelectorAll(".faq-item");
-      items.forEach(function (item) {
-        var q = item.querySelector(".faq-q");
-        if (!q) return;
-        q.addEventListener("click", function () {
-          var isOpen = item.classList.toggle("open");
-          q.setAttribute("aria-expanded", isOpen ? "true" : "false");
-        });
-      });
-    })();
-  </script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/split-type@0.3.4/umd/index.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="/js/translations.js?v=20260616b"></script>
+  <script type="module" src="/v3/js/main.js?v=20260616b"></script>
 </body>
 </html>

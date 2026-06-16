@@ -2,164 +2,104 @@
 <html lang="en" dir="ltr" class="no-js">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Safety Tips — 2NIGHT</title>
-  <meta name="description" content="2NIGHT safety tips — meet in a public place, tell a friend, arrange your own transport, never send money, trust your gut, report and block, and protect your personal information. Meet people the smart way, tonight." />
-  <meta name="theme-color" content="#0D0D0D" />
-
-  <!-- Open Graph -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Safety — 2NIGHT</title>
+  <meta name="description" content="2NIGHT safety — simple habits that keep spontaneous, real-life nights fun and keep you in control when you meet someone new." />
+  <meta name="theme-color" content="#050505" />
+  <link rel="canonical" href="https://2night.co/safety" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Safety Tips — 2NIGHT" />
-  <meta property="og:description" content="Meet people the smart way. Practical safety tips for meeting someone new tonight." />
-  <meta property="og:image" content="assets/icon.png" />
+  <meta property="og:site_name" content="2NIGHT" />
+  <meta property="og:url" content="https://2night.co/safety" />
+  <meta property="og:title" content="Safety — 2NIGHT" />
+  <meta property="og:description" content="Meet people the smart way." />
+  <meta property="og:image" content="https://2night.co/assets/og-card.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Safety Tips — 2NIGHT" />
-  <meta name="twitter:description" content="Meet people the smart way. Practical safety tips for meeting someone new tonight." />
-  <meta name="twitter:image" content="assets/icon.png" />
-
-  <link rel="icon" type="image/png" href="assets/icon.png" />
-  <link rel="apple-touch-icon" href="assets/icon.png" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="icon" type="image/png" href="/assets/icon.png" />
+  <link rel="stylesheet" href="/v3/css/styles.css?v=20260616b" />
   <script>document.documentElement.classList.remove("no-js");</script>
-  <script src="js/translations.js" defer></script>
-  <script src="js/main.js" defer></script>
+  <script type="importmap">
+  { "imports": { "three": "https://unpkg.com/three@0.160.1/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.1/examples/jsm/" } }
+  </script>
 </head>
 <body>
-
+  <div class="city-poster" aria-hidden="true"></div>
+  <canvas id="gl" class="gl-canvas" aria-hidden="true"></canvas>
   <div class="grain" aria-hidden="true"></div>
-  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
   <div class="cursor-ring" aria-hidden="true"></div>
   <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="transition" aria-hidden="true"><div class="transition-strip"></div><div class="transition-strip"></div><div class="transition-strip"></div><div class="transition-strip"></div><div class="transition-strip"></div></div>
 
-  <!-- ============================ NAV ============================ -->
-  <header class="nav scrolled" id="nav">
-    <div class="container nav-inner">
-      <a class="brand" href="index.html" aria-label="2NIGHT home">
-        <img src="assets/icon.png" alt="2NIGHT" />
-        <span class="brand-name">2NIGHT</span>
-      </a>
-      <div class="nav-right">
-        <nav class="nav-links" aria-label="Primary">
-          <a href="about.html" data-i18n="nav_about">About</a>
-          <a href="safety.html" data-i18n="nav_safety">Safety</a>
-          <a href="support.html" data-i18n="nav_support">Support</a>
-          <a href="support.html#contact" data-i18n="nav_contact">Contact</a>
-        </nav>
-        <div class="lang" aria-label="Language selector">
-          <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-            </svg>
-            <span class="lang-current">EN</span>
-            <svg class="lang-caret" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="lang-menu" role="menu"></div>
-        </div>
-        <a class="btn btn-gold btn-pill btn-magnetic" href="index.html#download" data-i18n="nav_download"><span>Download</span></a>
-        <button class="nav-toggle" type="button" aria-label="Menu"><span></span></button>
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/" aria-label="2NIGHT home"><img src="/assets/icon.png" alt="" /><span class="brand-name">2NIGHT</span></a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/about" data-i18n="nav_about">About</a>
+        <a href="/safety" data-i18n="nav_safety">Safety</a>
+        <a href="/support" data-i18n="nav_support">Support</a>
+        <a href="/support#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
+      <div class="lang" aria-label="Language selector">
+        <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span class="lang-current">EN</span>
+          <svg class="lang-caret" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="lang-menu" role="menu"></div>
       </div>
+      <a class="btn btn-gold magnetic" href="/#download" data-i18n="nav_download"><span class="magnetic-inner">Download</span></a>
     </div>
   </header>
 
   <main>
-    <section class="page" id="safety">
-      <div class="container">
+    <article class="page">
+      <p class="page-kicker" data-i18n="safety_kicker">Safety</p>
+      <h1 class="page-title gold-text" data-reveal data-i18n="safety_title">Meet people the smart way.</h1>
+      <p class="page-lead" data-reveal data-i18n="safety_lead">2NIGHT is built for spontaneous, real-life nights. A few simple habits keep them fun — and keep you in control when you meet someone new.</p>
 
-        <div class="page-hero">
-          <p class="kicker reveal" data-i18n="safety_kicker">Safety</p>
-          <h1 class="reveal gold-text" data-delay="80" data-i18n="safety_title">Meet people the smart way.</h1>
-          <p class="lead reveal" data-delay="160" data-i18n="safety_lead">2NIGHT is built for spontaneous, real-life nights. A few simple habits keep them fun — and keep you in control when you meet someone new.</p>
-        </div>
-
-        <div class="tips-grid">
-          <article class="tip-card reveal">
-            <div class="tip-num">01</div>
-            <h2 data-i18n="safety_t1_t">Meet in a public place</h2>
-            <p data-i18n="safety_t1_b">For a first meet, pick somewhere busy and well-lit — a bar, a café, a popular spot. Stay in public until you genuinely feel comfortable, and don't go to a private location with someone you've just met.</p>
-          </article>
-
-          <article class="tip-card reveal" data-delay="80">
-            <div class="tip-num">02</div>
-            <h2 data-i18n="safety_t2_t">Tell a friend your plans</h2>
-            <p data-i18n="safety_t2_b">Let someone you trust know where you're going, who you're meeting, and when you expect to be back. Share your live location with them for the night and check in afterwards.</p>
-          </article>
-
-          <article class="tip-card reveal" data-delay="160">
-            <div class="tip-num">03</div>
-            <h2 data-i18n="safety_t3_t">Arrange your own transport</h2>
-            <p data-i18n="safety_t3_b">Get yourself there and back on your own terms. Keep your phone charged, know how you're getting home, and you're free to leave whenever you want — no explanation needed.</p>
-          </article>
-
-          <article class="tip-card reveal" data-delay="80">
-            <div class="tip-num">04</div>
-            <h2 data-i18n="safety_t4_t">Never send money</h2>
-            <p data-i18n="safety_t4_b">Never send money, gift cards, or crypto to someone you met on the app, no matter the story. Requests for cash, financial help, or investment "tips" are classic scams — stop and report them.</p>
-          </article>
-
-          <article class="tip-card reveal" data-delay="160">
-            <div class="tip-num">05</div>
-            <h2 data-i18n="safety_t5_t">Trust your gut</h2>
-            <p data-i18n="safety_t5_b">If something feels off, it probably is. You never owe anyone your time. End the chat, leave the meet, or call a friend — there's no wrong reason to walk away.</p>
-          </article>
-
-          <article class="tip-card reveal" data-delay="240">
-            <div class="tip-num">06</div>
-            <h2 data-i18n="safety_t6_t">Report &amp; block</h2>
-            <p data-i18n="safety_t6_b">Anyone who makes you uncomfortable can be blocked and reported in a tap. Our team reviews reports — flagging bad behaviour keeps the whole night safer for everyone.</p>
-          </article>
-
-          <article class="tip-card reveal" data-delay="160">
-            <div class="tip-num">07</div>
-            <h2 data-i18n="safety_t7_t">Protect your personal info</h2>
-            <p data-i18n="safety_t7_b">Keep chats inside 2NIGHT until you trust someone. Don't share your home address, workplace, financial details, or documents, and be thoughtful about photos that reveal exactly where you live.</p>
-          </article>
-
-          <article class="tip-card reveal" data-delay="240">
-            <div class="tip-num">08</div>
-            <h2 data-i18n="safety_t8_t">You're in control</h2>
-            <p data-i18n="safety_t8_b">You decide when you're live, how far your radius reaches, and what you share. We don't run background checks, so your own judgement always comes first.</p>
-          </article>
-        </div>
-
-        <!-- ============================ EMERGENCY ============================ -->
-        <div class="contact-panel reveal">
-          <h2 data-i18n="safety_help_t">In an emergency, call for help.</h2>
-          <p data-i18n="safety_help_p">If you ever feel unsafe or threatened, contact your local emergency services first. To report someone or something to us, email our team — we read every message.</p>
-          <a class="contact-email" href="mailto:support@2night.co">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/>
-            </svg>
-            support@2night.co
-          </a>
-        </div>
-
+      <div class="tip-grid">
+        <div class="tip-card" data-reveal><span class="tip-no">01</span><h3 data-i18n="safety_t1_t">Meet in a public place</h3><p data-i18n="safety_t1_b">For a first meet, pick somewhere busy and well-lit. Stay in public until you genuinely feel comfortable.</p></div>
+        <div class="tip-card" data-reveal><span class="tip-no">02</span><h3 data-i18n="safety_t2_t">Tell a friend your plans</h3><p data-i18n="safety_t2_b">Let someone you trust know where you're going, who you're meeting, and when you'll be back.</p></div>
+        <div class="tip-card" data-reveal><span class="tip-no">03</span><h3 data-i18n="safety_t4_t">Never send money</h3><p data-i18n="safety_t4_b">Never send money, gift cards, or crypto to someone you met on the app, no matter the story.</p></div>
+        <div class="tip-card" data-reveal><span class="tip-no">04</span><h3 data-i18n="safety_t5_t">Trust your gut</h3><p data-i18n="safety_t5_b">If something feels off, it probably is. End the chat, leave the meet — there's no wrong reason to walk away.</p></div>
+        <div class="tip-card" data-reveal><span class="tip-no">05</span><h3 data-i18n="safety_t6_t">Report &amp; block</h3><p data-i18n="safety_t6_b">Anyone who makes you uncomfortable can be blocked and reported in a tap. Flagging keeps the night safer for everyone.</p></div>
+        <div class="tip-card" data-reveal><span class="tip-no">06</span><h3 data-i18n="safety_t8_t">You're in control</h3><p data-i18n="safety_t8_b">You decide when you're live, how far your radius reaches, and what you share. We don't run background checks, so your own judgement comes first.</p></div>
       </div>
-    </section>
+
+      <div class="panel" data-reveal>
+        <h2 data-i18n="safety_help_t">In an emergency, call for help.</h2>
+        <p data-i18n="safety_help_p">If you ever feel unsafe, contact your local emergency services first. To report someone to us, email our team — we read every message.</p>
+        <a class="email" href="mailto:support@2night.co">support@2night.co</a>
+      </div>
+
+      <a class="page-back" href="/" data-i18n="home_back">← Back to home</a>
+    </article>
   </main>
 
-  <!-- ============================ FOOTER ============================ -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a class="brand" href="index.html" aria-label="2NIGHT home">
-          <img src="assets/icon.png" alt="2NIGHT" />
-          <span class="brand-name">2NIGHT</span>
-        </a>
-        <p data-i18n="footer_tagline">Who’s out? Who’s in? 2Night.</p>
-        <p class="footer-disclaimer" data-i18n="screens_disclaimer">All photos are for illustration only.</p>
-      </div>
-      <nav class="footer-links" aria-label="Footer">
-        <a href="about.html" data-i18n="footer_about">About</a>
-        <a href="safety.html" data-i18n="footer_safety">Safety</a>
-        <a href="support.html" data-i18n="footer_support">Support</a>
-        <a href="support.html#contact" data-i18n="footer_contact">Contact</a>
-        <a href="terms.html" data-i18n="footer_terms">Terms</a>
-        <a href="privacy.html" data-i18n="footer_privacy">Privacy</a>
-        <span class="footer-copy" data-i18n="footer_rights">© 2NIGHT. All rights reserved.</span>
+    <div class="footer-inner">
+      <a class="brand" href="/"><img src="/assets/icon.png" alt="" /><span class="brand-name">2NIGHT</span></a>
+      <nav class="footer-links">
+        <a class="footer-login" href="/login" data-i18n-auth="auth_login">Log in</a>
+        <a href="/about" data-i18n="footer_about">About</a>
+        <a href="/blog/">Blog</a>
+        <a href="/safety" data-i18n="footer_safety">Safety</a>
+        <a href="/support" data-i18n="footer_support">Support</a>
+        <a href="/terms" data-i18n="footer_terms">Terms</a>
+        <a href="/privacy" data-i18n="footer_privacy">Privacy</a>
+        <a href="/mentions-legales" data-i18n="footer_legal">Legal notice</a>
       </nav>
+      <p class="footer-copy" data-i18n="footer_rights">© 2026 2NIGHT. All rights reserved.</p>
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/split-type@0.3.4/umd/index.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="/js/translations.js?v=20260616b"></script>
+  <script type="module" src="/v3/js/main.js?v=20260616b"></script>
 </body>
 </html>
