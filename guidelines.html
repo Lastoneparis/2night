@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Guidelines — 2NIGHT</title>
+  <meta name="description" content="2NIGHT's rules, how to report or block someone, what happens after you report, how appeals work, and how long we keep reports." />
+  <meta name="theme-color" content="#0B0A0D" />
+  <link rel="canonical" href="https://2night.co/guidelines" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="2NIGHT" />
+  <meta property="og:url" content="https://2night.co/guidelines" />
+  <meta property="og:title" content="Guidelines — 2NIGHT" />
+  <meta property="og:description" content="The rules, how to report and block, and what we do about it." />
+  <meta property="og:image" content="https://2night.co/assets/og-card.png" />
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="2NIGHT — Who's out tonight?">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Guidelines — 2NIGHT" />
+  <meta name="twitter:description" content="The rules, how to report and block, and what we do about it." />
+  <meta name="twitter:image" content="https://2night.co/assets/og-card.png" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="icon" type="image/png" href="/assets/icon.png" />
+  <link rel="apple-touch-icon" href="/assets/icon.png" />
+  <link rel="stylesheet" href="/v3/css/styles.css?v=20260814b" />
+  <script>document.documentElement.classList.remove("no-js");</script>
+  <script type="importmap">
+  { "imports": { "three": "https://unpkg.com/three@0.160.1/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.1/examples/jsm/" } }
+  </script>
+  <script src="/js/config.js?v=20260814a"></script>
+  <meta name="apple-itunes-app" content="app-id=6780563413" />
+</head>
+<body>
+  <div class="city-poster" aria-hidden="true"></div>
+  <canvas id="gl" class="gl-canvas" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="transition" aria-hidden="true"><div class="transition-strip"></div><div class="transition-strip"></div><div class="transition-strip"></div><div class="transition-strip"></div><div class="transition-strip"></div></div>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/" aria-label="2NIGHT home"><img src="/assets/icon.png" alt="" width="256" height="256" /><span class="brand-name">2NIGHT</span></a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/discover" data-i18n="nav_discover">Discover</a>
+        <a href="/safety" data-i18n="nav_safety">Safety</a>
+        <a href="/community-guidelines" data-i18n="nav_community">Community</a>
+        <a href="/support" data-i18n="nav_support">Support</a>
+      </nav>
+      <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false" data-i18n-aria-label="aria_menu"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line class="bx b-top" x1="4" y1="8" x2="22" y2="8"/><line class="bx b-mid" x1="4" y1="13" x2="22" y2="13"/><line class="bx b-bot" x1="4" y1="18" x2="22" y2="18"/></svg></button>
+      <div class="lang" aria-label="Language selector">
+        <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span class="lang-current">EN</span>
+          <svg class="lang-caret" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="lang-menu" role="menu"></div>
+      </div>
+      <a class="btn btn-gold magnetic" href="/#download" data-i18n="nav_download"><span class="magnetic-inner">Download</span></a>
+    </div>
+  </header>
+
+  <!--
+    GUIDELINES — the "publish" half of Apple's Guideline 1.2 checklist for
+    user-generated content (filter, report, block, publish, act within 24 hours).
+
+    EVERY SENTENCE ON THIS PAGE DESCRIBES SHIPPED BEHAVIOUR. Verified against
+    source on 14 Aug 2026:
+      * report a PERSON, three reasons ......... PublicProfileView.swift:411-439
+      * report from the chat menu ............. ChatView.swift:54-65, 665
+      * reports unreadable by members ......... schema_moderation.sql:120-141
+                                                (no SELECT policy for `authenticated`)
+      * block mutual/instant/silent ........... schema_block_enforcement.sql:42-58
+      * block evicts from a shared plan ....... schema_plans_social.sql:556-601
+      * blocked list + unblock ................ SafetyView.swift:107-186
+      * queue, age_hours, sla_breached ........ schema_moderation.sql:143-181
+      * ban stops msg/ping/plan ............... schema_moderation.sql:390-460, 546-588
+      * bio prohibited terms .................. ModerationService.swift:18-30,
+                                                ProfileViewModel.swift:161-164
+      * retention periods ..................... schema_moderation.sql:623-667
+
+    DELIBERATELY NOT CLAIMED, because it is not built:
+      * message content is NOT screened for abuse. ChatContentFilter.swift only
+        looks for contact details, and only as a membership gate — for a
+        Gold-to-Gold thread it returns `.clean` without reading the text at all.
+      * reporting a MESSAGE, a PLAN or an ALBUM PHOTO is fully built server-side
+        (report_content/4, reports_target_type_check) and wrapped in
+        ModerationService, but reportMessage/reportPlan/reportAlbumMedia have
+        ZERO callers — there is no button. Hence "report a person" throughout.
+        Delete the caveat in "How to report someone" the day a button ships.
+
+    ONE SENTENCE IS PENDING VERIFICATION — see "How long we keep reports".
+    The purge is scheduled by schema_moderation.sql:669-684 only IF pg_cron is
+    present at migration time; the migration degrades to a notice if it is not.
+    `bash tools/apply_moderation.sh --probe` prints the live answer (section 3d).
+    Until someone runs it with a SUPABASE_ACCESS_TOKEN, this page states the
+    periods without claiming a cadence. Once probed, replace the marked sentence
+    with EITHER "This runs automatically every night." OR "We run this on a
+    manual schedule." Do not guess.
+  -->
+
+  <main>
+    <article class="page">
+      <p class="page-kicker" data-i18n="gl_kicker">Safety</p>
+      <h1 class="page-title gold-text" data-reveal data-i18n="gl_title">The rules, and what we do about them.</h1>
+      <p class="page-lead" data-reveal data-i18n="gl_lead">2NIGHT puts strangers in the same room on a few hours' notice. That only works if the rules are clear and somebody actually enforces them. Here are the rules, exactly how to report or block someone, and exactly what happens after you do.</p>
+
+      <h2 data-i18n="gl_rules_h">The rules</h2>
+
+      <div class="tip-grid">
+        <div class="tip-card" data-reveal><span class="tip-no">01</span><h3 data-i18n="gl_r1_t">Real people only</h3><p data-i18n="gl_r1_b">2NIGHT is for real people going out tonight. One account, and it's yours. No bots, no agencies, no accounts run on someone else's behalf.</p></div>
+        <div class="tip-card" data-reveal><span class="tip-no">02</span><h3 data-i18n="gl_r2_t">Be who you say you are</h3><p data-i18n="gl_r2_b">Your own photos, your own age, your own name. No impersonating anyone — not a celebrity, not a friend, not someone who doesn't exist.</p></div>
+        <div class="tip-card" data-reveal><span class="tip-no">03</span><h3 data-i18n="gl_r3_t">Respect. A pass is just a pass</h3><p data-i18n="gl_r3_b">No harassment, no hate, no threats, no pressure. If someone passes on you or stops replying, that's the whole answer. Take it and move on.</p></div>
+        <div class="tip-card" data-reveal><span class="tip-no">04</span><h3 data-i18n="gl_r4_t">18 and over. No exceptions</h3><p data-i18n="gl_r4_b">2NIGHT is strictly for adults. If we believe an account belongs to someone under 18, we remove it. If you think a minor is on 2NIGHT, tell us immediately.</p></div>
+        <div class="tip-card" data-reveal><span class="tip-no">05</span><h3 data-i18n="gl_r5_t">Keep it clothed</h3><p data-i18n="gl_r5_b">No nudity and no sexually explicit content — not in your photos, not in your bio, not in a plan, and not sent to someone who didn't ask for it.</p></div>
+        <div class="tip-card" data-reveal><span class="tip-no">06</span><h3 data-i18n="gl_r6_t">Nothing for sale</h3><p data-i18n="gl_r6_b">No escorting or solicitation, no scams, no asking members for money, gifts or crypto. No spam, no promotion, no recruiting people to another app.</p></div>
+      </div>
+
+      <h2 data-i18n="gl_filter_h">What we check automatically</h2>
+      <p data-i18n="gl_filter_1">When you save your bio, we check it against a list of prohibited terms and refuse the save if it matches. It is a deliberately narrow tool: it catches the worst slurs and it will not catch anything clever.</p>
+      <p data-i18n-html="gl_filter_2">We want to be straight with you about the limits of that. <strong>We do not scan the contents of your messages for abuse.</strong> There is a check on messages that looks for phone numbers, social handles and links — but that is a membership rule about when contact details can be exchanged, not a safety filter, and it never looks for abusive language. Nobody at 2NIGHT reads your chats.</p>
+      <p data-i18n="gl_filter_3">Which is exactly why reporting matters. A word list cannot tell that someone made you uncomfortable. You can.</p>
+
+      <h2 data-i18n="gl_report_h">How to report someone</h2>
+      <p data-i18n-html="gl_report_1">Open their profile and tap the <strong>shield</strong>. You'll be asked to pick one of three reasons: <strong>inappropriate content</strong>, <strong>fake or scam</strong>, or <strong>harassment</strong>. That's the whole flow — pick one and it's sent.</p>
+      <p data-i18n-html="gl_report_2">You can also report from inside a conversation: the <strong>⋯</strong> menu at the top of a chat has Report in it.</p>
+      <p data-i18n-html="gl_report_3">Right now you report a <strong>person</strong>, not an individual message, plan or photo. If one specific thing is the problem, report the person and then email <a href="mailto:safety@2night.co">safety@2night.co</a> saying which conversation or plan it was, so we know where to look.</p>
+
+      <h2 data-i18n="gl_block_h">How to block someone</h2>
+      <p data-i18n-html="gl_block_1">Blocking is in the same two places as reporting — their profile, and the <strong>⋯</strong> menu in a chat. When you report from a profile, we offer to block in the same step.</p>
+      <p data-i18n-html="gl_block_2"><strong>A block is instant, silent and works both ways.</strong> They are not notified and there is no announcement. From that moment you are gone from each other's Tonight feed, no ping from them reaches you, you drop off each other's plans, and the conversation leaves both inboxes.</p>
+      <p data-i18n="gl_block_3">If you were both going to the same upcoming plan, blocking takes one of you off the list — them, normally, or you if the plan was theirs. Past plans are left alone.</p>
+      <p data-i18n-html="gl_block_4"><strong>Blocking is reversible.</strong> Everyone you have blocked is listed in the app at <strong>Settings → Safety &amp; privacy</strong>, each with an <strong>Unblock</strong> button. One tap and it's undone. Nobody has to email us to take a block back.</p>
+
+      <h2 data-i18n="gl_next_h">What happens after you report</h2>
+      <p data-i18n="gl_next_1">Your report lands in our safety queue the moment you send it, timestamped. The queue is ordered oldest open report first, it shows how long each one has been waiting, and it flags anything that has sat there longer than 24 hours.</p>
+      <p data-i18n-html="gl_next_2"><strong>We read that queue and act on every report within 24 hours.</strong></p>
+      <p data-i18n="gl_next_3">Acting means one of three things:</p>
+      <ul>
+        <li data-i18n-html="gl_next_o1"><strong>We remove the account.</strong> It disappears from the Tonight feed, from likes, and from the plans list, and it can no longer message anyone, ping anyone, or post a plan. Its notifications are cut off and it is signed out.</li>
+        <li data-i18n-html="gl_next_o2"><strong>We warn it.</strong> The account stays, the person is told what has to stop, and the report stays on their record.</li>
+        <li data-i18n-html="gl_next_o3"><strong>We close the report.</strong> Sometimes nothing was broken. We would rather you over-report than sit on something, so a closed report is never held against the person who filed it.</li>
+      </ul>
+      <p data-i18n-html="gl_next_4"><strong>Anything that looks like a threat to someone's safety goes to the police, not just to us.</strong></p>
+
+      <h2 data-i18n="gl_conf_h">Reports are confidential</h2>
+      <p data-i18n="gl_conf_1">The person you report is never told who reported them. They do not see your name, and they do not see that a report exists at all until something happens to their account.</p>
+      <p data-i18n-html="gl_conf_2">This is built into the database, not just promised here. <strong>No member can read a report — including the person who wrote it.</strong> You cannot pull up your own report after filing it, and neither can anyone else. That is on purpose: if you could read your own, someone who harasses several people could work out which of them filed. The safety queue is the only reader.</p>
+      <p data-i18n="gl_conf_3">Blocking is just as quiet. Nobody is told they have been blocked.</p>
+
+      <h2 data-i18n="gl_appeal_h">If you think we got it wrong</h2>
+      <p data-i18n-html="gl_appeal_1">Email <a href="mailto:safety@2night.co">safety@2night.co</a> from the address on your account and tell us what happened. Removals and warnings are decided by a person, and people make mistakes — if we made one, we reverse it and put your account back the way it was.</p>
+      <p data-i18n="gl_appeal_2">You can appeal a warning as well as a removal. There is no form and no deadline.</p>
+
+      <h2 data-i18n="gl_ret_h">How long we keep reports</h2>
+      <p data-i18n="gl_ret_1">A report is a record about two people, so we do not keep it forever:</p>
+      <ul>
+        <li data-i18n-html="gl_ret_o1"><strong>Still open, or being looked at</strong> — kept until it is decided. Nothing is ever deleted out from under an unfinished case.</li>
+        <li data-i18n-html="gl_ret_o2"><strong>Closed with no action</strong> — deleted 90 days after we close it.</li>
+        <li data-i18n-html="gl_ret_o3"><strong>Acted on</strong> — the evidence attached to it is erased after 12 months, and the report itself is deleted after 24 months. Both clocks start the day we decide, not the day you filed.</li>
+      </ul>
+      <!-- PENDING PROBE: replace this sentence once tools/apply_moderation.sh
+           --probe has printed section 3d. See the note at the top of this file. -->
+      <p data-i18n="gl_ret_2">One routine in our database enforces every one of these periods.</p>
+      <p data-i18n-html="gl_ret_3">If you delete your 2NIGHT account, reports you filed are unlinked from you. Reports other people filed about you stay, on the schedule above — otherwise anyone could wipe their record by deleting and re-registering. There is more on this in our <a href="/privacy">Privacy Policy</a>.</p>
+
+      <div class="panel" data-reveal>
+        <h2 data-i18n="gl_panel_h">In an emergency, call for help first.</h2>
+        <p data-i18n="gl_panel_p">If you are in danger right now, contact your local emergency services before you contact us. We are one person reading a queue; they can reach you in minutes. Then tell us, so we can act on the account.</p>
+        <a class="email" href="mailto:safety@2night.co">safety@2night.co</a>
+      </div>
+
+      <p style="margin-top:36px"><a href="/safety" data-i18n="gl_see_safety">Read our safety advice for meeting someone new →</a></p>
+
+      <a class="page-back" href="/" data-i18n="home_back">← Back to home</a>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a class="brand" href="/"><img src="/assets/icon.png" alt="" width="256" height="256" /><span class="brand-name">2NIGHT</span></a>
+      <nav class="footer-links">
+        <a class="footer-login" href="/login" data-i18n-auth="auth_login">Log in</a>
+        <a href="/about" data-i18n="footer_about">About</a>
+        <a href="/blog/index" data-i18n="footer_blog">Blog</a>
+        <a href="/safety" data-i18n="footer_safety">Safety</a>
+        <a href="/guidelines" data-i18n="footer_guidelines">Guidelines</a>
+        <a href="/support" data-i18n="footer_support">Support</a>
+        <a href="/terms" data-i18n="footer_terms">Terms</a>
+        <a href="/privacy" data-i18n="footer_privacy">Privacy</a>
+        <a href="/privacy-choices" data-i18n="footer_privacy_choices">Your privacy choices</a>
+        <a href="/mentions-legales" data-i18n="footer_legal">Legal notice</a>
+      </nav>
+      <p class="footer-copy" data-i18n="footer_rights">© 2026 2NIGHT. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/js/vendor/gsap.min.js?v=20260814a"></script>
+  <script src="/js/vendor/ScrollTrigger.min.js?v=20260814a"></script>
+  <script src="/js/vendor/split-type.min.js?v=20260814a"></script>
+  <script src="/js/vendor/lenis.min.js?v=20260814a"></script>
+  <script src="/js/translations.js?v=20260814b"></script>
+  <script type="module" src="/v3/js/main.js?v=20260618c"></script>
+  <script src="/js/consent.js?v=20260814a"></script>
+</body>
+</html>

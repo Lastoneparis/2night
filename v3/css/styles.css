@@ -691,6 +691,16 @@ section { isolation: isolate; }
 .legal p { color: #C4C4C4; line-height: 1.78; margin-bottom: 14px; }
 .legal a { color: var(--gold); text-decoration: underline; text-underline-offset: 2px; }
 .legal strong { color: var(--text); }
+/* The global reset sets `ol, ul { list-style: none }` for the nav and tier
+   lists. Legal and long-form pages are the one place a real bullet earns its
+   keep -- a retention schedule or a sub-processor list has to be scannable, not
+   a wall of prose. Scoped so no existing page changes. */
+.legal ul, .page ul { list-style: disc; padding-left: 1.35em; margin: 0 0 18px; }
+.legal ol, .page ol { list-style: decimal; padding-left: 1.5em; margin: 0 0 18px; }
+.legal li, .page li { color: #C4C4C4; line-height: 1.75; margin-bottom: 9px; max-width: 680px; }
+.legal li::marker, .page li::marker { color: var(--gold); }
+.legal li strong, .page li strong { color: var(--text); }
+.page li a, .page ul a, .page ol a { color: var(--gold); text-decoration: underline; text-underline-offset: 2px; }
 
 /* =================== MOBILE-TIGHT: kill any horizontal pan =================== */
 html { overflow-x: hidden; }

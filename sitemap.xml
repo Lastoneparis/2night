@@ -53,6 +53,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://2night.co/guidelines</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://2night.co/blog/index</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
