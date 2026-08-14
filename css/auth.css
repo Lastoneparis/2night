@@ -10,8 +10,8 @@
 .auth-body {
   min-height: 100vh;
   background:
-    radial-gradient(120% 80% at 50% -10%, rgba(255, 215, 0, 0.07) 0%, transparent 55%),
-    radial-gradient(90% 60% at 100% 110%, rgba(255, 215, 0, 0.05) 0%, transparent 60%),
+    radial-gradient(120% 80% at 50% -10%, rgba(var(--gold-fill-rgb), 0.07) 0%, transparent 55%),
+    radial-gradient(90% 60% at 100% 110%, rgba(var(--gold-fill-rgb), 0.05) 0%, transparent 60%),
     var(--black-deep);
   display: flex;
   flex-direction: column;
@@ -49,7 +49,7 @@
 }
 .auth-card::before {
   content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
-  border-top: 1px solid rgba(255, 215, 0, 0.22);
+  border-top: 1px solid rgba(var(--gold-fill-rgb), 0.22);
   -webkit-mask: linear-gradient(#000, transparent 40%);
           mask: linear-gradient(#000, transparent 40%);
 }
@@ -84,9 +84,9 @@
 }
 .auth-input::placeholder { color: #6a6a6a; }
 .auth-input:focus {
-  border-color: rgba(255, 215, 0, 0.6);
-  background: rgba(255, 215, 0, 0.04);
-  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
+  border-color: rgba(var(--gold-fill-rgb), 0.6);
+  background: rgba(var(--gold-fill-rgb), 0.04);
+  box-shadow: 0 0 0 3px rgba(var(--gold-fill-rgb), 0.1);
 }
 .auth-input.is-code {
   text-align: center; letter-spacing: 0.5em; font-size: 24px; font-weight: 600;
@@ -105,7 +105,7 @@
 .auth-btn-gold {
   background: linear-gradient(135deg, var(--gold-light), var(--gold) 55%, var(--gold-dark));
   color: var(--black-deep);
-  box-shadow: 0 8px 30px rgba(255, 215, 0, 0.18);
+  box-shadow: 0 8px 30px rgba(var(--gold-fill-rgb), 0.18);
 }
 .auth-btn-gold:hover:not(:disabled) { filter: brightness(1.05); }
 .auth-btn-dark {
@@ -116,7 +116,7 @@
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--border); color: var(--text);
 }
-.auth-btn-ghost:hover:not(:disabled) { border-color: rgba(255, 215, 0, 0.5); background: rgba(255, 215, 0, 0.05); }
+.auth-btn-ghost:hover:not(:disabled) { border-color: rgba(var(--gold-fill-rgb), 0.5); background: rgba(var(--gold-fill-rgb), 0.05); }
 .auth-btn-danger {
   background: rgba(255, 70, 70, 0.07);
   border: 1px solid rgba(255, 90, 90, 0.4); color: #ff8d8d;
@@ -196,7 +196,7 @@
 .profile-avatar {
   width: 72px; height: 72px; border-radius: 18px; flex: 0 0 auto;
   background: linear-gradient(135deg, #1a1a1f, #0a0a0c);
-  border: 1px solid rgba(255, 215, 0, 0.25);
+  border: 1px solid rgba(var(--gold-fill-rgb), 0.25);
   display: flex; align-items: center; justify-content: center;
   font-size: 28px; font-weight: 700; color: var(--gold); overflow: hidden;
 }
@@ -215,7 +215,7 @@
   padding: 4px 11px; border-radius: 100px; border: 1px solid;
 }
 .tier-pill.silver { color: var(--silver); border-color: rgba(192, 192, 192, 0.5); background: rgba(192, 192, 192, 0.08); }
-.tier-pill.gold { color: var(--gold); border-color: rgba(255, 215, 0, 0.5); background: rgba(255, 215, 0, 0.08); }
+.tier-pill.gold { color: var(--gold); border-color: rgba(var(--gold-fill-rgb), 0.5); background: rgba(var(--gold-fill-rgb), 0.08); }
 .tier-pill.platinum { color: var(--platinum); border-color: rgba(229, 228, 226, 0.55); background: rgba(229, 228, 226, 0.08); }
 
 .verified-mark {
@@ -247,7 +247,7 @@
 
 /* actions list */
 .actions-title {
-  font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #8a8a8a;
+  font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-2);
   margin: 4px 0 14px;
 }
 .action-row {
@@ -257,13 +257,13 @@
   transition: border-color 0.25s var(--ease), background 0.25s var(--ease);
   cursor: pointer; color: inherit;
 }
-.action-row:hover { border-color: rgba(255, 215, 0, 0.4); background: rgba(255, 215, 0, 0.04); }
-.action-row.primary { border-color: rgba(255, 215, 0, 0.4); background: rgba(255, 215, 0, 0.06); }
+.action-row:hover { border-color: rgba(var(--gold-fill-rgb), 0.4); background: rgba(var(--gold-fill-rgb), 0.04); }
+.action-row.primary { border-color: rgba(var(--gold-fill-rgb), 0.4); background: rgba(var(--gold-fill-rgb), 0.06); }
 .action-row.danger:hover { border-color: rgba(255, 90, 90, 0.6); background: rgba(255, 70, 70, 0.06); }
 .action-ic {
   width: 38px; height: 38px; flex: 0 0 auto; border-radius: 11px;
   display: flex; align-items: center; justify-content: center;
-  background: rgba(255, 215, 0, 0.1); color: var(--gold);
+  background: rgba(var(--gold-fill-rgb), 0.1); color: var(--gold);
 }
 .action-row.danger .action-ic { background: rgba(255, 70, 70, 0.1); color: #ff8d8d; }
 .action-ic svg { width: 19px; height: 19px; }

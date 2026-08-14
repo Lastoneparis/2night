@@ -1,73 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Every <loc> below returns HTTP 200 directly. The previous sitemap listed 12
+  URLs of which 4 were 301s: /blog/ (nginx rewrites the directory index to
+  /blog/index.html, which then hits the .html→extensionless redirect) and the
+  three blog articles, which were listed with their .html extensions.
+  It also omitted five live, indexable pages entirely.
+  Verified with:
+    for u in $(grep -o 'https://2night.co[^<]*' sitemap.xml); do
+      echo "$(curl -s -o /dev/null -w '%{http_code}' "$u")  $u"; done
+-->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://2night.co/</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://2night.co/discover</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://2night.co/about</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://2night.co/support</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://2night.co/safety</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://2night.co/blog/</loc>
-    <lastmod>2026-06-16</lastmod>
+    <loc>https://2night.co/security</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://2night.co/community-guidelines</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://2night.co/blog/index</loc>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://2night.co/blog/meet-people-near-you-tonight.html</loc>
-    <lastmod>2026-06-16</lastmod>
+    <loc>https://2night.co/blog/meet-people-near-you-tonight</loc>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://2night.co/blog/radius-based-social-discovery-vs-dating-apps.html</loc>
-    <lastmod>2026-06-16</lastmod>
+    <loc>https://2night.co/blog/radius-based-social-discovery-vs-dating-apps</loc>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://2night.co/blog/making-friends-new-city-nightlife-safety.html</loc>
-    <lastmod>2026-06-16</lastmod>
+    <loc>https://2night.co/blog/making-friends-new-city-nightlife-safety</loc>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://2night.co/terms</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://2night.co/privacy</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://2night.co/cookies</loc>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://2night.co/privacy-choices</loc>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://2night.co/mentions-legales</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>

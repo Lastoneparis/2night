@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Support — 2NIGHT</title>
   <meta name="description" content="2NIGHT support — answers about the app, membership and safety, and a real human at the other end when you need one." />
-  <meta name="theme-color" content="#050505" />
+  <meta name="theme-color" content="#0B0A0D" />
   <link rel="canonical" href="https://2night.co/support" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="2NIGHT" />
@@ -26,14 +26,16 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "Is 2NIGHT free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Silver tier is free forever — go live, browse the Tonight Feed, match and chat. Gold and Platinum Black add more reach and features." } },
+      { "@type": "Question", "name": "Is 2NIGHT free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Joining 2NIGHT and meeting people is free. A paid membership is on the way, and you'll see exactly what it costs in the app before anything is charged." } },
       { "@type": "Question", "name": "Who can see that I'm out?", "acceptedAnswer": { "@type": "Answer", "text": "Only people inside the radius and audience you choose, and only while you're live. Go offline and you disappear." } },
       { "@type": "Question", "name": "How does matching work on 2NIGHT?", "acceptedAnswer": { "@type": "Answer", "text": "Ping someone you'd like to meet. If they ping back, it's a match and a chat opens — so you can make a plan for tonight." } },
-      { "@type": "Question", "name": "How do memberships work?", "acceptedAnswer": { "@type": "Answer", "text": "Gold and Platinum Black are billed through the Apple App Store and renew automatically until cancelled. Manage or cancel anytime in your App Store settings." } },
+      { "@type": "Question", "name": "How do memberships work?", "acceptedAnswer": { "@type": "Answer", "text": "Any paid membership is billed through the Apple App Store and renews automatically until cancelled. You can manage or cancel anytime in your App Store settings." } },
       { "@type": "Question", "name": "How do I delete my account or data?", "acceptedAnswer": { "@type": "Answer", "text": "You can export or delete your account and data anytime from Settings, or email support@2night.co and we'll take care of it." } }
     ]
   }
   </script>
+  <script src="/js/config.js?v=20260814a"></script>
+  <meta name="apple-itunes-app" content="app-id=6780563413" />
 </head>
 <body>
   <div class="city-poster" aria-hidden="true"></div>
@@ -47,7 +49,7 @@
 
   <header class="nav" id="nav">
     <div class="nav-inner">
-      <a class="brand" href="/" aria-label="2NIGHT home"><img src="/assets/icon.png" alt="" /><span class="brand-name">2NIGHT</span></a>
+      <a class="brand" href="/" aria-label="2NIGHT home"><img src="/assets/icon.png" alt="" width="256" height="256" /><span class="brand-name">2NIGHT</span></a>
       <nav class="nav-links" aria-label="Primary">
         <a href="/discover" data-i18n="nav_discover">Discover</a>
         <a href="/safety" data-i18n="nav_safety">Safety</a>
@@ -74,11 +76,22 @@
       <p class="page-lead" data-reveal data-i18n="support_lead">Everything you need to know about 2NIGHT — and a real human at the other end when you need one.</p>
 
       <div class="faq">
-        <div class="faq-item" data-reveal><h3 data-i18n="faq_q1">Is 2NIGHT free?</h3><p data-i18n="faq_a1">Yes. The Silver tier is free forever — go live, browse the Tonight Feed, match and chat. Gold and Platinum Black add more reach and features.</p></div>
-        <div class="faq-item" data-reveal><h3 data-i18n="faq_q2">Who can see that I'm out?</h3><p data-i18n="faq_a2">Only people inside the radius and audience you choose, and only while you're live. Go offline and you disappear.</p></div>
-        <div class="faq-item" data-reveal><h3 data-i18n="faq_q3">How does matching work?</h3><p data-i18n="faq_a3">Ping someone you'd like to meet. If they ping back, it's a match and a chat opens — so you can make a plan for tonight.</p></div>
-        <div class="faq-item" data-reveal><h3 data-i18n="faq_q4">How do memberships work?</h3><p data-i18n="faq_a4">Gold and Platinum Black are billed through the App Store and renew automatically until cancelled. Manage or cancel anytime in your App Store settings.</p></div>
-        <div class="faq-item" data-reveal><h3 data-i18n="faq_q5">How do I delete my account or data?</h3><p data-i18n="faq_a5">You can export or delete your account and data anytime from Settings, or email us and we'll take care of it.</p></div>
+        <!-- KEY COLLISION — do not re-add data-i18n to items 2-5.
+             This page reused the keys faq_q2..faq_q5 / faq_a2..faq_a5, but the
+             homepage already owns those keys with COMPLETELY DIFFERENT
+             questions ("When does it launch in my city?", "Is it safe?", …).
+             Because translations.js wins over the inline text, this FAQ was
+             rendering the homepage's questions and answers in all 35 locales —
+             a visitor asking "who can see that I'm out?" was shown the launch
+             answer instead. Only faq_q1/faq_a1 genuinely match, so only that
+             pair stays localised. The rest now show their own correct English
+             until support-specific keys (sup_faq_*) are translated. Correct in
+             one language beats wrong in thirty-five. -->
+        <div class="faq-item" data-reveal><h3 data-i18n="faq_q1">Is 2NIGHT free?</h3><p data-i18n="faq_a1">Yes. Joining 2NIGHT and meeting people is free. A paid membership is on the way, and you'll see exactly what it costs in the app before anything is charged.</p></div>
+        <div class="faq-item" data-reveal><h3>Who can see that I'm out?</h3><p>Only people inside the radius and audience you choose, and only while you're live. Go offline and you disappear.</p></div>
+        <div class="faq-item" data-reveal><h3>How does matching work?</h3><p>Ping someone you'd like to meet. If they ping back, it's a match and a chat opens — so you can make a plan for tonight.</p></div>
+        <div class="faq-item" data-reveal><h3>How do memberships work?</h3><p>Any paid membership is billed through the App Store and renews automatically until cancelled. Manage or cancel anytime in your App Store settings.</p></div>
+        <div class="faq-item" data-reveal><h3>How do I delete my account or data?</h3><p>You can export or delete your account and data anytime from Settings, or email us and we'll take care of it.</p></div>
       </div>
 
       <div class="panel" id="contact" data-reveal>
@@ -94,11 +107,11 @@
 
   <footer class="footer">
     <div class="footer-inner">
-      <a class="brand" href="/"><img src="/assets/icon.png" alt="" /><span class="brand-name">2NIGHT</span></a>
+      <a class="brand" href="/"><img src="/assets/icon.png" alt="" width="256" height="256" /><span class="brand-name">2NIGHT</span></a>
       <nav class="footer-links">
         <a class="footer-login" href="/login" data-i18n-auth="auth_login">Log in</a>
         <a href="/about" data-i18n="footer_about">About</a>
-        <a href="/blog/" data-i18n="footer_blog">Blog</a>
+        <a href="/blog/index" data-i18n="footer_blog">Blog</a>
         <a href="/safety" data-i18n="footer_safety">Safety</a>
         <a href="/support" data-i18n="footer_support">Support</a>
         <a href="/terms" data-i18n="footer_terms">Terms</a>
@@ -110,34 +123,12 @@
     </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://unpkg.com/split-type@0.3.4/umd/index.min.js"></script>
-  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="/js/vendor/gsap.min.js?v=20260814a"></script>
+  <script src="/js/vendor/ScrollTrigger.min.js?v=20260814a"></script>
+  <script src="/js/vendor/split-type.min.js?v=20260814a"></script>
+  <script src="/js/vendor/lenis.min.js?v=20260814a"></script>
   <script src="/js/translations.js?v=20260618c"></script>
   <script type="module" src="/v3/js/main.js?v=20260618c"></script>
-<!-- 2NIGHT cookie consent banner (essential-only; compliant) -->
-<style>
-#tn-cc{position:fixed;left:16px;right:16px;bottom:16px;z-index:99999;max-width:720px;margin:0 auto;background:#14141a;color:#e8e8ea;border:1px solid #2a2a33;border-radius:16px;padding:18px 20px;font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;box-shadow:0 12px 40px rgba(0,0,0,.5);display:none}
-#tn-cc.show{display:block}
-#tn-cc p{margin:0 0 12px;font-size:.92rem;line-height:1.5}
-#tn-cc a{color:#ffce5c}
-#tn-cc .row{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-#tn-cc button{border:0;border-radius:10px;padding:10px 18px;font-weight:700;cursor:pointer;font-size:.9rem}
-#tn-cc .ok{background:linear-gradient(135deg,#ffd66b,#ff9d3c);color:#111}
-#tn-cc .ghost{background:transparent;color:#cfcfd6;border:1px solid #33333d}
-</style>
-<div id="tn-cc" role="dialog" aria-label="Cookie notice">
-  <p>2NIGHT uses only <strong>strictly necessary cookies</strong> to keep the site working securely. We don't use advertising or tracking cookies. See our <a href="/cookies.html">Cookie Policy</a> and <a href="/privacy.html">Privacy Policy</a>.</p>
-  <div class="row">
-    <button class="ghost" onclick="tnCC(false)">Decline non-essential</button>
-    <button class="ok" onclick="tnCC(true)">Got it</button>
-  </div>
-</div>
-<script>
-(function(){try{if(!localStorage.getItem('tn_cookie_choice')){document.getElementById('tn-cc').classList.add('show');}}catch(e){}})();
-function tnCC(ok){try{localStorage.setItem('tn_cookie_choice',ok?'accepted':'essential');}catch(e){}document.getElementById('tn-cc').classList.remove('show');}
-</script>
-
+  <script src="/js/consent.js?v=20260814a"></script>
 </body>
 </html>

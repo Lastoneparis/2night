@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>You've been invited to 2NIGHT</title>
+  <meta name="description" content="Someone invited you to 2NIGHT — the app for people who decide at 7pm they want to go out." />
+  <meta name="theme-color" content="#0B0A0D" />
+  <!-- Invite links are personal. They must never be indexed: each one carries a
+       member's referral code, and a crawled /i/<CODE> would leak it into search. -->
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="apple-itunes-app" content="app-id=6780563413" />
+  <link rel="icon" type="image/png" href="/assets/icon.png" />
+  <link rel="apple-touch-icon" href="/assets/icon.png" />
+  <link rel="stylesheet" href="/v3/css/styles.css?v=20260814a" />
+  <script src="/js/config.js?v=20260814a"></script>
+  <style>
+    body { background: var(--base); min-height: 100vh; display: flex; flex-direction: column; }
+    .inv-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+                text-align: center; padding: 40px 22px 56px; gap: 20px; max-width: 560px; margin: 0 auto; }
+    .inv-logo { width: 76px; height: 76px; border-radius: 20px; box-shadow: 0 18px 50px rgba(0,0,0,.6), 0 0 0 1px var(--control-border); }
+    .inv-kicker { font-size: 12px; letter-spacing: .3em; text-transform: uppercase; color: var(--gold-ink); }
+    .inv-title { font-size: clamp(28px, 7vw, 44px); font-weight: 800; letter-spacing: -.02em; line-height: 1.08; color: var(--ink); }
+    .inv-lead { color: var(--ink-2); font-size: clamp(15px, 4vw, 17px); line-height: 1.6; }
+    /* The code chip is small bold text, which is NOT WCAG "large text" — so it
+       owes the full 4.5:1. --gold-ink on --raised measures 12.63:1. */
+    .inv-code { display: inline-flex; align-items: center; gap: 10px; margin: 4px 0 2px;
+                padding: 12px 20px; border-radius: 100px; background: var(--raised);
+                border: 1px solid var(--control-border); color: var(--gold-ink);
+                font-weight: 700; font-size: 18px; letter-spacing: .18em; font-variant-numeric: tabular-nums; }
+    .inv-code small { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-2); font-weight: 600; }
+    .inv-cta { display: flex; flex-direction: column; gap: 12px; width: 100%; max-width: 340px; margin-top: 8px; }
+    .inv-cta .btn, .inv-cta .btn-appstore { width: 100%; }
+    .inv-note { font-size: 13px; color: var(--ink-2); line-height: 1.6; max-width: 42ch; }
+    .inv-foot { text-align: center; padding: 22px; color: var(--ink-2); font-size: 12px; border-top: 1px solid var(--control-border); }
+    .inv-foot a { color: var(--ink-2); text-decoration: underline; text-underline-offset: 2px; }
+  </style>
+</head>
+<body>
+  <main class="inv-wrap">
+    <img class="inv-logo" src="/assets/icon.png" width="256" height="256" alt="2NIGHT" />
+    <p class="inv-kicker" id="invKicker">You're invited</p>
+    <h1 class="inv-title" id="invTitle">Someone wants you out tonight.</h1>
+    <p class="inv-lead" id="invLead">2NIGHT shows you who's out near you right now — and helps you actually meet them. Tonight, not tomorrow.</p>
+
+    <!-- Filled from the URL. Hidden entirely when there is no code, so this
+         page never displays an empty or invented one. -->
+    <span class="inv-code" id="invCode" hidden><small id="invCodeLabel">Invite code</small><span id="invCodeVal"></span></span>
+
+    <div class="inv-cta">
+      <!-- Pre-launch: the waitlist. Post-launch: the App Store. Switched by
+           APP_STORE_LIVE in /js/config.js — see that file. -->
+      <a class="btn btn-gold lg" data-tn-when="waitlist" href="/#waitlist" id="invWaitlist" style="--tn-when-display:inline-flex">
+        <span id="invWaitlistLabel">Join the waitlist</span>
+      </a>
+      <a class="btn-appstore" data-tn-when="live" data-tn-appstore href="https://apps.apple.com/app/2night/id6780563413">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 12.94c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.09-2.01-3.76-2.04-1.6-.16-3.12.94-3.93.94-.81 0-2.06-.92-3.39-.9-1.74.03-3.35 1.01-4.25 2.57-1.81 3.14-.46 7.79 1.3 10.34.86 1.25 1.89 2.65 3.24 2.6 1.3-.05 1.79-.84 3.36-.84 1.57 0 2.01.84 3.38.81 1.4-.02 2.28-1.27 3.13-2.53.99-1.45 1.4-2.86 1.42-2.93-.03-.01-2.72-1.04-2.75-4.13zM14.6 5.3c.71-.87 1.19-2.07 1.06-3.27-1.02.04-2.27.68-3.01 1.54-.66.76-1.24 1.99-1.08 3.16 1.14.09 2.31-.58 3.03-1.43z"/></svg>
+        <span class="as-lines"><small>Download</small><span id="invDownloadLabel">Download for iPhone</span></span>
+      </a>
+    </div>
+
+    <!-- No reward is promised here. The app's referral reward cannot currently
+         be granted, and the app's own copy was corrected on 2026-08-14, so this
+         page describes the invite and nothing else. -->
+    <p class="inv-note" id="invNote">Keep this code — you'll be asked for it in the app after you sign up.</p>
+  </main>
+
+  <footer class="inv-foot">
+    <a href="/">2night.co</a> · <a href="/terms">Terms</a> · <a href="/privacy">Privacy</a>
+  </footer>
+
+  <script>
+  (function () {
+    "use strict";
+
+    // ---- where the code comes from ---------------------------------------
+    // Primary form is the path the iOS app shares:  https://2night.co/i/<CODE>
+    // ?c=<CODE> is accepted as a fallback so the page still works before the
+    // nginx location block for /i/ exists (see the deploy report).
+    function readCode() {
+      var m = location.pathname.match(/^\/i\/([A-Za-z0-9_-]{1,32})\/?$/);
+      if (m) return m[1];
+      try {
+        var q = new URLSearchParams(location.search).get("c");
+        if (q && /^[A-Za-z0-9_-]{1,32}$/.test(q)) return q;
+      } catch (e) {}
+      return null;
+    }
+
+    var code = readCode();
+
+    if (code) {
+      var up = code.toUpperCase();
+      document.getElementById("invCodeVal").textContent = up;
+      document.getElementById("invCode").hidden = false;
+      // Hand the code to the app's own sign-up flow if the visitor continues on
+      // this device. Apple provides no way to carry a parameter through an App
+      // Store install, so the code is stashed locally and the copy tells the
+      // user to expect to type it — we do not pretend it travels automatically.
+      try { localStorage.setItem("tn_invite_code", up); } catch (e) {}
+      var wl = document.getElementById("invWaitlist");
+      if (wl) wl.setAttribute("href", "/?invite=" + encodeURIComponent(up) + "#waitlist");
+    } else {
+      // No code in the URL — this is a bare /i/ hit. Say so plainly instead of
+      // showing an invite that does not exist.
+      document.getElementById("invKicker").textContent = "2NIGHT";
+      document.getElementById("invTitle").textContent = "This invite link is incomplete.";
+      document.getElementById("invLead").textContent =
+        "Ask your friend to send the full link again — it should end with their invite code.";
+      document.getElementById("invNote").textContent = "";
+    }
+
+    // ---- light localisation, matching the /app interstitial's approach -----
+    var I18N = {
+      fr: { k: "Tu es invité", t: "Quelqu'un veut te voir sortir ce soir.",
+            l: "2NIGHT te montre qui est dehors près de toi, maintenant — et t'aide à les rencontrer vraiment. Ce soir, pas demain.",
+            c: "Code d'invitation", w: "Rejoindre la liste d'attente", d: "Télécharger pour iPhone",
+            n: "Garde ce code — l'app te le demandera après ton inscription." },
+      de: { k: "Du bist eingeladen", t: "Jemand will dich heute Abend draußen sehen.",
+            l: "2NIGHT zeigt dir, wer gerade in deiner Nähe unterwegs ist — und hilft dir, sie wirklich zu treffen. Heute Abend, nicht morgen.",
+            c: "Einladungscode", w: "Auf die Warteliste", d: "Für iPhone laden",
+            n: "Behalte diesen Code — die App fragt nach der Anmeldung danach." },
+      es: { k: "Te han invitado", t: "Alguien quiere verte salir esta noche.",
+            l: "2NIGHT te muestra quién está fuera cerca de ti ahora mismo — y te ayuda a conocerlos de verdad. Esta noche, no mañana.",
+            c: "Código de invitación", w: "Unirme a la lista de espera", d: "Descargar para iPhone",
+            n: "Guarda este código — la app te lo pedirá después de registrarte." }
+    };
+    var lang = (navigator.language || "en").slice(0, 2).toLowerCase();
+    var D = I18N[lang];
+    if (D && code) {
+      document.documentElement.setAttribute("lang", lang);
+      document.getElementById("invKicker").textContent = D.k;
+      document.getElementById("invTitle").textContent = D.t;
+      document.getElementById("invLead").textContent = D.l;
+      document.getElementById("invCodeLabel").textContent = D.c;
+      document.getElementById("invWaitlistLabel").textContent = D.w;
+      document.getElementById("invDownloadLabel").textContent = D.d;
+      document.getElementById("invNote").textContent = D.n;
+    }
+  })();
+  </script>
+  <script src="/js/consent.js?v=20260814a"></script>
+</body>
+</html>

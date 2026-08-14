@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Opening 2NIGHT…</title>
+  <meta name="theme-color" content="#0B0A0D" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="apple-itunes-app" content="app-id=6780563413" />
+  <link rel="icon" type="image/png" href="/assets/icon.png" />
+  <link rel="canonical" href="https://2night.co/open" />
+  <script src="/js/config.js?v=20260814a"></script>
+  <style>
+    :root { --base:#0B0A0D; --ink:#ECE7E0; --ink-2:#A8A29B; --gold-ink:#F7D372; --control-border:#757090; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    html, body { height:100%; }
+    body { background:var(--base); color:var(--ink); display:flex; align-items:center; justify-content:center;
+           text-align:center; padding:32px 22px;
+           font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Arial,sans-serif; }
+    .wrap { display:flex; flex-direction:column; align-items:center; gap:18px; max-width:32ch; }
+    img { width:72px; height:72px; border-radius:18px; box-shadow:0 0 0 1px var(--control-border); }
+    h1 { font-size:22px; font-weight:700; letter-spacing:-.01em; }
+    p { color:var(--ink-2); font-size:15px; line-height:1.6; }
+    a { color:var(--gold-ink); text-decoration:underline; text-underline-offset:3px; }
+    .sp { width:16px; height:16px; border-radius:50%; border:2px solid rgba(255,255,255,.22);
+          border-top-color:var(--gold-ink); animation:s .7s linear infinite; }
+    @keyframes s { to { transform:rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) { .sp { animation:none; } }
+  </style>
+</head>
+<body>
+  <!-- WHY THIS FILE EXISTS
+       js/app-handoff.js navigates to https://2night.co/open expecting iOS to
+       intercept it as a universal link and hand off to the app. It is declared
+       in apple-app-site-association. But the app does not yet carry the
+       associated-domains entitlement, so iOS never intercepts, the browser
+       actually requests /open — and before this file existed, nginx returned
+       404. Every "Continue in the app" that did not hit the store fallback
+       first landed on an error page.
+       This is the graceful web fallback: it forwards to /app, which is the
+       real interstitial and which already knows how to offer the store (or the
+       waitlist, pre-launch). The query string is preserved so nothing is lost. -->
+  <div class="wrap">
+    <img src="/assets/icon.png" width="256" height="256" alt="2NIGHT" />
+    <div class="sp" aria-hidden="true"></div>
+    <h1>Opening 2NIGHT…</h1>
+    <p>If nothing happens, <a href="/app" id="fallback">continue here</a>.</p>
+  </div>
+  <script>
+    (function () {
+      var qs = window.location.search || "";
+      var target = "/app" + qs;
+      var link = document.getElementById("fallback");
+      if (link) link.setAttribute("href", target);
+      // Short delay so a real universal-link interception (once the app ships
+      // the entitlement) wins the race instead of being cut off by this hop.
+      setTimeout(function () {
+        if (!document.hidden) window.location.replace(target);
+      }, 1200);
+    })();
+  </script>
+</body>
+</html>

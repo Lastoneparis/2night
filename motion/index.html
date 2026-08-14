@@ -6,7 +6,7 @@
   <title>2NIGHT — The one-night dating app · Who's out tonight?</title>
   <meta name="description" content="2NIGHT is the one-night dating app for spontaneous nights. Decide at 7pm, see who's out near you, match and meet someone tonight — not tomorrow. Real plans, real people, right now." />
   <meta name="keywords" content="one-night dating app, dating app, meet someone tonight, date tonight, spontaneous dating, tonight dating, nightlife dating, social discovery app, dating tonight" />
-  <meta name="theme-color" content="#050505" />
+  <meta name="theme-color" content="#0B0A0D" />
   <link rel="canonical" href="https://2night.co/" />
 
   <meta property="og:type" content="website" />
@@ -26,14 +26,23 @@
   <meta name="author" content="2NIGHT" />
   <meta property="og:locale" content="en_US" />
 
+  <!-- Smart App Banner. app-id is required — without it Safari renders nothing.
+       Harmless before launch: Safari simply shows no banner until the listing
+       is published, then starts showing it with no site change. -->
+  <meta name="apple-itunes-app" content="app-id=6780563413" />
+
   <link rel="icon" type="image/png" href="/assets/icon.png" />
   <link rel="apple-touch-icon" href="/assets/icon.png" />
   <link rel="preconnect" href="https://unpkg.com" crossorigin />
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-  <link rel="preload" as="image" href="/v3/assets/screens/tonight.jpg?v=20260618c" />
-  <link rel="stylesheet" href="/v3/css/styles.css?v=20260618c" />
+  <link rel="preload" as="image" href="/v3/assets/city-poster.jpg" fetchpriority="high" />
+  <link rel="stylesheet" href="/v3/css/styles.css?v=20260814a" />
 
   <script>document.documentElement.classList.remove("no-js");</script>
+
+  <!-- Release switch. Loaded blocking and BEFORE any content so the App Store
+       vs. waitlist call-to-action never flashes the wrong state. One boolean
+       in this file is the entire release-day action. -->
+  <script src="/js/config.js?v=20260814a"></script>
 
   <script type="importmap">
   {
@@ -91,26 +100,14 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "Is 2NIGHT free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — joining is free and you can meet people on the free Basic tier. Silver, Gold and Platinum Black widen your radius and unlock more pings, Boosts and Black Events." } },
+      { "@type": "Question", "name": "Is 2NIGHT free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Joining 2NIGHT and meeting people is free. A paid membership is on the way, and you'll see exactly what it costs in the app before anything is charged." } },
       { "@type": "Question", "name": "When does 2NIGHT launch in my city?", "acceptedAnswer": { "@type": "Answer", "text": "We open cities in waves. Join the waitlist and we'll message you the moment 2NIGHT goes live near you." } },
       { "@type": "Question", "name": "How is 2NIGHT different from other dating apps?", "acceptedAnswer": { "@type": "Answer", "text": "No endless swiping toward someday. 2NIGHT shows who's out near you right now and helps you actually meet — tonight, not in three weeks." } },
-      { "@type": "Question", "name": "Is 2NIGHT safe?", "acceptedAnswer": { "@type": "Answer", "text": "You decide when you're live, how far your radius reaches and what you share. Block and report in a tap, and go offline to disappear instantly. Read our Safety guidance before you meet." } },
-      { "@type": "Question", "name": "What do I get for joining the waitlist early?", "acceptedAnswer": { "@type": "Answer", "text": "The first 20 members get 1 year of Platinum Black, free. The next 200 get free Gold." } },
+      { "@type": "Question", "name": "Is 2NIGHT safe?", "acceptedAnswer": { "@type": "Answer", "text": "You decide when you're live, how far your radius reaches and what you share. Block and report in a tap, and go offline to disappear instantly. 2NIGHT does not run background or identity checks, so your own judgement comes first — read our Safety guidance before you meet." } },
       { "@type": "Question", "name": "Does 2NIGHT sell my data?", "acceptedAnswer": { "@type": "Answer", "text": "Never. We don't sell your personal data and we don't run third-party ad tracking." } }
     ]
   }
   </script>
-
-<style id="vmotion-css">
-  #gl{display:none!important}                       /* retire the 3D WebGL motion */
-  #vmotion-bg{background:#000}                       /* video takes the background role */
-  @media (prefers-reduced-motion: reduce){
-    #vmotion-bg{background:#000 url('https://2night.co/motion/assets/poster.jpg') center/cover no-repeat}
-  }
-  @media (prefers-reduced-motion: reduce) and (max-width:768px){
-    #vmotion-bg{background-image:url('https://2night.co/motion/assets/poster_m.jpg')}
-  }
-</style>
 </head>
 
 <body>
@@ -118,7 +115,6 @@
   <!-- ============ FIXED / PERSISTENT CINEMATIC LAYERS ============ -->
   <div class="city-poster" aria-hidden="true"></div>
   <canvas id="gl" class="gl-canvas" aria-hidden="true"></canvas>
-  <canvas id="vmotion-bg" class="gl-canvas" aria-hidden="true"></canvas>
   <div class="grain" aria-hidden="true"></div>
   <div class="vignette" aria-hidden="true"></div>
   <div class="scroll-progress" aria-hidden="true"><span></span></div>
@@ -154,7 +150,7 @@
   <header class="nav" id="nav">
     <div class="nav-inner">
       <a class="brand" href="/" aria-label="2NIGHT home">
-        <img src="/assets/icon.png" alt="" />
+        <img src="/assets/icon.png" alt="" width="256" height="256" />
         <span class="brand-name">2NIGHT</span>
       </a>
       <nav class="nav-links" aria-label="Primary">
@@ -172,7 +168,8 @@
         </button>
         <div class="lang-menu" role="menu"></div>
       </div>
-      <a class="btn btn-gold magnetic" href="#waitlist" data-waitlist><span class="magnetic-inner" data-i18n="nav_join">Join the waitlist</span></a>
+      <a class="btn btn-gold magnetic" href="#waitlist" data-waitlist data-tn-when="waitlist"><span class="magnetic-inner" data-i18n="nav_join">Join the waitlist</span></a>
+      <a class="btn btn-gold magnetic" data-tn-when="live" data-tn-appstore href="https://apps.apple.com/app/2night/id6780563413"><span class="magnetic-inner" data-i18n="nav_download">Download</span></a>
     </div>
   </header>
 
@@ -182,9 +179,19 @@
     <!-- ===================== HERO ===================== -->
     <section class="hero" id="top">
       <div class="hero-inner">
-        <div class="hero-badge" data-reveal>
+        <!-- Real number or no number. This badge previously read
+             "247 people going out in <rotating city> tonight" — a hardcoded
+             figure attached to a city name that cycled through eight cities
+             regardless of where the visitor actually was. Nothing produced
+             either value.
+             It now shows the live waitlist count from /api/waitlist/count,
+             the only real number the site has. initHeroCount() in
+             /v3/js/main.js removes the badge entirely when the count is
+             unavailable or zero, so an empty state prints nothing rather
+             than inventing something. -->
+        <div class="hero-badge is-pending" id="heroBadge" data-reveal hidden>
           <span class="dot-pulse" aria-hidden="true"></span>
-          <span><strong>247</strong> <span data-i18n="hero_badge">people going out in</span> <span id="cityName">Zürich</span> tonight</span>
+          <span><strong id="heroCount"></strong> <span data-i18n="stat_on_list">on the waitlist</span></span>
         </div>
         <h1 class="hero-title">
           <span class="morph" data-morph data-i18n="hero_title1">Who's</span>
@@ -197,10 +204,16 @@
           <span data-i18n="hero_sub2">Not tomorrow. Not “maybe next week.”</span>
         </p>
         <div class="hero-cta">
-          <a class="btn btn-gold magnetic" href="#waitlist" data-waitlist><span class="magnetic-inner" data-i18n="hero_cta_waitlist">Join the waitlist</span></a>
+          <!-- Pre-launch and post-launch CTAs both ship. /js/config.js decides
+               which one is visible; see APP_STORE_LIVE in that file. -->
+          <a class="btn btn-gold magnetic" href="#waitlist" data-waitlist data-tn-when="waitlist"><span class="magnetic-inner" data-i18n="hero_cta_waitlist">Join the waitlist</span></a>
+          <a class="btn-appstore" data-tn-when="live" data-tn-appstore href="https://apps.apple.com/app/2night/id6780563413">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 12.94c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.09-2.01-3.76-2.04-1.6-.16-3.12.94-3.93.94-.81 0-2.06-.92-3.39-.9-1.74.03-3.35 1.01-4.25 2.57-1.81 3.14-.46 7.79 1.3 10.34.86 1.25 1.89 2.65 3.24 2.6 1.3-.05 1.79-.84 3.36-.84 1.57 0 2.01.84 3.38.81 1.4-.02 2.28-1.27 3.13-2.53.99-1.45 1.4-2.86 1.42-2.93-.03-.01-2.72-1.04-2.75-4.13zM14.6 5.3c.71-.87 1.19-2.07 1.06-3.27-1.02.04-2.27.68-3.01 1.54-.66.76-1.24 1.99-1.08 3.16 1.14.09 2.31-.58 3.03-1.43z"/></svg>
+            <span class="as-lines"><small data-i18n="nav_download">Download</small><span data-i18n="hero_cta_download">Download for iPhone</span></span>
+          </a>
           <a class="btn btn-ghost magnetic" href="#how"><span class="magnetic-inner" data-i18n="hero_cta_how">See how it works</span></a>
         </div>
-        <p class="hero-perk" data-reveal data-i18n="waitlist_perk_short">First 20 get Platinum free for a year — next 200 get Gold.</p>
+        <p class="hero-perk" data-reveal data-i18n="waitlist_sub">Be first to own the night, wherever you are.</p>
       </div>
 
       <!-- interactive swipe card — drag right / tap ★ to join, left to pass -->
@@ -225,9 +238,13 @@
           <span class="proof-num gold-text" id="proofCount" data-count>—</span>
           <span class="proof-label" data-i18n="stat_on_list">on the waitlist</span>
         </div>
+        <!-- Was: "First 20 / get 1 year of Platinum Black, free" — a promise of
+             a paid subscription that (a) names a tier that no longer exists,
+             (b) is worth ~$360 x 20 + ~$156 x 200, and (c) appears nowhere in
+             the Terms. Replaced with a claim the product can actually back. -->
         <div class="proof-stat" data-reveal>
-          <span class="proof-num" data-i18n="stat_founders_big">First 20</span>
-          <span class="proof-label" data-i18n="stat_founders_sub">get 1 year of Platinum Black, free</span>
+          <span class="proof-num" data-i18n="stat_radius">Your radius</span>
+          <span class="proof-label" data-i18n="stat_radius_label">You set the distance</span>
         </div>
         <div class="proof-stat" data-reveal>
           <span class="proof-num" data-i18n="stat_zero_big">Zero</span>
@@ -268,29 +285,33 @@
           <p class="section-tag" data-reveal data-i18n="screens_kicker">The app</p>
           <h2 class="display sm" data-split data-i18n="screens_title">Designed for the night.</h2>
         </div>
+        <!-- Every img carries intrinsic width/height so the browser reserves the
+             box before the bytes land (CLS). The screenshots are all 900x1951. -->
         <div class="gallery-track" id="galleryTrack">
           <figure class="card">
-            <div class="card-media"><img loading="lazy" decoding="async" src="/v3/assets/screens/tonight.jpg?v=20260618c" data-screen="tonight" alt="2NIGHT — Tonight feed of the one-night dating app" /></div>
+            <div class="card-media"><img loading="lazy" decoding="async" width="900" height="1951" src="/v3/assets/screens/tonight.jpg?v=20260814a" data-screen="tonight" alt="2NIGHT — Tonight feed of the one-night dating app" /></div>
             <figcaption><strong data-i18n="gal_tonight_t">Tonight</strong><span data-i18n="gal_tonight_s">Who's live, right now</span></figcaption>
           </figure>
           <figure class="card">
-            <div class="card-media"><img loading="lazy" decoding="async" src="/v3/assets/screens/plans.jpg?v=20260618c" data-screen="plans" alt="2NIGHT dating app — plans near you tonight" /></div>
+            <div class="card-media"><img loading="lazy" decoding="async" width="900" height="1951" src="/v3/assets/screens/plans.jpg?v=20260814a" data-screen="plans" alt="2NIGHT dating app — plans near you tonight" /></div>
             <figcaption><strong data-i18n="gal_plans_t">Plans</strong><span data-i18n="gal_plans_s">Join something tonight</span></figcaption>
           </figure>
           <figure class="card">
-            <div class="card-media"><img loading="lazy" decoding="async" src="/v3/assets/screens/chat.jpg?v=20260618c" data-screen="chat" alt="2NIGHT dating app — chat with your match" /></div>
+            <div class="card-media"><img loading="lazy" decoding="async" width="900" height="1951" src="/v3/assets/screens/chat.jpg?v=20260814a" data-screen="chat" alt="2NIGHT dating app — chat with your match" /></div>
             <figcaption><strong data-i18n="gal_chat_t">Chat</strong><span data-i18n="gal_chat_s">Skip the small talk</span></figcaption>
           </figure>
           <figure class="card">
-            <div class="card-media"><img loading="lazy" decoding="async" src="/v3/assets/screens/matches.jpg?v=20260618c" data-screen="matches" alt="2NIGHT dating app — mutual matches" /></div>
+            <div class="card-media"><img loading="lazy" decoding="async" width="900" height="1951" src="/v3/assets/screens/matches.jpg?v=20260814a" data-screen="matches" alt="2NIGHT dating app — mutual matches" /></div>
             <figcaption><strong data-i18n="gal_matches_t">Matches</strong><span data-i18n="gal_matches_s">Mutual, never random</span></figcaption>
           </figure>
+          <!-- The Membership card is deliberately absent. Its screenshot
+               (paywall.jpg, in six languages) is a photograph of the OLD
+               paywall: it shows the Silver / Gold / Platinum Black tiers and
+               their prices baked into the pixels, which no amount of copy
+               editing can correct. It must not return until a screenshot of
+               the restructured offer exists. -->
           <figure class="card">
-            <div class="card-media"><img loading="lazy" decoding="async" src="/v3/assets/screens/paywall.jpg?v=20260618c" data-screen="paywall" alt="2NIGHT dating app — Silver, Gold and Platinum membership" /></div>
-            <figcaption><strong data-i18n="gal_membership_t">Membership</strong><span data-i18n="gal_membership_s">Silver · Gold · Platinum</span></figcaption>
-          </figure>
-          <figure class="card">
-            <div class="card-media"><img loading="lazy" decoding="async" src="/v3/assets/screens/profile.jpg?v=20260618c" data-screen="profile" alt="2NIGHT dating app — your profile" /></div>
+            <div class="card-media"><img loading="lazy" decoding="async" width="900" height="1951" src="/v3/assets/screens/profile.jpg?v=20260814a" data-screen="profile" alt="2NIGHT dating app — your profile" /></div>
             <figcaption><strong data-i18n="gal_profile_t">Profile</strong><span data-i18n="gal_profile_s">You, after dark</span></figcaption>
           </figure>
         </div>
@@ -298,39 +319,31 @@
       </div>
     </section>
 
-    <!-- ===================== TESTIMONIALS ===================== -->
-    <section class="testimonials has-scrim" id="testimonials">
-      <div class="testimonials-head">
-        <p class="section-tag" data-reveal data-i18n="testimonials_kicker">From the night</p>
-        <h2 class="display sm" data-split data-i18n="testimonials_title">What our users said.</h2>
+    <!-- ===================== MEMBERSHIP ===================== -->
+    <!-- This section replaces the six-quote testimonial wall.
+         The wall was removed, not edited, for three reasons:
+           1. Every quote carried a tier badge (Gold / Silver / Platinum Black)
+              and two of them sold features of the old paid offer by name
+              ("Black Events", "Travel Mode").
+           2. Its own disclaimer said "Names and cities are representative" —
+              i.e. the people were invented — while the live waitlist count
+              from /api/waitlist/count is currently 1. Six glowing reviews from
+              "beta users" is the same fabricated-social-proof problem as the
+              hardcoded 247 counter, and is an App Store review risk.
+           3. It shipped seven stock portraits on the critical path.
+         The testimonial_* translation keys are intentionally LEFT IN
+         translations.js so the section can be restored verbatim, in all 35
+         locales, the day there are real quotes from real named users.
+
+         The block below is the slot for the restructured paid offer. It names
+         no tier and quotes no price, so a new offer can be described by
+         editing membership_note alone. -->
+    <section class="membership has-scrim" id="membership">
+      <div class="membership-head">
+        <p class="section-tag" data-reveal data-i18n="tiers_kicker">Membership</p>
+        <h2 class="display sm" data-split data-i18n="tiers_title">Free to join.</h2>
+        <p class="lede" data-reveal data-i18n="membership_note">2NIGHT is free to join and free to meet people. A paid membership is on the way — when it arrives you'll see exactly what it includes, and what it costs, in the app before anything is charged.</p>
       </div>
-      <div class="testi-grid">
-        <figure class="testi" data-reveal>
-          <blockquote data-i18n="testimonial1_q">I landed in Lisbon with zero plans. By 9pm I was at a rooftop bar with three people I'd just matched. That's the whole app in one night.</blockquote>
-          <figcaption><img class="t-avatar" loading="lazy" decoding="async" src="/v3/assets/people/m_marco.jpg?v=20260618c" alt="" /><span class="t-name" data-i18n="testimonial1_n">Marco</span><span class="t-meta"><span data-i18n="testimonial1_c">Lisbon</span> · <em class="gold-text" data-i18n="tier_gold">Gold</em></span></figcaption>
-        </figure>
-        <figure class="testi" data-reveal>
-          <blockquote data-i18n="testimonial2_q">No more “we should hang out soon.” I set my status, saw who was free, and actually met someone the same evening. Finally.</blockquote>
-          <figcaption><img class="t-avatar" loading="lazy" decoding="async" src="/v3/assets/people/w_nina.jpg?v=20260618c" alt="" /><span class="t-name" data-i18n="testimonial2_n">Léa</span><span class="t-meta"><span data-i18n="testimonial2_c">Paris</span> · <em data-i18n="tier_silver">Silver</em></span></figcaption>
-        </figure>
-        <figure class="testi" data-reveal>
-          <blockquote data-i18n="testimonial3_q">The Black Events are unreal. It feels less like an app and more like an invite to the best room in the city.</blockquote>
-          <figcaption><img class="t-avatar" loading="lazy" decoding="async" src="/v3/assets/people/p2.jpg?v=20260618c" alt="" /><span class="t-name" data-i18n="testimonial3_n">Sofia</span><span class="t-meta"><span data-i18n="testimonial3_c">Dubai</span> · <em data-i18n="tier_platinum">Platinum Black</em></span></figcaption>
-        </figure>
-        <figure class="testi" data-reveal>
-          <blockquote data-i18n="testimonial4_q">New city for work, knew no one. Two weeks in I've got a real circle — all from deciding at 7pm I didn't want to stay in.</blockquote>
-          <figcaption><img class="t-avatar" loading="lazy" decoding="async" src="/v3/assets/people/m_kenji.jpg?v=20260618c" alt="" /><span class="t-name" data-i18n="testimonial4_n">Daniel</span><span class="t-meta"><span data-i18n="testimonial4_c">Berlin</span> · <em class="gold-text" data-i18n="tier_gold">Gold</em></span></figcaption>
-        </figure>
-        <figure class="testi" data-reveal>
-          <blockquote data-i18n="testimonial5_q">It's fast, it's beautiful, and it actually respects your time. Ping, match, meet — exactly as promised.</blockquote>
-          <figcaption><img class="t-avatar" loading="lazy" decoding="async" src="/v3/assets/people/p1.jpg?v=20260618c" alt="" /><span class="t-name" data-i18n="testimonial5_n">Aisha</span><span class="t-meta"><span data-i18n="testimonial5_c">London</span> · <em data-i18n="tier_silver">Silver</em></span></figcaption>
-        </figure>
-        <figure class="testi" data-reveal>
-          <blockquote data-i18n="testimonial6_q">Travel Mode is a cheat code. I open 2NIGHT the second I land and the local night is already waiting.</blockquote>
-          <figcaption><img class="t-avatar" loading="lazy" decoding="async" src="/v3/assets/people/m_leo.jpg?v=20260618c" alt="" /><span class="t-name" data-i18n="testimonial6_n">Tomás</span><span class="t-meta"><span data-i18n="testimonial6_c">New York</span> · <em data-i18n="tier_platinum">Platinum Black</em></span></figcaption>
-        </figure>
-      </div>
-      <p class="testi-note" data-reveal data-i18n="testimonials_note">Quotes from beta users. Names and cities are representative.</p>
     </section>
 
     <!-- ===================== RADIUS ===================== -->
@@ -340,10 +353,16 @@
         <h2 class="display sm" data-split data-i18n="radius_title">Choose your radius.</h2>
         <p class="lede" data-reveal data-i18n="radius_sub">Discover people within the distance you set — from your street to the whole city. Your tier sets how far the night can reach.</p>
       </div>
+      <!-- The distances used to be labelled "Silver — 5 km", "Gold — 15 km",
+           "Platinum Black — 50 km", i.e. the radius was sold as a tier benefit.
+           The tier names are gone and the paid offer is being restructured, so
+           the scale now shows the distances only. The *_note keys were already
+           tier-free and already translated into all 35 locales, so this needed
+           no new translation. The numerals are locale-independent. -->
       <ul class="radius-scale">
-        <li class="rscale silver" data-reveal><span class="rdot"></span><span class="rkm" data-i18n="radius_silver">Silver — 5&nbsp;km</span><span class="rnote" data-i18n="radius_silver_note">Just around you</span></li>
-        <li class="rscale gold" data-reveal><span class="rdot"></span><span class="rkm" data-i18n="radius_gold">Gold — 15&nbsp;km</span><span class="rnote" data-i18n="radius_gold_note">Across the city</span></li>
-        <li class="rscale platinum" data-reveal><span class="rdot"></span><span class="rkm" data-i18n="radius_platinum">Platinum Black — 50&nbsp;km</span><span class="rnote" data-i18n="radius_platinum_note">The whole night, wide open</span></li>
+        <li class="rscale near" data-reveal><span class="rdot"></span><span class="rkm">5&nbsp;km</span><span class="rnote" data-i18n="radius_silver_note">Just around you</span></li>
+        <li class="rscale city" data-reveal><span class="rdot"></span><span class="rkm">15&nbsp;km</span><span class="rnote" data-i18n="radius_gold_note">Across the city</span></li>
+        <li class="rscale wide" data-reveal><span class="rdot"></span><span class="rkm">50&nbsp;km</span><span class="rnote" data-i18n="radius_platinum_note">The whole night, wide open</span></li>
       </ul>
       <p class="radius-caption gold-text" data-reveal data-i18n="radius_caption">Wherever you are tonight.</p>
     </section>
@@ -359,7 +378,10 @@
         <details class="faq-item" data-reveal><summary><span data-i18n="faq_q2">When does it launch in my city?</span><span class="faq-ico" aria-hidden="true"></span></summary><div class="faq-a"><p data-i18n="faq_a2">We open cities in waves.</p></div></details>
         <details class="faq-item" data-reveal><summary><span data-i18n="faq_q3">How is it different from other dating apps?</span><span class="faq-ico" aria-hidden="true"></span></summary><div class="faq-a"><p data-i18n="faq_a3">No endless swiping.</p></div></details>
         <details class="faq-item" data-reveal><summary><span data-i18n="faq_q4">Is it safe?</span><span class="faq-ico" aria-hidden="true"></span></summary><div class="faq-a"><p data-i18n="faq_a4">You're in control.</p></div></details>
-        <details class="faq-item" data-reveal><summary><span data-i18n="faq_q5">What do I get for joining early?</span><span class="faq-ico" aria-hidden="true"></span></summary><div class="faq-a"><p data-i18n="faq_a5">Founder perks.</p></div></details>
+        <!-- The "What do I get for joining early?" item is removed. Its answer
+             promised the first 20 signups a free year of Platinum Black and the
+             next 200 a free year of Gold — tiers that no longer exist, a reward
+             that cannot be granted, and terms that appear nowhere in /terms. -->
         <details class="faq-item" data-reveal><summary><span data-i18n="faq_q6">Do you sell my data?</span><span class="faq-ico" aria-hidden="true"></span></summary><div class="faq-a"><p data-i18n="faq_a6">Never.</p></div></details>
       </div>
     </section>
@@ -367,11 +389,15 @@
     <!-- ===================== FINAL CTA ===================== -->
     <section class="download" id="download">
       <h2 class="display" data-split data-i18n="cta_title">Tonight, not tomorrow.</h2>
-      <p class="lede center" data-reveal data-i18n="cta_sub2">Be first in. The earliest members own the night — free.</p>
+      <p class="lede center" data-reveal data-i18n="cta_sub">The app for people who don't want to wait.</p>
       <div class="download-cta">
-        <a class="btn btn-gold lg magnetic" href="#waitlist" data-waitlist><span class="magnetic-inner" data-i18n="cta_join">Join the waitlist</span></a>
+        <a class="btn btn-gold lg magnetic" href="#waitlist" data-waitlist data-tn-when="waitlist"><span class="magnetic-inner" data-i18n="cta_join">Join the waitlist</span></a>
+        <a class="btn-appstore" data-tn-when="live" data-tn-appstore href="https://apps.apple.com/app/2night/id6780563413">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 12.94c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.09-2.01-3.76-2.04-1.6-.16-3.12.94-3.93.94-.81 0-2.06-.92-3.39-.9-1.74.03-3.35 1.01-4.25 2.57-1.81 3.14-.46 7.79 1.3 10.34.86 1.25 1.89 2.65 3.24 2.6 1.3-.05 1.79-.84 3.36-.84 1.57 0 2.01.84 3.38.81 1.4-.02 2.28-1.27 3.13-2.53.99-1.45 1.4-2.86 1.42-2.93-.03-.01-2.72-1.04-2.75-4.13zM14.6 5.3c.71-.87 1.19-2.07 1.06-3.27-1.02.04-2.27.68-3.01 1.54-.66.76-1.24 1.99-1.08 3.16 1.14.09 2.31-.58 3.03-1.43z"/></svg>
+          <span class="as-lines"><small data-i18n="nav_download">Download</small><span data-i18n="cta_button">Download 2NIGHT</span></span>
+        </a>
       </div>
-      <p class="download-note" data-reveal data-i18n="waitlist_perk_short">First 20 get Platinum free for a year — next 200 get Gold.</p>
+      <p class="download-note" data-reveal data-i18n="sticky_note">Free to join · 18+</p>
     </section>
 
   </main>
@@ -385,13 +411,13 @@
     </div>
     <div class="footer-inner">
       <a class="brand" href="/">
-        <img src="/assets/icon.png" alt="" />
+        <img src="/assets/icon.png" alt="" width="256" height="256" />
         <span class="brand-name">2NIGHT</span>
       </a>
       <nav class="footer-links">
         <a class="footer-login" href="/login" data-i18n-auth="auth_login">Log in</a>
         <a href="/about" data-i18n="footer_about">About</a>
-        <a href="/blog/" data-i18n="footer_blog">Blog</a>
+        <a href="/blog/index" data-i18n="footer_blog">Blog</a>
         <a href="/safety" data-i18n="footer_safety">Safety</a>
         <a href="/support" data-i18n="footer_support">Support</a>
         <a href="/support#contact" data-i18n="footer_contact">Contact</a>
@@ -412,7 +438,7 @@
       <div class="wl-form-wrap" id="wlFormWrap">
         <p class="wl-kicker" data-i18n="waitlist_kicker">Early access</p>
         <h2 class="wl-title" id="wlTitle" data-i18n="waitlist_title2">Make 2NIGHT happen.</h2>
-        <p class="wl-perk" data-i18n="waitlist_perk">First 20 get Platinum free for a year — next 200 get Gold. We'll message you the moment 2NIGHT is ready.</p>
+        <p class="wl-perk" data-i18n="waitlist_done_tail">We'll message you the moment 2NIGHT is ready.</p>
         <form class="wl-form" id="wlForm" novalidate>
           <input class="wl-input" id="wlName" type="text" autocomplete="given-name" placeholder="Name (optional)" data-i18n-placeholder="waitlist_name" />
           <input class="wl-input" id="wlEmail" type="email" autocomplete="email" required placeholder="Your email" data-i18n-placeholder="waitlist_email" />
@@ -434,19 +460,23 @@
   <!-- ============ STICKY MOBILE CTA (thumb zone) ============ -->
   <div class="sticky-cta" id="stickyCta" aria-hidden="true">
     <div class="sticky-cta-text">
-      <strong id="stickyCount"></strong>
+      <!-- stickyCount is filled from /api/waitlist/count. initProofSticky()
+           hides the whole count phrase when there is no real number, so this
+           bar never shows an invented figure. -->
+      <span id="stickyCountWrap" hidden><strong id="stickyCount"></strong>
       <span data-i18n="stat_on_list">on the waitlist</span>
-      <span class="sticky-dot">·</span>
+      <span class="sticky-dot">·</span></span>
       <span data-i18n="sticky_note">Free to join · 18+</span>
     </div>
-    <a class="btn btn-gold" href="#waitlist" data-waitlist><span class="magnetic-inner" data-i18n="cta_join">Join the waitlist</span></a>
+    <a class="btn btn-gold" href="#waitlist" data-waitlist data-tn-when="waitlist"><span class="magnetic-inner" data-i18n="cta_join">Join the waitlist</span></a>
+    <a class="btn btn-gold" data-tn-when="live" data-tn-appstore href="https://apps.apple.com/app/2night/id6780563413"><span class="magnetic-inner" data-i18n="nav_download">Download</span></a>
   </div>
 
   <!-- ============ LIBRARIES ============ -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://unpkg.com/split-type@0.3.4/umd/index.min.js"></script>
-  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="/js/vendor/gsap.min.js?v=20260814a"></script>
+  <script src="/js/vendor/ScrollTrigger.min.js?v=20260814a"></script>
+  <script src="/js/vendor/split-type.min.js?v=20260814a"></script>
+  <script src="/js/vendor/lenis.min.js?v=20260814a"></script>
   <script src="/js/translations.js?v=20260618c"></script>
 
   <!-- ============ APP ============ -->
@@ -481,18 +511,19 @@
       if (I) { if (I[l] && I[l][key] != null) return I[l][key]; if (I.en && I.en[key] != null) return I.en[key]; }
       return fallback;
     }
+    // Confirmation copy. This used to tell signup #1-20 they had won a free
+    // year of Platinum Black and #21-220 a free year of Gold. Those tiers no
+    // longer exist, the reward cannot be granted, and nothing in /terms ever
+    // backed it — so the promise is gone. We still show the queue position,
+    // which is real and comes from the database.
     function doneMessage(position) {
       var msg = document.getElementById("wlDoneMsg");
       if (!msg) return;
       var out;
       if (position != null && position > 0) {
-        var tier = position <= 20
-          ? t("waitlist_done_platinum", "1 year of Platinum is yours, free. 🖤")
-          : position <= 220
-            ? t("waitlist_done_gold", "A free year of Gold is reserved for you. ✨")
-            : t("waitlist_done_listed", "You're on the list. 🌙");
-        var pos = t("waitlist_position", "You're #{n}.").replace("{n}", String(position));
-        out = pos + " " + tier + " " + t("waitlist_done_tail", "We'll message you the moment 2NIGHT is ready.");
+        out = t("waitlist_position", "You're #{n}.").replace("{n}", String(position))
+            + " " + t("waitlist_done_listed", "You're on the list. 🌙")
+            + " " + t("waitlist_done_tail", "We'll message you the moment 2NIGHT is ready.");
       } else {
         out = t("waitlist_done_p", "We'll message you the moment 2NIGHT is ready in your city.");
       }
@@ -557,8 +588,8 @@
       var I18N = (window.TN_I18N && window.TN_I18N.en) || {};
       function L(k, fb) { return (I18N[k] != null) ? I18N[k] : fb; }
       var CARDS = [
-        { emoji: "🍸", tkey: "swipe_c1_t", skey: "swipe_c1_s", glow: "rgba(255,215,0,.2)" },
-        { emoji: "🎶", tkey: "swipe_c2_t", skey: "swipe_c2_s", glow: "rgba(255,90,150,.2)" },
+        { emoji: "🍸", tkey: "swipe_c1_t", skey: "swipe_c1_s", glow: "rgba(240,194,75,.2)" },
+        { emoji: "🎶", tkey: "swipe_c2_t", skey: "swipe_c2_s", glow: "rgba(255,111,97,.2)" },
         { emoji: "🌙", tkey: "swipe_c3_t", skey: "swipe_c3_s", glow: "rgba(150,180,255,.2)" }
       ];
       var els = [], idx = 0;
@@ -599,35 +630,6 @@
     }
   })();
   </script>
-
-<script id="vmotion-js">
-(function(){
-  "use strict";
-  var canvas=document.getElementById('vmotion-bg');
-  if(!canvas||!canvas.getContext) return;
-  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var MOB=window.matchMedia&&window.matchMedia('(max-width: 768px)').matches;
-  var FRAMES=361,PAD=4;
-  var BASE=MOB?"https://2night.co/motion/frames_m/":"https://2night.co/motion/frames_webp/";
-  var iw=MOB?720:1280, ih=MOB?1280:720;
-  function src(i){return BASE+"f_"+String(i).padStart(PAD,'0')+".webp";}
-  var ctx=canvas.getContext('2d',{alpha:false});
-  var images=new Array(FRAMES+1),loaded=new Array(FRAMES+1);
-  var dpr=Math.min(window.devicePixelRatio||1,2),cur=1;
-  function resize(){var w=window.innerWidth,h=window.innerHeight;canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);canvas.style.width=w+'px';canvas.style.height=h+'px';draw(cur);}
-  function drawImg(im){if(!im)return;var cw=canvas.width,ch=canvas.height,ir=iw/ih,cr=cw/ch,dw,dh,dx,dy;if(cr>ir){dw=cw;dh=cw/ir;dx=0;dy=(ch-dh)/2;}else{dh=ch;dw=ch*ir;dy=0;dx=(cw-dw)/2;}ctx.drawImage(im,dx,dy,dw,dh);}
-  function nearest(i){if(loaded[i])return images[i];for(var d=1;d<FRAMES;d++){if(i-d>=1&&loaded[i-d])return images[i-d];if(i+d<=FRAMES&&loaded[i+d])return images[i+d];}return null;}
-  function draw(i){i=Math.max(1,Math.min(FRAMES,i|0));var im=loaded[i]?images[i]:nearest(i);if(im)drawImg(im);cur=i;}
-  var order=[],i;for(i=1;i<=FRAMES;i+=12)order.push(i);for(i=1;i<=FRAMES;i++)if(order.indexOf(i)<0)order.push(i);
-  var qi=0;
-  function next(){if(qi>=order.length)return;var idx=order[qi++];if(loaded[idx]){next();return;}var im=new Image();im.decoding='async';im.onload=function(){images[idx]=im;loaded[idx]=true;if(idx===cur)drawImg(im);next();};im.onerror=function(){next();};im.src=src(idx);}
-  function progress(){var de=document.documentElement;var max=de.scrollHeight-window.innerHeight;var y=window.scrollY||window.pageYOffset||de.scrollTop||0;return max>0?Math.max(0,Math.min(1,y/max)):0;}
-  var disp=1,targ=1;
-  function loop(){var p=progress();targ=1+p*(FRAMES-1);disp+=(targ-disp)*0.15;if(Math.abs(targ-disp)<0.5)disp=targ;draw(Math.round(disp));requestAnimationFrame(loop);}
-  resize();window.addEventListener('resize',resize,{passive:true});
-  for(var k=0;k<8;k++)next();
-  requestAnimationFrame(loop);
-})();
-</script>
+  <script src="/js/consent.js?v=20260814a"></script>
 </body>
 </html>

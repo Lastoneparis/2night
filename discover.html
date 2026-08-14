@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Discover — 2NIGHT, the one-night dating app</title>
   <meta name="description" content="Discover 2NIGHT — the one-night dating app. Go live, see who's out near you, ping, match and meet someone tonight." />
-  <meta name="theme-color" content="#050505" />
+  <meta name="theme-color" content="#0B0A0D" />
   <link rel="canonical" href="https://2night.co/discover" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="2NIGHT" />
@@ -21,6 +21,8 @@
   <script type="importmap">
   { "imports": { "three": "https://unpkg.com/three@0.160.1/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.1/examples/jsm/" } }
   </script>
+  <script src="/js/config.js?v=20260814a"></script>
+  <meta name="apple-itunes-app" content="app-id=6780563413" />
 </head>
 <body>
   <div class="city-poster" aria-hidden="true"></div>
@@ -34,7 +36,7 @@
 
   <header class="nav" id="nav">
     <div class="nav-inner">
-      <a class="brand" href="/" aria-label="2NIGHT home"><img src="/assets/icon.png" alt="" /><span class="brand-name">2NIGHT</span></a>
+      <a class="brand" href="/" aria-label="2NIGHT home"><img src="/assets/icon.png" alt="" width="256" height="256" /><span class="brand-name">2NIGHT</span></a>
       <nav class="nav-links" aria-label="Primary">
         <a href="/discover" data-i18n="nav_discover">Discover</a>
         <a href="/safety" data-i18n="nav_safety">Safety</a>
@@ -66,13 +68,20 @@
         <div class="tip-card" data-reveal><span class="tip-no">01</span><h3 data-i18n="disc_f1_t">Go live in one tap</h3><p data-i18n="disc_f1_b">Set your status and the city sees you're free tonight. You control who, how far, and for how long.</p></div>
         <div class="tip-card" data-reveal><span class="tip-no">02</span><h3 data-i18n="disc_f2_t">The Tonight Feed</h3><p data-i18n="disc_f2_b">Real people near you, free right now, wanting the same thing. No endless swiping toward someday.</p></div>
         <div class="tip-card" data-reveal><span class="tip-no">03</span><h3 data-i18n="disc_f3_t">Ping, match, meet</h3><p data-i18n="disc_f3_b">Mutual interest opens a chat. Make a plan and meet — in person, the same night.</p></div>
-        <div class="tip-card" data-reveal><span class="tip-no">04</span><h3 data-i18n="disc_f4_t">Your radius, your night</h3><p data-i18n="disc_f4_b">From your street to the whole city. Your membership sets how far the night can reach.</p></div>
+        <!-- disc_f4_b said "Your membership sets how far the night can reach",
+             gating the radius on the paid offer that is being restructured.
+             Repointed to radius_sub, which is already translated into all 35
+             locales and makes no claim about what a membership includes. -->
+        <div class="tip-card" data-reveal><span class="tip-no">04</span><h3 data-i18n="disc_f4_t">Your radius, your night</h3><p data-i18n="radius_sub">Discover people within the distance you set — from your street to the whole city.</p></div>
       </div>
 
       <div class="panel" data-reveal>
         <h2 data-i18n="about_cta_t">Be out tonight.</h2>
-        <p data-i18n="waitlist_perk_short">First 20 get 1 year of Platinum Black, free. Next 200 get free Gold.</p>
-        <p style="margin-top:18px"><a class="btn btn-gold magnetic" href="/#waitlist"><span class="magnetic-inner" data-i18n="cta_join">Join the waitlist</span></a></p>
+        <p data-i18n="waitlist_sub">Be first to own the night, wherever you are.</p>
+        <p style="margin-top:18px">
+          <a class="btn btn-gold magnetic" href="/#waitlist" data-tn-when="waitlist"><span class="magnetic-inner" data-i18n="cta_join">Join the waitlist</span></a>
+          <a class="btn-appstore" data-tn-when="live" data-tn-appstore href="https://apps.apple.com/app/2night/id6780563413"><span data-i18n="cta_button">Download 2NIGHT</span></a>
+        </p>
       </div>
 
       <a class="page-back" href="/" data-i18n="home_back">← Back to home</a>
@@ -81,7 +90,7 @@
 
   <footer class="footer">
     <div class="footer-inner">
-      <a class="brand" href="/"><img src="/assets/icon.png" alt="" /><span class="brand-name">2NIGHT</span></a>
+      <a class="brand" href="/"><img src="/assets/icon.png" alt="" width="256" height="256" /><span class="brand-name">2NIGHT</span></a>
       <nav class="footer-links">
         <a href="/discover" data-i18n="nav_discover">Discover</a>
         <a href="/about" data-i18n="footer_about">About</a>
@@ -98,34 +107,12 @@
     </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://unpkg.com/split-type@0.3.4/umd/index.min.js"></script>
-  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="/js/vendor/gsap.min.js?v=20260814a"></script>
+  <script src="/js/vendor/ScrollTrigger.min.js?v=20260814a"></script>
+  <script src="/js/vendor/split-type.min.js?v=20260814a"></script>
+  <script src="/js/vendor/lenis.min.js?v=20260814a"></script>
   <script src="/js/translations.js?v=20260618c"></script>
   <script type="module" src="/v3/js/main.js?v=20260618c"></script>
-<!-- 2NIGHT cookie consent banner (essential-only; compliant) -->
-<style>
-#tn-cc{position:fixed;left:16px;right:16px;bottom:16px;z-index:99999;max-width:720px;margin:0 auto;background:#14141a;color:#e8e8ea;border:1px solid #2a2a33;border-radius:16px;padding:18px 20px;font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;box-shadow:0 12px 40px rgba(0,0,0,.5);display:none}
-#tn-cc.show{display:block}
-#tn-cc p{margin:0 0 12px;font-size:.92rem;line-height:1.5}
-#tn-cc a{color:#ffce5c}
-#tn-cc .row{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-#tn-cc button{border:0;border-radius:10px;padding:10px 18px;font-weight:700;cursor:pointer;font-size:.9rem}
-#tn-cc .ok{background:linear-gradient(135deg,#ffd66b,#ff9d3c);color:#111}
-#tn-cc .ghost{background:transparent;color:#cfcfd6;border:1px solid #33333d}
-</style>
-<div id="tn-cc" role="dialog" aria-label="Cookie notice">
-  <p>2NIGHT uses only <strong>strictly necessary cookies</strong> to keep the site working securely. We don't use advertising or tracking cookies. See our <a href="/cookies.html">Cookie Policy</a> and <a href="/privacy.html">Privacy Policy</a>.</p>
-  <div class="row">
-    <button class="ghost" onclick="tnCC(false)">Decline non-essential</button>
-    <button class="ok" onclick="tnCC(true)">Got it</button>
-  </div>
-</div>
-<script>
-(function(){try{if(!localStorage.getItem('tn_cookie_choice')){document.getElementById('tn-cc').classList.add('show');}}catch(e){}})();
-function tnCC(ok){try{localStorage.setItem('tn_cookie_choice',ok?'accepted':'essential');}catch(e){}document.getElementById('tn-cc').classList.remove('show');}
-</script>
-
+  <script src="/js/consent.js?v=20260814a"></script>
 </body>
 </html>

@@ -1,7 +1,23 @@
 # 2night.co — open to all engines (Google, Bing, Brave, DuckDuckGo…)
-# /v3/ holds the homepage CSS/JS — must stay crawlable for rendering.
+#
+# /v3/ holds the homepage CSS, JS and image assets — it MUST stay crawlable or
+# Google cannot render the homepage. Do not disallow it.
 User-agent: *
 Allow: /
-Disallow: /classic.html
+
+# Invite links are personal: /i/<CODE> carries a member's referral code and must
+# never end up in an index. The pages also send X-Robots via a noindex meta.
+Disallow: /i/
+
+# App handoff / auth plumbing — no content, nothing to index.
+Disallow: /app
+Disallow: /open
+Disallow: /auth/
+Disallow: /account
+Disallow: /login
+
+# NOTE: the old file said "Disallow: /classic.html", but nginx 301s every .html
+# URL to its extensionless form, so the crawlable URL was /classic — which was
+# never blocked and returned 200. The page itself has since been removed.
 
 Sitemap: https://2night.co/sitemap.xml

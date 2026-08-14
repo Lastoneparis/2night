@@ -72,7 +72,16 @@
   var CFG = {
     universalBase: "https://2night.co",          // Associated Domains host
     appScheme: "twonight://",                     // custom URL scheme fallback
-    appStoreURL: "https://apps.apple.com/app/2night/id0000000000", // TODO: real id
+    // Read from /js/config.js — the single place the App Store id and the
+    // APP_STORE_LIVE switch are defined. This used to be a hardcoded
+    // id0000000000, one of three divergent copies across the site, and every
+    // one of them dead-ended on an Apple error page.
+    // The literal here is only a fallback for pages that somehow load this file
+    // without config.js; it uses the real id either way.
+    appStoreURL: (window.TN_CONFIG && window.TN_CONFIG.appStoreURL())
+                 || "https://apps.apple.com/app/2night/id6780563413",
+    // Never send anyone to the store before the listing is live.
+    appStoreLive: !!(window.TN_CONFIG && window.TN_CONFIG.isLive()),
     // Optional Edge Function (Flow A). If the project is not provisioned with it,
     // continueInApp() silently degrades to Flow B / plain open.
     handoffFnURL: "https://ygsbrqfbaropfmczvlyy.supabase.co/functions/v1/app-handoff",
@@ -191,13 +200,19 @@
   function continueInApp(opts) {
     opts = opts || {};
     var status = typeof opts.onStatus === "function" ? opts.onStatus : function () {};
-    var storeURL = opts.storeURL || CFG.appStoreURL;
+    // Before launch there is no store page to fall back to, so we must not
+    // navigate to one. A null storeURL makes tryOpenThenStore() stay put and
+    // leaves the interstitial's own copy on screen instead of throwing the
+    // user at an Apple error page.
+    var storeURL = CFG.appStoreLive ? (opts.storeURL || CFG.appStoreURL) : null;
 
     if (isAndroid()) {
-      // Android app is "coming soon" — there is no deep target yet.
-      status("store");
-      window.location.href =
-        "https://play.google.com/store/apps/details?id=com.twonightapp.ios";
+      // There is no Android build and no Play listing. This previously sent
+      // every Android visitor to a Play Store URL built from the *iOS* bundle
+      // id (com.twonightapp.ios), which does not exist there — a guaranteed
+      // 404, three lines below a comment saying the app was "coming soon".
+      // Say so honestly instead of faking a destination.
+      status("android_soon");
       return Promise.resolve();
     }
 

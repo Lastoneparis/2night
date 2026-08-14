@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>My account — 2NIGHT</title>
   <meta name="description" content="Manage your 2NIGHT account, membership and profile." />
-  <meta name="theme-color" content="#050505" />
+  <meta name="theme-color" content="#0B0A0D" />
   <meta name="robots" content="noindex, nofollow" />
   <link rel="icon" type="image/png" href="/assets/icon.png" />
   <link rel="apple-touch-icon" href="/assets/icon.png" />
   <link rel="stylesheet" href="/v3/css/styles.css?v=20260616b" />
   <link rel="stylesheet" href="/css/auth.css?v=20260616b" />
   <script>document.documentElement.classList.remove("no-js");</script>
+  <script src="/js/config.js?v=20260814a"></script>
 </head>
 
 <body class="auth-body">
@@ -20,7 +21,7 @@
   <!-- ============ NAV ============ -->
   <header class="nav" id="nav">
     <div class="nav-inner">
-      <a class="brand" href="/" aria-label="2NIGHT home"><img src="/assets/icon.png" alt="" /><span class="brand-name">2NIGHT</span></a>
+      <a class="brand" href="/" aria-label="2NIGHT home"><img src="/assets/icon.png" alt="" width="256" height="256" /><span class="brand-name">2NIGHT</span></a>
       <nav class="nav-links" aria-label="Primary">
         <a href="/about" data-i18n="nav_about">About</a>
         <a href="/safety" data-i18n="nav_safety">Safety</a>
@@ -66,11 +67,16 @@
           <div class="profile-id">
             <div class="profile-name">
               <span id="profileName">—</span>
-              <span class="tier-pill silver is-hidden" id="tierPill"></span>
-              <span class="verified-mark is-hidden" id="verifiedMark">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <span data-i18n-auth="account_verified">Verified</span>
-              </span>
+              <span class="tier-pill is-hidden" id="tierPill"></span>
+              <!-- The "Verified" check mark is removed.
+                   It was toggled by profile.is_verified, but 2NIGHT operates NO
+                   verification flow of any kind — there is no process that can
+                   legitimately set that column true. The badge therefore
+                   asserted something the product cannot back, with no caveat
+                   anywhere on this page, while /terms states plainly that we do
+                   not conduct identity verification. The claim has also been
+                   stripped from the App Store listing.
+                   Restore this only alongside a real verification flow. -->
             </div>
             <div class="profile-city" id="profileCity"></div>
             <div class="status-line" id="statusLine"><span class="status-dot"></span><span id="statusText"></span></div>
@@ -151,10 +157,10 @@
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="footer-inner">
-      <a class="brand" href="/"><img src="/assets/icon.png" alt="" /><span class="brand-name">2NIGHT</span></a>
+      <a class="brand" href="/"><img src="/assets/icon.png" alt="" width="256" height="256" /><span class="brand-name">2NIGHT</span></a>
       <nav class="footer-links">
         <a href="/about" data-i18n="footer_about">About</a>
-        <a href="/blog/" data-i18n="footer_blog">Blog</a>
+        <a href="/blog/index" data-i18n="footer_blog">Blog</a>
         <a href="/safety" data-i18n="footer_safety">Safety</a>
         <a href="/support" data-i18n="footer_support">Support</a>
         <a href="/terms" data-i18n="footer_terms">Terms</a>
@@ -277,7 +283,6 @@
       profileName: document.getElementById("profileName"),
       profileCity: document.getElementById("profileCity"),
       tierPill: document.getElementById("tierPill"),
-      verifiedMark: document.getElementById("verifiedMark"),
       statusLine: document.getElementById("statusLine"),
       statusText: document.getElementById("statusText"),
       dName: document.getElementById("dName"),
@@ -298,10 +303,15 @@
       delError: document.getElementById("delError")
     };
 
+    // Membership label.
+    // This used to map the DB column to "Silver" / "Gold" / "Platinum Black".
+    // Those tier names are retired while the paid offer is restructured, so the
+    // page now states only what is true and checkable: whether this account is
+    // on the free tier or on a paid membership. When the new offer exists, the
+    // new plan names go in ONE place — here.
     function tierName(tier) {
-      if (tier === "gold") return T("tier_gold");
-      if (tier === "platinum") return T("tier_platinum");
-      return T("tier_silver");
+      var paid = tier && tier !== "silver" && tier !== "free" && tier !== "basic";
+      return paid ? T("account_plan_member") : T("account_plan_free");
     }
     function fmtTime(iso) {
       try {
@@ -328,13 +338,10 @@
       el.profileName.textContent = name || "—";
       el.profileCity.textContent = city || "";
 
-      // tier pill
+      // membership pill — neutral styling, no tier colour coding
       el.tierPill.textContent = tierName(tier);
-      el.tierPill.className = "tier-pill " + (tier === "gold" ? "gold" : tier === "platinum" ? "platinum" : "silver");
+      el.tierPill.className = "tier-pill";
       el.tierPill.classList.remove("is-hidden");
-
-      // verified
-      el.verifiedMark.classList.toggle("is-hidden", !profile.is_verified);
 
       // status
       var until = profile.available_until ? new Date(profile.available_until) : null;
@@ -456,28 +463,6 @@
     boot();
   })();
   </script>
-<!-- 2NIGHT cookie consent banner (essential-only; compliant) -->
-<style>
-#tn-cc{position:fixed;left:16px;right:16px;bottom:16px;z-index:99999;max-width:720px;margin:0 auto;background:#14141a;color:#e8e8ea;border:1px solid #2a2a33;border-radius:16px;padding:18px 20px;font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;box-shadow:0 12px 40px rgba(0,0,0,.5);display:none}
-#tn-cc.show{display:block}
-#tn-cc p{margin:0 0 12px;font-size:.92rem;line-height:1.5}
-#tn-cc a{color:#ffce5c}
-#tn-cc .row{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-#tn-cc button{border:0;border-radius:10px;padding:10px 18px;font-weight:700;cursor:pointer;font-size:.9rem}
-#tn-cc .ok{background:linear-gradient(135deg,#ffd66b,#ff9d3c);color:#111}
-#tn-cc .ghost{background:transparent;color:#cfcfd6;border:1px solid #33333d}
-</style>
-<div id="tn-cc" role="dialog" aria-label="Cookie notice">
-  <p>2NIGHT uses only <strong>strictly necessary cookies</strong> to keep the site working securely. We don't use advertising or tracking cookies. See our <a href="/cookies.html">Cookie Policy</a> and <a href="/privacy.html">Privacy Policy</a>.</p>
-  <div class="row">
-    <button class="ghost" onclick="tnCC(false)">Decline non-essential</button>
-    <button class="ok" onclick="tnCC(true)">Got it</button>
-  </div>
-</div>
-<script>
-(function(){try{if(!localStorage.getItem('tn_cookie_choice')){document.getElementById('tn-cc').classList.add('show');}}catch(e){}})();
-function tnCC(ok){try{localStorage.setItem('tn_cookie_choice',ok?'accepted':'essential');}catch(e){}document.getElementById('tn-cc').classList.remove('show');}
-</script>
-
+  <script src="/js/consent.js?v=20260814a"></script>
 </body>
 </html>

@@ -5,27 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Open 2NIGHT</title>
   <meta name="description" content="Opening the 2NIGHT app — tonight, not tomorrow." />
-  <meta name="theme-color" content="#050505" />
+  <meta name="theme-color" content="#0B0A0D" />
   <meta name="robots" content="noindex, nofollow" />
   <link rel="canonical" href="https://2night.co/app" />
   <link rel="icon" type="image/png" href="/assets/icon.png" />
   <!-- Smart App Banner: surfaces "OPEN/GET" chip in Safari. Replace id once live. -->
-  <meta name="apple-itunes-app" content="app-argument=https://2night.co/app" />
+  <meta name="apple-itunes-app" content="app-id=6780563413, app-argument=https://2night.co/app" />
   <style>
     :root {
-      --black: #050505;
-      --panel: #0d0d0f;
-      --line: rgba(255, 255, 255, .08);
-      --text: #f4f1ea;
-      --muted: #9b968c;
-      --gold: #d8b15a;
-      --gold-2: #f0d692;
+      /* 2NIGHT tokens — champagne + warm neutral (see v3/css/styles.css) */
+      --black: #0B0A0D;   /* base    */
+      --panel: #16141A;   /* raised  */
+      --line: rgba(117, 112, 144, .45);
+      --text: #ECE7E0;    /* ink     */
+      --muted: #A8A29B;   /* ink-2   */
+      --gold: #F7D372;    /* gold-ink  — text on dark */
+      --gold-2: #F0C24B;  /* gold-fill — background under --on-fill */
+      --on-fill: #0B0A0D;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { height: 100%; }
     body {
       background:
-        radial-gradient(1200px 600px at 50% -10%, rgba(216, 177, 90, .12), transparent 60%),
+        radial-gradient(1200px 600px at 50% -10%, rgba(240, 194, 75, .12), transparent 60%),
         var(--black);
       color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -96,10 +98,11 @@
     footer a { color: var(--muted); }
     a { color: var(--gold-2); }
   </style>
+  <script src="/js/config.js?v=20260814a"></script>
 </head>
 <body>
   <main class="wrap">
-    <img class="logo" src="/assets/icon.png" alt="2NIGHT" />
+    <img class="logo" src="/assets/icon.png" alt="2NIGHT" width="256" height="256" />
     <h1><span data-i18n="app_open_h1a">Continue in</span> <span class="gold">2NIGHT</span></h1>
     <p class="lead" data-i18n="app_open_lead">Tonight's already moving. We'll open the app and sign you in.</p>
 
@@ -109,7 +112,8 @@
     </div>
 
     <div class="stores">
-      <a id="appStore" class="btn btn-ghost" href="https://apps.apple.com/app/2night/id0000000000" data-i18n="app_open_appstore">Get it on the App Store</a>
+      <a id="appStore" class="btn btn-ghost" data-tn-when="live" data-tn-appstore href="https://apps.apple.com/app/2night/id6780563413" data-i18n="app_open_appstore">Get it on the App Store</a>
+      <a class="btn btn-ghost" data-tn-when="waitlist" href="/#waitlist" style="--tn-when-display:inline-flex">Join the waitlist</a>
       <p class="soon" data-i18n="app_open_android">Android — coming soon.</p>
     </div>
   </main>
@@ -129,7 +133,8 @@
           app_open_android: "Android — coming soon.", app_open_back: "← Back to 2night.co",
           st_opening: "Opening the app…", st_emailed: "Check your email — we sent a secure link that opens 2NIGHT signed in.",
           st_store: "Send to the App Store…", st_nosess: "Opening 2NIGHT — sign in inside the app.",
-          st_default: "Tap Open 2NIGHT to continue."
+          st_default: "Tap Open 2NIGHT to continue.",
+          st_android: "2NIGHT is iPhone-only for now — an Android app is not available yet."
         },
         fr: {
           app_open_h1a: "Continuer dans", app_open_lead: "La soirée a déjà commencé. On ouvre l'app et on te connecte.",
@@ -137,7 +142,8 @@
           app_open_android: "Android — bientôt disponible.", app_open_back: "← Retour sur 2night.co",
           st_opening: "Ouverture de l'app…", st_emailed: "Vérifie tes e-mails — on t'a envoyé un lien sécurisé qui ouvre 2NIGHT déjà connecté.",
           st_store: "Redirection vers l'App Store…", st_nosess: "Ouverture de 2NIGHT — connecte-toi dans l'app.",
-          st_default: "Touche Ouvrir 2NIGHT pour continuer."
+          st_default: "Touche Ouvrir 2NIGHT pour continuer.",
+          st_android: "2NIGHT est disponible uniquement sur iPhone pour l'instant — l'app Android n'existe pas encore."
         },
         de: {
           app_open_h1a: "Weiter in", app_open_lead: "Der Abend läuft schon. Wir öffnen die App und melden dich an.",
@@ -145,7 +151,8 @@
           app_open_android: "Android — bald verfügbar.", app_open_back: "← Zurück zu 2night.co",
           st_opening: "App wird geöffnet…", st_emailed: "Prüfe deine E-Mails — wir haben dir einen sicheren Link geschickt, der 2NIGHT angemeldet öffnet.",
           st_store: "Weiter zum App Store…", st_nosess: "2NIGHT wird geöffnet — melde dich in der App an.",
-          st_default: "Tippe auf 2NIGHT öffnen, um fortzufahren."
+          st_default: "Tippe auf 2NIGHT öffnen, um fortzufahren.",
+          st_android: "2NIGHT gibt es vorerst nur für iPhone — eine Android-App ist noch nicht verfügbar."
         },
         es: {
           app_open_h1a: "Continúa en", app_open_lead: "La noche ya se mueve. Abrimos la app y te conectamos.",
@@ -153,7 +160,8 @@
           app_open_android: "Android — muy pronto.", app_open_back: "← Volver a 2night.co",
           st_opening: "Abriendo la app…", st_emailed: "Revisa tu correo — te enviamos un enlace seguro que abre 2NIGHT con la sesión iniciada.",
           st_store: "Redirigiendo al App Store…", st_nosess: "Abriendo 2NIGHT — inicia sesión en la app.",
-          st_default: "Toca Abrir 2NIGHT para continuar."
+          st_default: "Toca Abrir 2NIGHT para continuar.",
+          st_android: "2NIGHT solo está disponible en iPhone por ahora — todavía no hay app para Android."
         }
       };
       var lang = "en";
@@ -197,6 +205,8 @@
             statusEl.textContent = t("st_store"); break;
           case "no-session":
             statusEl.textContent = t("st_nosess"); break;
+          case "android_soon":
+            statusEl.textContent = t("st_android"); break;
           default:
             statusEl.textContent = t("st_default");
         }
@@ -222,28 +232,6 @@
       }
     })();
   </script>
-<!-- 2NIGHT cookie consent banner (essential-only; compliant) -->
-<style>
-#tn-cc{position:fixed;left:16px;right:16px;bottom:16px;z-index:99999;max-width:720px;margin:0 auto;background:#14141a;color:#e8e8ea;border:1px solid #2a2a33;border-radius:16px;padding:18px 20px;font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;box-shadow:0 12px 40px rgba(0,0,0,.5);display:none}
-#tn-cc.show{display:block}
-#tn-cc p{margin:0 0 12px;font-size:.92rem;line-height:1.5}
-#tn-cc a{color:#ffce5c}
-#tn-cc .row{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-#tn-cc button{border:0;border-radius:10px;padding:10px 18px;font-weight:700;cursor:pointer;font-size:.9rem}
-#tn-cc .ok{background:linear-gradient(135deg,#ffd66b,#ff9d3c);color:#111}
-#tn-cc .ghost{background:transparent;color:#cfcfd6;border:1px solid #33333d}
-</style>
-<div id="tn-cc" role="dialog" aria-label="Cookie notice">
-  <p>2NIGHT uses only <strong>strictly necessary cookies</strong> to keep the site working securely. We don't use advertising or tracking cookies. See our <a href="/cookies.html">Cookie Policy</a> and <a href="/privacy.html">Privacy Policy</a>.</p>
-  <div class="row">
-    <button class="ghost" onclick="tnCC(false)">Decline non-essential</button>
-    <button class="ok" onclick="tnCC(true)">Got it</button>
-  </div>
-</div>
-<script>
-(function(){try{if(!localStorage.getItem('tn_cookie_choice')){document.getElementById('tn-cc').classList.add('show');}}catch(e){}})();
-function tnCC(ok){try{localStorage.setItem('tn_cookie_choice',ok?'accepted':'essential');}catch(e){}document.getElementById('tn-cc').classList.remove('show');}
-</script>
-
+  <script src="/js/consent.js?v=20260814a"></script>
 </body>
 </html>

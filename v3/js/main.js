@@ -20,8 +20,14 @@ const finePointer = window.matchMedia("(pointer: fine)").matches;
 // Only fully skip the WebGL scene (→ static poster) for users who opt out of
 // motion or data. Phones / low-core devices STILL get the animated scene —
 // night.js scales its own quality down for them.
-const _conn = navigator.connection || {};
-const lite = reduce || _conn.saveData === true;
+// Bail out of the heavy scene for anyone who opted out of motion, opted out of
+// data, or is on a genuinely slow connection. effectiveType is included because
+// saveData alone is opt-in and almost nobody sets it — a 2g/3g visitor would
+// otherwise still pull the whole WebGL scene down.
+const _conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection || {};
+const _slowNet = _conn.saveData === true ||
+                 (typeof _conn.effectiveType === "string" && /(^|-)(slow-)?2g$|^3g$/.test(_conn.effectiveType));
+const lite = reduce || _slowNet;
 
 if (gsap && ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
 
@@ -211,20 +217,53 @@ function initMobileMenu() {
 function initProofSticky() {
   const proofEl = document.getElementById("proofCount");
   const stickyCountEl = document.getElementById("stickyCount");
+  const stickyWrap = document.getElementById("stickyCountWrap");
+  const heroBadge = document.getElementById("heroBadge");
+  const heroCountEl = document.getElementById("heroCount");
   const sticky = document.getElementById("stickyCta");
-  // live count → animate proof number, fill sticky
+
+  // Real number or nothing.
+  //
+  // The hero badge used to read "247 people going out in <city> tonight".
+  // Nothing produced the 247 and nothing produced the city — it cycled through
+  // eight of them on a timer. Both were invented.
+  //
+  // /api/waitlist/count is the one real number the site has, so it now drives
+  // the hero badge, the proof tile and the sticky bar. If the request fails,
+  // or the count is 0, every surface that would have shown a number is REMOVED
+  // rather than filled with a placeholder. An empty state prints nothing.
   fetch("/api/waitlist/count").then((r) => r.json()).then((d) => {
     const n = Math.max(0, parseInt(d && d.count, 10) || 0);
     const fmt = (v) => Math.round(v).toLocaleString();
-    if (stickyCountEl) stickyCountEl.textContent = fmt(n);
+    if (n <= 0) { hideCounts(); return; }
+
+    if (heroCountEl && heroBadge) {
+      heroCountEl.textContent = fmt(n);
+      heroBadge.hidden = false;
+      heroBadge.classList.remove("is-pending");
+    }
+    if (stickyCountEl && stickyWrap) {
+      stickyCountEl.textContent = fmt(n);
+      stickyWrap.hidden = false;
+    }
     if (proofEl) {
-      if (gsap && !reduce && n > 0) {
+      if (gsap && !reduce) {
         const o = { v: 0 };
         gsap.to(o, { v: n, duration: 1.3, ease: "power2.out",
           onUpdate: () => { proofEl.textContent = fmt(o.v); } });
       } else { proofEl.textContent = fmt(n); }
     }
-  }).catch(() => { if (proofEl) proofEl.textContent = "—"; });
+  }).catch(hideCounts);
+
+  function hideCounts() {
+    if (heroBadge) heroBadge.remove();
+    if (stickyWrap) stickyWrap.remove();
+    // The proof tile is one of three in a grid; drop just the tile, not the band.
+    if (proofEl) {
+      const tile = proofEl.closest(".proof-stat");
+      if (tile) tile.remove(); else proofEl.textContent = "";
+    }
+  }
   // reveal sticky CTA once past the hero (mobile only; CSS gates display)
   if (sticky) {
     const onScroll = () => {
@@ -238,36 +277,13 @@ function initProofSticky() {
   }
 }
 
-// ---- cookie consent (shares localStorage key with the main 2night.co site) ----
-function initCookieConsent() {
-  const KEY = "tn_cookie_consent";
-  try { if (localStorage.getItem(KEY)) return; } catch (e) { return; }
-  const I = window.TN_I18N || {};
-  const clang = document.documentElement.getAttribute("lang") || "en";
-  const T = (k, fb) => ((I[clang] && I[clang][k] != null) ? I[clang][k]
-    : ((I.en && I.en[k] != null) ? I.en[k] : fb));
-  const banner = document.createElement("div");
-  banner.className = "cookie-banner";
-  banner.setAttribute("role", "dialog");
-  banner.setAttribute("aria-label", T("cookie_aria", "Cookie consent"));
-  banner.setAttribute("data-i18n-aria-label", "cookie_aria");
-  banner.innerHTML =
-    '<p class="cookie-text"><span data-i18n="cookie_text">' + T("cookie_text", "") + '</span> ' +
-    '<a href="/privacy#cookies" data-i18n="cookie_privacy_link">' + T("cookie_privacy_link", "Privacy & Cookies") + '</a></p>' +
-    '<div class="cookie-actions">' +
-      '<button type="button" class="btn btn-ghost" data-cookie="declined" data-i18n="cookie_decline">' + T("cookie_decline", "Essential only") + '</button>' +
-      '<button type="button" class="btn btn-gold" data-cookie="accepted"><span class="magnetic-inner" data-i18n="cookie_accept">' + T("cookie_accept", "Accept") + '</span></button>' +
-    "</div>";
-  document.body.appendChild(banner);
-  requestAnimationFrame(() => banner.classList.add("show"));
-  const decide = (v) => {
-    try { localStorage.setItem(KEY, v); } catch (e) {}
-    banner.classList.remove("show");
-    setTimeout(() => banner.remove(), 520);
-  };
-  banner.querySelectorAll("[data-cookie]").forEach((b) =>
-    b.addEventListener("click", () => decide(b.getAttribute("data-cookie"))));
-}
+// ---- cookie consent ----
+// Moved out to /js/consent.js so that ONE implementation covers every page,
+// including cookies.html, app.html and classic.html which never load this
+// file. It previously coexisted with a separate inline banner on 17 pages
+// that used a different localStorage key, so index.html showed two banners
+// and answering one did not silence the other.
+
 
 // ---- make a scroll container easy to drive with a laptop mouse -------------
 //   · native wheel scroll that never leaks to Lenis / the page
@@ -555,7 +571,6 @@ function boot() {
   initI18n();
   initMobileMenu();
   initProofSticky();
-  initCookieConsent();
 
   runLoader(() => {
     initPage(document);

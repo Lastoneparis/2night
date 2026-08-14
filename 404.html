@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>404 — Lost in the night · 2NIGHT</title>
   <meta name="description" content="This page is out tonight and we can't find it. Play a quick round, then head back to 2NIGHT — the one-night dating app." />
-  <meta name="theme-color" content="#050505" />
+  <meta name="theme-color" content="#0B0A0D" />
   <meta name="robots" content="noindex, follow" />
   <link rel="icon" type="image/png" href="/assets/icon.png" />
   <link rel="stylesheet" href="/v3/css/styles.css?v=20260618c" />
@@ -31,13 +31,14 @@
     .nf-btn { width: 62px; height: 62px; border-radius: 50%; border: 1px solid var(--border); background: rgba(20,20,26,.7); backdrop-filter: blur(8px); font-size: 24px; display: grid; place-items: center; transition: transform .2s var(--ease), border-color .2s, box-shadow .2s; }
     .nf-btn:hover { transform: translateY(-3px); }
     .nf-btn.pass { color: #ff5a5a; } .nf-btn.pass:hover { border-color: #ff5a5a; }
-    .nf-btn.ping { color: var(--gold); } .nf-btn.ping:hover { border-color: var(--gold); box-shadow: 0 0 22px rgba(255,215,0,.3); }
+    .nf-btn.ping { color: var(--gold); } .nf-btn.ping:hover { border-color: var(--gold); box-shadow: 0 0 22px rgba(240,194,75,.3); }
     .nf-hint { color: var(--muted); font-size: 12.5px; letter-spacing: .06em; margin-top: 18px; }
     .nf-end { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; opacity: 0; visibility: hidden; transition: opacity .5s var(--ease), visibility .5s; padding: 20px; }
     .nf-end.show { opacity: 1; visibility: visible; }
     .nf-end p { color: #D2D2D2; line-height: 1.5; }
     @media (max-width: 480px) { .deck { height: 380px; } }
   </style>
+  <script src="/js/config.js?v=20260814a"></script>
 </head>
 <body>
   <div class="city-poster" aria-hidden="true"></div>
@@ -48,7 +49,7 @@
 
   <header class="nav is-scrolled" id="nav">
     <div class="nav-inner">
-      <a class="brand" href="/" aria-label="2NIGHT home"><img src="/assets/icon.png" alt="" /><span class="brand-name">2NIGHT</span></a>
+      <a class="brand" href="/" aria-label="2NIGHT home"><img src="/assets/icon.png" alt="" width="256" height="256" /><span class="brand-name">2NIGHT</span></a>
       <a class="btn btn-gold magnetic" href="/"><span class="magnetic-inner">Back to safety</span></a>
     </div>
   </header>
@@ -73,15 +74,15 @@
     </div>
   </main>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="/js/vendor/gsap.min.js?v=20260814a"></script>
   <script>
   (function () {
     var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
     var CARDS = [
       { emoji: "👻", name: "The link you clicked", tag: "Online · just now", line: "Ghosted you at 7 PM. Classic.", glow: "rgba(255,90,90,.18)" },
       { emoji: "🔗", name: "/this-page", tag: "Last seen: never", line: "Looking for: a URL that exists.", glow: "rgba(120,140,255,.18)" },
-      { emoji: "✍️", name: "A small typo", tag: "It's not you, it's the link", line: "One wrong letter and here we are.", glow: "rgba(255,215,0,.18)" },
-      { emoji: "🌙", name: "Tonight's real plan", tag: "Live now · 2night.co", line: "Still on. Swipe right and come home.", glow: "rgba(255,215,0,.22)" }
+      { emoji: "✍️", name: "A small typo", tag: "It's not you, it's the link", line: "One wrong letter and here we are.", glow: "rgba(240,194,75,.18)" },
+      { emoji: "🌙", name: "Tonight's real plan", tag: "Live now · 2night.co", line: "Still on. Swipe right and come home.", glow: "rgba(240,194,75,.22)" }
     ];
     var deck = document.getElementById("deck");
     var end = document.getElementById("nfEnd");
@@ -158,28 +159,6 @@
     build();
   })();
   </script>
-<!-- 2NIGHT cookie consent banner (essential-only; compliant) -->
-<style>
-#tn-cc{position:fixed;left:16px;right:16px;bottom:16px;z-index:99999;max-width:720px;margin:0 auto;background:#14141a;color:#e8e8ea;border:1px solid #2a2a33;border-radius:16px;padding:18px 20px;font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;box-shadow:0 12px 40px rgba(0,0,0,.5);display:none}
-#tn-cc.show{display:block}
-#tn-cc p{margin:0 0 12px;font-size:.92rem;line-height:1.5}
-#tn-cc a{color:#ffce5c}
-#tn-cc .row{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-#tn-cc button{border:0;border-radius:10px;padding:10px 18px;font-weight:700;cursor:pointer;font-size:.9rem}
-#tn-cc .ok{background:linear-gradient(135deg,#ffd66b,#ff9d3c);color:#111}
-#tn-cc .ghost{background:transparent;color:#cfcfd6;border:1px solid #33333d}
-</style>
-<div id="tn-cc" role="dialog" aria-label="Cookie notice">
-  <p>2NIGHT uses only <strong>strictly necessary cookies</strong> to keep the site working securely. We don't use advertising or tracking cookies. See our <a href="/cookies.html">Cookie Policy</a> and <a href="/privacy.html">Privacy Policy</a>.</p>
-  <div class="row">
-    <button class="ghost" onclick="tnCC(false)">Decline non-essential</button>
-    <button class="ok" onclick="tnCC(true)">Got it</button>
-  </div>
-</div>
-<script>
-(function(){try{if(!localStorage.getItem('tn_cookie_choice')){document.getElementById('tn-cc').classList.add('show');}}catch(e){}})();
-function tnCC(ok){try{localStorage.setItem('tn_cookie_choice',ok?'accepted':'essential');}catch(e){}document.getElementById('tn-cc').classList.remove('show');}
-</script>
-
+  <script src="/js/consent.js?v=20260814a"></script>
 </body>
 </html>

@@ -64,7 +64,9 @@
   var TNAuth = {
     ready: !!client,
     client: client,
-    APP_STORE_URL: "https://apps.apple.com/app/id0000000000",
+    // Delegated to /js/config.js so the id lives in exactly one place.
+    APP_STORE_URL: (window.TN_CONFIG && window.TN_CONFIG.appStoreURL())
+                   || "https://apps.apple.com/app/2night/id6780563413",
     SUBSCRIPTIONS_URL: "https://apps.apple.com/account/subscriptions",
     APP_HANDOFF_URL: "https://2night.co/app",
 
@@ -84,7 +86,7 @@
             // shouldCreateUser:true lets brand-new emails sign up too; the iOS
             // app creates the public.users row via a trigger on auth signup.
             shouldCreateUser: true,
-            emailRedirectTo: window.location.origin + "/account.html"
+            emailRedirectTo: window.location.origin + "/account"
           }
         })
         .then(function (res) {
@@ -121,7 +123,7 @@
         .signInWithOAuth({
           provider: "apple",
           options: {
-            redirectTo: window.location.origin + "/account.html",
+            redirectTo: window.location.origin + "/account",
             skipBrowserRedirect: false
           }
         })
@@ -143,7 +145,7 @@
       return client.auth
         .signInWithOAuth({
           provider: "apple",
-          options: { redirectTo: window.location.origin + "/account.html", skipBrowserRedirect: true }
+          options: { redirectTo: window.location.origin + "/account", skipBrowserRedirect: true }
         })
         .then(function (res) {
           if (res.error) return false;
