@@ -7,7 +7,7 @@
 //  · liquid-wipe page transitions (transitions.js)
 // All motion respects prefers-reduced-motion.
 // =========================================================
-import { setupTransitions } from "./transitions.js?v=20260616d";
+import { setupTransitions } from "./transitions.js?v=20260617g";
 
 const gsap = window.gsap;
 const ScrollTrigger = window.ScrollTrigger;
@@ -77,7 +77,7 @@ async function initSceneField() {
   if (!canvas) return;
   if (lite) { canvas.style.display = "none"; return; }     // static poster only
   try {
-    const { initCity } = await import("./night.js?v=20260616d");
+    const { initCity } = await import("./night.js?v=20260617g");
     particles = initCity(canvas);
     attachSceneScroll();
   } catch (e) {
@@ -185,20 +185,78 @@ function initMorph() {
   });
 }
 
+// ---- mobile nav menu (hamburger toggles .nav-links dropdown on small screens) ----
+function initMobileMenu() {
+  const nav = document.getElementById("nav") || document.querySelector(".nav");
+  const burger = document.querySelector(".nav-burger");
+  if (!nav || !burger) return;
+  const links = nav.querySelector(".nav-links");
+  const setOpen = (open) => {
+    nav.classList.toggle("menu-open", open);
+    burger.setAttribute("aria-expanded", open ? "true" : "false");
+  };
+  burger.addEventListener("click", (e) => {
+    e.stopPropagation();
+    setOpen(!nav.classList.contains("menu-open"));
+  });
+  if (links) links.querySelectorAll("a").forEach((a) =>
+    a.addEventListener("click", () => setOpen(false)));
+  document.addEventListener("click", (e) => {
+    if (nav.classList.contains("menu-open") && !nav.contains(e.target)) setOpen(false);
+  });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") setOpen(false); });
+}
+
+// ---- live waitlist count (proof band + sticky CTA) + sticky reveal ----
+function initProofSticky() {
+  const proofEl = document.getElementById("proofCount");
+  const stickyCountEl = document.getElementById("stickyCount");
+  const sticky = document.getElementById("stickyCta");
+  // live count → animate proof number, fill sticky
+  fetch("/api/waitlist/count").then((r) => r.json()).then((d) => {
+    const n = Math.max(0, parseInt(d && d.count, 10) || 0);
+    const fmt = (v) => Math.round(v).toLocaleString();
+    if (stickyCountEl) stickyCountEl.textContent = fmt(n);
+    if (proofEl) {
+      if (gsap && !reduce && n > 0) {
+        const o = { v: 0 };
+        gsap.to(o, { v: n, duration: 1.3, ease: "power2.out",
+          onUpdate: () => { proofEl.textContent = fmt(o.v); } });
+      } else { proofEl.textContent = fmt(n); }
+    }
+  }).catch(() => { if (proofEl) proofEl.textContent = "—"; });
+  // reveal sticky CTA once past the hero (mobile only; CSS gates display)
+  if (sticky) {
+    const onScroll = () => {
+      const past = (window.scrollY || document.documentElement.scrollTop) > 560;
+      sticky.classList.toggle("show", past);
+      sticky.setAttribute("aria-hidden", past ? "false" : "true");
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    if (typeof lenis !== "undefined" && lenis) lenis.on("scroll", onScroll);
+    onScroll();
+  }
+}
+
 // ---- cookie consent (shares localStorage key with the main 2night.co site) ----
 function initCookieConsent() {
   const KEY = "tn_cookie_consent";
   try { if (localStorage.getItem(KEY)) return; } catch (e) { return; }
+  const I = window.TN_I18N || {};
+  const clang = document.documentElement.getAttribute("lang") || "en";
+  const T = (k, fb) => ((I[clang] && I[clang][k] != null) ? I[clang][k]
+    : ((I.en && I.en[k] != null) ? I.en[k] : fb));
   const banner = document.createElement("div");
   banner.className = "cookie-banner";
   banner.setAttribute("role", "dialog");
-  banner.setAttribute("aria-label", "Cookie consent");
+  banner.setAttribute("aria-label", T("cookie_aria", "Cookie consent"));
+  banner.setAttribute("data-i18n-aria-label", "cookie_aria");
   banner.innerHTML =
-    '<p class="cookie-text"><strong>2NIGHT</strong> · We use only the cookies needed to make this site work and remember your preferences. No advertising or third-party tracking. ' +
-    '<a href="/privacy.html#cookies">Privacy &amp; Cookies</a></p>' +
+    '<p class="cookie-text"><span data-i18n="cookie_text">' + T("cookie_text", "") + '</span> ' +
+    '<a href="/privacy#cookies" data-i18n="cookie_privacy_link">' + T("cookie_privacy_link", "Privacy & Cookies") + '</a></p>' +
     '<div class="cookie-actions">' +
-      '<button type="button" class="btn btn-ghost" data-cookie="declined">Essential only</button>' +
-      '<button type="button" class="btn btn-gold" data-cookie="accepted"><span class="magnetic-inner">Accept</span></button>' +
+      '<button type="button" class="btn btn-ghost" data-cookie="declined" data-i18n="cookie_decline">' + T("cookie_decline", "Essential only") + '</button>' +
+      '<button type="button" class="btn btn-gold" data-cookie="accepted"><span class="magnetic-inner" data-i18n="cookie_accept">' + T("cookie_accept", "Accept") + '</span></button>' +
     "</div>";
   document.body.appendChild(banner);
   requestAnimationFrame(() => banner.classList.add("show"));
@@ -209,6 +267,61 @@ function initCookieConsent() {
   };
   banner.querySelectorAll("[data-cookie]").forEach((b) =>
     b.addEventListener("click", () => decide(b.getAttribute("data-cookie"))));
+}
+
+// ---- make a scroll container easy to drive with a laptop mouse -------------
+//   · native wheel scroll that never leaks to Lenis / the page
+//   · click-drag-to-scroll (grab the list and pan it vertically)
+//   · a visible custom scrollbar is styled in CSS (.lang-menu)
+function enableEasyScroll(el) {
+  if (!el) return;
+
+  // wheel → scroll THIS element; stop it bubbling up to the page / Lenis
+  el.addEventListener("wheel", (e) => {
+    const max = el.scrollHeight - el.clientHeight;
+    if (max <= 0) return;                       // nothing to scroll
+    const atTop = el.scrollTop <= 0 && e.deltaY < 0;
+    const atEnd = el.scrollTop >= max - 1 && e.deltaY > 0;
+    // keep the wheel inside the menu (don't scroll the page behind it)
+    if (!(atTop || atEnd)) e.preventDefault();
+    e.stopPropagation();
+    el.scrollTop += e.deltaY;
+  }, { passive: false });
+
+  // click-drag-to-scroll
+  let dragging = false, startY = 0, startTop = 0, moved = 0;
+  el.addEventListener("pointerdown", (e) => {
+    if (e.button !== 0) return;
+    dragging = true; moved = 0;
+    startY = e.clientY; startTop = el.scrollTop;
+    el.classList.remove("is-dragging");          // reset; only add once we actually drag
+  });
+  el.addEventListener("pointermove", (e) => {
+    if (!dragging) return;
+    const dy = e.clientY - startY;
+    if (Math.abs(dy) > 3) {
+      moved += Math.abs(dy);
+      if (!el.classList.contains("is-dragging")) {
+        el.classList.add("is-dragging");
+        try { el.setPointerCapture(e.pointerId); } catch (_) {}
+      }
+      el.scrollTop = startTop - dy;
+      e.preventDefault();
+    }
+  });
+  const endDrag = (e) => {
+    if (!dragging) return;
+    dragging = false;
+    el.classList.remove("is-dragging");
+    try { el.releasePointerCapture(e.pointerId); } catch (_) {}
+  };
+  el.addEventListener("pointerup", endDrag);
+  el.addEventListener("pointercancel", endDrag);
+  el.addEventListener("pointerleave", endDrag);
+  // a real drag must not also fire the option's click (language switch)
+  el.addEventListener("click", (e) => {
+    if (moved > 6) { e.preventDefault(); e.stopPropagation(); moved = 0; }
+  }, true);
 }
 
 // ---- i18n + language switcher (reuses window.TN_I18N from js/translations.js) --
@@ -242,6 +355,22 @@ function initI18n() {
     document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
       const v = tr(el.getAttribute("data-i18n-placeholder"), lang); if (v != null) el.setAttribute("placeholder", v);
     });
+    document.querySelectorAll("[data-i18n-html]").forEach((el) => {
+      const v = tr(el.getAttribute("data-i18n-html"), lang); if (v != null) el.innerHTML = v;
+    });
+    document.querySelectorAll("[data-i18n-aria-label]").forEach((el) => {
+      const v = tr(el.getAttribute("data-i18n-aria-label"), lang); if (v != null) el.setAttribute("aria-label", v);
+    });
+    // localized app screenshots: use the app's available locales, else English (root)
+    const SHOT_LANGS = ["fr", "de", "es", "ja"];
+    const SHOT_V = "20260618a";
+    document.querySelectorAll("img[data-screen]").forEach((img) => {
+      const name = img.getAttribute("data-screen");
+      const src = SHOT_LANGS.includes(lang)
+        ? "/v3/assets/screens/" + lang + "/" + name + ".jpg?v=" + SHOT_V
+        : "/v3/assets/screens/" + name + ".jpg?v=" + SHOT_V;
+      if (img.getAttribute("src") !== src) img.setAttribute("src", src);
+    });
     try { localStorage.setItem("tn_lang", lang); } catch (e) {}
     if (langCurrent) langCurrent.textContent = lang.toUpperCase();
     if (langMenu) langMenu.querySelectorAll("button").forEach((b) =>
@@ -255,6 +384,7 @@ function initI18n() {
     langMenu.innerHTML = codes.map((c) => '<button type="button" data-lang="' + c + '"><span>' + names[c] + "</span>" + tick + "</button>").join("");
     langMenu.querySelectorAll("button").forEach((b) =>
       b.addEventListener("click", () => { apply(b.getAttribute("data-lang")); if (langEl) langEl.classList.remove("open"); }));
+    enableEasyScroll(langMenu);
   }
   if (langBtn && langEl) {
     langBtn.addEventListener("click", (e) => { e.stopPropagation(); langEl.classList.toggle("open"); });
@@ -422,8 +552,10 @@ function boot() {
   initChrome();
   initMagnetic();
   initMorph();
-  initCookieConsent();
   initI18n();
+  initMobileMenu();
+  initProofSticky();
+  initCookieConsent();
 
   runLoader(() => {
     initPage(document);

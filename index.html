@@ -30,8 +30,8 @@
   <link rel="apple-touch-icon" href="/assets/icon.png" />
   <link rel="preconnect" href="https://unpkg.com" crossorigin />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-  <link rel="preload" as="image" href="/v3/assets/screens/tonight.jpg" />
-  <link rel="stylesheet" href="/v3/css/styles.css?v=20260616d" />
+  <link rel="preload" as="image" href="/v3/assets/screens/tonight.jpg?v=20260618c" />
+  <link rel="stylesheet" href="/v3/css/styles.css?v=20260618c" />
 
   <script>document.documentElement.classList.remove("no-js");</script>
 
@@ -79,13 +79,24 @@
         "keywords": "one-night dating app, dating app, meet someone tonight, spontaneous dating, nightlife dating, date tonight",
         "url": "https://2night.co/",
         "description": "2NIGHT is the one-night dating app for people who decide at 7pm they want to meet someone. Go live, see who's out near you, ping, match and meet — tonight, not tomorrow.",
-        "publisher": { "@id": "https://2night.co/#org" },
-        "offers": [
-          { "@type": "Offer", "name": "Silver", "price": "0", "priceCurrency": "USD" },
-          { "@type": "Offer", "name": "Gold", "price": "12.99", "priceCurrency": "USD" },
-          { "@type": "Offer", "name": "Platinum Black", "price": "29.99", "priceCurrency": "USD" }
-        ]
+        "publisher": { "@id": "https://2night.co/#org" }
       }
+    ]
+  }
+  </script>
+
+  <!-- FAQ structured data (AI/LLM answers + search) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Is 2NIGHT free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — joining is free and you can meet people on the free Basic tier. Silver, Gold and Platinum Black widen your radius and unlock more pings, Boosts and Black Events." } },
+      { "@type": "Question", "name": "When does 2NIGHT launch in my city?", "acceptedAnswer": { "@type": "Answer", "text": "We open cities in waves. Join the waitlist and we'll message you the moment 2NIGHT goes live near you." } },
+      { "@type": "Question", "name": "How is 2NIGHT different from other dating apps?", "acceptedAnswer": { "@type": "Answer", "text": "No endless swiping toward someday. 2NIGHT shows who's out near you right now and helps you actually meet — tonight, not in three weeks." } },
+      { "@type": "Question", "name": "Is 2NIGHT safe?", "acceptedAnswer": { "@type": "Answer", "text": "You decide when you're live, how far your radius reaches and what you share. Block and report in a tap, and go offline to disappear instantly. Read our Safety guidance before you meet." } },
+      { "@type": "Question", "name": "What do I get for joining the waitlist early?", "acceptedAnswer": { "@type": "Answer", "text": "The first 20 members get 1 year of Platinum Black, free. The next 200 get free Gold." } },
+      { "@type": "Question", "name": "Does 2NIGHT sell my data?", "acceptedAnswer": { "@type": "Answer", "text": "Never. We don't sell your personal data and we don't run third-party ad tracking." } }
     ]
   }
   </script>
@@ -135,13 +146,12 @@
         <span class="brand-name">2NIGHT</span>
       </a>
       <nav class="nav-links" aria-label="Primary">
-        <a href="#how" data-i18n="nav_how">How it works</a>
-        <a href="#screens" data-i18n="nav_app">The app</a>
-        <a href="#tiers" data-i18n="nav_tiers">Tiers</a>
-        <a href="/about" data-i18n="nav_about">About</a>
+        <a href="/discover" data-i18n="nav_discover">Discover</a>
         <a href="/safety" data-i18n="nav_safety">Safety</a>
+        <a href="/community-guidelines" data-i18n="nav_community">Community</a>
         <a href="/support" data-i18n="nav_support">Support</a>
       </nav>
+      <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false" data-i18n-aria-label="aria_menu"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line class="bx b-top" x1="4" y1="8" x2="22" y2="8"/><line class="bx b-mid" x1="4" y1="13" x2="22" y2="13"/><line class="bx b-bot" x1="4" y1="18" x2="22" y2="18"/></svg></button>
       <div class="lang" aria-label="Language selector">
         <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
@@ -150,7 +160,7 @@
         </button>
         <div class="lang-menu" role="menu"></div>
       </div>
-      <a class="btn btn-gold magnetic" href="#download"><span class="magnetic-inner" data-i18n="nav_download">Download</span></a>
+      <a class="btn btn-gold magnetic" href="#waitlist" data-waitlist><span class="magnetic-inner" data-i18n="nav_join">Join the waitlist</span></a>
     </div>
   </header>
 
@@ -169,22 +179,49 @@
           <span class="morph" data-morph data-i18n="hero_title2">out</span>
           <span class="morph gold-text" data-morph data-i18n="hero_title3">tonight?</span>
         </h1>
-        <p class="hero-tagline" data-reveal data-i18n="hero_tagline">Ping. Match. Meet.</p>
+        <p class="hero-tagline gold-text" data-reveal data-i18n="hero_make_happen">Make 2NIGHT Happen</p>
         <p class="hero-sub" data-reveal>
           <span data-i18n="hero_sub1">Meet people for real plans, right now.</span>
           <span data-i18n="hero_sub2">Not tomorrow. Not “maybe next week.”</span>
         </p>
         <div class="hero-cta">
-          <a class="btn btn-gold magnetic" href="#download"><span class="magnetic-inner" data-i18n="hero_cta_download">Download for iPhone</span></a>
-          <a class="btn btn-ghost magnetic" href="/support#contact"><span class="magnetic-inner" data-i18n="hero_cta_waitlist">Join the waitlist</span></a>
+          <a class="btn btn-gold magnetic" href="#waitlist" data-waitlist><span class="magnetic-inner" data-i18n="hero_cta_waitlist">Join the waitlist</span></a>
+          <a class="btn btn-ghost magnetic" href="#how"><span class="magnetic-inner" data-i18n="hero_cta_how">See how it works</span></a>
         </div>
-        <ul class="tier-legend" data-reveal>
-          <li><span class="tdot silver"></span><strong data-i18n="tier_silver">Silver</strong> <em data-i18n="tier_silver_price">Basic account</em></li>
-          <li><span class="tdot gold"></span><strong data-i18n="tier_gold">Gold</strong> <em data-i18n="tier_gold_price">$12.99 / month</em></li>
-          <li><span class="tdot platinum"></span><strong data-i18n="tier_platinum">Platinum Black</strong> <em data-i18n="tier_platinum_price">$29.99 / month</em></li>
-        </ul>
+        <p class="hero-perk" data-reveal data-i18n="waitlist_perk_short">First 20 get Platinum free for a year — next 200 get Gold.</p>
       </div>
-      <a class="scroll-cue" href="#how" aria-label="Scroll"><span></span> scroll</a>
+
+      <!-- interactive swipe card — drag right / tap ★ to join, left to pass -->
+      <div class="hero-swipe" aria-hidden="true">
+        <div class="hs-deck" id="hsDeck"></div>
+        <div class="hs-actions">
+          <button class="hs-btn pass" id="hsPass" type="button" aria-label="Pass" data-i18n-aria-label="aria_pass">✕</button>
+          <button class="hs-btn ping" id="hsPing" type="button" aria-label="Join" data-i18n-aria-label="aria_join">★</button>
+        </div>
+        <p class="hs-hint" data-i18n="swipe_hint">Swipe right to join · left to pass</p>
+      </div>
+
+      <a class="scroll-cue" href="#how" aria-label="Scroll" data-i18n-aria-label="aria_scroll"><span></span> <span data-i18n="cue_scroll">scroll</span></a>
+    </section>
+
+    <!-- ===================== PROOF / SOCIAL PROOF BAND ===================== -->
+    <section class="proof has-scrim" id="proof">
+      <p class="section-tag" data-reveal data-i18n="diff_kicker">Not another swipe app</p>
+      <h2 class="display sm" data-split data-i18n="diff_title">Built to get you out the door.</h2>
+      <div class="proof-grid">
+        <div class="proof-stat" data-reveal>
+          <span class="proof-num gold-text" id="proofCount" data-count>—</span>
+          <span class="proof-label" data-i18n="stat_on_list">on the waitlist</span>
+        </div>
+        <div class="proof-stat" data-reveal>
+          <span class="proof-num" data-i18n="stat_founders_big">First 20</span>
+          <span class="proof-label" data-i18n="stat_founders_sub">get 1 year of Platinum Black, free</span>
+        </div>
+        <div class="proof-stat" data-reveal>
+          <span class="proof-num" data-i18n="stat_zero_big">Zero</span>
+          <span class="proof-label" data-i18n="stat_zero_sub">ads, trackers, or data sold</span>
+        </div>
+      </div>
     </section>
 
     <!-- ===================== HOW IT WORKS ===================== -->
@@ -221,74 +258,32 @@
         </div>
         <div class="gallery-track" id="galleryTrack">
           <figure class="card">
-            <div class="card-media"><img loading="lazy" decoding="async" src="/v3/assets/screens/tonight.jpg" alt="2NIGHT — Tonight feed of the one-night dating app" /></div>
+            <div class="card-media"><img loading="lazy" decoding="async" src="/v3/assets/screens/tonight.jpg?v=20260618c" data-screen="tonight" alt="2NIGHT — Tonight feed of the one-night dating app" /></div>
             <figcaption><strong data-i18n="gal_tonight_t">Tonight</strong><span data-i18n="gal_tonight_s">Who's live, right now</span></figcaption>
           </figure>
           <figure class="card">
-            <div class="card-media"><img loading="lazy" decoding="async" src="/v3/assets/screens/plans.jpg" alt="2NIGHT dating app — plans near you tonight" /></div>
+            <div class="card-media"><img loading="lazy" decoding="async" src="/v3/assets/screens/plans.jpg?v=20260618c" data-screen="plans" alt="2NIGHT dating app — plans near you tonight" /></div>
             <figcaption><strong data-i18n="gal_plans_t">Plans</strong><span data-i18n="gal_plans_s">Join something tonight</span></figcaption>
           </figure>
           <figure class="card">
-            <div class="card-media"><img loading="lazy" decoding="async" src="/v3/assets/screens/chat.jpg" alt="2NIGHT dating app — chat with your match" /></div>
+            <div class="card-media"><img loading="lazy" decoding="async" src="/v3/assets/screens/chat.jpg?v=20260618c" data-screen="chat" alt="2NIGHT dating app — chat with your match" /></div>
             <figcaption><strong data-i18n="gal_chat_t">Chat</strong><span data-i18n="gal_chat_s">Skip the small talk</span></figcaption>
           </figure>
           <figure class="card">
-            <div class="card-media"><img loading="lazy" decoding="async" src="/v3/assets/screens/matches.jpg" alt="2NIGHT dating app — mutual matches" /></div>
+            <div class="card-media"><img loading="lazy" decoding="async" src="/v3/assets/screens/matches.jpg?v=20260618c" data-screen="matches" alt="2NIGHT dating app — mutual matches" /></div>
             <figcaption><strong data-i18n="gal_matches_t">Matches</strong><span data-i18n="gal_matches_s">Mutual, never random</span></figcaption>
           </figure>
           <figure class="card">
-            <div class="card-media"><img loading="lazy" decoding="async" src="/v3/assets/screens/paywall.jpg" alt="2NIGHT dating app — Silver, Gold and Platinum membership" /></div>
+            <div class="card-media"><img loading="lazy" decoding="async" src="/v3/assets/screens/paywall.jpg?v=20260618c" data-screen="paywall" alt="2NIGHT dating app — Silver, Gold and Platinum membership" /></div>
             <figcaption><strong data-i18n="gal_membership_t">Membership</strong><span data-i18n="gal_membership_s">Silver · Gold · Platinum</span></figcaption>
           </figure>
           <figure class="card">
-            <div class="card-media"><img loading="lazy" decoding="async" src="/v3/assets/screens/profile.jpg" alt="2NIGHT dating app — your profile" /></div>
+            <div class="card-media"><img loading="lazy" decoding="async" src="/v3/assets/screens/profile.jpg?v=20260618c" data-screen="profile" alt="2NIGHT dating app — your profile" /></div>
             <figcaption><strong data-i18n="gal_profile_t">Profile</strong><span data-i18n="gal_profile_s">You, after dark</span></figcaption>
           </figure>
         </div>
         <p class="gallery-note" data-reveal data-i18n="screens_disclaimer">All photos are for illustration only.</p>
       </div>
-    </section>
-
-    <!-- ===================== TIERS ===================== -->
-    <section class="tiers has-scrim" id="tiers">
-      <div class="tiers-head">
-        <p class="section-tag" data-reveal data-i18n="tiers_kicker">Membership</p>
-        <h2 class="display sm" data-split data-i18n="tiers_title">Choose your tier. Own the night.</h2>
-      </div>
-      <div class="tier-grid">
-        <article class="tier tier-silver" data-reveal>
-          <span class="tier-badge" data-i18n="tier_silver">Silver</span>
-          <p class="tier-tag" data-i18n="tier_silver_tag">Start here</p>
-          <p class="tier-price">Basic account</p>
-          <ul class="tier-features">
-            <li data-i18n="tier_silver_f1">5 pings a day</li>
-            <li data-i18n="tier_silver_f2">See who's out within 5&nbsp;km</li>
-            <li data-i18n="tier_silver_f3">1 active plan</li>
-          </ul>
-        </article>
-        <article class="tier tier-gold" data-reveal>
-          <span class="tier-popular" data-i18n="tier_popular">Most popular</span>
-          <span class="tier-badge" data-i18n="tier_gold">Gold</span>
-          <p class="tier-tag" data-i18n="tier_gold_tag">Go further</p>
-          <p class="tier-price">$12.99<small>/mo</small></p>
-          <ul class="tier-features">
-            <li data-i18n="tier_gold_f1">Unlimited pings</li>
-            <li data-i18n="tier_gold_f2">Full Tonight Feed — 15&nbsp;km</li>
-            <li data-i18n="tier_gold_f3">Travel Mode + weekly Boost</li>
-          </ul>
-        </article>
-        <article class="tier tier-platinum" data-reveal>
-          <span class="tier-badge" data-i18n="tier_platinum">Platinum Black</span>
-          <p class="tier-tag" data-i18n="tier_platinum_tag">Own the night</p>
-          <p class="tier-price">$29.99<small>/mo</small></p>
-          <ul class="tier-features">
-            <li data-i18n="tier_platinum_f1">Frontline — appear first</li>
-            <li data-i18n="tier_platinum_f2">Exclusive Black Events</li>
-            <li data-i18n="tier_platinum_f3">Verified Black badge + anonymous mode</li>
-          </ul>
-        </article>
-      </div>
-      <p class="tiers-note" data-reveal data-i18n="tiers_note">Prices in USD and may vary by region. Paid plans are billed through the Apple App Store and renew automatically until cancelled — manage or cancel anytime in your App Store settings. See our Terms.</p>
     </section>
 
     <!-- ===================== TESTIMONIALS ===================== -->
@@ -300,27 +295,27 @@
       <div class="testi-grid">
         <figure class="testi" data-reveal>
           <blockquote data-i18n="testimonial1_q">I landed in Lisbon with zero plans. By 9pm I was at a rooftop bar with three people I'd just matched. That's the whole app in one night.</blockquote>
-          <figcaption><span class="t-name" data-i18n="testimonial1_n">Marco</span><span class="t-meta"><span data-i18n="testimonial1_c">Lisbon</span> · <em class="gold-text" data-i18n="tier_gold">Gold</em></span></figcaption>
+          <figcaption><img class="t-avatar" loading="lazy" decoding="async" src="/v3/assets/people/m_marco.jpg?v=20260618c" alt="" /><span class="t-name" data-i18n="testimonial1_n">Marco</span><span class="t-meta"><span data-i18n="testimonial1_c">Lisbon</span> · <em class="gold-text" data-i18n="tier_gold">Gold</em></span></figcaption>
         </figure>
         <figure class="testi" data-reveal>
           <blockquote data-i18n="testimonial2_q">No more “we should hang out soon.” I set my status, saw who was free, and actually met someone the same evening. Finally.</blockquote>
-          <figcaption><span class="t-name" data-i18n="testimonial2_n">Léa</span><span class="t-meta"><span data-i18n="testimonial2_c">Paris</span> · <em data-i18n="tier_silver">Silver</em></span></figcaption>
+          <figcaption><img class="t-avatar" loading="lazy" decoding="async" src="/v3/assets/people/w_nina.jpg?v=20260618c" alt="" /><span class="t-name" data-i18n="testimonial2_n">Léa</span><span class="t-meta"><span data-i18n="testimonial2_c">Paris</span> · <em data-i18n="tier_silver">Silver</em></span></figcaption>
         </figure>
         <figure class="testi" data-reveal>
           <blockquote data-i18n="testimonial3_q">The Black Events are unreal. It feels less like an app and more like an invite to the best room in the city.</blockquote>
-          <figcaption><span class="t-name" data-i18n="testimonial3_n">Sofia</span><span class="t-meta"><span data-i18n="testimonial3_c">Dubai</span> · <em data-i18n="tier_platinum">Platinum Black</em></span></figcaption>
+          <figcaption><img class="t-avatar" loading="lazy" decoding="async" src="/v3/assets/people/p2.jpg?v=20260618c" alt="" /><span class="t-name" data-i18n="testimonial3_n">Sofia</span><span class="t-meta"><span data-i18n="testimonial3_c">Dubai</span> · <em data-i18n="tier_platinum">Platinum Black</em></span></figcaption>
         </figure>
         <figure class="testi" data-reveal>
           <blockquote data-i18n="testimonial4_q">New city for work, knew no one. Two weeks in I've got a real circle — all from deciding at 7pm I didn't want to stay in.</blockquote>
-          <figcaption><span class="t-name" data-i18n="testimonial4_n">Daniel</span><span class="t-meta"><span data-i18n="testimonial4_c">Berlin</span> · <em class="gold-text" data-i18n="tier_gold">Gold</em></span></figcaption>
+          <figcaption><img class="t-avatar" loading="lazy" decoding="async" src="/v3/assets/people/m_kenji.jpg?v=20260618c" alt="" /><span class="t-name" data-i18n="testimonial4_n">Daniel</span><span class="t-meta"><span data-i18n="testimonial4_c">Berlin</span> · <em class="gold-text" data-i18n="tier_gold">Gold</em></span></figcaption>
         </figure>
         <figure class="testi" data-reveal>
           <blockquote data-i18n="testimonial5_q">It's fast, it's beautiful, and it actually respects your time. Ping, match, meet — exactly as promised.</blockquote>
-          <figcaption><span class="t-name" data-i18n="testimonial5_n">Aisha</span><span class="t-meta"><span data-i18n="testimonial5_c">London</span> · <em data-i18n="tier_silver">Silver</em></span></figcaption>
+          <figcaption><img class="t-avatar" loading="lazy" decoding="async" src="/v3/assets/people/p1.jpg?v=20260618c" alt="" /><span class="t-name" data-i18n="testimonial5_n">Aisha</span><span class="t-meta"><span data-i18n="testimonial5_c">London</span> · <em data-i18n="tier_silver">Silver</em></span></figcaption>
         </figure>
         <figure class="testi" data-reveal>
           <blockquote data-i18n="testimonial6_q">Travel Mode is a cheat code. I open 2NIGHT the second I land and the local night is already waiting.</blockquote>
-          <figcaption><span class="t-name" data-i18n="testimonial6_n">Tomás</span><span class="t-meta"><span data-i18n="testimonial6_c">New York</span> · <em data-i18n="tier_platinum">Platinum Black</em></span></figcaption>
+          <figcaption><img class="t-avatar" loading="lazy" decoding="async" src="/v3/assets/people/m_leo.jpg?v=20260618c" alt="" /><span class="t-name" data-i18n="testimonial6_n">Tomás</span><span class="t-meta"><span data-i18n="testimonial6_c">New York</span> · <em data-i18n="tier_platinum">Platinum Black</em></span></figcaption>
         </figure>
       </div>
       <p class="testi-note" data-reveal data-i18n="testimonials_note">Quotes from beta users. Names and cities are representative.</p>
@@ -341,14 +336,30 @@
       <p class="radius-caption gold-text" data-reveal data-i18n="radius_caption">Wherever you are tonight.</p>
     </section>
 
+    <!-- ===================== FAQ ===================== -->
+    <section class="faq has-scrim" id="faq">
+      <div class="faq-head">
+        <p class="section-tag" data-reveal data-i18n="faq_kicker">Good to know</p>
+        <h2 class="display sm" data-split data-i18n="faq_title">Questions, answered.</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item" data-reveal><summary><span data-i18n="faq_q1">Is 2NIGHT free?</span><span class="faq-ico" aria-hidden="true"></span></summary><div class="faq-a"><p data-i18n="faq_a1">Yes — joining is free.</p></div></details>
+        <details class="faq-item" data-reveal><summary><span data-i18n="faq_q2">When does it launch in my city?</span><span class="faq-ico" aria-hidden="true"></span></summary><div class="faq-a"><p data-i18n="faq_a2">We open cities in waves.</p></div></details>
+        <details class="faq-item" data-reveal><summary><span data-i18n="faq_q3">How is it different from other dating apps?</span><span class="faq-ico" aria-hidden="true"></span></summary><div class="faq-a"><p data-i18n="faq_a3">No endless swiping.</p></div></details>
+        <details class="faq-item" data-reveal><summary><span data-i18n="faq_q4">Is it safe?</span><span class="faq-ico" aria-hidden="true"></span></summary><div class="faq-a"><p data-i18n="faq_a4">You're in control.</p></div></details>
+        <details class="faq-item" data-reveal><summary><span data-i18n="faq_q5">What do I get for joining early?</span><span class="faq-ico" aria-hidden="true"></span></summary><div class="faq-a"><p data-i18n="faq_a5">Founder perks.</p></div></details>
+        <details class="faq-item" data-reveal><summary><span data-i18n="faq_q6">Do you sell my data?</span><span class="faq-ico" aria-hidden="true"></span></summary><div class="faq-a"><p data-i18n="faq_a6">Never.</p></div></details>
+      </div>
+    </section>
+
     <!-- ===================== FINAL CTA ===================== -->
     <section class="download" id="download">
       <h2 class="display" data-split data-i18n="cta_title">Tonight, not tomorrow.</h2>
-      <p class="lede center" data-reveal data-i18n="cta_sub">The app for people who don't want to wait.</p>
+      <p class="lede center" data-reveal data-i18n="cta_sub2">Be first in. The earliest members own the night — free.</p>
       <div class="download-cta">
-        <a class="btn btn-gold lg magnetic" href="#" data-store><span class="magnetic-inner" data-i18n="cta_button">Download 2NIGHT</span></a>
+        <a class="btn btn-gold lg magnetic" href="#waitlist" data-waitlist><span class="magnetic-inner" data-i18n="cta_join">Join the waitlist</span></a>
       </div>
-      <p class="download-note" data-reveal data-i18n="android_soon">Android — available soon.</p>
+      <p class="download-note" data-reveal data-i18n="waitlist_perk_short">First 20 get Platinum free for a year — next 200 get Gold.</p>
     </section>
 
   </main>
@@ -356,7 +367,7 @@
   <!-- ============ FOOTER (all main-page links) ============ -->
   <footer class="footer">
     <div class="footer-disclaimer">
-      <p>
+      <p data-i18n-html="disclaimer_html">
         <strong>2NIGHT is for adults 18 and over.</strong> 2NIGHT is launching soon; some features and the App&nbsp;Store download may not yet be available in your region. App screens and photos are for illustration only, and testimonials are from beta users and are representative. 2NIGHT helps people meet but does <strong>not</strong> conduct background or identity checks — please read our <a href="/safety">Safety</a> guidance and meet responsibly. Paid memberships are billed by Apple and renew automatically until cancelled. By using 2NIGHT you agree to our <a href="/terms">Terms</a> and <a href="/privacy">Privacy&nbsp;Policy</a>. Apple, the Apple logo and App&nbsp;Store are trademarks of Apple&nbsp;Inc.; 2NIGHT is not affiliated with, sponsored or endorsed by Apple&nbsp;Inc.
       </p>
     </div>
@@ -368,26 +379,213 @@
       <nav class="footer-links">
         <a class="footer-login" href="/login" data-i18n-auth="auth_login">Log in</a>
         <a href="/about" data-i18n="footer_about">About</a>
-        <a href="/blog/">Blog</a>
+        <a href="/blog/" data-i18n="footer_blog">Blog</a>
         <a href="/safety" data-i18n="footer_safety">Safety</a>
         <a href="/support" data-i18n="footer_support">Support</a>
         <a href="/support#contact" data-i18n="footer_contact">Contact</a>
         <a href="/terms" data-i18n="footer_terms">Terms</a>
         <a href="/privacy" data-i18n="footer_privacy">Privacy</a>
+        <a href="/privacy-choices" data-i18n="footer_privacy_choices">Your privacy choices</a>
         <a href="/mentions-legales" data-i18n="footer_legal">Legal notice</a>
       </nav>
       <p class="footer-copy" data-i18n="footer_rights">© 2NIGHT. All rights reserved.</p>
     </div>
   </footer>
 
+  <!-- ============ WAITLIST MODAL ============ -->
+  <div class="wl-modal" id="waitlist" role="dialog" aria-modal="true" aria-labelledby="wlTitle" hidden>
+    <div class="wl-overlay" data-wl-close></div>
+    <div class="wl-card">
+      <button class="wl-x" type="button" aria-label="Close" data-i18n-aria-label="aria_close" data-wl-close>✕</button>
+      <div class="wl-form-wrap" id="wlFormWrap">
+        <p class="wl-kicker" data-i18n="waitlist_kicker">Early access</p>
+        <h2 class="wl-title" id="wlTitle" data-i18n="waitlist_title2">Make 2NIGHT happen.</h2>
+        <p class="wl-perk" data-i18n="waitlist_perk">First 20 get Platinum free for a year — next 200 get Gold. We'll message you the moment 2NIGHT is ready.</p>
+        <form class="wl-form" id="wlForm" novalidate>
+          <input class="wl-input" id="wlName" type="text" autocomplete="given-name" placeholder="Name (optional)" data-i18n-placeholder="waitlist_name" />
+          <input class="wl-input" id="wlEmail" type="email" autocomplete="email" required placeholder="Your email" data-i18n-placeholder="waitlist_email" />
+          <input class="wl-input" id="wlPhone" type="tel" autocomplete="tel" required placeholder="Phone (with country code)" data-i18n-placeholder="waitlist_phone" />
+          <button class="btn btn-gold lg wl-submit" type="submit"><span class="magnetic-inner" data-i18n="waitlist_button2">Reserve my spot</span></button>
+          <p class="wl-err" id="wlErr" role="alert"></p>
+          <p class="wl-fine" data-i18n="waitlist_fine">By joining you agree to be contacted about 2NIGHT. We never sell your data. 18+.</p>
+        </form>
+      </div>
+      <div class="wl-done" id="wlDone" hidden>
+        <div class="wl-done-emoji">🌙</div>
+        <h2 class="wl-title" data-i18n="waitlist_done_t">You're on the list.</h2>
+        <p class="wl-done-msg" id="wlDoneMsg" data-i18n="waitlist_done_p">We'll message you the moment 2NIGHT is ready in your city.</p>
+        <button class="btn btn-ghost" type="button" data-wl-close data-i18n="waitlist_close">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ STICKY MOBILE CTA (thumb zone) ============ -->
+  <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+    <div class="sticky-cta-text">
+      <strong id="stickyCount"></strong>
+      <span data-i18n="stat_on_list">on the waitlist</span>
+      <span class="sticky-dot">·</span>
+      <span data-i18n="sticky_note">Free to join · 18+</span>
+    </div>
+    <a class="btn btn-gold" href="#waitlist" data-waitlist><span class="magnetic-inner" data-i18n="cta_join">Join the waitlist</span></a>
+  </div>
+
   <!-- ============ LIBRARIES ============ -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/split-type@0.3.4/umd/index.min.js"></script>
   <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
-  <script src="/js/translations.js?v=20260616d"></script>
+  <script src="/js/translations.js?v=20260618c"></script>
 
   <!-- ============ APP ============ -->
-  <script type="module" src="/v3/js/main.js?v=20260616d"></script>
+  <script type="module" src="/v3/js/main.js?v=20260618c"></script>
+
+  <!-- ============ WAITLIST + HERO SWIPE CARD ============ -->
+  <script>
+  (function () {
+    var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var g = window.gsap;
+
+    // ---------- modal ----------
+    var modal = document.getElementById("waitlist");
+    function openWL() { if (!modal) return; modal.hidden = false; requestAnimationFrame(function(){ modal.classList.add("show"); });
+      var f = document.getElementById("wlEmail"); if (f && matchMedia("(pointer:fine)").matches) setTimeout(function(){ f.focus(); }, 350); }
+    function closeWL() { if (!modal) return; modal.classList.remove("show"); setTimeout(function(){ modal.hidden = true; }, 350); }
+    document.addEventListener("click", function (e) {
+      var t = e.target.closest("[data-waitlist]");
+      if (t) { e.preventDefault(); openWL(); return; }
+      if (e.target.closest("[data-wl-close]")) { e.preventDefault(); closeWL(); }
+    });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && modal && !modal.hidden) closeWL(); });
+    if (location.hash === "#waitlist") setTimeout(openWL, 600);
+
+    // ---------- submit → Supabase waitlist (public anon PostgREST) ----------
+    var SUPA_URL = "https://ygsbrqfbaropfmczvlyy.supabase.co/rest/v1/waitlist";
+    var SUPA_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inlnc2JycWZiYXJvcGZtY3p2bHl5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE1NTU0NjQsImV4cCI6MjA5NzEzMTQ2NH0.uc0MiyDrKpB3oTXvk5ZdOlf1gQGdvO4pl5iNB_L85IY";
+
+    // localised string helper — reuses the i18n dictionary, falls back to EN literal
+    function t(key, fallback) {
+      var I = window.TN_I18N, l = (document.documentElement.getAttribute("lang") || "en");
+      if (I) { if (I[l] && I[l][key] != null) return I[l][key]; if (I.en && I.en[key] != null) return I.en[key]; }
+      return fallback;
+    }
+    function doneMessage(position) {
+      var msg = document.getElementById("wlDoneMsg");
+      if (!msg) return;
+      var out;
+      if (position != null && position > 0) {
+        var tier = position <= 20
+          ? t("waitlist_done_platinum", "1 year of Platinum is yours, free. 🖤")
+          : position <= 220
+            ? t("waitlist_done_gold", "A free year of Gold is reserved for you. ✨")
+            : t("waitlist_done_listed", "You're on the list. 🌙");
+        var pos = t("waitlist_position", "You're #{n}.").replace("{n}", String(position));
+        out = pos + " " + tier + " " + t("waitlist_done_tail", "We'll message you the moment 2NIGHT is ready.");
+      } else {
+        out = t("waitlist_done_p", "We'll message you the moment 2NIGHT is ready in your city.");
+      }
+      msg.textContent = out;
+    }
+    function showDone(position) {
+      doneMessage(position);
+      document.getElementById("wlFormWrap").hidden = true;
+      document.getElementById("wlDone").hidden = false;
+    }
+
+    var form = document.getElementById("wlForm");
+    if (form) form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var name = document.getElementById("wlName").value.trim();
+      var email = document.getElementById("wlEmail").value.trim();
+      var phone = document.getElementById("wlPhone").value.trim();
+      var err = document.getElementById("wlErr");
+      err.textContent = "";
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { err.textContent = t("waitlist_err_email", "Please enter a valid email."); return; }
+      if (phone.replace(/[^0-9]/g, "").length < 7) { err.textContent = t("waitlist_err_phone", "Please enter a valid phone number."); return; }
+      var btn = form.querySelector(".wl-submit"); btn.disabled = true; btn.style.opacity = .6;
+      var lang = (document.documentElement.getAttribute("lang") || "en");
+      var row = { email: email, phone: phone, lang: lang, source: "web" };
+      if (name) row.name = name;
+      if (document.referrer) row.ref = document.referrer.slice(0, 300);
+
+      fetch(SUPA_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "apikey": SUPA_ANON,
+          "Authorization": "Bearer " + SUPA_ANON,
+          "Prefer": "return=representation"
+        },
+        body: JSON.stringify(row)
+      }).then(function (r) {
+        return r.text().then(function (txt) {
+          var data = null; try { data = txt ? JSON.parse(txt) : null; } catch (_) {}
+          return { status: r.status, ok: r.ok, data: data };
+        });
+      }).then(function (res) {
+        if (res.ok) {
+          var rec = Array.isArray(res.data) ? res.data[0] : res.data;
+          var position = rec ? (rec.rank != null ? rec.rank : rec.position) : null;
+          showDone(typeof position === "number" ? position : null);
+          return;
+        }
+        // 409 = already on the list (unique email) → treat as success, no scary error
+        if (res.status === 409) { showDone(null); return; }
+        throw new Error("HTTP " + res.status);
+      }).catch(function () {
+        // network / table-not-ready → re-enable so the user can retry, show a soft error
+        btn.disabled = false; btn.style.opacity = 1;
+        err.textContent = t("waitlist_err_generic", "Something went wrong — please try again.");
+      });
+    });
+
+    // ---------- hero swipe card ----------
+    var deck = document.getElementById("hsDeck");
+    if (deck) {
+      var I18N = (window.TN_I18N && window.TN_I18N.en) || {};
+      function L(k, fb) { return (I18N[k] != null) ? I18N[k] : fb; }
+      var CARDS = [
+        { emoji: "🍸", tkey: "swipe_c1_t", skey: "swipe_c1_s", glow: "rgba(255,215,0,.2)" },
+        { emoji: "🎶", tkey: "swipe_c2_t", skey: "swipe_c2_s", glow: "rgba(255,90,150,.2)" },
+        { emoji: "🌙", tkey: "swipe_c3_t", skey: "swipe_c3_s", glow: "rgba(150,180,255,.2)" }
+      ];
+      var els = [], idx = 0;
+      CARDS.forEach(function (c) {
+        var el = document.createElement("div"); el.className = "hs-card";
+        el.innerHTML = '<div class="hs-glow" style="background:radial-gradient(120% 80% at 50% 30%,' + c.glow + ',transparent 70%)"></div>'
+          + '<span class="hs-stamp like" data-i18n="swipe_join">' + L("swipe_join","JOIN") + '</span><span class="hs-stamp nope" data-i18n="swipe_pass">' + L("swipe_pass","PASS") + '</span>'
+          + '<div class="hs-emoji">' + c.emoji + '</div><h3 data-i18n="' + c.tkey + '">' + L(c.tkey,"") + '</h3><div class="hs-tag" data-i18n="' + c.skey + '">' + L(c.skey,"") + '</div>';
+        deck.appendChild(el); els.push(el);
+      });
+      function layout() { els.forEach(function (el, i) { var d = i - idx; if (d < 0) return;
+        el.style.zIndex = String(CARDS.length - d); var s = 1 - Math.min(d, 2) * 0.05, y = Math.min(d, 2) * 12;
+        if (g && !reduce) g.to(el, { scale: s, y: y, duration: .4, ease: "power3.out" }); else el.style.transform = "translateY(" + y + "px) scale(" + s + ")";
+        el.style.display = d > 2 ? "none" : "flex"; }); }
+      function fly(el, dir) {
+        var x = dir * (innerWidth * 0.9);
+        if (g && !reduce) g.to(el, { x: x, rotate: dir * 18, opacity: 0, duration: .5, ease: "power2.in" });
+        else { el.style.transition = "transform .4s,opacity .4s"; el.style.transform = "translate(" + x + "px) rotate(" + (dir*18) + "deg)"; el.style.opacity = 0; }
+        if (dir > 0) openWL();
+        idx++; if (idx >= CARDS.length) { setTimeout(function(){ idx = 0; els.forEach(function(e){ e.style.opacity=1; e.style.transform=""; }); layout(); attach(els[0]); }, 700); }
+        else { layout(); attach(els[idx]); }
+      }
+      function attach(el) { if (!el) return; var sx=0, dx=0, drag=false;
+        var like = el.querySelector(".hs-stamp.like"), nope = el.querySelector(".hs-stamp.nope");
+        el.addEventListener("pointerdown", function (e) { drag=true; sx=e.clientX; el.setPointerCapture(e.pointerId); });
+        el.addEventListener("pointermove", function (e) { if(!drag)return; dx=e.clientX-sx;
+          el.style.transform = "translate("+dx+"px,"+(Math.abs(dx)*0.05)+"px) rotate("+(dx*0.06)+"deg)";
+          var k=Math.min(Math.abs(dx)/110,1); if(like)like.style.opacity=dx>0?k:0; if(nope)nope.style.opacity=dx<0?k:0; });
+        function up(){ if(!drag)return; drag=false;
+          if(Math.abs(dx)>95) fly(el, dx>0?1:-1);
+          else { if(g&&!reduce)g.to(el,{x:0,y:0,rotate:0,duration:.5,ease:"elastic.out(1,.5)"}); else el.style.transform="";
+            if(like)like.style.opacity=0; if(nope)nope.style.opacity=0; } dx=0; }
+        el.addEventListener("pointerup", up); el.addEventListener("pointercancel", up); }
+      layout(); attach(els[0]);
+      var pb = document.getElementById("hsPing"), xb = document.getElementById("hsPass");
+      if (pb) pb.addEventListener("click", function(){ if(els[idx]) fly(els[idx], 1); });
+      if (xb) xb.addEventListener("click", function(){ if(els[idx]) fly(els[idx], -1); });
+    }
+  })();
+  </script>
 </body>
 </html>

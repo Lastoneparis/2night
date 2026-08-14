@@ -208,10 +208,14 @@ function billboards({ texture, count, atlas, mode, blending, alpha, place, refle
 // ---------- dancefloor + sparkles + backdrop -------------------------------
 function buildFloor() {
   const mat = new THREE.ShaderMaterial({
-    uniforms: { uTime: { value: 0 }, uFogColor: { value: new THREE.Color(FOG) }, uFogNear: { value: NEAR }, uFogFar: { value: FAR } },
+    uniforms: {
+      uTime: { value: 0 }, uFogColor: { value: new THREE.Color(FOG) }, uFogNear: { value: NEAR }, uFogFar: { value: FAR },
+      uRipple: { value: new THREE.Vector2(0, -9999) },   // world x,z of last tap
+      uRippleT: { value: 99 },                            // seconds since tap
+    },
     transparent: true, depthWrite: false,
     vertexShader: `varying vec2 vP; varying float vFog; void main(){ vP = position.xy; vec4 mv = modelViewMatrix*vec4(position,1.0); vFog=-mv.z; gl_Position=projectionMatrix*mv; }`,
-    fragmentShader: `precision highp float; uniform float uTime; uniform vec3 uFogColor; uniform float uFogNear,uFogFar; varying vec2 vP; varying float vFog;
+    fragmentShader: `precision highp float; uniform float uTime; uniform vec3 uFogColor; uniform float uFogNear,uFogFar; uniform vec2 uRipple; uniform float uRippleT; varying vec2 vP; varying float vFog;
       void main(){
         vec2 g = abs(fract(vP*0.14)-0.5);
         float line = smoothstep(0.46,0.5,max(g.x,g.y));
@@ -220,13 +224,63 @@ function buildFloor() {
         vec3 gold = vec3(1.0,0.78,0.32), cyan = vec3(0.3,0.8,1.0);
         vec3 col = mix(gold, cyan, step(0.5, fract((cell.x+cell.y)*0.5)));
         float glow = line * (0.25 + 0.75*pulse);
+        // interactive ripple: a gold ring expanding from the tap point
+        float d = distance(vP, uRipple);          // vP.x=world x, vP.y=world z (plane rotated)
+        float ring = 1.0 - smoothstep(0.0, 2.4, abs(d - uRippleT*22.0));
+        float life = max(0.0, 1.0 - uRippleT/1.4);
+        glow += ring * life * 1.3;
+        col = mix(col, vec3(1.0,0.85,0.45), ring*life);
         float fog = smoothstep(uFogNear,uFogFar,vFog);
-        gl_FragColor = vec4(col*glow*1.6, glow*(1.0-fog)*0.9);
+        gl_FragColor = vec4(col*glow*1.6, clamp(glow,0.0,1.0)*(1.0-fog)*0.9);
       }`,
   });
   const m = new THREE.Mesh(new THREE.PlaneGeometry(260, 320), mat);
   m.rotation.x = -Math.PI / 2; m.position.set(0, -0.2, -60);
   return { mesh: m, mat };
+}
+
+// interactive heart burst — a CPU-driven pool fired on tap/click
+function buildBurst(heartTex, N) {
+  const pos = new Float32Array(N * 3), siz = new Float32Array(N), tint = new Float32Array(N * 3);
+  const life = new Float32Array(N), vel = new Float32Array(N * 3);
+  for (let i = 0; i < N; i++) { pos[i*3+1] = -9999; }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute("position", new THREE.BufferAttribute(pos, 3));
+  g.setAttribute("aSize", new THREE.BufferAttribute(siz, 1));
+  g.setAttribute("aTint", new THREE.BufferAttribute(tint, 3));
+  const mat = new THREE.ShaderMaterial({
+    transparent: true, depthWrite: false, blending: THREE.AdditiveBlending,
+    uniforms: { uTex: { value: heartTex } },
+    vertexShader: `attribute float aSize; attribute vec3 aTint; varying vec3 vT;
+      void main(){ vT=aTint; vec4 mv=modelViewMatrix*vec4(position,1.0); gl_PointSize=aSize*(300.0/-mv.z); gl_Position=projectionMatrix*mv; }`,
+    fragmentShader: `precision highp float; uniform sampler2D uTex; varying vec3 vT;
+      void main(){ vec4 t=texture2D(uTex,gl_PointCoord); if(t.a<0.03)discard; gl_FragColor=vec4(t.rgb*vT, t.a); }`,
+  });
+  const pts = new THREE.Points(g, mat); pts.frustumCulled = false;
+  let cursor = 0;
+  function fire(wx, wy, wz, n) {
+    for (let k = 0; k < n; k++) {
+      const i = cursor; cursor = (cursor + 1) % N;
+      pos[i*3] = wx + rand(-1.2, 1.2); pos[i*3+1] = wy + rand(-0.5, 0.5); pos[i*3+2] = wz + rand(-1.2, 1.2);
+      vel[i*3] = rand(-3, 3); vel[i*3+1] = rand(7, 13); vel[i*3+2] = rand(-3, 3);
+      life[i] = rand(1.6, 2.6); siz[i] = rand(2.2, 4.2);
+      const c = TINTS[(Math.random() * TINTS.length) | 0];
+      tint[i*3] = c[0]; tint[i*3+1] = c[1]; tint[i*3+2] = c[2];
+    }
+  }
+  function update(dt) {
+    let any = false;
+    for (let i = 0; i < N; i++) {
+      if (life[i] <= 0) continue; any = true;
+      life[i] -= dt;
+      if (life[i] <= 0) { pos[i*3+1] = -9999; siz[i] = 0; continue; }
+      vel[i*3+1] -= dt * 4.0;                 // gentle gravity
+      pos[i*3] += vel[i*3]*dt; pos[i*3+1] += vel[i*3+1]*dt; pos[i*3+2] += vel[i*3+2]*dt;
+      siz[i] *= (1 - dt * 0.25);
+    }
+    if (any) { g.attributes.position.needsUpdate = true; g.attributes.aSize.needsUpdate = true; g.attributes.aTint.needsUpdate = true; }
+  }
+  return { pts, fire, update };
 }
 
 function buildSparkles(N) {
@@ -313,6 +367,10 @@ export function initCity(canvas) {
   scene.add(skyline, floor.mesh, crowd.mesh, cards.mesh, hearts.mesh, sparkles);
   if (crowd.reflMesh) scene.add(crowd.reflMesh);
 
+  // interactive heart burst (fired on tap/click)
+  const burst = buildBurst(hTex, small ? 90 : 160);
+  scene.add(burst.pts);
+
   // bloom
   let composer = null;
   try {
@@ -327,6 +385,29 @@ export function initCity(canvas) {
   const mouse = { x: 0, y: 0, tx: 0, ty: 0 };
   function onPointer(e) { if (reduceMotion) return; mouse.tx = (e.clientX / innerWidth) * 2 - 1; mouse.ty = (e.clientY / innerHeight) * 2 - 1; }
   window.addEventListener("pointermove", onPointer, { passive: true });
+
+  // ---- TAP / CLICK INTERACTION: send hearts + ripple the floor where you tap ----
+  const ray = new THREE.Raycaster();
+  const ndc = new THREE.Vector2();
+  const floorPlane = new THREE.Plane(new THREE.Vector3(0, 1, 0), 0.2); // y = -0.2 floor
+  const hit = new THREE.Vector3();
+  function onTap(e) {
+    if (reduceMotion) return;
+    // ignore taps on real UI (links, buttons, menus, banner)
+    if (e.target && e.target.closest && e.target.closest("a,button,input,textarea,select,.lang-menu,.cookie-banner")) return;
+    ndc.x = (e.clientX / innerWidth) * 2 - 1;
+    ndc.y = -((e.clientY / innerHeight) * 2 - 1);
+    ray.setFromCamera(ndc, camera);
+    // burst at a point a bit in front of the camera along the click ray
+    const at = ray.ray.at(26, new THREE.Vector3());
+    burst.fire(at.x, Math.max(at.y, 1.5), at.z, small ? 7 : 12);
+    // ripple where the ray meets the floor
+    if (ray.ray.intersectPlane(floorPlane, hit)) {
+      floor.mat.uniforms.uRipple.value.set(hit.x, hit.z);
+      floor.mat.uniforms.uRippleT.value = 0;
+    }
+  }
+  window.addEventListener("pointerdown", onTap, { passive: true });
 
   let progress = 0, eased = 0;
   const look = new THREE.Vector3();
@@ -346,15 +427,18 @@ export function initCity(canvas) {
   function onResize() { camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight, false); if (composer) composer.setSize(innerWidth, innerHeight); }
   window.addEventListener("resize", onResize);
 
-  const clock = new THREE.Clock(); let raf = 0;
+  const clock = new THREE.Clock(); let raf = 0, t = 0;
   function frame() {
-    const t = clock.getElapsedTime();
+    const dt = Math.min(clock.getDelta(), 0.05);
+    t += dt;
     eased += (progress - eased) * 0.08;
     mouse.x += (mouse.tx - mouse.x) * 0.05; mouse.y += (mouse.ty - mouse.y) * 0.05;
     if (!reduceMotion) {
       crowd.mat.uniforms.uTime.value = t; if (crowd.reflMat) crowd.reflMat.uniforms.uTime.value = t;
       hearts.mat.uniforms.uTime.value = t;
       cards.mat.uniforms.uTime.value = t; floor.mat.uniforms.uTime.value = t; sparkMat.uniforms.uTime.value = t;
+      floor.mat.uniforms.uRippleT.value += dt;
+      burst.update(dt);
     }
     placeCamera(eased);
     if (composer) composer.render(); else renderer.render(scene, camera);
@@ -368,6 +452,7 @@ export function initCity(canvas) {
       cancelAnimationFrame(raf);
       window.removeEventListener("resize", onResize);
       window.removeEventListener("pointermove", onPointer);
+      window.removeEventListener("pointerdown", onTap);
       renderer.dispose(); if (composer && composer.dispose) composer.dispose();
     },
   };

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Community Guidelines — 2NIGHT</title>
+  <meta name="description" content="2NIGHT Community Guidelines — the rules that keep the night safe and real. Be real, be respectful, 18+ only." />
+  <meta name="theme-color" content="#050505" />
+  <link rel="canonical" href="https://2night.co/community-guidelines" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="2NIGHT" />
+  <meta property="og:url" content="https://2night.co/community-guidelines" />
+  <meta property="og:title" content="Community Guidelines — 2NIGHT" />
+  <meta property="og:description" content="The one-night dating app. Tonight, not tomorrow." />
+  <meta property="og:image" content="https://2night.co/assets/og-card.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="icon" type="image/png" href="/assets/icon.png" />
+  <link rel="stylesheet" href="/v3/css/styles.css?v=20260618c" />
+  <script>document.documentElement.classList.remove("no-js");</script>
+  <script type="importmap">
+  { "imports": { "three": "https://unpkg.com/three@0.160.1/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.1/examples/jsm/" } }
+  </script>
+</head>
+<body>
+  <div class="city-poster" aria-hidden="true"></div>
+  <canvas id="gl" class="gl-canvas" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="transition" aria-hidden="true"><div class="transition-strip"></div><div class="transition-strip"></div><div class="transition-strip"></div><div class="transition-strip"></div><div class="transition-strip"></div></div>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/" aria-label="2NIGHT home"><img src="/assets/icon.png" alt="" /><span class="brand-name">2NIGHT</span></a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/discover" data-i18n="nav_discover">Discover</a>
+        <a href="/safety" data-i18n="nav_safety">Safety</a>
+        <a href="/community-guidelines" data-i18n="nav_community">Community</a>
+        <a href="/support" data-i18n="nav_support">Support</a>
+      </nav>
+      <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false" data-i18n-aria-label="aria_menu"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line class="bx b-top" x1="4" y1="8" x2="22" y2="8"/><line class="bx b-mid" x1="4" y1="13" x2="22" y2="13"/><line class="bx b-bot" x1="4" y1="18" x2="22" y2="18"/></svg></button>
+      <div class="lang" aria-label="Language selector">
+        <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span class="lang-current">EN</span>
+          <svg class="lang-caret" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="lang-menu" role="menu"></div>
+      </div>
+      <a class="btn btn-gold magnetic" href="/#waitlist" data-i18n="nav_join">Join the waitlist</a>
+    </div>
+  </header>
+
+  <main>
+    <article class="page">
+      <p class="page-kicker" data-i18n="cg_kicker">Community</p>
+      <h1 class="page-title gold-text" data-reveal data-i18n="cg_title">Community Guidelines</h1>
+      <p class="page-lead" data-reveal data-i18n="cg_lead">2NIGHT only works if it feels safe and real. These rules keep the night good for everyone — break them and you're out.</p>
+
+      <div class="tip-grid">
+        <div class="tip-card" data-reveal><span class="tip-no">01</span><h3 data-i18n="cg1_t">Be real</h3><p data-i18n="cg1_b">Use your own photos and real details. No fake profiles, impersonation, or catfishing.</p></div>
+        <div class="tip-card" data-reveal><span class="tip-no">02</span><h3 data-i18n="cg2_t">Be respectful</h3><p data-i18n="cg2_b">No harassment, hate, threats, or unsolicited explicit content. Treat people the way you'd want to be treated.</p></div>
+        <div class="tip-card" data-reveal><span class="tip-no">03</span><h3 data-i18n="cg3_t">18 and over only</h3><p data-i18n="cg3_b">2NIGHT is strictly for adults. Anyone underage is removed immediately.</p></div>
+        <div class="tip-card" data-reveal><span class="tip-no">04</span><h3 data-i18n="cg4_t">No money, no business</h3><p data-i18n="cg4_b">No selling, escorting, soliciting, scams, or asking members for money, gifts, or crypto.</p></div>
+        <div class="tip-card" data-reveal><span class="tip-no">05</span><h3 data-i18n="cg5_t">Keep it consensual</h3><p data-i18n="cg5_b">No recording or sharing anyone without consent, no doxxing, no sharing private information.</p></div>
+        <div class="tip-card" data-reveal><span class="tip-no">06</span><h3 data-i18n="cg6_t">Report what's wrong</h3><p data-i18n="cg6_b">Block and report anyone who crosses a line. Our team reviews every report — flagging keeps the night safe.</p></div>
+      </div>
+
+      <div class="panel" data-reveal>
+        <h2 data-i18n="cg_kicker">Community</h2>
+        <p data-i18n="cg_contact">See something serious? Email us — we read every message.</p>
+        <a class="email" href="mailto:support@2night.co">support@2night.co</a>
+      </div>
+
+      <a class="page-back" href="/" data-i18n="home_back">← Back to home</a>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a class="brand" href="/"><img src="/assets/icon.png" alt="" /><span class="brand-name">2NIGHT</span></a>
+      <nav class="footer-links">
+        <a href="/discover" data-i18n="nav_discover">Discover</a>
+        <a href="/about" data-i18n="footer_about">About</a>
+        <a href="/safety" data-i18n="footer_safety">Safety</a>
+        <a href="/community-guidelines" data-i18n="nav_community">Community</a>
+        <a href="/security" data-i18n="sec_kicker">Trust &amp; Security</a>
+        <a href="/support" data-i18n="footer_support">Support</a>
+        <a href="/terms" data-i18n="footer_terms">Terms</a>
+        <a href="/privacy" data-i18n="footer_privacy">Privacy</a>
+        <a href="/privacy-choices" data-i18n="footer_privacy_choices">Your privacy choices</a>
+        <a href="/mentions-legales" data-i18n="footer_legal">Legal notice</a>
+      </nav>
+      <p class="footer-copy" data-i18n="footer_rights">© 2026 2NIGHT. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/split-type@0.3.4/umd/index.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="/js/translations.js?v=20260618c"></script>
+  <script type="module" src="/v3/js/main.js?v=20260618c"></script>
+</body>
+</html>
