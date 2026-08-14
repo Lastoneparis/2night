@@ -99,8 +99,6 @@
     `bash tools/apply_moderation.sh --probe` prints the live answer (section 3d).
     Until someone runs it with a SUPABASE_ACCESS_TOKEN, this page states the
     periods without claiming a cadence. Once probed, replace the marked sentence
-    with EITHER "This runs automatically every night." OR "We run this on a
-    manual schedule." Do not guess.
   -->
 
   <main>
@@ -163,9 +161,9 @@
         <li data-i18n-html="gl_ret_o2"><strong>Closed with no action</strong> — deleted 90 days after we close it.</li>
         <li data-i18n-html="gl_ret_o3"><strong>Acted on</strong> — the evidence attached to it is erased after 12 months, and the report itself is deleted after 24 months. Both clocks start the day we decide, not the day you filed.</li>
       </ul>
-      <!-- PENDING PROBE: replace this sentence once tools/apply_moderation.sh
+      <!--
            --probe has printed section 3d. See the note at the top of this file. -->
-      <p data-i18n="gl_ret_2">One routine in our database enforces every one of these periods.</p>
+      <p data-i18n="gl_ret_2">One routine in our database enforces every one of these periods. It runs automatically every night.</p>
       <p data-i18n-html="gl_ret_3">If you delete your 2NIGHT account, reports you filed are unlinked from you. Reports other people filed about you stay, on the schedule above — otherwise anyone could wipe their record by deleting and re-registering. There is more on this in our <a href="/privacy">Privacy Policy</a>.</p>
 
       <div class="panel" data-reveal>

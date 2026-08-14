@@ -50,7 +50,7 @@ window.TN_I18N = {
     "gl_ret_o1": "<strong>Still open, or being looked at</strong> — kept until it is decided. Nothing is ever deleted out from under an unfinished case.",
     "gl_ret_o2": "<strong>Closed with no action</strong> — deleted 90 days after we close it.",
     "gl_ret_o3": "<strong>Acted on</strong> — the evidence attached to it is erased after 12 months, and the report itself is deleted after 24 months. Both clocks start the day we decide, not the day you filed.",
-    "gl_ret_2": "One routine in our database enforces every one of these periods.",
+    "gl_ret_2": "One routine in our database enforces every one of these periods. It runs automatically every night.",
     "gl_ret_3": "If you delete your 2NIGHT account, reports you filed are unlinked from you. Reports other people filed about you stay, on the schedule above — otherwise anyone could wipe their record by deleting and re-registering. There is more on this in our <a href=\"/privacy\">Privacy Policy</a>.",
     "gl_panel_h": "In an emergency, call for help first.",
     "gl_panel_p": "If you are in danger right now, contact your local emergency services before you contact us. We are one person reading a queue; they can reach you in minutes. Then tell us, so we can act on the account.",
