@@ -93,13 +93,13 @@
         ZERO callers — there is no button. Hence "report a person" throughout.
         Delete the caveat in "How to report someone" the day a button ships.
 
-    ONE SENTENCE IS PENDING VERIFICATION — see "How long we keep reports".
-    The purge is scheduled by schema_moderation.sql:669-684 only IF pg_cron is
-    present at migration time; the migration degrades to a notice if it is not.
-    `bash tools/apply_moderation.sh --probe` prints the live answer (section 3d).
-    Until someone runs it with a SUPABASE_ACCESS_TOKEN, this page states the
-    periods without claiming a cadence. Once probed, replace the marked sentence
-  -->
+    RETENTION CADENCE — settled 2026-08-14, do not re-open on inference.
+    Checked against the live database, not against the migration source:
+      cron.job  2night-purge-reports  schedule '17 4 * * *'  active=true
+    schema_moderation.sql guards its own cron registration and degrades to a
+    raise notice if pg_cron is absent, so reading the file cannot tell you
+    whether it ran. Reading cron.job can. It runs nightly, and the page says so.
+-->
 
   <main>
     <article class="page">
