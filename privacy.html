@@ -144,5 +144,28 @@
   <script src="/js/translations.js?v=20260618c"></script>
   <script type="module" src="/v3/js/main.js?v=20260618c"></script>
 
+<!-- 2NIGHT cookie consent banner (essential-only; compliant) -->
+<style>
+#tn-cc{position:fixed;left:16px;right:16px;bottom:16px;z-index:99999;max-width:720px;margin:0 auto;background:#14141a;color:#e8e8ea;border:1px solid #2a2a33;border-radius:16px;padding:18px 20px;font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;box-shadow:0 12px 40px rgba(0,0,0,.5);display:none}
+#tn-cc.show{display:block}
+#tn-cc p{margin:0 0 12px;font-size:.92rem;line-height:1.5}
+#tn-cc a{color:#ffce5c}
+#tn-cc .row{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+#tn-cc button{border:0;border-radius:10px;padding:10px 18px;font-weight:700;cursor:pointer;font-size:.9rem}
+#tn-cc .ok{background:linear-gradient(135deg,#ffd66b,#ff9d3c);color:#111}
+#tn-cc .ghost{background:transparent;color:#cfcfd6;border:1px solid #33333d}
+</style>
+<div id="tn-cc" role="dialog" aria-label="Cookie notice">
+  <p>2NIGHT uses only <strong>strictly necessary cookies</strong> to keep the site working securely. We don't use advertising or tracking cookies. See our <a href="/cookies.html">Cookie Policy</a> and <a href="/privacy.html">Privacy Policy</a>.</p>
+  <div class="row">
+    <button class="ghost" onclick="tnCC(false)">Decline non-essential</button>
+    <button class="ok" onclick="tnCC(true)">Got it</button>
+  </div>
+</div>
+<script>
+(function(){try{if(!localStorage.getItem('tn_cookie_choice')){document.getElementById('tn-cc').classList.add('show');}}catch(e){}})();
+function tnCC(ok){try{localStorage.setItem('tn_cookie_choice',ok?'accepted':'essential');}catch(e){}document.getElementById('tn-cc').classList.remove('show');}
+</script>
+
 </body>
 </html>
