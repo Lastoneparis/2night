@@ -1,0 +1,1983 @@
+# 2NIGHT — full text of key pages (plain text for LLMs)
+# Generated 2026-09-04 from https://2night.co
+
+2NIGHT is a one-night dating app for iPhone that shows who is out near you tonight, so you can match and meet the same evening instead of chatting for days.
+2NIGHT uses a radius around your location and a nightly “Tonight” status that expires at 5 AM; your profile only appears in the feed while you are live, next to other people who are out that night.
+2NIGHT is an alternative to Tinder, Bumble, Happn and Pure for people who want a spontaneous same-night date.
+
+================================================================
+URL: https://2night.co/dating-app-for-tonight
+TITLE: Dating App for Tonight — 2NIGHT dating app
+================================================================
+
+Dating app for tonight
+
+# A dating app for tonight — not for “sometime next week”
+
+By the 2NIGHT team
+·
+Updated 4 September 2026
+
+2NIGHT is a one-night dating app for iPhone that shows who is out near you tonight, so you can match and meet the same evening instead of chatting for days.
+
+Most dating apps are built around a slow funnel: swipe for a week, match, exchange messages for a few days, then try to find a free evening that suits two calendars. If what you actually want is a drink with someone new this evening, that funnel is the wrong shape. This page explains what a dating app for tonight has to do differently, and how 2NIGHT does it.
+
+## What “for tonight” means in practice
+
+A tonight-first app needs three things a classic swipe app does not have. First, a notion of time : everyone you see has to be free in the same window you are, otherwise you are back to “maybe Thursday?”. Second, a notion of distance that is real : a match 40 km away is not a plan for tonight, it is a plan for a weekend. Third, a way to say what kind of night you want before anyone types “hey”.
+
+2NIGHT is designed around exactly those three things. You go live with a one-line status (“free after 8, drinks and live music”), pick from categories such as drinks, food, rooftop, music, culture, sports, games, nightlife, talk, coffee or a walk, and say whether you are open to dating, meeting friends, or both. Then the Tonight Feed shows the other people who are live within your radius.
+
+## The nightly window
+
+2NIGHT uses a radius around your location and a nightly “Tonight” status that expires at 5 AM; your profile only appears in the feed while you are live, next to other people who are out that night.
+
+The default status is Tonight . It ends at the next 5 AM, when the nightly reset clears every stale status and the feed starts again. There is no timer invented for marketing: the countdown in the app counts toward that real deadline, and only shows a “closing soon” cue in the last three hours before 5 AM. If you would rather stay visible longer, you can choose 24 hours, or open a separate “Stay discoverable” control for 3 days, 1 week or always-on — those options exist for quieter cities and for travellers, and they are deliberately kept out of the main picker so the “who's out tonight” count stays honest.
+
+Until you set a status you are invisible. You can still open the feed, but a banner reminds you that nobody can see you until you go live. One tap on “Hide me” takes you out of every feed immediately.
+
+## Radius: from your street to the whole city
+
+Distance is the second half of a same-night plan. In the filter sheet you set a maximum distance with a slider that starts at 1 km. How far it can reach depends on your membership: the free Silver tier sees people within 5 km, Gold extends that to 15 km, and Platinum Black opens it to 50 km. Other members never see your coordinates — the feed only returns a rounded distance in kilometres — and if you have not been live for about 30 days, your stored position is blurred to your city.
+
+## Ping, match, meet
+
+Swipe up (or tap the button) to ping someone; swipe down to pass. If they ping you back, it is a match and a chat opens. Free members get a nightly allowance of pings; Gold and Platinum Black members ping without limits. A match chat stays open for 48 hours — long enough to agree on a bar and a time, short enough that it does not turn into a pen-pal relationship. Gold and Platinum Black can relaunch an expired conversation; Silver members simply match again another night.
+
+Two more tools help turn a match into a meeting. A Plan is a public “I'm going to X at Y, join me” that other members nearby can join, and it is the fastest way to get a small group together when a one-to-one drink feels like too much pressure. And every match can start a two-minute video call — peer-to-peer, never passing through our servers — which is a quick, low-commitment way to check that the person is who their photos say before you head out. Video calls are free for everyone during the launch period.
+
+## What 2NIGHT does not do
+
+Honesty matters more than a feature list on a page like this. 2NIGHT does not run background or identity checks and has no photo-verification badge; meeting in a public place, telling a friend where you are, and trusting your gut are still your real safety system. Nobody at 2NIGHT reads your chats, and the app does not scan messages for abusive language — which is exactly why the report button matters. You can report or block anyone from their profile or from the ⋯ menu in a chat; a block is instant, silent and works both ways, and every report is read by a person, usually within 24 hours and always within 72.
+
+2NIGHT is also strictly 18+ (the age selector starts at 18), it runs on iPhone only, and it is opening city by city. If it is not live where you are yet, the waitlist at 2night.co is the way in.
+
+## Who a tonight-first app is for
+
+- People who decide at 7 pm that they would like company, and want an answer by 8.
+
+- Anyone tired of week-long chats that never become a date.
+
+- Newcomers to a city who do not yet have a circle to go out with.
+
+- Travellers with one free evening somewhere new (see 2NIGHT for travelers ).
+
+2NIGHT is an alternative to Tinder, Bumble, Happn and Pure for people who want a spontaneous same-night date. If you want a slower, profile-heavy search for a long-term partner, a traditional app is a perfectly good tool — our comparison of the best apps to meet people tonight is honest about where each one fits.
+
+## Frequently asked questions
+
+### Is 2NIGHT really for the same night?
+
+Yes. Your status defaults to “Tonight” and expires at 5 AM, the feed only shows people who are currently live, and match chats close after 48 hours, so everything points toward meeting this evening rather than chatting for a week.
+
+### Do I have to be out already to use it?
+
+No. You go live from wherever you are — your sofa counts — and set a radius. What you see is other people who are also live tonight within that distance.
+
+### Is 2NIGHT free?
+
+Joining and meeting people is free (the Silver tier: 5 km radius, a nightly allowance of pings, one active plan). Paid Gold and Platinum Black memberships add unlimited pings, a wider radius and other perks; prices are shown in the app before anything is charged, and billing is handled by Apple.
+
+### Is it on Android?
+
+No. 2NIGHT is an iPhone app. There is no Android build and no Google Play listing.
+
+### Does 2NIGHT verify profiles?
+
+No. There is no identity check, no background check and no verification badge. Use the two-minute video call, meet in public and tell a friend your plans.
+
+## Tonight, not tomorrow.
+
+2NIGHT is available on iPhone and opens city by city. Join the waitlist at 2night.co and we will message you the moment it is live near you.
+
+Join the waitlist
+
+## Read next
+
+GuideHow 2NIGHT works, step by step
+DiscoveryWho is out tonight near me?
+
+← Back to home
+
+================================================================
+URL: https://2night.co/spontaneous-dating-app
+TITLE: Spontaneous Dating App — 2NIGHT dating app
+================================================================
+
+Spontaneous dating
+
+# The spontaneous dating app: decide at 7 pm, meet by 9
+
+By the 2NIGHT team
+·
+Updated 4 September 2026
+
+2NIGHT is a one-night dating app for iPhone that shows who is out near you tonight, so you can match and meet the same evening instead of chatting for days.
+
+“Spontaneous” is a word every dating app likes to use and almost none are built for. Spontaneity needs two people to be free at the same moment, close enough to reach each other, and clear about what they want to do. A swipe deck of everyone in a 100-mile region who might be free some day cannot give you that. 2NIGHT was built to.
+
+## Why most apps kill spontaneity
+
+The classic model separates matching from meeting by days. You match on Monday, the conversation drifts, and by the time someone suggests a place the momentum is gone. Research on choice overload aside, the practical problem is simpler: nothing in the product knows whether either of you is free right now. Availability is negotiated by hand, in chat, and that is where most plans die.
+
+A spontaneous dating app has to make availability a first-class piece of data. On 2NIGHT it is the whole product: you are either live tonight or you are not in the feed.
+
+## How 2NIGHT makes spontaneity the default
+
+2NIGHT uses a radius around your location and a nightly “Tonight” status that expires at 5 AM; your profile only appears in the feed while you are live, next to other people who are out that night.
+
+### 1. A status instead of a profile essay
+
+Going live is one tap plus an optional line of text. You pick what you are up for from a short list — drinks, food, rooftop, music, culture, sports, games, nightlife, talk, coffee, walk, network — and whether you are open to dating, friends, or both. Your bio is capped at 150 characters and you can add up to six photos. The point is to be quick to read at 7 pm, not to be a résumé.
+
+### 2. A feed that only shows people who are out
+
+The Tonight Feed is filtered by the server on two things: whether a status is still valid (its “available until” time is in the future) and whether the person is inside your chosen distance. A “Tonight” status expires at the next 5 AM. There is a 24-hour option, and a separately labelled “Stay discoverable” section with 3-day, 1-week and always-on choices for people in quieter cities or on the road; those are kept out of the main picker on purpose so the count of people out tonight is not inflated.
+
+### 3. A radius you actually control
+
+The filter sheet has a max-distance slider that starts at 1 km. The ceiling depends on your tier: 5 km on the free Silver tier, 15 km on Gold, 50 km on Platinum Black. Nobody sees your exact location — the feed hands other members a rounded distance in kilometres, nothing more.
+
+### 4. Ping, match, 48-hour chat
+
+Ping someone you would like to meet; if they ping back, it is a match and a chat opens. Chats close after 48 hours, which is a feature rather than a limitation: it keeps the conversation pointed at a place and a time. Gold and Platinum Black members can relaunch an expired chat and ping without limits; Silver members have a nightly allowance of pings.
+
+### 5. Plans, for when one-to-one feels like too much
+
+Anyone can post a Plan — “rooftop bar on Rue X, 9 pm, come along” — and nearby members can join. Free members can have one active plan at a time. A plan is the lowest-pressure way to be spontaneous: you are not asking one person for a date, you are telling the neighbourhood where you will be.
+
+### 6. A two-minute video call before you leave the house
+
+From any match you can start a two-minute video call, peer-to-peer over WebRTC (we never hold the call). It is the fastest honest check that a person is who their photos say, and it is free for everyone during launch.
+
+## Spontaneous does not mean careless
+
+2NIGHT does not run background or identity checks and has no verification badge, so the usual rules apply harder, not softer: meet in a busy public place, tell a friend who you are meeting and where, keep your own way home, and leave the moment something feels off. You can block and report anyone from their profile or from the ⋯ menu in a chat. Blocking is instant, silent and mutual; reports are read by a person, with action normally within 24 hours and always within 72. The full procedure is on our Guidelines page.
+
+Privacy is part of that promise. There is no ads SDK, no analytics SDK and no tracking in the app. We do not sell data. Precise location is used only while you are live and, after about 30 days without going live, your stored position is blurred to your city. Your “who you want to see” preference is stored only if you give explicit consent and is never shown to anyone.
+
+## Who it is for — and who it is not for
+
+2NIGHT is an alternative to Tinder, Bumble, Happn and Pure for people who want a spontaneous same-night date. If you are patiently looking for a long-term partner and prefer detailed profiles and prompts, a traditional app is a better fit, and we say so in our honest comparison of tonight-focused apps . If you are free this evening and would like to meet someone real before it ends, 2NIGHT is built for that impulse.
+
+2NIGHT is an iPhone app, strictly 18+, free to join, and opening city by city. Join the waitlist at 2night.co to be told the moment it is live near you.
+
+## Frequently asked questions
+
+### What makes 2NIGHT a spontaneous dating app rather than a normal one?
+
+Availability is built into the product: you only appear in the feed while you are live, the default status ends at 5 AM, the feed is filtered by a radius you set, and chats close after 48 hours. Everything nudges toward meeting tonight.
+
+### Can I use it for friends, not only dates?
+
+Yes. When you go live you choose whether you are open to dating, friends, both, or networking, and Plans are open gatherings anyone nearby can join.
+
+### How far away are the people I see?
+
+As far as your slider allows: 1 km up to 5 km on the free tier, up to 15 km on Gold and up to 50 km on Platinum Black. You see a rounded distance, never an address.
+
+### What happens when a chat expires?
+
+After 48 hours the conversation closes. Gold and Platinum Black members can relaunch it; Silver members can match again another night.
+
+### Is there a verification badge?
+
+No. 2NIGHT does not verify identity or photos. The two-minute video call, meeting in public and telling a friend are the honest substitutes.
+
+## Tonight, not tomorrow.
+
+2NIGHT is available on iPhone and opens city by city. Join the waitlist at 2night.co and we will message you the moment it is live near you.
+
+Join the waitlist
+
+## Read next
+
+Same-day datesA same-day date app, explained
+TonightA dating app for tonight
+
+← Back to home
+
+================================================================
+URL: https://2night.co/same-day-date-app
+TITLE: Same-Day Date App — 2NIGHT dating app
+================================================================
+
+Same-day dates
+
+# What a same-day date app has to get right — and how 2NIGHT does it
+
+By the 2NIGHT team
+·
+Updated 4 September 2026
+
+2NIGHT is a one-night dating app for iPhone that shows who is out near you tonight, so you can match and meet the same evening instead of chatting for days.
+
+A same-day date is a plan with a hard deadline: it has to be agreed, travelled to and enjoyed before the night ends. That constraint is why most dating apps are bad at it, and it is the design brief 2NIGHT was written against. Below is what the app actually does, feature by feature, with the limits stated plainly.
+
+## The three problems of a same-day date
+
+- Time. Both people need to be free in the same window. In most apps that is discovered by asking, days after matching.
+
+- Distance. A same-day date has a travel budget of minutes, not hours. “Within 100 miles” is meaningless at 8 pm.
+
+- Intent. A drink, dinner, a gig, a walk — the plan is easier to say yes to when it is specific.
+
+## Time: the “Tonight” status
+
+2NIGHT uses a radius around your location and a nightly “Tonight” status that expires at 5 AM; your profile only appears in the feed while you are live, next to other people who are out that night.
+
+On 2NIGHT you are not browsing a permanent catalogue of profiles. You go live, and your status has an expiry the server enforces. “Tonight” runs until the next 5 AM, when the nightly cleanup removes every stale status and the feed resets. That is the real deadline the countdown in the app points to, and the “Tonight ends in…” cue only appears in the final three hours, when it is genuinely true. A 24-hour option exists, and a separate “Stay discoverable” control offers 3 days, 1 week or always-on for quieter cities and travellers — intentionally kept apart from the nightly choice so the “out tonight” count means what it says.
+
+If you have not set a status, you are not in anybody's feed. You can still look, but a gold banner tells you that you are invisible until you go live. “Hide me” removes you instantly.
+
+## Distance: a radius with a real ceiling
+
+The filter sheet has a max-distance slider from 1 km up to your tier's cap — 5 km on the free Silver tier, 15 km on Gold, 50 km on Platinum Black. The feed is centred on your current location, or on any city you pick with Travel Mode (a Gold and Platinum Black feature). Other members only ever receive a rounded distance in kilometres; coordinates are never shared, and a stored location is snapped to the city centre after about 30 days of inactivity.
+
+## Intent: categories and a one-line status
+
+Going live asks what you are up for tonight — drinks, food, rooftop, music, culture, sports, games, nightlife, talk, coffee, walk or network — and whether you are open to dating, friends, both, or networking. You can add one line of text. Bios are capped at 150 characters and profiles carry up to six photos. Everything is built to be read in seconds by someone deciding whether to ping you before the bar fills up.
+
+## From match to meeting
+
+Ping the people you would like to meet (swipe up) or pass (swipe down). A mutual ping is a match and opens a chat. The chat stays open for 48 hours; Gold and Platinum Black can relaunch an expired one. Free members have a nightly allowance of pings and one active Plan; paid members ping without limits and get a weekly Boost, Super Pings and, on Platinum Black, priority placement in the feed and access to Black Events (an RSVP request, confirmed by a person — never a purchased ticket).
+
+Two features exist specifically to shorten the distance between “matched” and “there”:
+
+- Plans. Post where you will be and when; people nearby can join. It turns a same-day date into a same-day gathering when that is easier.
+
+- Two-minute video call. Peer-to-peer, never routed through our servers, free for everyone during launch. Thirty seconds of video answers the question a hundred messages cannot.
+
+## The honest limits
+
+2NIGHT does not check identities, does not run background checks and has no verification badge. It does not read your chats and does not scan them for abuse; there is a check for phone numbers, social handles and links, but that is a membership rule about when contact details can be exchanged (free members cannot drop them into chat), not a safety filter. Reporting is how bad behaviour is caught: tap the shield on a profile, or use the ⋯ menu in a chat, pick one of three reasons, and a person reads it — usually within 24 hours, always within 72. Blocking is instant, silent and works both ways, and can be undone under Settings → Safety & privacy.
+
+The rest is the same advice we would give for any first meeting: pick a busy public place, tell someone your plan, keep your own way home, and leave if anything feels wrong. Our Safety page goes deeper.
+
+## Same-day date apps compared
+
+2NIGHT is an alternative to Tinder, Bumble, Happn and Pure for people who want a spontaneous same-night date. Other products approach the same-day idea differently: Pure deletes ads and chats after 24 hours, Bounce runs short daily matching sessions in New York and picks the venue for you, and MeetTonight lets you post a date plan for the next 72 hours. We compare them side by side, with what we could and could not verify, in Best apps to meet people tonight (2026) .
+
+2NIGHT is an iPhone app for adults 18 and over, free to join, launching city by city. Join the waitlist at 2night.co.
+
+## Frequently asked questions
+
+### How is a same-day date app different from Tinder?
+
+Tinder shows a standing catalogue of profiles within a distance you choose and leaves timing to the chat. 2NIGHT only shows people who are live tonight within your radius, expires statuses at 5 AM and closes chats after 48 hours, so the product itself pushes toward meeting today.
+
+### Can I set a date for tomorrow instead?
+
+Your status can run for 24 hours, or longer via the “Stay discoverable” options, and a Plan can be posted for a later time. The default and the design, though, are for tonight.
+
+### How close are the people in my feed?
+
+Within the distance you set on the slider, which starts at 1 km and is capped by your tier: 5 km free, 15 km Gold, 50 km Platinum Black.
+
+### Does the app pick a venue for us?
+
+No. Unlike Bounce, 2NIGHT does not choose a bar for you. You agree on a place in chat or post a Plan with the venue and time.
+
+### What does it cost?
+
+Joining and meeting people is free. Paid Gold and Platinum Black memberships are billed by Apple and their prices are shown in the app before anything is charged.
+
+## Tonight, not tomorrow.
+
+2NIGHT is available on iPhone and opens city by city. Join the waitlist at 2night.co and we will message you the moment it is live near you.
+
+Join the waitlist
+
+## Read next
+
+ComparisonBest apps to meet people tonight (2026)
+SpontaneousThe spontaneous dating app
+
+← Back to home
+
+================================================================
+URL: https://2night.co/who-is-out-tonight-near-me
+TITLE: Who Is Out Tonight Near Me? — 2NIGHT dating app
+================================================================
+
+Who's out tonight
+
+# Who is out tonight near me? How to actually find out
+
+By the 2NIGHT team
+·
+Updated 4 September 2026
+
+2NIGHT is a one-night dating app for iPhone that shows who is out near you tonight, so you can match and meet the same evening instead of chatting for days.
+
+“Who is out tonight near me?” is the question every restless evening starts with, and it is surprisingly hard to answer. Group chats say “soon”. Dating apps show people who might be free some week. Venue apps show places, not people. 2NIGHT exists to answer that one question directly: here are the people, within this distance, who are live right now and want to go out.
+
+## Why the question is hard
+
+Being “out” is a state that changes hour by hour, and almost no product models it. A profile that was created in March says nothing about whether its owner is free on a Tuesday in September. To answer “who's out tonight?” an app needs a live signal — something a person switches on this evening and that switches itself off when the night ends — plus an honest sense of distance.
+
+## How 2NIGHT answers it
+
+2NIGHT uses a radius around your location and a nightly “Tonight” status that expires at 5 AM; your profile only appears in the feed while you are live, next to other people who are out that night.
+
+### The live signal: going live
+
+You tap “Set status”, optionally write one line (“free from 9, up for a drink near the station”), choose what you are in the mood for — drinks, food, rooftop, music, culture, sports, games, nightlife, talk, coffee, walk, network — and whether you are open to dating, friends, both or networking. From that moment you are in the Tonight Feed of everyone inside your radius, and they are in yours.
+
+### The switch-off: 5 AM
+
+A “Tonight” status expires at the next 5 AM, when a nightly cleanup clears stale statuses and the feed resets. The in-app countdown counts toward that real time. There is a 24-hour option, and a separate “Stay discoverable” control (3 days, 1 week, always-on) meant for travellers and quieter cities; it is kept out of the main choice so that the count of people out tonight is not padded with people who are not.
+
+### The radius
+
+The feed is centred on your location — or a city you choose with Travel Mode on Gold and Platinum Black — and limited to the max distance you set on a slider that starts at 1 km. The ceiling is 5 km on the free tier, 15 km on Gold and 50 km on Platinum Black. You see rounded distances in kilometres; nobody sees coordinates.
+
+### The header count
+
+The feed header shows how many people are live near you right now. It is the real number returned with the feed, not a marketing figure, and on a quiet night in a new city it can be small. We would rather show you an honest three than a fake three hundred.
+
+## From “who's out” to “let's go”
+
+Seeing who is out is only useful if it turns into a plan. On 2NIGHT you ping people you would like to meet; a mutual ping is a match and opens a chat that stays open for 48 hours. You can also post or join a Plan — a specific place and time other members nearby can join — which is often the fastest route on a night when you would rather be with a small group than on a one-to-one date. Every match can start a two-minute peer-to-peer video call, free during launch, to check the person is real before you leave.
+
+A few habits make the difference between a dead chat and a real meeting, and they are the same ones we describe in our guide to meeting people near you tonight : lead with a concrete suggestion rather than “hey”, name a public place and a time, and keep it light.
+
+## What you will not find on 2NIGHT
+
+- Venue listings or event tickets. 2NIGHT is about people, not places. (An unrelated Italian app called “2night” lists bars and parties in Italian cities; that is not us.)
+
+- Verified badges or background checks. We do not check identities. Meet in public and tell a friend.
+
+- Precise locations. Distances are rounded; your stored position is blurred to your city after about 30 days of not going live.
+
+- Trackers. No ads SDK, no analytics SDK, nothing sold.
+
+## Safety when meeting someone who is out tonight
+
+Same-night meetings are exciting precisely because they are quick, so keep the basics automatic: busy, well-lit public place; a friend who knows where you are; your own way home; never send money to anyone you met in the app; leave if your gut says so. Anyone who makes you uncomfortable can be blocked (instant, silent, both ways) and reported (three reasons, read by a person within 24–72 hours) from their profile or the ⋯ menu in a chat. Details are on our Guidelines page.
+
+2NIGHT is an alternative to Tinder, Bumble, Happn and Pure for people who want a spontaneous same-night date. 2NIGHT is an iPhone app, 18+, free to join, opening city by city. If your city is not live yet, join the waitlist at 2night.co.
+
+## Frequently asked questions
+
+### Does 2NIGHT show everyone near me, or only people who are out?
+
+Only people whose status is currently live. Someone who has not gone live tonight is not in the feed, and neither are you until you set a status.
+
+### How near is “near me”?
+
+Whatever you set on the distance slider, from 1 km up to your tier's cap: 5 km on the free Silver tier, 15 km on Gold, 50 km on Platinum Black.
+
+### Can people see exactly where I am?
+
+No. Other members receive a rounded distance in kilometres. Coordinates are never shared, and your stored location is blurred to your city after about 30 days of inactivity.
+
+### What if nobody is out near me tonight?
+
+The header count is honest, so on a quiet night it may be low. You can widen your radius (within your tier), post a Plan so people find you, or choose a longer visibility so you are discoverable when others go live.
+
+### Is this the Italian nightlife app called 2night?
+
+No. 2NIGHT (2night.co) is a one-night dating app for iPhone made in Switzerland. The Italian 2night lists venues and events in Italian cities and is unrelated.
+
+## Tonight, not tomorrow.
+
+2NIGHT is available on iPhone and opens city by city. Join the waitlist at 2night.co and we will message you the moment it is live near you.
+
+Join the waitlist
+
+## Read next
+
+TonightA dating app for tonight
+GuideHow 2NIGHT works, step by step
+
+← Back to home
+
+================================================================
+URL: https://2night.co/tinder-alternative-for-tonight
+TITLE: Tinder Alternative for Tonight — 2NIGHT dating app
+================================================================
+
+Tinder alternative
+
+# A Tinder alternative for tonight: what changes when the app is built for one evening
+
+By the 2NIGHT team
+·
+Updated 4 September 2026
+
+2NIGHT is a one-night dating app for iPhone that shows who is out near you tonight, so you can match and meet the same evening instead of chatting for days.
+
+Tinder is very good at what it was built for: a huge pool, a fast swipe, and a match that may become a date at some point. If your goal is a date tonight , though, its shape works against you — the pool is wide, the timing is unknown, and the chat is where plans go to fade. This page is for people searching for a Tinder alternative that starts from the evening, not the profile. 2NIGHT is an alternative to Tinder, Bumble, Happn and Pure for people who want a spontaneous same-night date.
+
+## The structural difference
+
+Tinder's unit is the profile: it exists whether or not you are free, and the distance filter reaches up to roughly 160 km. Its paid tiers — Plus, Gold and Platinum — add unlimited likes, Passport, seeing who liked you, Top Picks and priority likes; list prices in the United States run from about $24.99 to $49.99 a month and vary by age and location. Tinder offers optional Photo Verification with a video selfie and, in some markets, ID verification.
+
+2NIGHT's unit is the night. 2NIGHT uses a radius around your location and a nightly “Tonight” status that expires at 5 AM; your profile only appears in the feed while you are live, next to other people who are out that night. Where Tinder answers “who might I like?”, 2NIGHT answers “who is out, near me, right now — and what are they up for?”.
+
+## Side by side
+
+| What | Tinder | 2NIGHT |
+
+| Built for | Ongoing matching, any timeline | Meeting the same night |
+
+| Who you see | Profiles within your distance setting, free or not | People who are live tonight within your radius |
+
+| Time limit | None on profiles or chats | Status ends at 5 AM by default; chats close after 48 h |
+
+| Radius | Up to ~160 km (100 mi), Passport to any city on paid tiers | 1 km up to 5 km free, 15 km Gold, 50 km Platinum Black; Travel Mode on paid tiers |
+
+| Intent | Relationship-goal tags on profile | Tonight's categories and a one-line status, reset nightly |
+
+| Verification | Optional Photo Verification; ID verification in some markets | None — no badge, no identity checks |
+
+| Group option | No | Plans anyone nearby can join |
+
+| Video | Video chat has been offered in the past; current availability not verified | 2-minute peer-to-peer call from any match, free during launch |
+
+| Platforms | iOS, Android, web | iPhone only |
+
+| Price | Free with limits; Plus / Gold / Platinum from ~$24.99–$49.99 per month (US, varies) | Free to join; Gold and Platinum Black billed by Apple, prices shown in the app |
+
+| Ads & tracking | Ads on the free tier; SDKs not verified | No ads, no analytics SDK, no data sold |
+
+## What you gain by switching for a night
+
+- Shared availability by default. Everyone in the feed went live tonight. The hardest part of any plan is solved before the first message.
+
+- A radius that means something. Five kilometres is a walk or a short ride. You are never shown someone you could not realistically meet before closing time.
+
+- A conversation with a deadline. Forty-eight hours is enough to pick a bar; it is not enough to become pen-pals.
+
+- Plans. When a one-to-one date feels like a lot, post where you will be and let people join.
+
+- A video check. Two minutes of video, device to device, before you leave the house.
+
+## What you give up — honestly
+
+- Scale. Tinder is everywhere. 2NIGHT is opening city by city and, on a quiet night in a small city, the honest header count may be low.
+
+- Verification. Tinder's photo and ID checks are optional but real. 2NIGHT has none; your judgement is the safety system, and we say so on every page.
+
+- Android and web. 2NIGHT is iPhone only.
+
+- Deep profiles. If you want to filter on values and lifestyle before meeting, Tinder's and Bumble's profiles do more. 2NIGHT gives you 150 characters, six photos, tonight's categories and a status line.
+
+## Safety and moderation on 2NIGHT
+
+Report from a profile (the shield icon) or from the ⋯ menu in a chat, with one of three reasons; a person reads every report, usually within 24 hours and always within 72, and may remove the account, warn it or close the report. Reports are confidential by design — no member, including the reporter, can read them back. Blocking is instant, silent and mutual, reversible under Settings → Safety & privacy. Nobody reads your chats, and messages are deleted with your account. There is no background check; meet in public and tell a friend.
+
+## Using both
+
+It is not either/or. Plenty of people will keep a Tinder profile for the slow search and open 2NIGHT on the evenings they want company now. If you want the wider picture, including Bumble, Happn, Pure, Bounce, MeetTonight and what happened to Thursday, read Best apps to meet people tonight (2026) , or the focused 2NIGHT vs Tinder page.
+
+2NIGHT is free to join, 18+, and on iPhone. Join the waitlist at 2night.co to be told when it opens in your city.
+
+## Frequently asked questions
+
+### Is 2NIGHT a replacement for Tinder?
+
+For a same-night date, yes — that is what it is built for. For a slow, profile-led search for a long-term partner, Tinder or Bumble remain better tools. Many people will use both.
+
+### Does 2NIGHT have something like Tinder Passport?
+
+Yes: Travel Mode, on the Gold and Platinum Black tiers, lets you set your status in any city before you arrive.
+
+### Does 2NIGHT verify photos like Tinder?
+
+No. There is no photo or ID verification and no badge. The two-minute video call is the practical substitute.
+
+### How much does 2NIGHT cost compared with Tinder?
+
+Joining and meeting people on 2NIGHT is free. Gold and Platinum Black memberships are billed by Apple and their prices are shown in the app before you pay. Tinder's US list prices run from about $24.99 to $49.99 a month and vary by age and location.
+
+### Is 2NIGHT on Android?
+
+No, iPhone only. Tinder is on iOS, Android and the web.
+
+## Tonight, not tomorrow.
+
+2NIGHT is available on iPhone and opens city by city. Join the waitlist at 2night.co and we will message you the moment it is live near you.
+
+Join the waitlist
+
+## Read next
+
+Comparison2NIGHT vs Tinder
+ComparisonBest apps to meet people tonight (2026)
+
+← Back to home
+
+================================================================
+URL: https://2night.co/how-2night-works
+TITLE: How 2NIGHT Works — 2NIGHT dating app
+================================================================
+
+How it works
+
+# How 2NIGHT works, step by step
+
+By the 2NIGHT team
+·
+Updated 4 September 2026
+
+2NIGHT is a one-night dating app for iPhone that shows who is out near you tonight, so you can match and meet the same evening instead of chatting for days.
+
+This is the plain, complete description of what happens inside 2NIGHT — from creating an account to hiding yourself at the end of the night — written from the app's own code rather than from a pitch deck. Where a feature depends on a paid tier, it says so. Where the app does not do something people often assume dating apps do, it says that too.
+
+## 1. Account and sign-in
+
+You sign in with Apple or with an email code (a one-time passcode; no password to remember). Onboarding asks for a first name, an age (the selector starts at 18 — 2NIGHT is strictly for adults), a gender, up to six photos, a bio of at most 150 characters, and the kind of nights you are into. When you save a bio, it is checked against a short list of prohibited terms and refused if it matches; that is a narrow filter for the worst slurs, not a content-moderation system.
+
+Optionally you can set who you want to see (everyone, women, men, non-binary people). Because that choice can reveal sexual orientation, it is stored on our servers only if you tick an explicit consent box; “Everyone” stores nothing at all. It is never shown to any other member.
+
+## 2. Going live
+
+2NIGHT uses a radius around your location and a nightly “Tonight” status that expires at 5 AM; your profile only appears in the feed while you are live, next to other people who are out that night.
+
+The feed opens with a banner saying you are invisible until you set a status. Tap Set status , choose what you are up for — drinks, food, rooftop, music, culture, sports, games, nightlife, talk, coffee, walk, network — say whether you are open to dating, friends, both or networking, and add one optional line of text. Then choose how long to stay visible:
+
+- Tonight (default): until the next 5 AM, when the nightly cleanup clears all stale statuses and the feed resets.
+
+- 24 hours.
+
+- Stay discoverable — a separate, clearly labelled control with 3 days, 1 week and always-on. These exist for travellers and quieter cities and are deliberately not shown as equals of “Tonight”, so the count of people out tonight stays truthful.
+
+Once live, the header shows a “Live until HH:MM” chip and a Hide me button. Hiding takes you out of every feed immediately. The countdown you see near the end of the night counts toward the real 5 AM reset and only appears in the last three hours.
+
+## 3. Location and radius
+
+The feed is centred on your phone's location, read at roughly kilometre accuracy. Other members receive only a rounded distance in kilometres from the server; coordinates are never sent to anyone. If you do not go live for about 30 days, your stored position is snapped to your city's centre.
+
+In the filter sheet, a Max distance slider runs from 1 km up to the cap for your tier: 5 km on Silver (free), 15 km on Gold, 50 km on Platinum Black. Gold and Platinum Black also have Travel Mode : search for any city and set your status there before you land; the feed re-centres on it.
+
+## 4. The Tonight Feed
+
+The feed is a deck of people who are live within your distance, optionally narrowed to a category. Swipe up or tap the button to ping ; swipe down to pass . Silver members get a nightly allowance of free pings and can buy more; Gold and Platinum Black ping without limits. Gold and Platinum Black can also undo a pass. The header shows the real number of people currently live near you — never a fixed marketing figure. A “Likes you” view lists people who have pinged you; on Silver it is blurred.
+
+## 5. Match and chat
+
+A mutual ping is a match: a popup appears and a chat opens. The chat has a 48-hour window. When it expires it closes; Gold and Platinum Black can relaunch an expired conversation from a “past matches” list, while Silver members match again another night. Inside a chat you can send text, a photo like with a note, short video messages, and — on Gold and Platinum Black — private albums that the recipient can view a limited number of times.
+
+There is a contact-details check on messages: free members cannot send phone numbers, social handles, emails or links, and phone numbers can only be exchanged between paid members. That is a membership rule, not a safety filter; nobody at 2NIGHT reads chats and the app does not scan them for abusive language.
+
+Any match can start a two-minute video or voice call . Calls run peer-to-peer over WebRTC directly between the two phones and never pass through our servers (which also means, as on any peer-to-peer call, each side can technically see the other's IP address). Calls are free for everyone during the launch period.
+
+## 6. Plans
+
+A Plan is a public invitation: a place, a time, a short description. Members nearby see it in the Plans tab and can ask to join; the host can remove someone. Free members can have one active plan; some plans require Gold to join. If someone in a plan has blocked you, or you them, the plan simply shows as unavailable — the app never reveals who is where.
+
+## 7. Memberships and extras
+
+2NIGHT is free to join and free to meet people. Three tiers exist: Silver (free), Gold and Platinum Black . Gold adds unlimited pings, the 15 km radius, a free Boost every week, Super Pings, Travel Mode, two private albums and chat relaunch. Platinum Black adds the 50 km radius, priority placement in the feed, three private albums plus a 50-second video, and access to Black Events — invitation-style evenings where a reservation is an RSVP request confirmed by a person, never a purchased ticket. Boosts and Super Pings can also be bought individually. All billing is handled by Apple, renews until cancelled, and every price is shown in the app before anything is charged.
+
+## 8. Safety tools
+
+Report someone from their profile (the shield icon) or from the ⋯ menu in a chat, choosing inappropriate content, fake or scam, or harassment. Reports are confidential — no member, including the reporter, can read them back — and are reviewed by a person, usually within 24 hours and always within 72; the outcome is removal, a warning or closure, and every decision can be appealed by email. Block from the same two places: blocks are instant, silent and mutual, and reversible under Settings → Safety & privacy. There are no background or identity checks and no verification badge.
+
+## 9. Your data
+
+Data lives in Supabase (processed primarily in the EU); Apple handles sign-in, billing and push notifications. There is no analytics, advertising or crash-reporting SDK in the app and nothing is sold. You can export a copy of your data and delete your account from Settings; messages are deleted with the account. Details: Privacy Policy , Trust & Security .
+
+2NIGHT is an alternative to Tinder, Bumble, Happn and Pure for people who want a spontaneous same-night date. 2NIGHT is iPhone-only and opens city by city — join the waitlist at 2night.co.
+
+## Frequently asked questions
+
+### Do I have to be live to see the feed?
+
+You can open the feed without a status, but you are invisible to everyone else until you set one. A banner reminds you.
+
+### When does my status end?
+
+“Tonight” ends at the next 5 AM. You can choose 24 hours instead, or the separate Stay discoverable options (3 days, 1 week, always-on), and you can hide yourself at any time with one tap.
+
+### How does matching work?
+
+Ping someone you would like to meet. If they ping you back, it is a match and a chat opens for 48 hours.
+
+### Can I share my phone number in chat?
+
+Free members cannot send phone numbers, social handles, emails or links in chat; phone numbers can be exchanged between paid members. You can always agree on a place and a time in the chat itself.
+
+### Does 2NIGHT verify users?
+
+No. There are no identity checks, no background checks and no verification badge. Use the two-minute video call, meet in public and tell a friend.
+
+### Is 2NIGHT on Android?
+
+No. It is an iPhone app.
+
+## Tonight, not tomorrow.
+
+2NIGHT is available on iPhone and opens city by city. Join the waitlist at 2night.co and we will message you the moment it is live near you.
+
+Join the waitlist
+
+## Read next
+
+DiscoveryWho is out tonight near me?
+Travel2NIGHT for travelers
+
+← Back to home
+
+================================================================
+URL: https://2night.co/2night-vs-tinder
+TITLE: 2NIGHT vs Tinder — 2NIGHT dating app
+================================================================
+
+Comparison
+
+# 2NIGHT vs Tinder: two different ideas of when a date happens
+
+By the 2NIGHT team
+·
+Updated 4 September 2026
+
+2NIGHT is a one-night dating app for iPhone that shows who is out near you tonight, so you can match and meet the same evening instead of chatting for days.
+
+2NIGHT is an alternative to Tinder, Bumble, Happn and Pure for people who want a spontaneous same-night date. Tinder is the largest dating app in the world and it is not going anywhere. The question this page answers is narrower: on an evening when you want to meet someone tonight , which of the two is built for it, and what do you trade away?
+
+## The core difference
+
+Tinder's model is a standing catalogue. Profiles are permanent, the distance filter reaches up to roughly 160 km (100 miles), and whether the person is free this evening is something you find out by asking. 2NIGHT's model is a night: 2NIGHT uses a radius around your location and a nightly “Tonight” status that expires at 5 AM; your profile only appears in the feed while you are live, next to other people who are out that night.
+
+## Feature by feature
+
+| Feature | Tinder | 2NIGHT |
+
+| Same-night focus | No time dimension; profiles and chats persist | Status expires at 5 AM; chats close after 48 h; feed shows only people live tonight |
+
+| Location radius | Distance filter up to ~160 km; Passport (paid) to browse any city | Slider from 1 km to 5 km (free), 15 km (Gold), 50 km (Platinum Black); Travel Mode on paid tiers |
+
+| Matching model | Swipe right/left; mutual like = match; Platinum can message before matching | Ping/pass; mutual ping = match; Super Ping to stand out; no messaging before a match |
+
+| Intent signal | Relationship-goal and interest tags on profile | Tonight's categories (drinks, food, music…) plus dating / friends / both, reset nightly |
+
+| Group meets | No | Plans: post a place and time, nearby members join |
+
+| Video | In-app video chat has existed; current availability not verified | 2-minute peer-to-peer video/voice call from any match; free during launch |
+
+| Verification | Optional Photo Verification (video selfie); ID verification in select markets; badges | None. No badge, no identity or background checks |
+
+| Report / block | Yes; Tinder has a large trust-and-safety operation | Yes; three report reasons, human review within 24–72 h; blocks instant, silent, mutual |
+
+| Chat scanning | Tinder states it uses automated tools to detect harmful messages (details not verified) | None; chats are not read or scanned for abuse. Contact-details check is a membership rule |
+
+| Price | Free with limits and ads; Plus ~$24.99, Gold ~$39.99, Platinum ~$49.99 per month (US list, varies by age/location) | Free to join; Gold and Platinum Black billed by Apple, prices shown in the app; no ads |
+
+| Platforms | iOS, Android, web | iPhone only |
+
+| Availability | Worldwide | Launching city by city; waitlist |
+
+| Tracking | Not verified | No analytics or ads SDK; no data sold |
+
+## Where Tinder is better
+
+- Reach. Tinder is live in essentially every city on earth. On 2NIGHT the header count is honest and can be small while a city is opening.
+
+- Verification and moderation scale. Optional photo and ID verification, and a large safety team. 2NIGHT's safety queue is read by a person, but there is no verification at all.
+
+- Profile depth. If you want to filter on lifestyle, values and prompts before meeting, Tinder gives you far more than 150 characters and six photos.
+
+- Platforms. Android and web.
+
+## Where 2NIGHT is better
+
+- Timing is solved by design. Everyone in the feed went live tonight. No “are you free this week?”.
+
+- Distance you can act on. A 5 km radius is a plan; a 160 km one is a wish list.
+
+- Chats with a deadline. 48 hours to name a place. Then it closes.
+
+- Plans. A public invitation nearby people can join — there is no equivalent on Tinder.
+
+- Privacy posture. No ads, no analytics SDK, rounded distances only, location blurred after 30 days idle, chats deleted with the account.
+
+## Price, honestly
+
+Both apps are free to use with limits. Tinder's paid tiers add unlimited likes, Passport, rewinds, seeing who liked you and priority likes; its prices vary by age and country and are best checked in the app. 2NIGHT's free Silver tier includes a nightly allowance of pings, a 5 km radius and one active plan; Gold adds unlimited pings, 15 km, a weekly Boost, Super Pings, Travel Mode, private albums and chat relaunch; Platinum Black adds 50 km, priority placement and Black Events. Every 2NIGHT price is shown in the app before you pay, and we do not publish numbers here so that this page cannot go stale or contradict your storefront.
+
+## Verdict
+
+Use Tinder for the wide, slow search. Use 2NIGHT on the evening you want to be out with someone real before the night is over. Many people will do both, and that is fine. Related reading: a Tinder alternative for tonight and our 2026 comparison of tonight-focused apps .
+
+Tinder facts are taken from Tinder's help centre (subscriptions; Photo Verification; ID + Photo Verification) and from 2026 pricing round-ups by Android Authority and SwipeStats; prices are US list prices and change. Anything we could not confirm is marked “not verified”.
+
+## Frequently asked questions
+
+### Is 2NIGHT just Tinder for hookups?
+
+No. 2NIGHT is a same-night meeting app: you say what you are up for tonight (drinks, food, music, a walk…) and whether you are open to dating, friends or both. It is about being out tonight, not about a specific kind of encounter.
+
+### Does 2NIGHT have Passport like Tinder?
+
+Travel Mode on Gold and Platinum Black lets you set your status in any city before you arrive; the feed re-centres on that city.
+
+### Which app is safer?
+
+Tinder offers optional photo and ID verification and has a large safety team; 2NIGHT has neither verification nor automated chat scanning, but has human-reviewed reports, silent mutual blocking, a two-minute video call and a strong privacy posture. On both, the real safety system is meeting in public and telling a friend.
+
+### Can I use 2NIGHT on Android or on the web?
+
+No. 2NIGHT is iPhone only. Tinder runs on iOS, Android and the web.
+
+## Tonight, not tomorrow.
+
+2NIGHT is available on iPhone and opens city by city. Join the waitlist at 2night.co and we will message you the moment it is live near you.
+
+Join the waitlist
+
+## Read next
+
+Comparison2NIGHT vs Happn
+Comparison2NIGHT vs Pure
+
+← Back to home
+
+================================================================
+URL: https://2night.co/2night-vs-happn
+TITLE: 2NIGHT vs Happn — 2NIGHT dating app
+================================================================
+
+Comparison
+
+# 2NIGHT vs Happn: crossed paths in the past, or out together tonight?
+
+By the 2NIGHT team
+·
+Updated 4 September 2026
+
+2NIGHT is a one-night dating app for iPhone that shows who is out near you tonight, so you can match and meet the same evening instead of chatting for days.
+
+2NIGHT is an alternative to Tinder, Bumble, Happn and Pure for people who want a spontaneous same-night date. Happn is the closest of the big apps to 2NIGHT in spirit, because both are built on proximity. The difference is when . Happn shows you people you have physically crossed paths with — a timeline of the past. 2NIGHT shows you people who are live near you right now — a feed of tonight.
+
+## How each one uses location
+
+Happn keeps location running in the background and logs an encounter whenever another Happn user comes within roughly 250 metres of you. Those people appear on your timeline, with a count of how many times you crossed and roughly where. Like someone; if they like you back it is a “Crush” and you can chat. There is no time limit on the timeline or the chat.
+
+2NIGHT reads your location only while you are live, at roughly kilometre accuracy. 2NIGHT uses a radius around your location and a nightly “Tonight” status that expires at 5 AM; your profile only appears in the feed while you are live, next to other people who are out that night. The distance is set by you on a slider from 1 km up to your tier's cap (5 km free, 15 km Gold, 50 km Platinum Black), and other members see only a rounded distance in kilometres. Gold and Platinum Black can also re-centre the feed on any city with Travel Mode.
+
+## Side by side
+
+| Feature | Happn | 2NIGHT |
+
+| Same-night focus | No; timeline of past crossings, no expiry | Yes; status ends at 5 AM by default, chats close after 48 h |
+
+| Location model | Background tracking; encounters within ~250 m | Location only while live; radius you set, 1–50 km depending on tier |
+
+| Matching model | Like; mutual like = Crush; “FlashNote” style messages on paid plans (details not verified) | Ping/pass; mutual ping = match; Super Ping on paid tiers |
+
+| Intent | Profile-based | Tonight's categories + dating / friends / both, reset nightly |
+
+| Group meets | No | Plans nearby members can join |
+
+| Video | Not verified | 2-minute peer-to-peer video/voice call, free during launch |
+
+| Verification | Optional profile certification by short video selfie, with a badge | None |
+
+| Privacy controls | Invisibility mode on paid plans (e.g. during work hours) | Hide me (one tap, free); location blurred to city after ~30 days idle; no trackers |
+
+| Price | Free with limits; Premium around $24.99–$29.99 per month depending on region and source | Free to join; Gold and Platinum Black billed by Apple, prices in the app |
+
+| Platforms | iOS, Android | iPhone only |
+
+| Availability | Worldwide, strongest in Europe | Launching city by city; waitlist |
+
+## What Happn does better
+
+- Serendipity. Seeing that you passed the same person three times outside the same bakery is a genuinely good conversation starter, and no other app has it.
+
+- Verification. Happn's video certification gives you a badge; 2NIGHT has no verification at all.
+
+- Scale and Android. Happn is established across Europe and beyond, on both platforms.
+
+## What 2NIGHT does better
+
+- Present tense. Happn tells you who was near you; 2NIGHT tells you who is out near you tonight and what they are up for.
+
+- No background tracking. Happn's model needs your location running in the background. 2NIGHT uses it only while you are live, and you can hide yourself with one tap for free.
+
+- A deadline. Statuses reset at 5 AM and chats close after 48 hours, so conversations turn into plans or end.
+
+- Plans and video. A public invitation nearby people can join, and a two-minute video call to check someone is real.
+
+## Which one for which night
+
+If you enjoy the idea of reconnecting with the person you keep seeing on your commute, and you are happy for that to take a few days, Happn is the right tool. If it is 7 pm, you are free and you would like to meet someone before midnight, 2NIGHT is built for exactly that. For the wider field, including Tinder, Bumble, Pure, Bounce and MeetTonight, see Best apps to meet people tonight (2026) .
+
+2NIGHT is free to join, 18+, iPhone only; join the waitlist at 2night.co.
+
+Happn facts are taken from Happn's Google Play listing and from 2026 reviews by SwipeStats, VIDA Select and DatingNav. Prices vary by region and change; anything unconfirmed is marked “not verified”.
+
+## Frequently asked questions
+
+### Is 2NIGHT like Happn?
+
+Both use proximity, but Happn shows people you crossed paths with in the past while 2NIGHT shows people who are live near you tonight, within a radius you set.
+
+### Does 2NIGHT track my location in the background?
+
+No. Location is used only while you are live, at roughly kilometre accuracy, and other members see only a rounded distance. After about 30 days without going live your stored position is blurred to your city.
+
+### Does 2NIGHT have a verification badge like Happn?
+
+No. 2NIGHT does not verify identity or photos. The two-minute video call is the practical alternative.
+
+### Which is cheaper?
+
+Both are free to use with limits. Happn Premium is reported around $24.99–$29.99 a month depending on region; 2NIGHT's Gold and Platinum Black prices are shown in the app before you pay.
+
+## Tonight, not tomorrow.
+
+2NIGHT is available on iPhone and opens city by city. Join the waitlist at 2night.co and we will message you the moment it is live near you.
+
+Join the waitlist
+
+## Read next
+
+Comparison2NIGHT vs Tinder
+DiscoveryWho is out tonight near me?
+
+← Back to home
+
+================================================================
+URL: https://2night.co/2night-vs-pure
+TITLE: 2NIGHT vs Pure — 2NIGHT dating app
+================================================================
+
+Comparison
+
+# 2NIGHT vs Pure: two ways to keep a dating app short-lived
+
+By the 2NIGHT team
+·
+Updated 4 September 2026
+
+2NIGHT is a one-night dating app for iPhone that shows who is out near you tonight, so you can match and meet the same evening instead of chatting for days.
+
+2NIGHT is an alternative to Tinder, Bumble, Happn and Pure for people who want a spontaneous same-night date. Pure and 2NIGHT share one conviction: a dating app should not be a place you live in. Pure achieves that with disappearing ads and chats; 2NIGHT with a status that ends at 5 AM and a feed of people who are out tonight. Beyond that shared idea, they are quite different products.
+
+## How Pure works
+
+Pure is built around personal ads , not profiles. To see other people you post an ad saying what you are looking for; ads and profiles are deleted after 24 hours, chats self-destruct after a day, and photos disappear after being viewed. Posting can be anonymous. Pure verifies that users are over 18 with a two-step check (face scan plus government ID) run by Veriff, and blocks screenshots. Most features require a subscription for men — around $13.49 a week, $29.99 a month or $79.99 a year according to 2026 reviews — while women can use the app free and pay for a separate “Pure Queens” tier. It runs on iOS, Android and the web.
+
+## How 2NIGHT works
+
+2NIGHT uses a radius around your location and a nightly “Tonight” status that expires at 5 AM; your profile only appears in the feed while you are live, next to other people who are out that night. You go live with a category (drinks, food, rooftop, music, culture, sports, games, nightlife, talk, coffee, walk, network), an intention (dating, friends, both, networking) and one line of text. You set a max distance from 1 km up to 5 km on the free tier, 15 km on Gold or 50 km on Platinum Black. Ping people; a mutual ping opens a 48-hour chat. You can also post a Plan others can join, and start a two-minute peer-to-peer video call from any match. There is no verification and no anonymity: profiles carry a first name, age and photos.
+
+## Side by side
+
+| Feature | Pure | 2NIGHT |
+
+| Same-night focus | Ads and profiles expire after 24 h; chats self-destruct after 24 h | Status ends at 5 AM by default; chats close after 48 h; feed shows only people live tonight |
+
+| Location radius | Location-based feed with filters; no published radius (not verified) | You set 1–5 km free, up to 15 km Gold, up to 50 km Platinum Black; rounded distances only |
+
+| Matching model | Post an ad, receive/like responses, chat | Ping/pass on people live tonight; mutual ping = match |
+
+| Anonymity | Anonymous ads possible | No; first name, age, photos, one-line status |
+
+| Intent | Free-text ad | Category + dating / friends / both + one line |
+
+| Group meets | No | Plans nearby members can join |
+
+| Video | Self-destructing photos/videos; live calls not verified | 2-minute peer-to-peer video/voice call, free during launch |
+
+| Verification | Age verification via face scan + government ID (Veriff) | None — age is self-declared; no identity checks |
+
+| Screenshots | Blocked | Not blocked (private albums have limited views) |
+
+| Price | Subscription required for most features for men (~$13.49/week, $29.99/month, $79.99/year per 2026 reviews); free for women, with a paid Queens tier | Free to join for everyone; Gold and Platinum Black optional, billed by Apple, prices shown in the app |
+
+| Platforms | iOS, Android, web | iPhone only |
+
+| Availability | Worldwide | Launching city by city; waitlist |
+
+## What Pure does better
+
+- Age verification. Pure's ID-backed check is real; 2NIGHT relies on a self-declared age (18+) and removes accounts it believes are underage.
+
+- Anonymity and disappearing content. If you want to post without a name and have everything vanish, Pure is designed for that.
+
+- Android and web.
+
+## What 2NIGHT does better
+
+- Free for everyone. Joining and meeting people is free regardless of gender; paid tiers add reach and convenience, not access.
+
+- A feed of people actually out. Pure shows ads; 2NIGHT shows people who are live tonight within a distance you control, with the honest count in the header.
+
+- Plans. Public invitations for a small group — useful when a one-to-one meeting is not the mood.
+
+- A video check. Two minutes, device to device, before you go.
+
+- Broader intent. Drinks, a gig, a walk, new friends — 2NIGHT is about being out tonight, not one kind of encounter.
+
+## Which one for which night
+
+If anonymity and disappearing content are the point, Pure is the more purpose-built tool. If you want to see who is out near you tonight, meet for a drink or a plan, and keep your privacy without hiding your face, 2NIGHT is built for that. Our wider 2026 comparison covers Tinder, Bumble, Happn, Bounce, MeetTonight and Thursday too.
+
+2NIGHT is free to join, 18+, iPhone only; join the waitlist at 2night.co.
+
+Pure facts are taken from Pure's Google Play listing and its press room, and from 2026 reviews by DatingScout and BestReviews. Prices vary by region and change; anything unconfirmed is marked “not verified”.
+
+## Frequently asked questions
+
+### Is 2NIGHT anonymous like Pure?
+
+No. 2NIGHT profiles show a first name, age, photos and tonight's status. What is protected is your location (rounded distances only) and your data (no trackers, nothing sold).
+
+### Does 2NIGHT verify age with an ID like Pure?
+
+No. Age is self-declared (the selector starts at 18) and accounts believed to be underage are removed. There is no ID or photo verification.
+
+### Do men have to pay on 2NIGHT?
+
+No. Joining and meeting people is free for everyone. Gold and Platinum Black are optional and priced the same regardless of gender.
+
+### Do chats disappear on 2NIGHT?
+
+A match chat closes after 48 hours. Messages are kept while your account exists and deleted with it; they are not read or scanned for abuse.
+
+## Tonight, not tomorrow.
+
+2NIGHT is available on iPhone and opens city by city. Join the waitlist at 2night.co and we will message you the moment it is live near you.
+
+Join the waitlist
+
+## Read next
+
+Comparison2NIGHT vs Happn
+Same-day datesA same-day date app, explained
+
+← Back to home
+
+================================================================
+URL: https://2night.co/2night-for-travelers
+TITLE: 2NIGHT for Travelers — 2NIGHT dating app
+================================================================
+
+Travel
+
+# 2NIGHT for travelers: one evening, a new city, real people
+
+By the 2NIGHT team
+·
+Updated 4 September 2026
+
+2NIGHT is a one-night dating app for iPhone that shows who is out near you tonight, so you can match and meet the same evening instead of chatting for days.
+
+Travel gives you the purest version of the problem 2NIGHT solves. You have one evening, you know nobody, and every “let's meet up sometime” is meaningless because you leave on Thursday. What you need is to know who is out near your hotel tonight — and a way to say hello that turns into a drink before midnight.
+
+## Why tonight-first fits travel
+
+2NIGHT uses a radius around your location and a nightly “Tonight” status that expires at 5 AM; your profile only appears in the feed while you are live, next to other people who are out that night. For a traveller that is exactly the right shape. You do not need a week of chat with someone who lives in the city; you need the three people who are also free tonight within walking distance of where you are standing. The feed's header count is honest, so you also know immediately whether a quiet Tuesday in a small city is worth waiting on or whether it is time to widen the radius.
+
+## Travel Mode: go live before you land
+
+On the Gold and Platinum Black tiers, Travel Mode lets you search for any city and set your status there before you arrive. The Tonight Feed re-centres on that city, so you can see who is out in Lisbon while you are still on the train from Porto, and land with a plan instead of a blank evening. The city you pick is stored with your status; when you go back to your real location, one tap on “Use my current location” resets it.
+
+On the free Silver tier there is no Travel Mode, but the app still works the moment you are physically there: go live from the hotel and the feed is your neighbourhood.
+
+## Visibility that fits a trip
+
+A “Tonight” status ends at 5 AM, which is perfect for one night out. If you are somewhere for a few days, the “Stay discoverable” control offers 3 days, 1 week or always-on, so you do not have to remember to go live every evening. Those longer options are shown separately from the nightly choice on purpose — they are useful for travellers and quieter cities, and keeping them apart is how the “out tonight” count stays truthful. Whatever you choose, “Hide me” takes you out of every feed in one tap.
+
+## Set the radius for the city you are in
+
+The max-distance slider starts at 1 km and is capped at 5 km on Silver, 15 km on Gold and 50 km on Platinum Black. A few practical rules from cities we know:
+
+- Dense centre (Paris, Lisbon, Barcelona, Zürich): 2–3 km is plenty and keeps every match walkable.
+
+- Spread-out city (Los Angeles, Berlin, the Swiss lakeside towns): 10–15 km on Gold, and lead with a specific neighbourhood in your status line.
+
+- Small town or off-season resort: go wide, choose a longer visibility, and post a Plan so people come to you.
+
+Whatever the radius, other members only see a rounded distance in kilometres, never your hotel's coordinates, and your stored position is blurred to the city centre after about 30 days without going live.
+
+## Plans: let the city come to you
+
+A Plan is a public invitation — “rooftop bar by the cathedral, 9:30, come say hi” — that nearby members can join. For a traveller it is often better than a one-to-one date: it is lower pressure, it can bring two or three people together, and it works even when you are not sure yet what you want the night to be. Free members can have one active plan at a time; Gold and Platinum Black can have more, and some plans require Gold to join.
+
+## The two-minute video call
+
+Any match can start a two-minute video or voice call, device to device over WebRTC (it never passes through our servers). Abroad, that is worth more than at home: it confirms a real person, checks the language works, and lets you agree a place in half a minute. It is free for everyone during launch.
+
+## Safety when you are far from home
+
+2NIGHT does not verify identities and runs no background checks, so the ordinary rules apply, plus a few travel-specific ones:
+
+- Meet in a busy public place you can find your own way back from — not your accommodation, not theirs.
+
+- Tell someone at home your plan, the person's first name and the venue; share your live location with them if you can.
+
+- Keep your passport at the hotel and enough local cash for a taxi.
+
+- Never send money, gift cards or crypto to anyone you met in the app, whatever the story.
+
+- Block (instant, silent, mutual) and report (three reasons, read by a person within 24–72 hours) anyone who makes you uncomfortable — from their profile or the ⋯ menu in a chat.
+
+Our guide to going out solo in a new city covers this in more depth.
+
+## Availability
+
+2NIGHT is an alternative to Tinder, Bumble, Happn and Pure for people who want a spontaneous same-night date. 2NIGHT is an iPhone app for adults 18 and over, free to join, and it opens city by city; Travel Mode works in any city you can search for, but the people you see there depend on 2NIGHT having launched locally. Join the waitlist at 2night.co and we will tell you as cities open.
+
+## Frequently asked questions
+
+### Can I use 2NIGHT before I arrive in a city?
+
+Yes, with Travel Mode on the Gold and Platinum Black tiers: search for the city, set your status there, and the Tonight Feed re-centres on it. Free members go live once they are physically there.
+
+### Does 2NIGHT work abroad?
+
+The app works wherever your iPhone works, but the people you see depend on 2NIGHT having opened in that city. It launches city by city; the waitlist tells you when.
+
+### How long can I stay visible on a trip?
+
+“Tonight” ends at 5 AM. Under Stay discoverable you can choose 3 days, 1 week or always-on, and hide yourself at any time.
+
+### Can people see which hotel I am in?
+
+No. Other members only see a rounded distance in kilometres. Coordinates are never shared.
+
+### Is 2NIGHT the Italian app that lists bars and events?
+
+No. The Italian 2night (2night.it) is a venue and event guide. 2NIGHT at 2night.co is a Swiss-made one-night dating app for iPhone.
+
+## Tonight, not tomorrow.
+
+2NIGHT is available on iPhone and opens city by city. Join the waitlist at 2night.co and we will message you the moment it is live near you.
+
+Join the waitlist
+
+## Read next
+
+DiscoveryWho is out tonight near me?
+SpontaneousThe spontaneous dating app
+
+← Back to home
+
+================================================================
+URL: https://2night.co/best-apps-to-meet-people-tonight-2026
+TITLE: Best Apps to Meet People Tonight (2026) — 2NIGHT dating app
+================================================================
+
+Comparison · 2026
+
+# Best apps to meet people tonight (2026): an honest comparison
+
+By the 2NIGHT team
+·
+Updated 4 September 2026
+
+2NIGHT is a one-night dating app for iPhone that shows who is out near you tonight, so you can match and meet the same evening instead of chatting for days.
+
+We make one of the apps on this list, so read it with that in mind. We say “not verified” wherever we could not confirm a competitor's detail from its own site, store listing or a 2026 review. Nothing is ranked; the point is to pick the right tool for the evening you actually have.
+
+## The table
+
+| App | Same-night focus | Location radius | Matching model | Verification / safety | Price | Platforms |
+
+| 2NIGHT | Yes. Status ends at 5 AM by default; feed shows only people live tonight; chats close after 48 h | You set 1–5 km (free), up to 15 km (Gold), up to 50 km (Platinum Black); Travel Mode on paid tiers; rounded distances only | Ping/pass; mutual ping = match; Plans anyone nearby can join; 2-min peer-to-peer video call | No identity/photo verification; human-reviewed reports (24–72 h); silent mutual block; no chat scanning; no trackers | Free to join; Gold / Platinum Black billed by Apple, prices in app | iPhone only; launching city by city |
+
+| Tinder | No time dimension | Distance filter up to ~160 km; Passport (paid) | Swipe; mutual like = match; Platinum can message first | Optional Photo Verification (video selfie); ID verification in some markets; large safety team | Free with ads/limits; Plus ~$24.99, Gold ~$39.99, Platinum ~$49.99 /month (US list; varies by age & location) | iOS, Android, web |
+
+| Bumble | No time dimension (matches used to expire after 24 h without a message; current rule not verified) | Distance filter (maximum not verified); Travel Mode (paid) | Swipe; mutual like = match; since August 2026 either person can message first | Photo verification with a selfie; ID verification not verified | Free with limits; Premium about $29.99 /month (varies); Boost and Premium+ tiers | iOS, Android, web |
+
+| Happn | No; timeline of past crossings | Encounters within ~250 m; background location | Like; mutual like = Crush | Optional video certification with badge; invisibility mode (paid) | Free with limits; Premium ~$24.99–$29.99 /month (varies) | iOS, Android |
+
+| Pure | Yes; ads, profiles and chats expire after 24 h | Location-based feed with filters; no published radius (not verified) | Post a personal ad; respond/like; chat | Age verification by face scan + government ID (Veriff); screenshot blocking; self-destructing media | Subscription for most features for men (~$13.49/wk, $29.99/mo, $79.99/yr per 2026 reviews); free for women; paid Queens tier | iOS, Android, web |
+
+| Bounce | Yes; short once-a-day live sessions, date the same evening | You pick a neighbourhood; app picks the venue (radius not verified) | Real-time mutual yes during a session; one date per night | Profiles reviewed before approval; no-shows suspended; other checks not verified | Not verified (was free at launch) | iOS, Android; New York only, other US cities “coming soon” |
+
+| MeetTonight | Yes; date plans within 72 hours | Not verified | Post or browse date plans; host picks from responders; time-limited chat | Profile verification offered (method not verified) | Free: verify, post 1 date/day, apply to 2; Premium, Weekend and Season passes (prices not verified) | Not verified |
+
+| Thursday | Was: app live only on Thursdays, matches wiped at midnight | — | — | — | Ticketed in-person events | Dating app shut down 10 January 2025; brand now runs Thursday Events |
+
+- Tinder: help.tinder.com (subscriptions; Photo Verification; ID + Photo Verification); Android Authority, “Tinder subscription plans compared”; SwipeStats, “Tinder Plus price 2026”.
+
+- Bumble: TechCrunch, 11 August 2026, “Bumble ditches its rule that kept men from making the first move”; support.bumble.com pricing page; VIDA Select, “Bumble Premium review 2026”.
+
+- Happn: Google Play listing; SwipeStats “Happn review 2026”; VIDA Select “Happn app review”; DatingNav happn pricing.
+
+- Pure: Google Play listing; press.pure.app; DatingScout “Pure review September 2026”; BestReviews Pure offers page.
+
+- Bounce: trybounce.com; Elite Daily and 6abc coverage of the launch.
+
+- MeetTonight: meettonight.me and its FAQ.
+
+- Thursday: Global Dating Insights, “Thursday shutters dating app to shift focus on real-world events” (January 2025); TechCrunch funding coverage.
+
+- 2NIGHT: this site and the app's source. Prices for competitors are US list prices where given and change frequently.
+
+## App by app
+
+### 2NIGHT
+
+2NIGHT is a one-night dating app for iPhone that shows who is out near you tonight, so you can match and meet the same evening instead of chatting for days. 2NIGHT uses a radius around your location and a nightly “Tonight” status that expires at 5 AM; your profile only appears in the feed while you are live, next to other people who are out that night. It is free to join, has no ads or analytics SDK, does not verify identities, and is opening city by city on iPhone. Its weaknesses are the mirror of its strengths: no Android, no verification badge, and an honest header count that can be low while a city is new.
+
+### Tinder
+
+The largest pool anywhere, on every platform, with optional photo and ID verification. Nothing in the product knows whether a match is free tonight; that is negotiated in chat. Best for a wide, unhurried search. Paid tiers are priced dynamically, so check the app rather than any article.
+
+### Bumble
+
+Similar to Tinder with more emphasis on profiles and filters, Travel Mode on the paid tier, and — since August 2026 — no rule that women must message first. Like Tinder, it has no notion of tonight.
+
+### Happn
+
+Proximity in the past tense: people you physically crossed paths with, logged in the background. Charming, established in Europe, with video certification. Not designed for “who is free right now”, and it requires background location.
+
+### Pure
+
+The most radical of the disappearing-content apps: anonymous ads and chats that vanish after 24 hours, ID-backed age verification, screenshot blocking. Most features need a subscription for men. Best when anonymity is the point; less suited to “let's get a drink and see”.
+
+### Bounce
+
+The purest same-day mechanic: join a short daily session, say yes to someone who is looking at you at that moment, and the app books the venue. Strict on no-shows. As of this writing it is live in New York with other US cities listed as coming soon; pricing is not published.
+
+### MeetTonight
+
+A plan-first app: post a date idea for the next 72 hours or apply to someone else's, with verification and a free tier that allows one post a day. Closest in spirit to 2NIGHT's Plans. We could not verify platforms, radius or paid prices from its public pages.
+
+### Thursday
+
+The once-a-week app that proved people wanted scarcity, then closed its app on 10 January 2025 citing declining interest. The brand continues as ticketed Thursday Events; if you liked meeting in person at a fixed time, those events — or a Plan on 2NIGHT — are the successors.
+
+## Which one for which situation
+
+- It's 7 pm, I'm free, I want a drink with someone new tonight: 2NIGHT (if it is open in your city), Bounce (New York), Pure (if anonymity matters more than a face).
+
+- I want to plan a specific date in the next couple of days: MeetTonight, or a Plan on 2NIGHT with a longer visibility.
+
+- I'm looking for a long-term partner and don't mind a slow search: Tinder or Bumble; Happn if you like the crossed-paths idea.
+
+- I'm travelling and know nobody: 2NIGHT with Travel Mode (paid) or simply going live where you are; Bumble's Travel Mode and Tinder's Passport for the slower version.
+
+- I want a verified badge before I meet anyone: Tinder, Bumble, Happn or Pure. 2NIGHT has none; use its two-minute video call instead.
+
+- I'd rather meet a small group than go on a date: 2NIGHT Plans, or Thursday Events in person.
+
+- I'm on Android: everything except 2NIGHT.
+
+2NIGHT is an alternative to Tinder, Bumble, Happn and Pure for people who want a spontaneous same-night date.
+
+## Frequently asked questions
+
+### Which app is best for meeting someone tonight?
+
+It depends on where you are and what you want. 2NIGHT is built specifically for it and is free to join, but only where it has launched. Bounce works in New York, Pure if you want anonymity, MeetTonight if you prefer to post a date plan.
+
+### Is Thursday still a dating app?
+
+No. Thursday closed its app on 10 January 2025 and now runs ticketed in-person Thursday Events.
+
+### Do any of these apps verify identity?
+
+Tinder (photo, and ID in some markets), Bumble (photo), Happn (video certification) and Pure (ID-backed age check) offer verification. 2NIGHT does not; Bounce reviews profiles manually; MeetTonight offers verification by a method we could not confirm.
+
+### Which apps are free?
+
+All have a free tier except Pure, where most features need a subscription for men. 2NIGHT is free to join and meet people; paid tiers add radius and convenience.
+
+### Which apps are on Android?
+
+Tinder, Bumble, Happn, Pure and Bounce. 2NIGHT is iPhone only; MeetTonight's platforms are not verified.
+
+## Tonight, not tomorrow.
+
+2NIGHT is available on iPhone and opens city by city. Join the waitlist at 2night.co and we will message you the moment it is live near you.
+
+Join the waitlist
+
+## Read next
+
+Comparison2NIGHT vs Tinder
+TonightA dating app for tonight
+
+← Back to home
+
+================================================================
+URL: https://2night.co/discover
+TITLE: Discover — 2NIGHT, the one-night dating app
+================================================================
+
+Discover
+
+# What is 2NIGHT?
+
+The one-night dating app for people who decide at 7pm they want to meet someone — tonight, not tomorrow.
+
+Most dating apps schedule a coffee three weeks out. 2NIGHT is built for the hours between now and 2 AM — the window where plans actually happen. Go live, see who's out near you, ping, match and meet.
+
+## Built to get you out the door
+
+01
+### Go live in one tap
+Set your status and the city sees you're free tonight. You control who, how far, and for how long.
+
+02
+### The Tonight Feed
+Real people near you, free right now, wanting the same thing. No endless swiping toward someday.
+
+03
+### Ping, match, meet
+Mutual interest opens a chat. Make a plan and meet — in person, the same night.
+
+04
+### Your radius, your night
+Discover people within the distance you set — from your street to the whole city.
+
+## The night, in detail
+
+2NIGHT is a one-night dating app for iPhone that shows who is out near you tonight, so you can match and meet the same evening instead of chatting for days. It uses a radius around your location and a nightly “Tonight” status that expires at 5 AM; your profile only appears in the feed while you are live, next to other people who are out that night.
+
+Going live is one tap plus an optional line of text. You choose what you are up for — drinks, food, rooftop, music, culture, sports, games, nightlife, talk, coffee, walk or network — and whether you are open to dating, friends, both or networking. The default status ends at the next 5 AM, when the nightly cleanup clears every stale status and the feed resets; the countdown in the app points at that real time. A 24-hour option exists, and a separate “Stay discoverable” control offers 3 days, 1 week or always-on for travellers and quieter cities. Until you set a status you are invisible, and “Hide me” removes you from every feed in one tap.
+
+## Your radius
+
+The filter sheet has a max-distance slider that starts at 1 km. How far it reaches depends on your membership: 5 km on the free Silver tier, 15 km on Gold, 50 km on Platinum Black. Gold and Platinum Black also get Travel Mode — set your status in any city before you arrive and the feed re-centres there. Other members only see a rounded distance in kilometres; your coordinates are never shared.
+
+## Ping, match, chat — with a deadline
+
+Ping the people you would like to meet (swipe up) or pass (swipe down). A mutual ping is a match and opens a chat that stays open for 48 hours: long enough to pick a bar, short enough not to become a pen-pal. Free members have a nightly allowance of pings; Gold and Platinum Black ping without limits, can undo a pass, and can relaunch an expired chat. A “Likes you” view shows who has pinged you.
+
+## Plans and the two-minute call
+
+A Plan is a public invitation — a venue, a time, a line of text — that people nearby can join. It is the lowest-pressure way to go out on 2NIGHT: you are not asking one person for a date, you are telling the neighbourhood where you will be. Free members can have one active plan. From any match you can also start a two-minute video or voice call, peer-to-peer between the two phones, free for everyone during launch — a quick, honest check that a person is real before you leave.
+
+## Memberships
+
+2NIGHT is free to join and free to meet people. Gold adds unlimited pings, the 15 km radius, a free Boost every week, Super Pings, Travel Mode, two private albums and chat relaunch. Platinum Black adds the 50 km radius, priority placement in the feed, three private albums plus a 50-second video, and access to Black Events — evenings where a reservation is an RSVP request confirmed by a person, never a purchased ticket. All billing is by Apple, renews until cancelled, and every price is shown in the app before anything is charged.
+
+## What 2NIGHT is not
+
+It is not a venue guide (the unrelated Italian app called 2night is). It does not verify identities or photos, run background checks, or read or scan your chats; reports are reviewed by a person within 24–72 hours and blocks are instant and silent. It has no ads, no analytics SDK and sells no data. It is iPhone only, strictly 18+, and opening city by city.
+
+## Go deeper
+
+How 2NIGHT works · A dating app for tonight · Who is out tonight near me? · 2NIGHT for travelers · How 2NIGHT compares with Tinder, Bumble, Happn, Pure and others
+
+## Be out tonight.
+
+Be first to own the night, wherever you are.
+
+Join the waitlist Download 2NIGHT
+
+← Back to home
+
+================================================================
+URL: https://2night.co/about
+TITLE: About — 2NIGHT
+================================================================
+
+About 2NIGHT
+
+# Tonight, not tomorrow.
+
+2NIGHT is for the moment you decide at 7pm that you actually want to do something — and want real people near you who feel the same.
+
+The best nights aren't planned three weeks out. They happen because someone nearby is free right now and ready to move. We made the app that turns that impulse into a real plan — fast, in person, tonight.
+
+## Two friends, one stubborn idea
+
+Hugo & JericFounder & Associate · Switzerland
+
+Hugo and Jeric, two friends from Switzerland, kept hitting the same wall: cities full of people, group chats full of “we should hang out soon,” and no one actually out tonight.
+
+Hugo, the founder, writes the code. Jeric, his associate, runs the project and shapes the experience. From a Swiss kitchen table to wherever you're standing tonight — that's the whole story.
+
+— Hugo & Jeric · Switzerland
+
+## What 2NIGHT is
+
+2NIGHT is a one-night dating app for iPhone that shows who is out near you tonight, so you can match and meet the same evening instead of chatting for days. It uses a radius around your location and a nightly “Tonight” status that expires at 5 AM; your profile only appears in the feed while you are live, next to other people who are out that night. It is an alternative to Tinder, Bumble, Happn and Pure for people who want a spontaneous same-night date — and it works just as well for a drink with new friends as for a date.
+
+In practice that means: you go live with one line and a category (drinks, food, rooftop, music, culture, sports, games, nightlife, talk, coffee, walk or network), you set how far the night reaches with a slider from 1 km up to 5 km on the free tier, 15 km on Gold or 50 km on Platinum Black, you ping the people you would like to meet, and a mutual ping opens a chat that stays open for 48 hours. You can post a Plan that people nearby can join, and start a two-minute video call from any match before you leave the house. The full walkthrough is on How 2NIGHT works .
+
+## What we believe
+
+Tonight, not tomorrow. The best plans are the ones that happen in the next three hours. Every scarcity cue in the app — the count of people out near you, the countdown to 5 AM — points at a real deadline, never an invented one. The longer “stay discoverable” options exist for travellers and quiet cities, and they are kept apart from the nightly choice so the number of people out tonight means what it says.
+
+Honest numbers. The feed header shows the real count returned by the server, even when it is three. The waitlist counter on this site is the real count from our own database. We do not publish invented testimonials and we do not publish prices we cannot guarantee for your storefront; every membership price is shown in the app, by Apple, before anything is charged.
+
+Private by default. Other members see a rounded distance in kilometres, never your coordinates. Nobody at 2NIGHT reads your chats. There is no advertising, analytics or crash-reporting SDK in the app, and we do not sell data. Your “who you want to see” preference is stored only if you give explicit consent, because we treat it as the sensitive data it is. Details are on the Trust & Security page and in the Privacy Policy .
+
+Say what we do not do. 2NIGHT does not run background or identity checks, has no verification badge, and does not scan messages for abuse. Reports are read by a person, usually within 24 hours and always within 72, and every decision can be appealed. We would rather tell you that on every page than let you assume otherwise.
+
+## Who builds it
+
+2NIGHT is a two-person project. Hugo writes the app (Swift, on iPhone only) and the backend; Jeric runs the project and shapes the experience. We are based in Switzerland, on the Geneva border, and the legal entity behind the app is listed on the legal notice . There are no investors and no growth team, which is why the honest header count and the absence of trackers are not marketing positions — they are simply how a small team that uses its own product wants it to work.
+
+## Where 2NIGHT is available
+
+2NIGHT runs on iPhone and is opening city by city. It is not yet available on the App Store; the waitlist on this site is the way in, and we message you the moment your city goes live. There is no Android version and no web version. The app is for adults 18 and over only.
+
+## Not the Italian 2night
+
+An unrelated Italian company also uses the name 2night: it publishes a guide to bars, restaurants and parties in Italian cities at 2night.it. That is not us and we are not affiliated. 2NIGHT at 2night.co is the one-night dating app described on this page.
+
+## Read more
+
+Discover 2NIGHT · How 2NIGHT works · Safety · Community guidelines · How 2NIGHT compares with other apps · Support
+
+## Be out tonight.
+
+The city's already moving. Join it.
+
+Download 2NIGHT
+
+← Back to home
+
+================================================================
+URL: https://2night.co/safety
+TITLE: Safety — 2NIGHT
+================================================================
+
+Safety
+
+# Meet people the smart way.
+
+2NIGHT is built for spontaneous, real-life nights. A few simple habits keep them fun — and keep you in control when you meet someone new.
+
+01
+### Meet in a public place
+For a first meet, pick somewhere busy and well-lit. Stay in public until you genuinely feel comfortable.
+
+02
+### Tell a friend your plans
+Let someone you trust know where you're going, who you're meeting, and when you'll be back.
+
+03
+### Never send money
+Never send money, gift cards, or crypto to someone you met on the app, no matter the story.
+
+04
+### Trust your gut
+If something feels off, it probably is. End the chat, leave the meet — there's no wrong reason to walk away.
+
+05
+### Report & block
+Anyone who makes you uncomfortable can be blocked and reported in a tap. Flagging keeps the night safer for everyone.
+
+06
+### You're in control
+You decide when you're live, how far your radius reaches, and what you share. We don't run background checks, so your own judgement comes first.
+
+## Why same-night meetings need their own habits
+
+2NIGHT is a one-night dating app for iPhone that shows who is out near you tonight, so you can match and meet the same evening instead of chatting for days. That speed is the point, and it also means you will often meet someone you first saw an hour ago. The six habits above are not a lecture; they are the short list that keeps a quick plan a good one. Two of them deserve a longer explanation.
+
+Meet in public, every first time. A first meet is a bar, a café, a venue or a busy square — never a private home, never a car, never an isolated spot, whatever the story. If a plan on 2NIGHT names a private address as the venue, treat that as a reason to skip it.
+
+Keep your own way home. Know your route, keep enough battery and cash for a taxi, and do not rely on the person you just met for a ride. Being able to leave at any moment is what makes trusting your gut possible.
+
+## The tools inside the app
+
+Two-minute video call. From any match you can start a short video or voice call. It runs peer-to-peer between the two phones (it never passes through our servers) and it is the quickest honest check that a person is who their photos say. It is free for everyone during the launch period. As on any peer-to-peer call, each side can technically see the other's IP address.
+
+Hide me. One tap takes you out of every feed immediately. A “Tonight” status also expires by itself at 5 AM, so you never stay visible by accident.
+
+Rounded distances only. Other members receive your distance in whole kilometres from the server, never your coordinates. If you do not go live for about 30 days, your stored position is blurred to your city.
+
+Block. From a profile or the ⋯ menu in a chat. A block is instant, silent and works both ways: you disappear from each other's Tonight feed, pings stop, shared plans drop one of you, and the conversation leaves both inboxes. Nobody is told. You can undo a block under Settings → Safety & privacy.
+
+Report. Tap the shield on a profile, or Report in the ⋯ menu of a chat, and choose one of three reasons: inappropriate content, fake or scam, or harassment. Reports are confidential by design — no member, including the person who filed it, can read a report back — and a person reviews every one, usually within 24 hours and always within 72. The outcome is removal, a warning, or closure; a closed report is never held against you. If a report describes a credible threat, we pass it to law enforcement. Details, including appeals and how long reports are kept, are on the Guidelines page.
+
+Contact details stay in the app until you choose. Free members cannot send phone numbers, social handles, emails or links in chat. That rule exists for membership reasons, but it has a useful side effect: you can agree on a bar and a time without handing over your number to someone you have not met.
+
+## What 2NIGHT does not do
+
+We do not run background checks or identity checks, and there is no verification badge. Nobody at 2NIGHT reads your chats, and the app does not scan messages for abusive language — the only automatic checks are a short list of prohibited terms when you save your bio, and the contact-details rule above. That is why reporting matters so much: a word list cannot tell that someone made you uncomfortable, but you can.
+
+## Scams, in one paragraph
+
+Never send money, gift cards or cryptocurrency to anyone you met in the app, no matter how good the reason sounds — a stranded traveller, a medical bill, an investment tip, a “verification fee”. 2NIGHT never asks for payment outside the App Store, and a real match does not need your money to have a drink with you. Report the account with “fake or scam” and block it.
+
+## If something goes wrong
+
+If you are in danger, contact local emergency services first — they can reach you in minutes; we are one person reading a queue. Then report the account so we can act on it. If a report or a block decision looks wrong to you, email safety@2night.co from the address on your account and a person will look again. Removals and warnings are made by people, and people can be wrong; if we were, we reverse it.
+
+## In an emergency, call for help.
+
+If you ever feel unsafe, contact your local emergency services first. To report someone to us, email our team — we read every message.
+
+support@2night.co
+
+← Back to home
+
+================================================================
+URL: https://2night.co/security
+TITLE: Trust & Security — 2NIGHT
+================================================================
+
+Trust & Security
+
+# Your safety, by design.
+
+Meeting new people should feel exciting, not risky. Here's how 2NIGHT protects you and your data.
+
+01
+### You're always in control
+You decide when you're live, how far your radius reaches, and what you share. Go offline and you disappear.
+
+02
+### Private by default
+Only people inside the radius and audience you choose can see you, and only while you're live.
+
+03
+### Your data, protected
+Encrypted in transit, access strictly limited, and never sold. Read the details in our Privacy Policy.
+
+04
+### Block & report in a tap
+Anyone who makes you uncomfortable can be blocked and reported instantly. Our team reviews every report.
+
+## Where your data lives
+
+2NIGHT is a one-night dating app for iPhone that shows who is out near you tonight, so you can match and meet the same evening instead of chatting for days. Almost everything you put into it — account, status, photos, plans, messages — is stored in Supabase, our database, authentication and file-storage provider, processed primarily within the European Union. Apple handles Sign in with Apple, subscription billing and push notifications; a push says that something happened and who it involves, never the contents of a message. The complete list of providers, with what each one sees, is in the Privacy Policy .
+
+There is no analytics, advertising, attribution or crash-reporting service in the app. There is no tracking SDK. We do not sell personal data and we do not share it for behavioural advertising.
+
+## Location
+
+Your location is read at roughly kilometre accuracy, only while you are live, and only to centre the Tonight Feed and rank people by distance. Other members receive a rounded distance in kilometres from the server; your coordinates are never sent to anyone. If you have not gone live for about 30 days, a routine on our database snaps your stored position to the centre of your city. Going offline in the app, or turning location off in iOS settings, stops sharing immediately.
+
+## Who you want to see
+
+Choosing to see women, men or non-binary people can reveal your sexual orientation, which the GDPR treats as special-category data. So 2NIGHT stores that choice only if you tick a separate, explicit consent box; choosing “Everyone” stores nothing. The choice is never shown to any member and is deleted the moment you withdraw consent, from Settings → Tonight → Who you see. Declining costs you nothing: your feed is not restricted and you are not hidden.
+
+## Chats and calls
+
+Nobody at 2NIGHT reads your messages, and the app does not scan them for abusive language. The one automatic check on messages looks for phone numbers, social handles, emails and links — a membership rule about when contact details can be exchanged, not a safety filter. Messages are kept while your account exists and deleted with it, immediately. Video and voice calls run peer-to-peer over WebRTC directly between the two phones; we never hold the call. Your device asks a Google STUN server how it is reachable (Google sees your IP address in that step), and, as on any peer-to-peer call, the other person can see your IP address and you can see theirs.
+
+## Reports are confidential by design
+
+When you report someone, the report lands in a queue only our safety reviewer can read. No member can read a report — including the person who wrote it — which is enforced in the database, not just promised here: if you could read your own report, someone who harasses several people could work out which of them filed. The person you report is never told who did, and never sees that a report exists until something happens to their account. Reports closed without action are deleted after 90 days; acted-on reports lose their evidence after 12 months and are deleted after 24. Blocks are equally quiet: nobody is told they have been blocked.
+
+## Your rights and controls
+
+From Settings you can export a copy of your data (the export is produced by a function that can only ever return the caller's own data) and delete your account. Deletion removes your profile, photos and messages; reports other people filed about you stay for the periods above, so a record cannot be wiped by deleting and re-registering. You can withdraw location consent, withdraw the “who you want to see” consent, and unblock anyone you have blocked, all from inside the app. For anything else, email support@2night.co; EEA and UK users can also complain to the CNIL, the French data protection authority.
+
+## What we do not claim
+
+We do not verify identities, photos or ages beyond the age you declare (the selector starts at 18). We do not run background checks and there is no verification badge. The two-minute video call, meeting in public and telling a friend are the honest substitutes, and our Safety page explains how to use them.
+
+Important: 2NIGHT does not run background or identity checks. Meet in public, tell a friend, and trust your gut — see our Safety tips.
+
+Questions about security or privacy? Email support@2night.co.
+
+← Back to home
+
+================================================================
+URL: https://2night.co/community-guidelines
+TITLE: Community Guidelines — 2NIGHT
+================================================================
+
+Community
+
+# Community Guidelines
+
+2NIGHT only works if it feels safe and real. These rules keep the night good for everyone — break them and you're out.
+
+01
+### Be real
+Use your own photos and real details. No fake profiles, impersonation, or catfishing.
+
+02
+### Be respectful
+No harassment, hate, threats, or unsolicited explicit content. Treat people the way you'd want to be treated.
+
+03
+### 18 and over only
+2NIGHT is strictly for adults. Anyone underage is removed immediately.
+
+04
+### No money, no business
+No selling, escorting, soliciting, scams, or asking members for money, gifts, or crypto.
+
+05
+### Keep it consensual
+No recording or sharing anyone without consent, no doxxing, no sharing private information.
+
+06
+### Report what's wrong
+Block and report anyone who crosses a line. Our team reviews every report — flagging keeps the night safe.
+
+Read the full rules — how to report, how to block, and what we do about it →
+
+## Why the rules are short
+
+2NIGHT is a one-night dating app for iPhone that shows who is out near you tonight, so you can match and meet the same evening instead of chatting for days. It puts strangers in the same bar on a few hours' notice. That only works if everyone can trust that the person in the feed is real, is an adult, and will take a “no” as an answer. Six rules cover that; the rest is enforcement, and enforcement is what this page is mostly about.
+
+## What is checked automatically — and what is not
+
+When you save your bio (150 characters at most) it is checked against a short list of prohibited terms and refused if it matches. That is the only automatic content check on profiles, and it is deliberately narrow: it catches the worst slurs and will not catch anything clever. Messages are not read by anyone at 2NIGHT and are not scanned for abuse. The one check on messages looks for phone numbers, social handles, emails and links; it is a membership rule about when contact details can be exchanged, not a safety filter.
+
+Which is why the sixth rule is the important one. A word list cannot tell that someone made you uncomfortable. You can, in two taps.
+
+## How reporting works
+
+Open a profile and tap the shield, or open the ⋯ menu at the top of a chat and choose Report. Pick one of three reasons — inappropriate content, fake or scam, or harassment — and it is sent. Your report goes into a queue that only our safety reviewer can read; no member, including you, can read it back, and the person you reported is never told who filed. We read the queue every day, aim to act within 24 hours and always act within 72. The outcome is one of three: the account is removed (it disappears from the feed, likes and plans, is signed out and can no longer message or ping anyone), the account is warned (the report stays on its record), or the report is closed because nothing was broken. A closed report is never held against you; we would rather you over-report than sit on something.
+
+If you think we got a decision wrong — a removal or a warning, yours or someone else's — email safety@2night.co from the address on your account. Decisions are made by people, and we reverse our mistakes.
+
+## How blocking works
+
+Block from the same two places. A block is instant, silent and works both ways: you leave each other's Tonight feed, pings stop, a shared upcoming plan drops one of you, and the conversation leaves both inboxes. Nobody is notified. Every block is listed under Settings → Safety & privacy with an Unblock button, so a block is never something you have to email us to undo.
+
+## Plans, calls and albums
+
+Plans are public invitations. Give a real venue and a real time; a plan that names a private address or asks people to pay outside the App Store breaks rule four and will be removed. Hosts can remove a member from their plan; a plan that includes someone you have blocked simply shows as unavailable, and the app never says why.
+
+Video calls are two minutes, peer-to-peer, and only ever between matched members. Recording a call, or a person, without consent breaks rule five. Private albums (a Gold and Platinum Black feature) can be viewed a limited number of times by the person you send them to; sharing someone's album further, or sending one to a person who did not ask for it, breaks rule five too — and rule two's ban on nudity applies inside albums exactly as it does on profiles.
+
+## Under 18
+
+The age selector starts at 18 and 2NIGHT does not verify age beyond what you declare, so we rely on you. If you believe an account belongs to a minor, report it with “fake or scam” and email safety@2night.co so it is looked at first. Accounts we believe to be underage are removed, and if a report describes a credible threat to someone's safety we pass it to law enforcement.
+
+## How long reports are kept
+
+Open reports are kept until decided. Reports closed without action are deleted after 90 days. For reports we acted on, the attached evidence is erased after 12 months and the report itself after 24, counted from the day we decided. If you delete your account, reports you filed are unlinked from you; reports about you stay on that schedule so nobody can wipe their record by re-registering.
+
+## Community
+
+See something serious? Email us — we read every message.
+
+support@2night.co
+
+← Back to home
+
+================================================================
+URL: https://2night.co/guidelines
+TITLE: Guidelines — 2NIGHT
+================================================================
+
+Safety
+
+# The rules, and what we do about them.
+
+2NIGHT puts strangers in the same room on a few hours' notice. That only works if the rules are clear and somebody actually enforces them. Here are the rules, exactly how to report or block someone, and exactly what happens after you do.
+
+## The rules
+
+01
+### Real people only
+2NIGHT is for real people going out tonight. One account, and it's yours. No bots, no agencies, no accounts run on someone else's behalf.
+
+02
+### Be who you say you are
+Your own photos, your own age, your own name. No impersonating anyone — not a celebrity, not a friend, not someone who doesn't exist.
+
+03
+### Respect. A pass is just a pass
+No harassment, no hate, no threats, no pressure. If someone passes on you or stops replying, that's the whole answer. Take it and move on.
+
+04
+### 18 and over. No exceptions
+2NIGHT is strictly for adults. If we believe an account belongs to someone under 18, we remove it. If you think a minor is on 2NIGHT, tell us immediately.
+
+05
+### Keep it clothed
+No nudity and no sexually explicit content — not in your photos, not in your bio, not in a plan, and not sent to someone who didn't ask for it.
+
+06
+### Nothing for sale
+No escorting or solicitation, no scams, no asking members for money, gifts or crypto. No spam, no promotion, no recruiting people to another app.
+
+## What we check automatically
+
+When you save your bio, we check it against a list of prohibited terms and refuse the save if it matches. It is a deliberately narrow tool: it catches the worst slurs and it will not catch anything clever.
+
+We want to be straight with you about the limits of that. We do not scan the contents of your messages for abuse. There is a check on messages that looks for phone numbers, social handles and links — but that is a membership rule about when contact details can be exchanged, not a safety filter, and it never looks for abusive language. Nobody at 2NIGHT reads your chats.
+
+Which is exactly why reporting matters. A word list cannot tell that someone made you uncomfortable. You can.
+
+## How to report someone
+
+Open their profile and tap the shield . You'll be asked to pick one of three reasons: inappropriate content , fake or scam , or harassment . That's the whole flow — pick one and it's sent.
+
+You can also report from inside a conversation: the ⋯ menu at the top of a chat has Report in it.
+
+Right now you report a person , not an individual message, plan or photo. If one specific thing is the problem, report the person and then email safety@2night.co saying which conversation or plan it was, so we know where to look.
+
+## How to block someone
+
+Blocking is in the same two places as reporting — their profile, and the ⋯ menu in a chat. When you report from a profile, we offer to block in the same step.
+
+A block is instant, silent and works both ways. They are not notified and there is no announcement. From that moment you are gone from each other's Tonight feed, no ping from them reaches you, you drop off each other's plans, and the conversation leaves both inboxes.
+
+If you were both going to the same upcoming plan, blocking takes one of you off the list — them, normally, or you if the plan was theirs. Past plans are left alone.
+
+Blocking is reversible. Everyone you have blocked is listed in the app at Settings → Safety & privacy , each with an Unblock button. One tap and it's undone. Nobody has to email us to take a block back.
+
+## What happens after you report
+
+Your report lands in our safety queue the moment you send it, timestamped. The queue is ordered oldest open report first, it shows how long each one has been waiting, and it flags anything that has sat there longer than 24 hours.
+
+We read that queue every day. We aim to act within 24 hours, and we always act within 72.
+
+Acting means one of three things:
+
+- We remove the account. It disappears from the Tonight feed, from likes, and from the plans list, and it can no longer message anyone, ping anyone, or post a plan. Its notifications are cut off and it is signed out.
+
+- We warn it. The account stays, the person is told what has to stop, and the report stays on their record.
+
+- We close the report. Sometimes nothing was broken. We would rather you over-report than sit on something, so a closed report is never held against the person who filed it.
+
+If a report describes a credible threat to someone's safety, we will report it to law enforcement and give them what we hold.
+
+## Reports are confidential
+
+The person you report is never told who reported them. They do not see your name, and they do not see that a report exists at all until something happens to their account.
+
+This is built into the database, not just promised here. No member can read a report — including the person who wrote it. You cannot pull up your own report after filing it, and neither can anyone else. That is on purpose: if you could read your own, someone who harasses several people could work out which of them filed. The safety queue is the only reader.
+
+Blocking is just as quiet. Nobody is told they have been blocked.
+
+## If you think we got it wrong
+
+Email safety@2night.co from the address on your account and tell us what happened. Removals and warnings are decided by a person, and people make mistakes — if we made one, we reverse it and put your account back the way it was.
+
+You can appeal a warning as well as a removal. There is no form and no deadline.
+
+## How long we keep reports
+
+A report is a record about two people, so we do not keep it forever:
+
+- Still open, or being looked at — kept until it is decided. Nothing is ever deleted out from under an unfinished case.
+
+- Closed with no action — deleted 90 days after we close it.
+
+- Acted on — the evidence attached to it is erased after 12 months, and the report itself is deleted after 24 months. Both clocks start the day we decide, not the day you filed.
+
+One routine in our database enforces every one of these periods. It runs automatically every night.
+
+If you delete your 2NIGHT account, reports you filed are unlinked from you. Reports other people filed about you stay, on the schedule above — otherwise anyone could wipe their record by deleting and re-registering. There is more on this in our Privacy Policy .
+
+## In an emergency, call for help first.
+
+If you are in danger right now, contact your local emergency services before you contact us. We are one person reading a queue; they can reach you in minutes. Then tell us, so we can act on the account.
+
+safety@2night.co
+
+Read our safety advice for meeting someone new →
+
+← Back to home
+
+================================================================
+URL: https://2night.co/support
+TITLE: Support — 2NIGHT
+================================================================
+
+Support
+
+# How can we help?
+
+Everything you need to know about 2NIGHT — and a real human at the other end when you need one.
+
+### Is 2NIGHT free?
+Yes. Joining 2NIGHT and meeting people is free. A paid membership is on the way, and you'll see exactly what it costs in the app before anything is charged.
+
+### Who can see that I'm out?
+Only people inside the radius and audience you choose, and only while you're live. Go offline and you disappear.
+
+### How does matching work?
+Ping someone you'd like to meet. If they ping back, it's a match and a chat opens — so you can make a plan for tonight.
+
+### How do memberships work?
+Any paid membership is billed through the App Store and renews automatically until cancelled. Manage or cancel anytime in your App Store settings.
+
+### How do I delete my account or data?
+You can export or delete your account and data anytime from Settings, or email us and we'll take care of it.
+
+Contact
+
+## Still need a hand?
+
+Email us and a real person will get back to you. We read every message.
+
+support@2night.co
+
+← Back to home
+
+================================================================
+URL: https://2night.co/blog/meet-people-near-you-tonight
+TITLE: How to Meet People Near You Tonight — A Practical Guide | 2NIGHT
+================================================================
+
+Meeting people
+
+# How to Meet People Near You Tonight (Without Waiting for the Weekend)
+
+By the 2NIGHT team
+·
+7 min read
+
+It's 7pm. You're free, a little restless, and you don't want to spend another evening scrolling on the couch. The good news: meeting someone tonight is far more achievable than most people think — if you stop planning and start moving.
+
+## Why “tonight” is the easiest plan to make
+
+Most social plans die in a group chat. Someone says “we should hang out soon,” three people heart-react, and nothing happens. The problem isn't a lack of desire — it's distance in time.
+
+Tonight has the opposite property. There's no calendar to negotiate, no “let me check my week,” no flaking three days later. The people who are free tonight are free right now, and that shared availability is the single most powerful ingredient in any plan.
+
+## Step 1 — Decide what kind of night you actually want
+
+Before you open any app or text anyone, get specific about the vibe. “I want to go out” is too vague to act on. Pick a lane:
+
+- Low-key: a quiet drink, a coffee that runs late, a walk and a conversation.
+
+- Social: live music, a busy bar, a games night, something with energy around you.
+
+- Active: a late gym session, a run club, bouldering, a pickup game.
+
+- Cultural: a gallery late-night, a film, an open mic, a pop-up.
+
+Naming the vibe does two things: it makes you easy to match with, and it filters out plans you'd quietly resent.
+
+## Step 2 — Set your radius (closer than you think)
+
+The biggest mistake people make is casting too wide a net. A match across town who'd take 45 minutes to reach is, realistically, not happening tonight. Proximity is everything when the clock is running.
+
+This is exactly the problem radius-based social discovery solves. Instead of browsing everyone everywhere, you set a distance — your street, your neighbourhood, your city — and only see people inside it. On 2NIGHT you choose how far the night reaches.
+
+The Tonight Feed on 2NIGHT — real people near you, free right now.
+
+## Step 3 — Lead with a plan, not a “hey”
+
+Once you can see who's out, the difference between a dead conversation and a real plan is your opening message. “Hey” puts all the work on the other person and almost always stalls.
+
+Don't ask someone to design the evening. Offer them an easy yes.
+Compare these two openers. “Hey, how's your night going?” versus “There's live music at the place on the corner around 9 — I'm heading over, want to come?” The second one names a place, a time, and a low-pressure invitation.
+
+- Reference something real — their status, a shared interest, the same neighbourhood.
+
+- Suggest a concrete, public spot and a rough time.
+
+- Keep it light — “no worries if not” lowers the stakes for everyone.
+
+## Step 4 — Move fast, but meet smart
+
+Momentum matters. The longer a “tonight” plan sits in a chat, the more likely it evaporates. Once you've agreed on something, lock the spot and the time and go. But moving fast doesn't mean abandoning common sense.
+
+- Meet in a public, busy place — a bar, a café, a venue — never a private home on a first meet.
+
+- Tell a friend where you're going and who you're meeting.
+
+- Keep your own transport home, and trust your gut — if something feels off, leave.
+
+We go deeper on this in our guide to going out solo and staying safe , which is worth a read before any first meet with someone new.
+
+## Step 5 — Let one good night build the next
+
+Here's the part people miss: a single good night isn't the goal — it's the seed. The person you grabbed a drink with tonight knows other people, other places, other plans. Meeting someone in person, tonight, is how a social life actually compounds.
+
+So the next time it's 7pm and you feel that restless pull, don't put it in a calendar for “soon.” Soon never comes. Decide what you want, see who's near you, send the message that makes yes easy — and go.
+
+## The short version
+
+Pick a vibe, set a tight radius, open with a real plan instead of “hey,” meet somewhere public, and let one good night lead to the next. The whole thing can take fifteen minutes and change your entire evening.
+
+## Stop planning. Start tonight.
+
+2NIGHT shows you who's out near you, right now. Set your radius, match, and make a real plan — tonight, not tomorrow.
+
+Download 2NIGHT
+
+## Read next
+
+Dating apps vs. discovery
+Radius-Based Social Discovery vs. Traditional Dating Apps
+
+New city · Safety
+Making Friends in a New City: A Guide to Going Out Solo (and Staying Safe)
+
+← Back to the blog
+
+================================================================
+URL: https://2night.co/blog/radius-based-social-discovery-vs-dating-apps
+TITLE: Radius-Based Social Discovery vs. Traditional Dating Apps | 2NIGHT
+================================================================
+
+Dating apps vs. discovery
+
+# Radius-Based Social Discovery vs. Traditional Dating Apps: Why “Tonight” Beats “Someday”
+
+By the 2NIGHT team
+·
+8 min read
+
+Both promise to help you meet someone. But a traditional dating app and a radius-based discovery app are built around completely different ideas of time — and that single difference shapes everything about how they feel to use.
+
+## Two different models of meeting people
+
+A traditional dating app is, at its core, a matchmaking queue. You build a profile, swipe through a deck of people who could be anywhere in a wide region, match, and then begin the slow work of a text conversation that might — eventually — become a date next week.
+
+Radius-based social discovery flips the order. Instead of “who might I be compatible with someday,” it answers “who is near me and free right now.” The goal isn't a pen-pal — it's a plan in the next few hours.
+
+## Where traditional dating apps win
+
+Let's be fair: the swipe model exists for good reasons, and for some goals it's genuinely the better tool.
+
+- Long-term intent: if you're looking for a serious relationship, the slower filtering of profiles, prompts and back-and-forth can help you find compatibility before you ever meet.
+
+- Selectivity: detailed profiles let you screen for values, lifestyle and dealbreakers up front.
+
+- Lower time pressure: you can match on Tuesday and meet in two weeks, which suits busy or far-apart schedules.
+
+If your honest answer to “when do you want to meet?” is “sometime in the next month, with the right person,” a traditional app is a reasonable fit.
+
+## Where radius-based discovery wins
+
+But a huge share of the time, that's not the actual question. The real one is: “I'm free tonight — who else is, and where are they?” That's where proximity-first discovery pulls ahead.
+
+- It respects your time: no months of texting toward a date that may never happen. You see who's out and you go.
+
+- Shared availability is built in: everyone you see is free in the same window you are — the hardest part of any plan, solved by default.
+
+- Distance is real, not abstract: a 5 km radius is a walkable plan; a match 50 km away you'll never meet isn't shown.
+
+- It's not only dating: spontaneous discovery works for new friends, a plus-one to an event, or simply company for the evening.
+
+Set your radius on 2NIGHT — from your street to the whole city.
+
+## The “swipe fatigue” problem
+
+There's a well-documented downside to the endless-deck model: it can start to feel like work. Hundreds of swipes, a handful of matches, most conversations fading after two messages. Psychologists call the underlying trap the paradox of choice — when options feel infinite, we commit to none of them.
+
+When everyone is theoretically available someday, no one is actually available tonight.
+Radius-based discovery sidesteps this by shrinking the field to something human-sized: not “everyone in a 100 km region, eventually,” but “these specific people, near me, out right now.” A smaller, time-bound set of options is far easier to act on.
+
+## How 2NIGHT approaches it
+
+2NIGHT is built around the tonight question. You set a one-line status — what you're up for this evening — and go live. You see the Tonight Feed of people near you who are also out, ping the ones you like, and match. From there it's a plan, not a pen-pal: a place, a time, and a real meet.
+
+Your radius is yours to set. Keep it close at 5 km when you want somewhere walkable, open the whole city at 15 km, or go wide at 50 km when you're happy to travel for the right night. The philosophy never changes: proximity first, tonight first.
+
+## So which should you use?
+
+It's not really a war — it's a question of what you want this week. If you're patiently building toward a long-term relationship and don't mind a slow burn, a traditional dating app is a fine tool. If you're tired of conversations that go nowhere and you'd rather actually be out, in person, tonight, radius-based discovery is built for exactly that impulse.
+
+The best nights rarely come from the most swiping. They come from deciding, at 7pm, that you'd like to meet someone — and then doing something about it. If that sounds like you, here's how to meet people near you tonight , step by step.
+
+## In one line
+
+Traditional dating apps optimise for “the right person, someday.” Radius-based discovery optimises for “real people, near me, tonight.” Pick the one that matches the night you actually want.
+
+## Stop planning. Start tonight.
+
+2NIGHT shows you who's out near you, right now. Set your radius, match, and make a real plan — tonight, not tomorrow.
+
+Download 2NIGHT
+
+## Read next
+
+Meeting people
+How to Meet People Near You Tonight (Without Waiting for the Weekend)
+
+New city · Safety
+Making Friends in a New City: A Guide to Going Out Solo (and Staying Safe)
+
+← Back to the blog
+
+================================================================
+URL: https://2night.co/blog/making-friends-new-city-nightlife-safety
+TITLE: Making Friends in a New City: Going Out Solo & Staying Safe | 2NIGHT
+================================================================
+
+New city · Safety
+
+# Making Friends in a New City: A Guide to Going Out Solo (and Staying Safe)
+
+By the 2NIGHT team
+·
+9 min read
+
+Moving somewhere new is exciting for about a week. Then the boxes are unpacked, the novelty fades, and you realise you don't actually know anyone. Building a social circle from zero is one of the most underrated challenges of adult life — and one of the most doable, once you treat it as a skill rather than luck.
+
+## Why making friends as an adult feels hard
+
+As kids we made friends by proximity and repetition — the same classmates, every day, for years. Adult life strips both away. People are scattered, schedules are full, and the easy “we just kept running into each other” path disappears. Nothing's wrong with you; the structure that used to do the work is simply gone.
+
+Which means the fix is structural too. To make friends in a new city you need to manufacture the two ingredients childhood handed you for free: proximity (being physically near the same people) and repetition (seeing them more than once).
+
+## Go out solo — it's a feature, not a failure
+
+Many people stay in simply because they have no one to go out with — and waiting for company is the single biggest reason newcomers stay isolated. But going out alone is quietly one of the best social tools you have. Without a friend to retreat into, you're far more approachable.
+
+Make solo outings easy on yourself:
+
+- Pick the bar, not the table: sitting at a bar or counter invites conversation in a way a corner table never will.
+
+- Go where there's a shared activity: a class, a run club, a games night, a tasting — a built-in reason to talk to strangers.
+
+- Become a regular: the same café or gym three times a week turns strangers into familiar faces, then into friends.
+
+- Give yourself an exit: “I'll stay 45 minutes” removes the pressure and almost always turns into longer.
+
+Join a plan near you on 2NIGHT — instant proximity, no waiting for company.
+
+## Use proximity to your advantage
+
+Here's where technology genuinely helps. The hardest part of a new city is that you don't yet know where your people are. Radius-based social discovery short-circuits that: instead of hoping to bump into the right crowd, you can see who's out near you tonight and what's happening close by.
+
+This is exactly what 2NIGHT is built for. Land somewhere new, set your radius, and the local night is already in front of you — people who are out right now, plans you can join, company for the evening without needing a pre-existing circle.
+
+## Turn one meeting into a circle
+
+A social circle isn't built one friend at a time in isolation — it grows through connection. The person you meet tonight knows other people, hosts other plans, frequents other places. Your job is to convert single encounters into repeat ones.
+
+One genuine evening, followed up on, is worth more than fifty introductions you never see again.
+
+- Follow up within a day or two — a specific “that bar was great, let's do the Thursday quiz next week” beats a vague “we should hang out.”
+
+- Say yes to the invitation behind the invitation — the house party, the friend's birthday, the group hike.
+
+- Be the one who organises. People are grateful to whoever sends the “anyone free Friday?” message. Be that person.
+
+## The going-out-solo safety checklist
+
+Meeting new people is wonderful; doing it sensibly is non-negotiable, especially in a city you don't know well yet. None of this should make you anxious — treat it as the same kind of automatic habit as locking your door.
+
+- Meet in public, busy places. A first meet is always a bar, café or venue — never a private home, never an isolated spot.
+
+- Tell someone your plan. Share where you're going, who you're meeting and a rough timeline with a friend back home or new.
+
+- Keep your own way home. Don't rely on someone you just met for your ride. Know your route and keep enough battery and cash.
+
+- Mind your drink and your pace. Watch it being poured, keep it with you, and stay clear-headed enough to make good calls.
+
+- Guard personal details early. Your exact address, workplace and routine can wait until trust is earned.
+
+- Trust your gut. If anything feels off, you owe no one an explanation. Leaving early is always a complete sentence.
+
+Remember that apps help you meet people but don't vet them — 2NIGHT doesn't run background or identity checks, so your own judgement is the real safety system. You can block and report anyone in a tap, but the habits above matter most. See our full Safety guidance for more.
+
+## Give it time — and keep showing up
+
+A real social circle in a new city usually takes a few months, not a few nights, and the people who build one fastest aren't the most charismatic — they're the ones who keep showing up. Every evening you go out is a small bet, and you only need a few to pay off.
+
+So unpack the last box, pick a night, and go meet your city. The people you're looking for are already out there tonight — you just have to be out there too. If you're not sure where to start, here's how to meet people near you tonight .
+
+## The takeaway
+
+Friendship in a new city is proximity plus repetition, engineered on purpose. Go out solo, use your radius to find who's near, follow up relentlessly, and keep your safety habits automatic. Show up enough times and the circle builds itself.
+
+## Stop planning. Start tonight.
+
+2NIGHT shows you who's out near you, right now. Set your radius, match, and make a real plan — tonight, not tomorrow.
+
+Download 2NIGHT
+
+## Read next
+
+Meeting people
+How to Meet People Near You Tonight (Without Waiting for the Weekend)
+
+Dating apps vs. discovery
+Radius-Based Social Discovery vs. Traditional Dating Apps
+
+← Back to the blog
