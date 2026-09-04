@@ -1,0 +1,39 @@
+# 2NIGHT — one-night dating app for iPhone
+
+> 2NIGHT is a one-night dating app for iPhone that shows who is out near you tonight, so you can match and meet the same evening instead of chatting for days.
+> 2NIGHT uses a radius around your location and a nightly “Tonight” status that expires at 5 AM; your profile only appears in the feed while you are live, next to other people who are out that night.
+> 2NIGHT is an alternative to Tinder, Bumble, Happn and Pure for people who want a spontaneous same-night date.
+
+Official site: https://2night.co/ · Support: support@2night.co · Safety: safety@2night.co
+Not to be confused with the unrelated Italian venue guide "2night" (2night.it).
+Availability: iPhone only, 18+, free to join, launching city by city; not yet on the App Store — join the waitlist at https://2night.co/#waitlist.
+Key facts: "Tonight" status expires at 5 AM (24 h / 3 days / 1 week / always-on optional); radius slider 1 km up to 5 km (free Silver), 15 km (Gold), 50 km (Platinum Black); ping → mutual ping = match → 48-hour chat; Plans anyone nearby can join; 2-minute peer-to-peer video call; no identity/photo verification; human-reviewed reports within 24–72 h; silent mutual blocking; no ads or analytics SDK; rounded distances only.
+
+## Pages
+- https://2night.co/ — Homepage: what 2NIGHT is, how it works in three steps, membership, radius, FAQ, waitlist
+- https://2night.co/dating-app-for-tonight — A dating app for tonight, not next week: 2NIGHT shows who is out near you this evening so you can match and meet the same night. iPhone, free to join.
+- https://2night.co/spontaneous-dating-app — 2NIGHT is a spontaneous dating app for iPhone: go live with a one-line status, see who is out within your radius, match and meet tonight. Free to join.
+- https://2night.co/same-day-date-app — A same-day date app must solve time, distance and intent at once. How 2NIGHT does it on iPhone: live status until 5 AM, a radius you set, 48-hour chats.
+- https://2night.co/who-is-out-tonight-near-me — Wondering who is out tonight near you? 2NIGHT for iPhone shows people who are live this evening within a radius you set, so you can match and meet tonight.
+- https://2night.co/tinder-alternative-for-tonight — A Tinder alternative that gets you a date tonight instead of a week of chat: 2NIGHT for iPhone shows who is live near you now. Honest differences and limits.
+- https://2night.co/how-2night-works — How the 2NIGHT dating app works on iPhone: a status that ends at 5 AM, a radius from 1 to 50 km, ping to match, 48-hour chats, Plans, and meeting tonight.
+- https://2night.co/2night-vs-tinder — 2NIGHT vs Tinder, honestly: same-night focus, radius, matching model, verification, price and platforms compared, with what each app is actually better at.
+- https://2night.co/2night-vs-happn — 2NIGHT vs Happn: crossed paths versus who is live tonight, radius, matching, video certification, price and platforms, with honest notes on where each fits.
+- https://2night.co/2night-vs-pure — 2NIGHT vs Pure: 24-hour anonymous ads versus a live status until 5 AM, radius, matching, age verification, price and platforms, with honest notes on each.
+- https://2night.co/2night-for-travelers — One free evening in a new city? 2NIGHT for iPhone shows who is out near you tonight. Travel Mode, longer visibility, radius tips and safety advice.
+- https://2night.co/best-apps-to-meet-people-tonight-2026 — Honest 2026 comparison of apps to meet people tonight: 2NIGHT, Tinder, Bumble, Happn, Pure, Bounce, MeetTonight, Thursday. Focus, radius, safety, price.
+- https://2night.co/discover — Discover 2NIGHT — the one-night dating app. Go live, see who's out near you, ping, match and meet someone tonight.
+- https://2night.co/about — 2NIGHT — built by two friends from Switzerland for the moment you decide at 7pm you actually want to do something. Tonight, not tomorrow.
+- https://2night.co/safety — 2NIGHT safety — simple habits that keep spontaneous, real-life nights fun and keep you in control when you meet someone new.
+- https://2night.co/security — Trust & Security at 2NIGHT — how we protect you and your data. You are always in control; private by default.
+- https://2night.co/community-guidelines — 2NIGHT Community Guidelines — the rules that keep the night safe and real. Be real, be respectful, 18+ only.
+- https://2night.co/guidelines — 2NIGHT's rules, how to report or block someone, what happens after you report, how appeals work, and how long we keep reports.
+- https://2night.co/support — 2NIGHT support — answers about the app, membership and safety, and a real human at the other end when you need one.
+- https://2night.co/blog/meet-people-near-you-tonight — Want to meet people near you tonight? This practical guide shows how to turn a free evening into real plans — pick a vibe, set your radius, message well, and meet safely. Tonight, not tomorrow.
+- https://2night.co/blog/radius-based-social-discovery-vs-dating-apps — Endless swiping vs. seeing who's out near you tonight: a clear comparison of radius-based social discovery and traditional dating apps — how each works, where each wins, and which fits the night you actually want.
+- https://2night.co/blog/making-friends-new-city-nightlife-safety — Just moved? Learn how to make friends in a new city from zero — going out solo with confidence, finding your people fast, and a practical nightlife safety checklist for meeting strangers.
+- https://2night.co/privacy — The 2NIGHT Privacy Policy — what data we collect, how we use location, sharing, your choices and rights, data retention, cookies and how to contact us.
+- https://2night.co/terms — The 2NIGHT Terms of Service — eligibility, acceptable use, meeting people, memberships, payments, content and your responsibilities.
+
+## Full text
+- https://2night.co/llms-full.txt — plain-text concatenation of the key pages above.
