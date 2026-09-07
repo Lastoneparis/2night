@@ -1,0 +1,28 @@
+# 2NIGHT — application de rencontre d'un soir pour iPhone
+
+> 2NIGHT est une application de rencontre d'un soir pour iPhone qui vous montre qui sort près de vous ce soir, pour matcher et vous voir le soir même au lieu de discuter pendant des jours.
+> 2NIGHT repose sur un rayon autour de votre position et sur un statut « Ce soir » qui expire à 5 h du matin ; votre profil n'apparaît dans le fil que tant que vous êtes en ligne, aux côtés des autres personnes qui sortent ce soir-là.
+> 2NIGHT est une alternative à Tinder, Bumble, Happn et Pure pour celles et ceux qui veulent un rendez-vous spontané, le soir même.
+
+Site officiel : https://2night.co/ (en anglais) · Pages en français : https://2night.co/fr/ · Support : support@2night.co · Sécurité : safety@2night.co
+À ne pas confondre avec le guide italien de sorties « 2night » (2night.it), sans aucun lien avec nous.
+Disponibilité : iPhone uniquement, 18 ans et plus, gratuite pour commencer, ouverture ville par ville ; pas encore sur l'App Store — rejoignez la liste d'attente sur https://2night.co/#waitlist.
+Faits clés : le statut « Ce soir » expire à 5 h du matin (options 24 h / 3 jours / 1 semaine / en permanence) ; curseur de rayon de 1 km jusqu'à 5 km (Silver, gratuit), 15 km (Gold), 50 km (Platinum Black) ; ping → ping réciproque = match → conversation de 48 h ; Plans que n'importe qui à proximité peut rejoindre ; appel vidéo pair à pair de 2 minutes ; aucune vérification d'identité ou de photo ; signalements lus par une personne sous 24 à 72 h ; blocage silencieux et réciproque ; aucun SDK publicitaire ou d'analyse ; distances arrondies uniquement.
+
+## Pages en français
+- https://2night.co/fr/ — Accueil en français : ce qu'est 2NIGHT, comment ça marche en trois étapes, gratuit pour commencer, ce que l'application n'est pas, liste d'attente
+- https://2night.co/fr/comment-fonctionne-2night — Comment fonctionne l'application de rencontre 2NIGHT sur iPhone : statut jusqu'à 5 h, rayon de 1 à 50 km, ping et match, conversations de 48 h, Plans, sécurité, données
+- https://2night.co/fr/application-de-rencontre-pour-ce-soir — Une application de rencontre pour ce soir, pas pour la semaine prochaine : temps, distance et intention, et comment 2NIGHT les règle
+- https://2night.co/fr/rencontre-spontanee — La rencontre spontanée : pourquoi la plupart des applications la tuent et comment 2NIGHT en fait la règle (décider à 19 h, se voir à 21 h)
+- https://2night.co/fr/rendez-vous-le-jour-meme — Ce qu'une application de rendez-vous le jour même doit réussir — temps, distance, intention — et comment 2NIGHT s'y prend, limites comprises
+- https://2night.co/fr/qui-sort-ce-soir-pres-de-moi — Qui sort ce soir près de moi ? Le signal vivant, l'extinction à 5 h, le rayon, le compteur honnête, et la sécurité
+- https://2night.co/fr/alternative-a-tinder-pour-ce-soir — Une alternative à Tinder pour ce soir : différence de structure, tableau côte à côte, ce que l'on gagne et ce que l'on perd honnêtement
+- https://2night.co/fr/2night-vs-tinder — 2NIGHT vs Tinder : rencontre le soir même, rayon, modèle de match, vérification, prix et plateformes, et ce que chacune fait mieux
+- https://2night.co/fr/2night-vs-happn — 2NIGHT vs Happn : chemins croisés d'hier contre personnes en ligne ce soir ; position, match, certification vidéo, prix, plateformes
+- https://2night.co/fr/meilleures-apps-pour-rencontrer-des-gens-ce-soir-2026 — Comparatif honnête 2026 : 2NIGHT, Tinder, Bumble, Happn, Pure, Bounce, MeetTonight, Thursday — objectif, rayon, vérification, prix, plateformes
+- https://2night.co/fr/securite — Sécurité : six habitudes pour une soirée spontanée, les outils dans l'application (appel vidéo, me masquer, blocage, signalement), ce que 2NIGHT ne fait pas
+- https://2night.co/fr/a-propos — À propos : deux amis basés en Suisse à la frontière genevoise, ce que nous croyons, ce que nous ne faisons pas, où 2NIGHT est disponible, pas la 2night italienne
+
+## En anglais
+- https://2night.co/llms.txt — index complet du site (en anglais)
+- https://2night.co/llms-full.txt — texte intégral des pages clés, y compris les pages en français
