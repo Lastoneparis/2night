@@ -8,13 +8,19 @@
   Verified with:
     for u in $(grep -o 'https://2night.co[^<]*' sitemap.xml); do
       echo "$(curl -s -o /dev/null -w '%{http_code}' "$u")  $u"; done
+  French pages live under /fr/ and are paired with their English originals
+  through xhtml:link alternates (hreflang en / fr / x-default) on both entries.
 -->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://2night.co/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2night.co/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://2night.co/fr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2night.co/" />
   </url>
   <url>
     <loc>https://2night.co/discover</loc>
@@ -24,9 +30,12 @@
   </url>
   <url>
     <loc>https://2night.co/about</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2night.co/about" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://2night.co/fr/a-propos" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2night.co/about" />
   </url>
   <url>
     <loc>https://2night.co/support</loc>
@@ -36,9 +45,12 @@
   </url>
   <url>
     <loc>https://2night.co/safety</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2night.co/safety" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://2night.co/fr/securite" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2night.co/safety" />
   </url>
   <url>
     <loc>https://2night.co/security</loc>
@@ -114,51 +126,75 @@
   </url>
   <url>
     <loc>https://2night.co/dating-app-for-tonight</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2night.co/dating-app-for-tonight" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://2night.co/fr/application-de-rencontre-pour-ce-soir" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2night.co/dating-app-for-tonight" />
   </url>
   <url>
     <loc>https://2night.co/spontaneous-dating-app</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2night.co/spontaneous-dating-app" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://2night.co/fr/rencontre-spontanee" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2night.co/spontaneous-dating-app" />
   </url>
   <url>
     <loc>https://2night.co/same-day-date-app</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2night.co/same-day-date-app" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://2night.co/fr/rendez-vous-le-jour-meme" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2night.co/same-day-date-app" />
   </url>
   <url>
     <loc>https://2night.co/who-is-out-tonight-near-me</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2night.co/who-is-out-tonight-near-me" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://2night.co/fr/qui-sort-ce-soir-pres-de-moi" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2night.co/who-is-out-tonight-near-me" />
   </url>
   <url>
     <loc>https://2night.co/tinder-alternative-for-tonight</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2night.co/tinder-alternative-for-tonight" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://2night.co/fr/alternative-a-tinder-pour-ce-soir" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2night.co/tinder-alternative-for-tonight" />
   </url>
   <url>
     <loc>https://2night.co/how-2night-works</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2night.co/how-2night-works" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://2night.co/fr/comment-fonctionne-2night" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2night.co/how-2night-works" />
   </url>
   <url>
     <loc>https://2night.co/2night-vs-tinder</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2night.co/2night-vs-tinder" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://2night.co/fr/2night-vs-tinder" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2night.co/2night-vs-tinder" />
   </url>
   <url>
     <loc>https://2night.co/2night-vs-happn</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2night.co/2night-vs-happn" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://2night.co/fr/2night-vs-happn" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2night.co/2night-vs-happn" />
   </url>
   <url>
     <loc>https://2night.co/2night-vs-pure</loc>
@@ -174,8 +210,119 @@
   </url>
   <url>
     <loc>https://2night.co/best-apps-to-meet-people-tonight-2026</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2night.co/best-apps-to-meet-people-tonight-2026" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://2night.co/fr/meilleures-apps-pour-rencontrer-des-gens-ce-soir-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2night.co/best-apps-to-meet-people-tonight-2026" />
+  </url>
+  <url>
+    <loc>https://2night.co/fr/</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2night.co/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://2night.co/fr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2night.co/" />
+  </url>
+  <url>
+    <loc>https://2night.co/fr/comment-fonctionne-2night</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2night.co/how-2night-works" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://2night.co/fr/comment-fonctionne-2night" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2night.co/how-2night-works" />
+  </url>
+  <url>
+    <loc>https://2night.co/fr/application-de-rencontre-pour-ce-soir</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2night.co/dating-app-for-tonight" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://2night.co/fr/application-de-rencontre-pour-ce-soir" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2night.co/dating-app-for-tonight" />
+  </url>
+  <url>
+    <loc>https://2night.co/fr/rencontre-spontanee</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2night.co/spontaneous-dating-app" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://2night.co/fr/rencontre-spontanee" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2night.co/spontaneous-dating-app" />
+  </url>
+  <url>
+    <loc>https://2night.co/fr/rendez-vous-le-jour-meme</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2night.co/same-day-date-app" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://2night.co/fr/rendez-vous-le-jour-meme" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2night.co/same-day-date-app" />
+  </url>
+  <url>
+    <loc>https://2night.co/fr/qui-sort-ce-soir-pres-de-moi</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2night.co/who-is-out-tonight-near-me" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://2night.co/fr/qui-sort-ce-soir-pres-de-moi" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2night.co/who-is-out-tonight-near-me" />
+  </url>
+  <url>
+    <loc>https://2night.co/fr/alternative-a-tinder-pour-ce-soir</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2night.co/tinder-alternative-for-tonight" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://2night.co/fr/alternative-a-tinder-pour-ce-soir" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2night.co/tinder-alternative-for-tonight" />
+  </url>
+  <url>
+    <loc>https://2night.co/fr/2night-vs-tinder</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2night.co/2night-vs-tinder" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://2night.co/fr/2night-vs-tinder" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2night.co/2night-vs-tinder" />
+  </url>
+  <url>
+    <loc>https://2night.co/fr/2night-vs-happn</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2night.co/2night-vs-happn" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://2night.co/fr/2night-vs-happn" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2night.co/2night-vs-happn" />
+  </url>
+  <url>
+    <loc>https://2night.co/fr/meilleures-apps-pour-rencontrer-des-gens-ce-soir-2026</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2night.co/best-apps-to-meet-people-tonight-2026" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://2night.co/fr/meilleures-apps-pour-rencontrer-des-gens-ce-soir-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2night.co/best-apps-to-meet-people-tonight-2026" />
+  </url>
+  <url>
+    <loc>https://2night.co/fr/securite</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2night.co/safety" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://2night.co/fr/securite" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2night.co/safety" />
+  </url>
+  <url>
+    <loc>https://2night.co/fr/a-propos</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://2night.co/about" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://2night.co/fr/a-propos" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://2night.co/about" />
   </url>
 </urlset>
