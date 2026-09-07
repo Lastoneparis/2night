@@ -61,16 +61,40 @@
   };
 
   // ---- per-tab override, for previewing either state ------------------------
+  // ASYMMETRIC ON PURPOSE.
+  //
+  // Forcing the state OFF (?appstore=0) is safe anywhere: the worst case is a
+  // visitor sees the waitlist, which is the truth today.
+  //
+  // Forcing it ON is not. `?appstore=1` used to work on the public site, so
+  // https://2night.co/?appstore=1 rendered the full "Download on the App Store"
+  // state to anyone who typed it — for a listing that currently returns HTTP 404
+  // (itunes lookup id=6780563413 → resultCount:0). That is an availability claim
+  // the app cannot honour, reachable without any tooling, and it is the same
+  // shape as the unguarded demo/screenshot flags that have cost this account a
+  // 5.6 rejection before. So the ON direction is restricted to local and
+  // preview hosts, where it is a development convenience and nothing else.
+  var PREVIEW_HOST = /^(localhost|127\.0\.0\.1|\[::1\]|.*\.local)$/i;
+  var isPreviewHost = PREVIEW_HOST.test(window.location.hostname) ||
+                      window.location.protocol === "file:";
+
   var forced = null;
   try {
     var q = new URLSearchParams(window.location.search);
     if (q.has("appstore")) {
-      forced = q.get("appstore") !== "0";
-      try { sessionStorage.setItem("tn_force_appstore", forced ? "1" : "0"); } catch (e) {}
+      var want = q.get("appstore") !== "0";
+      // Only the "off" direction is honoured in production.
+      forced = (want && !isPreviewHost) ? null : want;
+      if (forced !== null) {
+        try { sessionStorage.setItem("tn_force_appstore", forced ? "1" : "0"); } catch (e) {}
+      }
     } else {
       var s = null;
       try { s = sessionStorage.getItem("tn_force_appstore"); } catch (e) {}
-      if (s !== null) forced = s === "1";
+      if (s !== null) {
+        var stored = s === "1";
+        forced = (stored && !isPreviewHost) ? null : stored;
+      }
     }
   } catch (e) {}
 
