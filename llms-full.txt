@@ -1983,6 +1983,914 @@ Radius-Based Social Discovery vs. Traditional Dating Apps
 ← Back to the blog
 
 
+================================================================
+URL: https://2night.co/cities
+TITLE: 2NIGHT City Guides — 2NIGHT dating app
+================================================================
+
+Cities
+
+# 2NIGHT city guides: how a one-night date works where you are
+
+By the 2NIGHT team
+
+·
+
+Updated 7 September 2026
+
+2NIGHT is a one-night dating app for iPhone that shows who is out near you tonight, so you can match and meet the same evening instead of chatting for days.
+
+Every city has its own idea of what “tonight” means. In Paris it starts with an apéro at half past six and ends with the last metro; in Berlin it starts at midnight and ends whenever; in Los Angeles it is over by two and involves a car. The 2NIGHT model is the same everywhere, but the way you use it is not, and these guides are our attempt to be specific about that.
+
+## What every guide covers
+
+2NIGHT uses a radius around your location and a nightly “Tonight” status that expires at 5 AM; your profile only appears in the feed while you are live, next to other people who are out that night. Each city page explains how that plays out locally: which neighbourhoods people actually go out in on a weeknight versus a weekend, what time the evening starts and ends, how the last train or the lack of one shapes a plan, what radius setting makes sense on the free 5 km tier and on the 15 km and 50 km tiers, a short safety paragraph drawn from our safety page, and an honest status block saying where 2NIGHT stands in that city today. The city facts are general knowledge about neighbourhoods and transport; there are no venue recommendations and no invented figures.
+
+## The eight cities
+
+- Tonight in London — A city of villages that goes out near the office on weeknights and near home at weekends. Soho, Shoreditch, Dalston, Brixton, the last Tube around midnight and the Night Tube on Friday and Saturday nights.
+
+- Tonight in New York — A 24-hour subway and bars open until 4 am. The East Village and Lower East Side on weeknights, Williamsburg and Bushwick at weekends, and a 5 km circle that covers more than it looks like on a map.
+
+- Tonight in Paris — Apéro at 6:30, dinner at 9, last metro after midnight. Oberkampf, the Marais, Canal Saint-Martin, Pigalle and Belleville, all inside a city where the free 5 km radius already reaches the périphérique.
+
+- Tonight in Berlin — No closing time, trains all night at the weekend, and a Kiez for every kind of evening: Kreuzberg, Neukölln, Friedrichshain, Prenzlauer Berg, Schöneberg. A big city where naming the neighbourhood matters most.
+
+- Tonight in Barcelona — Dinner at ten, bars until two, a metro that runs all night on Saturdays. Gràcia, El Born, Poble-sec, Sant Antoni and the Eixample in a compact grid between the sea and the hills.
+
+- Tonight in Amsterdam — A city crossed by bike, where 4 km is fifteen minutes along a canal. The Jordaan, De Pijp, Oud-West, Oost and Noord across the IJ, with bars closing at 1 on weeknights and much later at weekends.
+
+- Tonight in Lisbon — Seven hills, a 2 km centre and a late timetable. Bairro Alto until two, Cais do Sodré after, Príncipe Real, Anjos and Intendente for locals, and a metro that stops at 1 am.
+
+- Tonight in Los Angeles — The city where a radius decides everything. Silver Lake and the Eastside, Koreatown, Downtown, Hollywood, Venice and the Westside; last call at 2 am and a ride home to arrange before you leave.
+
+## Where 2NIGHT stands in these cities
+
+All eight are waitlist-only. As of 7 September 2026, 2NIGHT is not on the App Store, and no launch wave has been announced for any city on this page. We open cities in waves; the waitlist at 2night.co is the only way in, and we message you the moment your city goes live. We do not publish member counts or activity figures for cities that have not opened. When a city does open, its page will say so, and the feed header in the app will show the real number of people live near you, never a marketing figure.
+
+If your city is not here, the waitlist still applies: it is not limited to these eight. And if you are travelling, the travellers guide explains Travel Mode, the longer “Stay discoverable” options and how to set a radius for a city you do not know.
+
+## Why the radius changes the advice
+
+A 5 km circle is a very different thing in different cities. In Paris, Barcelona, Lisbon and Amsterdam it covers nearly the whole place people go out in, so the free Silver tier is enough and the advice is to keep the circle tight and name the neighbourhood. In London, Berlin and New York it covers a cluster of neighbourhoods and the river or the ring matters more than the number. In Los Angeles it covers one cluster and nothing else, and the 15 km Gold radius is where a real choice begins. Transport is the other variable: a city with an all-night subway (New York) or all-night weekend trains (Berlin, Barcelona on Saturdays) removes the deadline that a last-metro city (Paris, Lisbon, London on weeknights) builds into every plan. The guides are organised around those two facts because they decide whether a ping at nine becomes a drink at ten.
+
+## How to use the guides
+
+Read the one for the city you are in, set your radius the way it suggests, put the neighbourhood and a time in your status line, and ping early on weeknights. Use the categories in the app (drinks, food, walk, talk, music, nightlife and the rest) to say what kind of night you mean. Post a Plan when you would rather meet a small group than one person. And keep the safety habits automatic: public place, a friend who knows, your own way home, no money to strangers, block and report anyone who makes you uncomfortable.
+
+2NIGHT is an alternative to Tinder, Bumble, Happn and Pure for people who want a spontaneous same-night date. 2NIGHT is an iPhone app for adults 18 and over, free to join, and it opens city by city.
+
+## Frequently asked questions
+
+### Which cities is 2NIGHT live in?
+
+None yet. 2NIGHT is not on the App Store and no launch wave has been announced for any of the cities on this page. We open cities in waves; the waitlist at 2night.co is the way in, and we message you when your city goes live.
+
+### Why write city guides before the app has launched there?
+
+Because the radius model works differently in a compact city like Paris than in a spread-out one like Los Angeles, and people ask. Each guide explains the neighbourhoods, hours and transport that shape a same-night date, and states plainly that the city is waitlist-only.
+
+### Can I use Travel Mode in a city that has not opened?
+
+Once the app is available, Travel Mode on the Gold and Platinum Black tiers lets you set a status in any city you can search for, but the people you see depend on 2NIGHT having launched there.
+
+### My city is not on this list. Can I still join?
+
+Yes. The waitlist is not limited to these eight cities. Leave an email and a phone number and we message you when 2NIGHT opens near you.
+
+## Tonight, not tomorrow.
+
+2NIGHT is built for iPhone and opens city by city. It is not on the App Store yet: join the waitlist at 2night.co and we will message you the moment it is live near you.
+
+Join the waitlist
+
+## Read next
+
+Travel
+2NIGHT for travelers
+
+Discovery
+Who is out tonight near me?
+
+Guide
+How 2NIGHT works, step by step
+
+← Back to home
+
+================================================================
+URL: https://2night.co/tonight-in-london
+TITLE: Tonight in London — 2NIGHT dating app
+================================================================
+
+City guide
+
+# Tonight in London: a one-night dating app for a city of villages
+
+By the 2NIGHT team
+
+·
+
+Updated 7 September 2026
+
+2NIGHT is a one-night dating app for iPhone that shows who is out near you tonight, so you can match and meet the same evening instead of chatting for days.
+
+London is not one night out; it is thirty of them happening at once, ten Tube stops apart. That is exactly the problem a radius solves. Instead of matching with someone in Walthamstow while you sit in a pub in Clapham, 2NIGHT shows you the people who are live tonight within a distance you choose, so a “fancy a drink?” can actually become a drink before the last train.
+
+## How a night out works in London
+
+The first thing to understand about London is how early it starts and how early most of it ends. After-work drinks begin around 6 pm and the pubs are at their fullest between 7 and 9. Most pubs call last orders around 11 pm; bars run later and clubs later still, but on a Tuesday the realistic window for meeting someone new is roughly 7 to 11. On Fridays and Saturdays the city stretches: dinner at 8, a bar until 1, and in Dalston, Peckham or Brixton the night can run well past that.
+
+The second thing is that Londoners go out near where they work on weeknights and near where they live at weekends. A Wednesday evening pulls people to Soho, Fitzrovia, London Bridge, Farringdon and Shoreditch, close to the office. A Saturday pulls them to their own patch: Clapham and Brixton south of the river, Hackney, Dalston and Stoke Newington to the north-east, Peckham to the south-east, Camden and Islington in the north, Notting Hill and Hammersmith to the west. Go live on a Saturday from a central hotel and the feed can look quieter than on Wednesday; the people are still out, just spread across the villages.
+
+The third thing is the river. The Thames divides London more than any map suggests. A 3 km radius drawn from Soho reaches Waterloo and Southwark comfortably, but for a spontaneous meeting most people will not cross from Clapham to Camden on a weeknight. Set your radius with the river in mind and lead with a specific area in your status line: “Shoreditch, free from 8” gets more replies than “London, free tonight”.
+
+## Radius settings that make sense in London
+
+2NIGHT uses a radius around your location and a nightly “Tonight” status that expires at 5 AM; your profile only appears in the feed while you are live, next to other people who are out that night. The max-distance slider starts at 1 km and is capped at 5 km on the free Silver tier, 15 km on Gold and 50 km on Platinum Black. In London those numbers mean something concrete:
+
+- 1–3 km: one neighbourhood and its neighbours. From Soho this covers Covent Garden, Fitzrovia, Marylebone and the Southbank; from Shoreditch it covers Hoxton, Dalston, Bethnal Green and the City. Everything is walkable or one bus away.
+
+- 5 km (Silver cap): most of Zone 1 plus a slice of Zone 2 in one direction. From King's Cross that reaches Camden, Islington, Clerkenwell and Bloomsbury. It is the right setting for a weeknight when you want a match you can reach in fifteen minutes.
+
+- 15 km (Gold): roughly Zones 1 to 4 in every direction. Useful on a slow evening or if you live out in Zone 3 and would happily travel in, but expect a match at that distance to cost you forty minutes each way.
+
+- 50 km (Platinum Black): the whole of Greater London and beyond. It is there for the quiet nights and for people outside the city; on a Friday in Zone 1 it is far more than you need.
+
+Greater London is about 50 km across, so even the largest radius does not turn the city into a single feed. A same-night date is a date you can physically get to.
+
+## Last Tube, Night Tube and getting home
+
+Transport shapes the whole evening. On Sunday to Thursday nights the last Tube trains leave central London around midnight to half past, and the last thing you want is to be three stops from a good conversation when the platforms close. On Friday and Saturday nights the Night Tube runs through the night on the Central, Jubilee, Northern, Piccadilly and Victoria lines, plus part of the Overground, which is why weekend nights in Brixton, Dalston or Stratford can run so late. Night buses (the N routes) run every night of the week on most main roads, so a match a few kilometres away is never really stranded; it is just slower. Black cabs and app taxis fill the gaps. Practically: on a weeknight, suggest a place near a line that serves both of you, agree a time before 9, and let the last train be the natural end of the evening.
+
+## Weeknight versus weekend on 2NIGHT
+
+Because the “Tonight” status expires at 5 AM and the chat window lasts 48 hours, the app fits the London week rather than fighting it. On a weeknight, go live around 6 with a category (drinks, food, talk, walk) and a one-line status naming the area you are in; ping early, because the useful window closes by 11. At the weekend, the later you go live the more the feed shifts to nightlife and music, and a Plan (“pub garden in Peckham from 8, come say hi”) is often the best way to pull two or three people together instead of hoping for one perfect match. You can also choose the longer “Stay discoverable” options if you are in town for a few days, and
+
+## Safety on a same-night date in London
+
+2NIGHT does not verify identities or photos and runs no background checks, so the habits on our safety page do the work: meet in a busy, well-lit public place, never a private home or a car; tell a friend where you are going and who you are meeting; keep your own way home; never send money, gift cards or crypto to anyone you met in the app. In London that mostly means picking a pub or bar near a station you both know, and keeping an eye on the last train so nobody is pressured into a lift. Any match can start a two-minute peer-to-peer video call before you leave, free during the launch period. Block is instant, silent and mutual; reports (inappropriate content, fake or scam, harassment) are read by a person within 24 to 72 hours. Other members only ever see a rounded distance in kilometres, never your address.
+
+## 2NIGHT in London: current status
+
+Status: waitlist only. No launch wave has been announced for London. As of 7 September 2026, 2NIGHT is not yet on the App Store anywhere. We open cities in waves, and London has not been named in one. The only way in today is the waitlist at 2night.co: leave an email and a phone number and we message you the moment London goes live. We do not publish member counts or activity figures for a city that has not opened, and this page will not pretend a feed exists where it does not.
+
+Once the app is available, the free Silver tier works the moment you are physically in London. Travel Mode on the Gold and Platinum Black tiers lets you set a status in London before you arrive, but the people you see depend on 2NIGHT having launched locally, and the feed header shows the real number of people live near you, never a marketing figure.
+
+2NIGHT is an alternative to Tinder, Bumble, Happn and Pure for people who want a spontaneous same-night date. 2NIGHT is an iPhone app for adults 18 and over, free to join, and it opens city by city.
+
+## Frequently asked questions
+
+### Is 2NIGHT available in London?
+
+Not yet. 2NIGHT is not on the App Store and no launch wave has been announced for London. Join the waitlist at 2night.co and we will message you when London opens.
+
+### What radius should I set in London?
+
+On a weeknight, 3 to 5 km from wherever you are keeps every match within a short bus or Tube ride. The free tier is capped at 5 km, Gold at 15 km and Platinum Black at 50 km; Greater London is about 50 km across.
+
+### Does the Tube run all night in London?
+
+Only on Friday and Saturday nights, and only on the Central, Jubilee, Northern, Piccadilly and Victoria lines plus part of the Overground. Other nights the last trains leave central London around midnight to half past; night buses run every night.
+
+### Which areas of London are busiest on a weeknight?
+
+Soho, Fitzrovia, London Bridge, Farringdon and Shoreditch fill up after work. Weekends spread out to Clapham, Brixton, Dalston, Hackney, Peckham, Camden and Islington.
+
+### Does 2NIGHT show how many people are out in London?
+
+Only once the city has opened, and only the real number returned with the feed. We do not publish member or activity figures for cities on the waitlist.
+
+## Tonight, not tomorrow.
+
+2NIGHT is built for iPhone and opens city by city. It is not on the App Store yet: join the waitlist at 2night.co and we will message you the moment it is live near you.
+
+Join the waitlist
+
+## Read next
+
+Cities
+All 2NIGHT city guides
+
+Travel
+2NIGHT for travelers
+
+City guide
+Tonight in New York
+
+← All city guides
+
+================================================================
+URL: https://2night.co/tonight-in-new-york
+TITLE: Tonight in New York — 2NIGHT dating app
+================================================================
+
+City guide
+
+# Tonight in New York: a one-night dating app for a city that stays open
+
+By the 2NIGHT team
+
+·
+
+Updated 7 September 2026
+
+2NIGHT is a one-night dating app for iPhone that shows who is out near you tonight, so you can match and meet the same evening instead of chatting for days.
+
+New York is the easiest city in the world to be out in and one of the hardest to actually meet someone in, because there is always somewhere else to be. A radius fixes the second part. 2NIGHT shows you the people who are live tonight within a distance you set, so “drinks?” is a question about the next hour and the next few blocks, not about which borough you might both be in some Thursday.
+
+## How a night out works in New York
+
+The New York evening has a long tail. Happy hour runs from about 5 to 7, dinner is 7 to 9, and the bars fill up from 9 onwards. Because bars in New York State can serve until 4 am, a weeknight does not have the hard stop that London or Paris has; a Tuesday can end at midnight or at 3, depending entirely on the company. Weekends start later and go later, and in Bushwick or Williamsburg the real night often begins after midnight.
+
+Where people go depends on the day. On weeknights Manhattan does most of the work: the East Village and Lower East Side for bars, the West Village for something quieter, Hell's Kitchen and Chelsea for the west side, Koreatown for late food, Harlem uptown. Weekends tilt to Brooklyn and Queens: Williamsburg and Greenpoint along the East River, Bushwick further out on the L, Bed-Stuy and Crown Heights, Astoria and Long Island City across the water in Queens. If you are staying in Midtown, note that it empties in the evening; going live from the East Village or Williamsburg puts you where people already are.
+
+The other thing to know is the geography. Manhattan is a long island, roughly 21 km from tip to tip and under 4 km wide, with Brooklyn and Queens across the East River and the Bronx to the north. A radius that looks small on the map can cover a lot of the useful city, because the useful city is dense.
+
+## Radius settings that make sense in New York
+
+2NIGHT uses a radius around your location and a nightly “Tonight” status that expires at 5 AM; your profile only appears in the feed while you are live, next to other people who are out that night. The max-distance slider starts at 1 km and is capped at 5 km on the free Silver tier, 15 km on Gold and 50 km on Platinum Black. In New York terms:
+
+- 1–2 km: your neighbourhood. From the East Village that is the Lower East Side, NoHo, Gramercy and the edge of the West Village, all walkable.
+
+- 5 km (Silver cap): most of Manhattan below Midtown plus Williamsburg and Greenpoint across the river. This is the setting for a weeknight when you want to meet within twenty minutes.
+
+- 15 km (Gold): all of Manhattan, most of Brooklyn and western Queens. Useful when you live further out or on a quiet Monday; at 15 km a match may be a forty-minute subway ride away.
+
+- 50 km (Platinum Black): the five boroughs and well into New Jersey, Long Island and Westchester. It exists for the quiet nights and for people outside the city, not for a Saturday in Brooklyn.
+
+Lead with the neighbourhood in your status line. “LES, free from 9” tells someone in Astoria whether it is realistic; “NYC tonight” does not.
+
+## The subway never closes, but it slows down
+
+New York's transport reality is the opposite of most European cities: the subway runs 24 hours a day, so there is no last train to plan around. What changes is frequency. After midnight trains come every twenty minutes or so on many lines, and weekend service changes and reroutes are common, so a “quick” trip across the river at 2 am can take an hour. Yellow cabs and app taxis are everywhere in Manhattan and northern Brooklyn; the ferries along the East River stop in the evening. Practically: on a weeknight, meet somewhere on a line that serves both of you and does not require a transfer late at night; at the weekend, check the service changes before you agree on Bushwick.
+
+## Weeknight versus weekend on 2NIGHT
+
+The “Tonight” status expires at 5 AM, which in New York lines up neatly with last call at 4. On a weeknight, go live around 6 with a category (drinks, food, talk, walk, coffee) and a status that names your neighbourhood; pings sent before 9 have the best chance of turning into a plan. At weekends, the feed shifts toward nightlife and music the later you go live, and a Plan is often better than a one-to-one: “rooftop in Williamsburg from 10, come find us” brings a small group together and takes the pressure off. A mutual ping opens a 48-hour chat, so a Thursday match that did not work out can still become a Friday date.
+
+## Safety on a same-night date in New York
+
+2NIGHT does not verify identities or photos and runs no background checks, so the habits on our safety page do the work: meet in a busy, well-lit public place, never a private home or a car; tell a friend where you are going and who you are meeting; keep your own way home; never send money, gift cards or crypto to anyone you met in the app. In New York that usually means a bar on a subway line you both use and a route home you have checked, since a 3 am transfer can be a long wait on an empty platform. Any match can start a two-minute peer-to-peer video call before you leave, free during the launch period. Block is instant, silent and mutual; reports (inappropriate content, fake or scam, harassment) are read by a person within 24 to 72 hours. Other members only ever see a rounded distance in kilometres, never your address.
+
+## 2NIGHT in New York: current status
+
+Status: waitlist only. No launch wave has been announced for New York. As of 7 September 2026, 2NIGHT is not yet on the App Store anywhere. We open cities in waves, and New York has not been named in one. The only way in today is the waitlist at 2night.co: leave an email and a phone number and we message you the moment New York goes live. We do not publish member counts or activity figures for a city that has not opened, and this page will not pretend a feed exists where it does not.
+
+Once the app is available, the free Silver tier works the moment you are physically in New York. Travel Mode on the Gold and Platinum Black tiers lets you set a status in New York before you arrive, but the people you see depend on 2NIGHT having launched locally, and the feed header shows the real number of people live near you, never a marketing figure.
+
+2NIGHT is an alternative to Tinder, Bumble, Happn and Pure for people who want a spontaneous same-night date. 2NIGHT is an iPhone app for adults 18 and over, free to join, and it opens city by city.
+
+## Frequently asked questions
+
+### Is 2NIGHT available in New York?
+
+Not yet. 2NIGHT is not on the App Store and no launch wave has been announced for New York. Join the waitlist at 2night.co and we will message you when the city opens.
+
+### What radius should I set in New York?
+
+On a weeknight, 3 to 5 km from where you are covers most of lower Manhattan or the near side of Brooklyn. The free tier is capped at 5 km, Gold at 15 km and Platinum Black at 50 km.
+
+### Does the subway run all night in New York?
+
+Yes, 24 hours a day, but after midnight trains are much less frequent and weekend service changes are common. There is no last train, only a slower one.
+
+### Which neighbourhoods are busiest on a weeknight?
+
+The East Village, Lower East Side, West Village, Hell's Kitchen and Koreatown in Manhattan; Williamsburg and Greenpoint in Brooklyn. Weekends push further out to Bushwick, Bed-Stuy, Crown Heights and Astoria.
+
+### Does 2NIGHT show how many people are out in New York?
+
+Only once the city has opened, and only the real number returned with the feed. We do not publish member or activity figures for cities on the waitlist.
+
+## Tonight, not tomorrow.
+
+2NIGHT is built for iPhone and opens city by city. It is not on the App Store yet: join the waitlist at 2night.co and we will message you the moment it is live near you.
+
+Join the waitlist
+
+## Read next
+
+Cities
+All 2NIGHT city guides
+
+Travel
+2NIGHT for travelers
+
+City guide
+Tonight in Paris
+
+← All city guides
+
+================================================================
+URL: https://2night.co/tonight-in-paris
+TITLE: Tonight in Paris — 2NIGHT dating app
+================================================================
+
+City guide
+
+# Tonight in Paris: a one-night dating app for a city you can cross on foot
+
+By the 2NIGHT team
+
+·
+
+Updated 7 September 2026
+
+2NIGHT is a one-night dating app for iPhone that shows who is out near you tonight, so you can match and meet the same evening instead of chatting for days.
+
+Paris is the city the radius model was made for. Inside the périphérique it is barely 12 km across, most of the bars people actually go to sit in a handful of neighbourhoods on the right bank, and a Parisian will happily walk thirty minutes to a good terrace. 2NIGHT shows you the people who are live tonight within a distance you set, so the question is never “are you free some evening?” but “are you near Oberkampf right now?”
+
+## How a night out works in Paris
+
+The Paris evening runs on the apéro. From about 6:30 pm the terraces fill up with people who have not yet decided what the night is; dinner comes late, around 8:30 or 9, and the bars are at their fullest between 10 and 1. Most bars close around 2 am, which is also when the last metro has gone on a weeknight, so the shape of a Tuesday is apéro, dinner, one more drink, last train. Friday and Saturday nights push later: the metro runs an hour longer, clubs open after the bars, and Pigalle or Bastille can carry you past 4.
+
+Where people go is remarkably stable. On weeknights the crowd is in Oberkampf and along rue Jean-Pierre Timbaud, in the Marais, around Canal Saint-Martin and République, and in the Latin Quarter and Saint-Germain on the left bank. At weekends the map tilts north and east: South Pigalle and Montmartre, Belleville and Ménilmontant, Bastille and the Faubourg Saint-Antoine, the Butte-aux-Cailles in the 13th, Batignolles in the 17th. The western arrondissements are quieter at night and the business district at La Défense empties after 8. If you are staying near the Louvre or the Opéra, going live from there is fine, but a 2 km status line that says “Marais, free from 9” will get you more replies than the neighbourhood you are sleeping in.
+
+## Radius settings that make sense in Paris
+
+2NIGHT uses a radius around your location and a nightly “Tonight” status that expires at 5 AM; your profile only appears in the feed while you are live, next to other people who are out that night. The max-distance slider starts at 1 km and is capped at 5 km on the free Silver tier, 15 km on Gold and 50 km on Platinum Black. Paris is compact enough that those caps mean something different from London or Los Angeles:
+
+- 1–2 km: a neighbourhood and its neighbours. From République that is the Marais, Canal Saint-Martin, Oberkampf and the edge of Belleville, all on foot.
+
+- 3 km: most of the right-bank nightlife in one circle. This is the setting most people will want on a Thursday: every match is a walk or two metro stops away.
+
+- 5 km (Silver cap): almost all of Paris intra-muros. From Châtelet the périphérique is about 5 km away in most directions, so the free tier already covers the whole city; the extra reach of Gold and Platinum Black is for the near suburbs.
+
+- 15 km and 50 km (Gold, Platinum Black): the petite couronne, then most of the Île-de-France. Useful if you live in Montreuil, Saint-Ouen, Boulogne or further out and want to see the city's feed, or on a quiet Sunday.
+
+Because the city is small, the honest advice is to keep the radius tight and the status line specific. Paris rewards “near Pigalle, drinks from 10” far more than a wide circle.
+
+## Last metro, Noctilien and getting home
+
+The metro is the clock of the Paris night. On Sunday to Thursday the last trains leave the centre a little after midnight to around 1 am; on Friday and Saturday nights and before public holidays they run about an hour later, to around 2. The RER lines to the suburbs stop earlier than the metro, which matters if your match lives outside the périphérique. After that there are the Noctilien night buses, which run all night on the main axes from the big stations, the Vélib' bikes if you are sober enough to use them, and taxis and app cars, which get scarce at 2 am on a Saturday. Practically: on a weeknight, pick a place near a metro line that serves both of you, and let the last train set the natural end; at the weekend the extra hour is exactly the hour in which most spontaneous plans happen.
+
+## Weeknight versus weekend on 2NIGHT
+
+The “Tonight” status expires at 5 AM, and chats last 48 hours. On a weeknight, go live at apéro time with a category (drinks, food, walk, talk) and a status that names an area; pings sent between 7 and 10 are the ones that turn into a table. At weekends, later is better, and the feed leans toward nightlife and music after midnight. A Plan is a good fit for Paris: “terrace at Canal Saint-Martin from 8, come say bonjour” is low pressure and brings a couple of people together.
+
+## Safety on a same-night date in Paris
+
+2NIGHT does not verify identities or photos and runs no background checks, so the habits on our safety page do the work: meet in a busy, well-lit public place, never a private home or a car; tell a friend where you are going and who you are meeting; keep your own way home; never send money, gift cards or crypto to anyone you met in the app. In Paris that means a café or bar on a well-lit street near a metro you both know, and a plan for the last train so nobody has to accept a lift. Any match can start a two-minute peer-to-peer video call before you leave, free during the launch period. Block is instant, silent and mutual; reports (inappropriate content, fake or scam, harassment) are read by a person within 24 to 72 hours. Other members only ever see a rounded distance in kilometres, never your address.
+
+## 2NIGHT in Paris: current status
+
+Status: waitlist only. No launch wave has been announced for Paris. As of 7 September 2026, 2NIGHT is not yet on the App Store anywhere. We open cities in waves, and Paris has not been named in one. The only way in today is the waitlist at 2night.co: leave an email and a phone number and we message you the moment Paris goes live. We do not publish member counts or activity figures for a city that has not opened, and this page will not pretend a feed exists where it does not.
+
+Once the app is available, the free Silver tier works the moment you are physically in Paris. Travel Mode on the Gold and Platinum Black tiers lets you set a status in Paris before you arrive, but the people you see depend on 2NIGHT having launched locally, and the feed header shows the real number of people live near you, never a marketing figure.
+
+2NIGHT is an alternative to Tinder, Bumble, Happn and Pure for people who want a spontaneous same-night date. 2NIGHT is an iPhone app for adults 18 and over, free to join, and it opens city by city.
+
+## Frequently asked questions
+
+### Is 2NIGHT available in Paris?
+
+Not yet. 2NIGHT is not on the App Store and no launch wave has been announced for Paris. Join the waitlist at 2night.co and we will message you when Paris opens. A French version of this site is at 2night.co/fr/.
+
+### What radius should I set in Paris?
+
+2 to 3 km covers most of the right-bank nightlife from République or Bastille. The free tier's 5 km cap already covers nearly all of Paris inside the périphérique; Gold (15 km) and Platinum Black (50 km) reach the suburbs.
+
+### When is the last metro in Paris?
+
+Around 12:30 to 1 am on Sunday to Thursday nights, and about an hour later on Friday and Saturday nights and before public holidays. Noctilien night buses run after that.
+
+### Which areas of Paris are busiest on a weeknight?
+
+Oberkampf, the Marais, Canal Saint-Martin and République, and the Latin Quarter. Weekends spread to South Pigalle, Belleville, Ménilmontant, Bastille, the Butte-aux-Cailles and Batignolles.
+
+### Does 2NIGHT show how many people are out in Paris?
+
+Only once the city has opened, and only the real number returned with the feed. We do not publish member or activity figures for cities on the waitlist.
+
+## Tonight, not tomorrow.
+
+2NIGHT is built for iPhone and opens city by city. It is not on the App Store yet: join the waitlist at 2night.co and we will message you the moment it is live near you.
+
+Join the waitlist
+
+## Read next
+
+Cities
+All 2NIGHT city guides
+
+Travel
+2NIGHT for travelers
+
+City guide
+Tonight in Berlin
+
+← All city guides
+
+================================================================
+URL: https://2night.co/tonight-in-berlin
+TITLE: Tonight in Berlin — 2NIGHT dating app
+================================================================
+
+City guide
+
+# Tonight in Berlin: a one-night dating app for a city with no closing time
+
+By the 2NIGHT team
+
+·
+
+Updated 7 September 2026
+
+2NIGHT is a one-night dating app for iPhone that shows who is out near you tonight, so you can match and meet the same evening instead of chatting for days.
+
+Berlin is the city where “tonight” has the loosest definition in Europe. There is no legal closing time for bars, the trains run all night at weekends, and a Friday can start at midnight and end on Sunday. That freedom is wonderful and it makes meeting someone new oddly hard, because nobody is in a hurry. 2NIGHT gives the night a shape: the people who are live within your radius, this evening, until 5 AM.
+
+## How a night out works in Berlin
+
+On a weeknight Berlin is a bar city, and a neighbourhood one. People drink where they live: in the Kneipen and cocktail bars of Kreuzberg and Neukölln, along the canal between the two, in Friedrichshain around Boxhagener Platz, in Prenzlauer Berg for a quieter evening, in Schöneberg around Nollendorfplatz, the historic heart of the city's queer nightlife, and increasingly in Wedding. Mitte has bars too, but it is where visitors stay rather than where Berliners go out. A Tuesday runs from about 8 pm to 1 or 2; a beer from a Späti on a bench by the canal is as legitimate a plan as any bar.
+
+Weekends are a different animal. Clubs open late and run through the morning, the crowd moves toward the Spree around Friedrichshain and Kreuzberg, and it is normal to leave home at midnight. If you go live at 8 pm on a Saturday, expect the feed to keep changing until 3; if you go live at 1 am, you are on time. The categories in the app (drinks, music, nightlife, talk, walk) matter more in Berlin than anywhere, because “out tonight” can mean a quiet glass of wine or a very long night, and it is kinder to say which.
+
+The city is also big: about 45 km east to west, nearly 900 square kilometres, with the Ringbahn S-Bahn circle marking the inner city. Kreuzberg to Prenzlauer Berg is a real journey, and someone in Charlottenburg is, for the purposes of a spontaneous drink, in another town.
+
+## Radius settings that make sense in Berlin
+
+2NIGHT uses a radius around your location and a nightly “Tonight” status that expires at 5 AM; your profile only appears in the feed while you are live, next to other people who are out that night. The max-distance slider starts at 1 km and is capped at 5 km on the free Silver tier, 15 km on Gold and 50 km on Platinum Black. In Berlin:
+
+- 1–3 km: one Kiez and its neighbours. From Kottbusser Tor that is most of Kreuzberg and north Neukölln, walkable or one U-Bahn stop; from Boxhagener Platz it is Friedrichshain and the river.
+
+- 5 km (Silver cap): Kreuzberg, Neukölln, Friedrichshain and Mitte together, or Prenzlauer Berg with Mitte and Wedding. This is the weeknight setting: every match is one direct train away.
+
+- 15 km (Gold): everything inside the Ringbahn and a good way beyond, including Charlottenburg and Schöneberg from the east. Useful on a slow Monday or if you live outside the ring.
+
+- 50 km (Platinum Black): the whole of Berlin and Potsdam. It is there for people outside the city and for very quiet nights.
+
+Name the Kiez in your status line. “Neukölln, free from 9” does more work in Berlin than in any other city on this list, because the neighbourhood tells people what kind of night you mean.
+
+## Trains all night at the weekend, night buses in the week
+
+Berlin's transport is built for its nightlife. On Friday and Saturday nights the U-Bahn and S-Bahn run through the night, roughly every fifteen minutes, so a weekend match across the city is genuinely reachable at 3 am. On Sunday to Thursday nights most U-Bahn lines stop around 1 am and are replaced by night buses that follow the same routes, while the Metro tram and bus lines keep running around the clock. Taxis and app cars are easy to find. Practically: on a weeknight, meet in the Kiez where one of you already is and let the last U-Bahn be the end; at the weekend the trains remove the deadline, and the only limit is the 5 AM reset of your “Tonight” status.
+
+## Weeknight versus weekend on 2NIGHT
+
+The “Tonight” status expires at 5 AM and the chat window lasts 48 hours, which suits Berlin's two speeds. On a weeknight, go live around 7 or 8 with a category and a status that names the Kiez, and ping early; the useful window closes around midnight. At the weekend, later is fine, and a Plan (“canal in Kreuzberg from 10, bring a drink”) is often the most Berlin way to meet: low key, open, no pressure. If your Friday match did not happen because the night went elsewhere, the 48-hour chat is still open on Saturday.
+
+## Safety on a same-night date in Berlin
+
+2NIGHT does not verify identities or photos and runs no background checks, so the habits on our safety page do the work: meet in a busy, well-lit public place, never a private home or a car; tell a friend where you are going and who you are meeting; keep your own way home; never send money, gift cards or crypto to anyone you met in the app. Berlin's nights are long and loose, so decide in advance when you are going home and stick to it; a busy bar or a bench by the canal with people around is a first meet, a private flat is not. Any match can start a two-minute peer-to-peer video call before you leave, free during the launch period. Block is instant, silent and mutual; reports (inappropriate content, fake or scam, harassment) are read by a person within 24 to 72 hours. Other members only ever see a rounded distance in kilometres, never your address.
+
+## 2NIGHT in Berlin: current status
+
+Status: waitlist only. No launch wave has been announced for Berlin. As of 7 September 2026, 2NIGHT is not yet on the App Store anywhere. We open cities in waves, and Berlin has not been named in one. The only way in today is the waitlist at 2night.co: leave an email and a phone number and we message you the moment Berlin goes live. We do not publish member counts or activity figures for a city that has not opened, and this page will not pretend a feed exists where it does not.
+
+Once the app is available, the free Silver tier works the moment you are physically in Berlin. Travel Mode on the Gold and Platinum Black tiers lets you set a status in Berlin before you arrive, but the people you see depend on 2NIGHT having launched locally, and the feed header shows the real number of people live near you, never a marketing figure.
+
+2NIGHT is an alternative to Tinder, Bumble, Happn and Pure for people who want a spontaneous same-night date. 2NIGHT is an iPhone app for adults 18 and over, free to join, and it opens city by city.
+
+## Frequently asked questions
+
+### Is 2NIGHT available in Berlin?
+
+Not yet. 2NIGHT is not on the App Store and no launch wave has been announced for Berlin. Join the waitlist at 2night.co and we will message you when Berlin opens.
+
+### What radius should I set in Berlin?
+
+3 to 5 km from the Kiez you are in keeps every match one direct train away. The free tier is capped at 5 km, Gold at 15 km (roughly the Ringbahn and beyond) and Platinum Black at 50 km.
+
+### Do Berlin's trains run all night?
+
+On Friday and Saturday nights the U-Bahn and S-Bahn run through the night. On other nights most U-Bahn lines stop around 1 am and night buses take over; Metro tram and bus lines run around the clock.
+
+### Which areas of Berlin are busiest on a weeknight?
+
+Kreuzberg, Neukölln, Friedrichshain, Prenzlauer Berg and Schöneberg. At weekends the crowd moves late toward the clubs along the Spree in Friedrichshain and Kreuzberg.
+
+### Does 2NIGHT show how many people are out in Berlin?
+
+Only once the city has opened, and only the real number returned with the feed. We do not publish member or activity figures for cities on the waitlist.
+
+## Tonight, not tomorrow.
+
+2NIGHT is built for iPhone and opens city by city. It is not on the App Store yet: join the waitlist at 2night.co and we will message you the moment it is live near you.
+
+Join the waitlist
+
+## Read next
+
+Cities
+All 2NIGHT city guides
+
+Travel
+2NIGHT for travelers
+
+City guide
+Tonight in Barcelona
+
+← All city guides
+
+================================================================
+URL: https://2night.co/tonight-in-barcelona
+TITLE: Tonight in Barcelona — 2NIGHT dating app
+================================================================
+
+City guide
+
+# Tonight in Barcelona: a one-night dating app for a city that eats at ten
+
+By the 2NIGHT team
+
+·
+
+Updated 7 September 2026
+
+2NIGHT is a one-night dating app for iPhone that shows who is out near you tonight, so you can match and meet the same evening instead of chatting for days.
+
+Barcelona runs two hours behind the rest of Europe. Dinner is at ten, the bars are quiet before eleven, and a night that starts at midnight is not late. It is also a compact, walkable city laid out on a grid, with the sea at the bottom and the hills at the top. Both facts matter for 2NIGHT: the radius can stay small, and the evening is long enough that a ping at nine can still be a drink at eleven.
+
+## How a night out works in Barcelona
+
+The evening begins with a vermut or a beer on a terrace around 7 or 8, then dinner, then bars from about 11 to 2 or 3, then clubs for those who want them until dawn. On a weeknight the middle part is what matters: people meet for dinner and a couple of drinks in Gràcia, around the squares that give the neighbourhood its village feel; in El Born and the Gòtic in the old city; in Poble-sec at the foot of Montjuïc; in Sant Antoni and the Eixample, including the “Gaixample” blocks that are the centre of the city's LGBTQ nightlife. El Raval is louder and later. Poblenou, by the beach, has its own quieter scene and a younger crowd.
+
+Weekends bring visitors into the old city and locals out into their own barris, and the timetable shifts later still. A Saturday in Barcelona often means dinner at 10:30, a bar at 12:30 and a decision about a club at 2:30, which is when most bars are required to close. If you are staying near the Rambla or the beach, go live from there by all means, but a status line that says “Gràcia, drinks from 11” will pull replies from people who live the city rather than pass through it.
+
+Geographically the city is small, about 100 square kilometres and roughly 10 km across, hemmed in by the sea, the river and the Collserola hills. Everything from the Barceloneta to Gràcia is inside a 4 km circle drawn from Plaça de Catalunya.
+
+## Radius settings that make sense in Barcelona
+
+2NIGHT uses a radius around your location and a nightly “Tonight” status that expires at 5 AM; your profile only appears in the feed while you are live, next to other people who are out that night. The max-distance slider starts at 1 km and is capped at 5 km on the free Silver tier, 15 km on Gold and 50 km on Platinum Black. In Barcelona:
+
+- 1–2 km: one barri and its neighbours. From Plaça del Sol in Gràcia that reaches the upper Eixample; from the Born it covers the Gòtic, the Raval and the Barceloneta on foot.
+
+- 3 km: the old city, the Eixample, Gràcia and Poble-sec in one circle. This is the everyday setting; every match is walkable or two metro stops away.
+
+- 5 km (Silver cap): nearly the whole city, from the beach to the edge of the hills, Sants to Poblenou. The free tier already covers the Barcelona most people go out in.
+
+- 15 km and 50 km (Gold, Platinum Black): L'Hospitalet, Badalona, Sant Cugat and the rest of the metropolitan area, then the coast in both directions. For people living outside the city and for very quiet nights.
+
+Keep the circle tight and let the status line do the work. Because dinner is late, “free from 11” is a normal thing to write here, and it helps people plan around their own table.
+
+## Metro until midnight, until two, or all night
+
+Barcelona's metro has three timetables and it is worth knowing them. Sunday to Thursday the last trains run around midnight. On Fridays and the eves of public holidays it runs until about 2 am. On Saturday night it runs all night. After the metro stops, the NitBus night buses run across the city from Plaça de Catalunya and along the main avenues, taxis are plentiful and the Bicing bikes are there if you are steady enough. Practically: on a weeknight, the midnight cut-off is early for a city that eats at ten, so agree a place you can both walk or bus home from and let the night run past the last train on foot; on Saturday the timetable is not a constraint at all.
+
+## Weeknight versus weekend on 2NIGHT
+
+The “Tonight” status expires at 5 AM, which in Barcelona is when the last clubs are emptying, and the chat window lasts 48 hours. On a weeknight, go live around 8 with a category (drinks, food, walk, talk, rooftop) and a status that names the barri; pings between 8 and 11 are the ones that turn into a table. At the weekend, going live late is fine, and a Plan (“terrace in Poble-sec from 11, come by”) fits a city that likes to go out in groups. If a Friday ping did not become a meeting, the 48-hour chat is still open on Saturday.
+
+## Safety on a same-night date in Barcelona
+
+2NIGHT does not verify identities or photos and runs no background checks, so the habits on our safety page do the work: meet in a busy, well-lit public place, never a private home or a car; tell a friend where you are going and who you are meeting; keep your own way home; never send money, gift cards or crypto to anyone you met in the app. Barcelona's crowded streets are a good place to meet and a bad place to be careless with a phone or a bag; keep both close in the old city late at night. Any match can start a two-minute peer-to-peer video call before you leave, free during the launch period. Block is instant, silent and mutual; reports (inappropriate content, fake or scam, harassment) are read by a person within 24 to 72 hours. Other members only ever see a rounded distance in kilometres, never your address.
+
+## 2NIGHT in Barcelona: current status
+
+Status: waitlist only. No launch wave has been announced for Barcelona. As of 7 September 2026, 2NIGHT is not yet on the App Store anywhere. We open cities in waves, and Barcelona has not been named in one. The only way in today is the waitlist at 2night.co: leave an email and a phone number and we message you the moment Barcelona goes live. We do not publish member counts or activity figures for a city that has not opened, and this page will not pretend a feed exists where it does not.
+
+Once the app is available, the free Silver tier works the moment you are physically in Barcelona. Travel Mode on the Gold and Platinum Black tiers lets you set a status in Barcelona before you arrive, but the people you see depend on 2NIGHT having launched locally, and the feed header shows the real number of people live near you, never a marketing figure.
+
+2NIGHT is an alternative to Tinder, Bumble, Happn and Pure for people who want a spontaneous same-night date. 2NIGHT is an iPhone app for adults 18 and over, free to join, and it opens city by city.
+
+## Frequently asked questions
+
+### Is 2NIGHT available in Barcelona?
+
+Not yet. 2NIGHT is not on the App Store and no launch wave has been announced for Barcelona. Join the waitlist at 2night.co and we will message you when Barcelona opens.
+
+### What radius should I set in Barcelona?
+
+2 to 3 km from the old city or Gràcia covers most of the nightlife on foot. The free tier's 5 km cap already reaches almost the whole city; Gold (15 km) and Platinum Black (50 km) cover the metropolitan area.
+
+### When does the Barcelona metro close?
+
+Around midnight from Sunday to Thursday, around 2 am on Fridays and the eves of public holidays, and all night on Saturdays. NitBus night buses run after the metro stops.
+
+### Which areas of Barcelona are busiest on a weeknight?
+
+Gràcia, El Born and the Gòtic, Poble-sec, Sant Antoni and the Eixample. El Raval is later and louder; Poblenou has its own quieter scene by the beach.
+
+### Does 2NIGHT show how many people are out in Barcelona?
+
+Only once the city has opened, and only the real number returned with the feed. We do not publish member or activity figures for cities on the waitlist.
+
+## Tonight, not tomorrow.
+
+2NIGHT is built for iPhone and opens city by city. It is not on the App Store yet: join the waitlist at 2night.co and we will message you the moment it is live near you.
+
+Join the waitlist
+
+## Read next
+
+Cities
+All 2NIGHT city guides
+
+Travel
+2NIGHT for travelers
+
+City guide
+Tonight in Amsterdam
+
+← All city guides
+
+================================================================
+URL: https://2night.co/tonight-in-amsterdam
+TITLE: Tonight in Amsterdam — 2NIGHT dating app
+================================================================
+
+City guide
+
+# Tonight in Amsterdam: a one-night dating app for a city you cross by bike
+
+By the 2NIGHT team
+
+·
+
+Updated 7 September 2026
+
+2NIGHT is a one-night dating app for iPhone that shows who is out near you tonight, so you can match and meet the same evening instead of chatting for days.
+
+Amsterdam is small, flat and crossed by bicycle, which changes what “near me” means. A match 4 km away in most cities is a metro ride; in Amsterdam it is fifteen minutes of pedalling along a canal. 2NIGHT shows you the people who are live tonight within a distance you set, and in this city that distance can be the whole town.
+
+## How a night out works in Amsterdam
+
+The Amsterdam evening starts early and stays civilised on weeknights. The borrel, an after-work drink, begins around 5 or 6; dinner is at 7 or 8; and the brown cafés and bars are at their fullest between 9 and midnight. Cafés and bars in the centre are generally allowed to stay open until 1 am on weeknights and until 3 or 4 am at weekends, with clubs later, so a Wednesday has a natural end around 1 and a Saturday does not.
+
+Where people go depends on whether they live here. Visitors gather around Leidseplein and Rembrandtplein, the two nightlife squares, and in the old centre around De Wallen. Amsterdammers go out closer to home: in the Jordaan, in De Pijp south of the canal ring, in Oud-West around the Kinkerstraat, in Oost around the Javastraat, in Westerpark, and increasingly across the water in Noord, where the ferry from Central Station lands you in a different city. If you are staying in the centre, going live from there works on any night, but a status line that says “De Pijp, drinks from 9” tells locals you know the difference.
+
+The city inside the A10 ring road is roughly 10 km across, and the canal ring at its heart is barely 2 km wide. It is possible to be out on a Friday and, by midnight, have cycled through four neighbourhoods.
+
+## Radius settings that make sense in Amsterdam
+
+2NIGHT uses a radius around your location and a nightly “Tonight” status that expires at 5 AM; your profile only appears in the feed while you are live, next to other people who are out that night. The max-distance slider starts at 1 km and is capped at 5 km on the free Silver tier, 15 km on Gold and 50 km on Platinum Black. In Amsterdam:
+
+- 1–2 km: the canal ring and one adjoining neighbourhood. From the Jordaan that reaches the centre and Westerpark; from De Pijp it covers the Museum quarter and the southern canals, all on foot.
+
+- 3 km: the centre, Jordaan, De Pijp, Oud-West and Oost in one circle. This is the everyday setting: every match is a ten-minute bike ride.
+
+- 5 km (Silver cap): essentially everything inside the A10 ring plus the near side of Noord. The free tier covers the whole Amsterdam most people go out in.
+
+- 15 km and 50 km (Gold, Platinum Black): Amstelveen, Haarlem, Zaandam and the rest of the region, then most of the Randstad. For people living outside the city and for quiet nights.
+
+Because the city is small and cycling makes it smaller, the honest advice is to keep the circle at 3 to 5 km and to name the neighbourhood in your status line.
+
+## Bikes, night buses and the ferry across the IJ
+
+The transport reality in Amsterdam is that most people cycle home, whatever the hour, and the rest take the night bus. Trams and the metro wind down around 12:30 to 1 am, after which the night buses (the N lines) run from Central Station and Leidseplein through the night, roughly every half hour. Taxis and app cars are available but slow to find at 3 am on a Saturday. The free ferries across the IJ to Noord run around the clock, which is why Noord's nightlife works at all. Practically: on a weeknight the 1 am closing time sets the end of the evening; if you cycled, remember that the same rules about drink apply on a bicycle as in a car, and if you did not, agree on a place near a night-bus stop that serves you both.
+
+## Weeknight versus weekend on 2NIGHT
+
+The “Tonight” status expires at 5 AM, and the chat window lasts 48 hours. On a weeknight, go live at borrel time with a category (drinks, food, walk, talk, coffee) and a status that names the neighbourhood; pings sent between 6 and 10 are the ones that become a table before the bars close at 1. At the weekend, later is fine, the feed leans toward nightlife and music after midnight, and a Plan (“terrace in Westerpark from 8, come say hoi”) is often the easiest way to bring two or three people together. If a Thursday match did not happen, the 48-hour chat is still open on Friday.
+
+## Safety on a same-night date in Amsterdam
+
+2NIGHT does not verify identities or photos and runs no background checks, so the habits on our safety page do the work: meet in a busy, well-lit public place, never a private home or a car; tell a friend where you are going and who you are meeting; keep your own way home; never send money, gift cards or crypto to anyone you met in the app. In Amsterdam that means a café on a busy street rather than a houseboat, a bike route you know, and a night bus in mind if you are not cycling. Any match can start a two-minute peer-to-peer video call before you leave, free during the launch period. Block is instant, silent and mutual; reports (inappropriate content, fake or scam, harassment) are read by a person within 24 to 72 hours. Other members only ever see a rounded distance in kilometres, never your address.
+
+## 2NIGHT in Amsterdam: current status
+
+Status: waitlist only. No launch wave has been announced for Amsterdam. As of 7 September 2026, 2NIGHT is not yet on the App Store anywhere. We open cities in waves, and Amsterdam has not been named in one. The only way in today is the waitlist at 2night.co: leave an email and a phone number and we message you the moment Amsterdam goes live. We do not publish member counts or activity figures for a city that has not opened, and this page will not pretend a feed exists where it does not.
+
+Once the app is available, the free Silver tier works the moment you are physically in Amsterdam. Travel Mode on the Gold and Platinum Black tiers lets you set a status in Amsterdam before you arrive, but the people you see depend on 2NIGHT having launched locally, and the feed header shows the real number of people live near you, never a marketing figure.
+
+2NIGHT is an alternative to Tinder, Bumble, Happn and Pure for people who want a spontaneous same-night date. 2NIGHT is an iPhone app for adults 18 and over, free to join, and it opens city by city.
+
+## Frequently asked questions
+
+### Is 2NIGHT available in Amsterdam?
+
+Not yet. 2NIGHT is not on the App Store and no launch wave has been announced for Amsterdam. Join the waitlist at 2night.co and we will message you when Amsterdam opens.
+
+### What radius should I set in Amsterdam?
+
+3 km from the centre, the Jordaan or De Pijp covers most of the city's nightlife by bike. The free tier's 5 km cap already reaches nearly everything inside the A10 ring; Gold (15 km) and Platinum Black (50 km) cover the region.
+
+### How do people get home late in Amsterdam?
+
+Mostly by bike. Trams and the metro wind down around 12:30 to 1 am; night buses run through the night from Central Station and Leidseplein, and the free ferries to Noord run around the clock.
+
+### Which areas of Amsterdam are busiest on a weeknight?
+
+The Jordaan, De Pijp, Oud-West and Oost for locals; Leidseplein, Rembrandtplein and the old centre for visitors. Noord and Westerpark have their own scenes, busier at weekends.
+
+### Does 2NIGHT show how many people are out in Amsterdam?
+
+Only once the city has opened, and only the real number returned with the feed. We do not publish member or activity figures for cities on the waitlist.
+
+## Tonight, not tomorrow.
+
+2NIGHT is built for iPhone and opens city by city. It is not on the App Store yet: join the waitlist at 2night.co and we will message you the moment it is live near you.
+
+Join the waitlist
+
+## Read next
+
+Cities
+All 2NIGHT city guides
+
+Travel
+2NIGHT for travelers
+
+City guide
+Tonight in Lisbon
+
+← All city guides
+
+================================================================
+URL: https://2night.co/tonight-in-lisbon
+TITLE: Tonight in Lisbon — 2NIGHT dating app
+================================================================
+
+City guide
+
+# Tonight in Lisbon: a one-night dating app for a city of seven hills
+
+By the 2NIGHT team
+
+·
+
+Updated 7 September 2026
+
+2NIGHT is a one-night dating app for iPhone that shows who is out near you tonight, so you can match and meet the same evening instead of chatting for days.
+
+Lisbon is small enough that most of its nightlife fits inside a 2 km circle, and hilly enough that the last 500 metres of that circle can take twenty minutes. Both facts shape a same-night date here. 2NIGHT shows you the people who are live tonight within a distance you set, and in Lisbon the useful distance is short, the hours are late, and the viewpoints do half the work.
+
+## How a night out works in Lisbon
+
+The Lisbon evening starts with a drink at a miradouro or a terrace as the light goes, dinner around 9, and then the streets. On weeknights that mostly means Bairro Alto, where the bars spill onto the narrow streets until about 2 am; Cais do Sodré below it, which takes over when Bairro Alto closes; Príncipe Real and Chiado for something calmer; and, increasingly, the neighbourhoods along the Avenida Almirante Reis, Intendente, Anjos and Arroios, where the crowd is younger and more local. Santos and Alcântara toward the river to the west have their own bars and later clubs; Alfama and Graça are for a quieter glass with a view.
+
+Weekends are later and louder. Bairro Alto fills with visitors, locals move to Cais do Sodré, Santos and the riverside clubs, and Marvila to the east has a scene of its own. A Saturday in Lisbon can mean dinner at 10, Bairro Alto until 2, Cais do Sodré until 4 and a club until dawn. If you are staying in Baixa or Chiado you are already in the middle of it; a status line that says “Anjos, drinks from 10” will reach the people who live here rather than the ones passing through.
+
+The city itself is about 100 square kilometres, with the Tagus along its southern edge and the hills doing the rest. Baixa to Príncipe Real is under 2 km on the map and a real climb on foot; the elevators and funiculars help, and the number 28 tram is charming and slow.
+
+## Radius settings that make sense in Lisbon
+
+2NIGHT uses a radius around your location and a nightly “Tonight” status that expires at 5 AM; your profile only appears in the feed while you are live, next to other people who are out that night. The max-distance slider starts at 1 km and is capped at 5 km on the free Silver tier, 15 km on Gold and 50 km on Platinum Black. In Lisbon:
+
+- 1–2 km: the whole of the historic centre. From Chiado that reaches Bairro Alto, Cais do Sodré, Príncipe Real, Baixa and the foot of Alfama. This is the setting most people will want; everything is a walk, if a steep one.
+
+- 3 km: adds Anjos, Intendente, Santos, Graça and Estrela. Still a short taxi or one metro ride.
+
+- 5 km (Silver cap): nearly the whole city from Belém to Marvila and up to Campo Grande. The free tier already covers the Lisbon people go out in.
+
+- 15 km and 50 km (Gold, Platinum Black): Cascais, Sintra, Almada across the river and the rest of the metropolitan area, then the coast. For people living outside the city and for quiet nights.
+
+Keep the radius small and lead with the neighbourhood. Because the hills make distances misleading, “near Cais do Sodré” is more useful to a match than any number of kilometres.
+
+## Last metro, night buses and the hills
+
+Lisbon's metro runs until about 1 am every night of the week, which is early for a city whose bars are only getting going at midnight. After that there are night buses on the main routes, taxis, and the app cars that most people actually use at 3 am, which are easy to find in the centre. Trams stop earlier than the metro. The other transport reality is gravity: a bar “ten minutes away” on the map may be uphill on cobbles, so agree on a meeting point at the same level as where you both are, or near a metro station. Practically: on a weeknight, let the last metro set the end of the evening if you live outside the centre; at the weekend, plan on a taxi and pick a place you can find your own way home from.
+
+## Weeknight versus weekend on 2NIGHT
+
+The “Tonight” status expires at 5 AM, which in Lisbon is when the last clubs on the river close, and the chat window lasts 48 hours. On a weeknight, go live around 8 with a category (drinks, food, walk, talk, rooftop) and a status that names the bairro; pings between 8 and 11 are the ones that become a table. At the weekend, going live late is normal, the feed leans toward nightlife and music after midnight, and a Plan (“miradouro in Graça at sunset, then drinks, come along”) is a very Lisbon way to bring a few people together. If a Friday ping did not become a meeting, the chat is still open on Saturday.
+
+## Safety on a same-night date in Lisbon
+
+2NIGHT does not verify identities or photos and runs no background checks, so the habits on our safety page do the work: meet in a busy, well-lit public place, never a private home or a car; tell a friend where you are going and who you are meeting; keep your own way home; never send money, gift cards or crypto to anyone you met in the app. In Lisbon the busy streets of Bairro Alto and Cais do Sodré are a good place for a first meet; the dark, steep lanes between them are not the place to walk alone with a stranger. Any match can start a two-minute peer-to-peer video call before you leave, free during the launch period. Block is instant, silent and mutual; reports (inappropriate content, fake or scam, harassment) are read by a person within 24 to 72 hours. Other members only ever see a rounded distance in kilometres, never your address.
+
+## 2NIGHT in Lisbon: current status
+
+Status: waitlist only. No launch wave has been announced for Lisbon. As of 7 September 2026, 2NIGHT is not yet on the App Store anywhere. We open cities in waves, and Lisbon has not been named in one. The only way in today is the waitlist at 2night.co: leave an email and a phone number and we message you the moment Lisbon goes live. We do not publish member counts or activity figures for a city that has not opened, and this page will not pretend a feed exists where it does not.
+
+Once the app is available, the free Silver tier works the moment you are physically in Lisbon. Travel Mode on the Gold and Platinum Black tiers lets you set a status in Lisbon before you arrive, but the people you see depend on 2NIGHT having launched locally, and the feed header shows the real number of people live near you, never a marketing figure.
+
+2NIGHT is an alternative to Tinder, Bumble, Happn and Pure for people who want a spontaneous same-night date. 2NIGHT is an iPhone app for adults 18 and over, free to join, and it opens city by city.
+
+## Frequently asked questions
+
+### Is 2NIGHT available in Lisbon?
+
+Not yet. 2NIGHT is not on the App Store and no launch wave has been announced for Lisbon. Join the waitlist at 2night.co and we will message you when Lisbon opens.
+
+### What radius should I set in Lisbon?
+
+1 to 2 km from Chiado or Cais do Sodré covers the whole historic centre. The free tier's 5 km cap already reaches nearly the whole city; Gold (15 km) and Platinum Black (50 km) cover Cascais, Sintra and the south bank.
+
+### When does the Lisbon metro close?
+
+Around 1 am every night. Night buses run on the main routes after that, and taxis and app cars are easy to find in the centre.
+
+### Which areas of Lisbon are busiest on a weeknight?
+
+Bairro Alto until about 2 am, then Cais do Sodré; Príncipe Real and Chiado for something calmer; Intendente, Anjos and Arroios for a younger, more local crowd. Santos, Alcântara and Marvila come into their own at weekends.
+
+### Does 2NIGHT show how many people are out in Lisbon?
+
+Only once the city has opened, and only the real number returned with the feed. We do not publish member or activity figures for cities on the waitlist.
+
+## Tonight, not tomorrow.
+
+2NIGHT is built for iPhone and opens city by city. It is not on the App Store yet: join the waitlist at 2night.co and we will message you the moment it is live near you.
+
+Join the waitlist
+
+## Read next
+
+Cities
+All 2NIGHT city guides
+
+Travel
+2NIGHT for travelers
+
+City guide
+Tonight in Los Angeles
+
+← All city guides
+
+================================================================
+URL: https://2night.co/tonight-in-los-angeles
+TITLE: Tonight in Los Angeles — 2NIGHT dating app
+================================================================
+
+City guide
+
+# Tonight in Los Angeles: a one-night dating app for a city you cannot walk
+
+By the 2NIGHT team
+
+·
+
+Updated 7 September 2026
+
+2NIGHT is a one-night dating app for iPhone that shows who is out near you tonight, so you can match and meet the same evening instead of chatting for days.
+
+Los Angeles is the city where a radius matters most, because distance is the whole story. Nobody in LA is “free tonight” in the abstract; they are free tonight on the Eastside, or in Venice, or in Koreatown, and a match on the other side of the 405 at 9 pm is not a date, it is a commute. 2NIGHT shows you the people who are live tonight within a distance you set, and in Los Angeles that distance decides whether the evening happens at all.
+
+## How a night out works in Los Angeles
+
+The LA evening runs early. Happy hours start at 4 or 5, dinner is at 7 or 8, and the bars are at their fullest between 9 and midnight. California law stops alcohol service at 2 am, and last call comes around half past one, so even a Saturday has a hard edge that New York and Berlin do not. Weeknights are shorter still: a Tuesday is dinner and a drink and home by 11, partly because so many people drive.
+
+Where people go is a matter of which side of the city they live on. The Eastside cluster is Silver Lake, Echo Park, Los Feliz and, further out, Highland Park, with bars along Sunset and Hollywood boulevards and a crowd that walks between them. Downtown has its own scene, densest in the Arts District and around the historic core, and Koreatown, between Downtown and Hollywood, is the city's late-food capital with bars to match. Hollywood and West Hollywood do the club and cocktail end of things, with West Hollywood the centre of LGBTQ nightlife. The Westside is Venice, Santa Monica and Culver City, earlier and more relaxed, near the beach. On a weeknight people stay in their own cluster; at weekends they might cross town once, and plan the night around it.
+
+The scale is the point. The City of Los Angeles alone is about 1,300 square kilometres, Downtown to Santa Monica is roughly 25 km, and the county is far larger. A 5 km circle here is one neighbourhood cluster and nothing else.
+
+## Radius settings that make sense in Los Angeles
+
+2NIGHT uses a radius around your location and a nightly “Tonight” status that expires at 5 AM; your profile only appears in the feed while you are live, next to other people who are out that night. The max-distance slider starts at 1 km and is capped at 5 km on the free Silver tier, 15 km on Gold and 50 km on Platinum Black. In Los Angeles:
+
+- 1–3 km: a walkable stretch of one neighbourhood: Silver Lake and Echo Park together, or the Arts District and the historic core Downtown, or Abbot Kinney and the Venice boardwalk.
+
+- 5 km (Silver cap): one full cluster. From Silver Lake that reaches Los Feliz, Echo Park and the edge of Hollywood and Koreatown; from Venice it covers Santa Monica and part of Culver City. This is the weeknight setting, and on the free tier it is the ceiling.
+
+- 15 km (Gold): the Eastside, Downtown, Koreatown, Hollywood and West Hollywood in one circle, or the whole Westside from another. Useful on quiet nights and on Fridays when you would drive once for the right plan; a 15 km match can still be forty minutes in traffic.
+
+- 50 km (Platinum Black): most of the LA basin, from the Valley to Long Beach and Pasadena to the beach. It is there for people in the suburbs and for very quiet nights, not for a Thursday in Silver Lake.
+
+Name the cluster in your status line. “Eastside, free from 8” and “Westside, near the beach” are the two most useful words on any LA profile, because they tell a match whether the drive is realistic.
+
+## Cars, rideshare and the last train
+
+Los Angeles has a Metro rail system, and it is more useful for a night out than its reputation suggests: the B line links Downtown, Koreatown and Hollywood to North Hollywood, and the E line runs from Downtown to Santa Monica, with last trains around midnight to 1 am depending on the line and the night. But the honest transport reality is that most people drive or take an app car, and that shapes the evening. Whoever drives is not drinking much; whoever does not drive is paying for a ride at 1:30 am when demand peaks. Practically: meet somewhere in your own cluster, near a rail stop if you can, agree on how each of you is getting home before you leave, and never treat a lift from someone you met an hour ago as the plan.
+
+## Weeknight versus weekend on 2NIGHT
+
+The “Tonight” status expires at 5 AM, well after the 2 am cut-off, and the chat window lasts 48 hours. On a weeknight, go live around 5 or 6 with a category (drinks, food, walk, talk, coffee) and a status that names your cluster; pings sent before 8 are the ones that become a table before people head home. At the weekend, the feed leans toward nightlife and music from 10, and a Plan (“patio in Highland Park from 8, come by”) works well in a city where people prefer to drive once to a known place. If a Thursday match was on the wrong side of town, the 48-hour chat gives you Friday to meet halfway.
+
+## Safety on a same-night date in Los Angeles
+
+2NIGHT does not verify identities or photos and runs no background checks, so the habits on our safety page do the work: meet in a busy, well-lit public place, never a private home or a car; tell a friend where you are going and who you are meeting; keep your own way home; never send money, gift cards or crypto to anyone you met in the app. In Los Angeles that means arranging your own ride home in advance rather than accepting one, and meeting at a busy bar or restaurant, never a parking lot or a private address. Any match can start a two-minute peer-to-peer video call before you leave, free during the launch period. Block is instant, silent and mutual; reports (inappropriate content, fake or scam, harassment) are read by a person within 24 to 72 hours. Other members only ever see a rounded distance in kilometres, never your address.
+
+## 2NIGHT in Los Angeles: current status
+
+Status: waitlist only. No launch wave has been announced for Los Angeles. As of 7 September 2026, 2NIGHT is not yet on the App Store anywhere. We open cities in waves, and Los Angeles has not been named in one. The only way in today is the waitlist at 2night.co: leave an email and a phone number and we message you the moment Los Angeles goes live. We do not publish member counts or activity figures for a city that has not opened, and this page will not pretend a feed exists where it does not.
+
+Once the app is available, the free Silver tier works the moment you are physically in Los Angeles. Travel Mode on the Gold and Platinum Black tiers lets you set a status in Los Angeles before you arrive, but the people you see depend on 2NIGHT having launched locally, and the feed header shows the real number of people live near you, never a marketing figure.
+
+2NIGHT is an alternative to Tinder, Bumble, Happn and Pure for people who want a spontaneous same-night date. 2NIGHT is an iPhone app for adults 18 and over, free to join, and it opens city by city.
+
+## Frequently asked questions
+
+### Is 2NIGHT available in Los Angeles?
+
+Not yet. 2NIGHT is not on the App Store and no launch wave has been announced for Los Angeles. Join the waitlist at 2night.co and we will message you when the city opens.
+
+### What radius should I set in Los Angeles?
+
+5 km covers one neighbourhood cluster, such as Silver Lake, Echo Park and Los Feliz, or Venice and Santa Monica; that is the free tier's cap. Gold (15 km) joins the Eastside, Downtown, Koreatown and Hollywood; Platinum Black (50 km) covers most of the basin.
+
+### When is last call in Los Angeles?
+
+Alcohol service in California stops at 2 am, and most bars call last orders around 1:30. Nights in LA run earlier than in New York or European cities.
+
+### Which areas of Los Angeles are busiest on a weeknight?
+
+Silver Lake, Echo Park and Los Feliz on the Eastside; Koreatown and Downtown's Arts District; Hollywood and West Hollywood; Venice, Santa Monica and Culver City on the Westside. People stay in their own cluster on weeknights.
+
+### Does 2NIGHT show how many people are out in Los Angeles?
+
+Only once the city has opened, and only the real number returned with the feed. We do not publish member or activity figures for cities on the waitlist.
+
+## Tonight, not tomorrow.
+
+2NIGHT is built for iPhone and opens city by city. It is not on the App Store yet: join the waitlist at 2night.co and we will message you the moment it is live near you.
+
+Join the waitlist
+
+## Read next
+
+Cities
+All 2NIGHT city guides
+
+Travel
+2NIGHT for travelers
+
+City guide
+Tonight in London
+
+← All city guides
+
 # Pages en français (French pages, added 2026-09-07)
 
 ## Qui sort ce soir près de vous ?
