@@ -84,11 +84,11 @@
     appStoreLive: !!(window.TN_CONFIG && window.TN_CONFIG.isLive()),
     // Optional Edge Function (Flow A). If the project is not provisioned with it,
     // continueInApp() silently degrades to Flow B / plain open.
-    handoffFnURL: "https://ygsbrqfbaropfmczvlyy.supabase.co/functions/v1/app-handoff",
-    supabaseURL: "https://ygsbrqfbaropfmczvlyy.supabase.co",
+    handoffFnURL: "https://api.2night.co/functions/v1/app-handoff",
+    supabaseURL: "https://api.2night.co",
     // Anon key — PUBLIC by design; safe in client code, identical to the app's.
     supabaseAnonKey:
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inlnc2JycWZiYXJvcGZtY3p2bHl5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE1NTU0NjQsImV4cCI6MjA5NzEzMTQ2NH0.uc0MiyDrKpB3oTXvk5ZdOlf1gQGdvO4pl5iNB_L85IY",
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhbm9uIiwiZXhwIjoyMTAyMDU4NTIxLCJpYXQiOjE3ODY2OTg1MjEsImlzcyI6InN1cGFiYXNlIiwicm9sZSI6ImFub24ifQ.9p6GFVRr-ropf6kpjcw9pxwSpU13y2lw_fYGbNbZGMM",
     storeFallbackMs: 1400 // how long to wait for the app to take over
   };
 

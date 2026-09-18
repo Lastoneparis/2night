@@ -14,9 +14,9 @@
   "use strict";
 
   /* --- Public config (anon key is safe in the browser; RLS enforces access) --- */
-  var SUPABASE_URL = "https://ygsbrqfbaropfmczvlyy.supabase.co";
+  var SUPABASE_URL = "https://api.2night.co";
   var SUPABASE_ANON_KEY =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inlnc2JycWZiYXJvcGZtY3p2bHl5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE1NTU0NjQsImV4cCI6MjA5NzEzMTQ2NH0.uc0MiyDrKpB3oTXvk5ZdOlf1gQGdvO4pl5iNB_L85IY";
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhbm9uIiwiZXhwIjoyMTAyMDU4NTIxLCJpYXQiOjE3ODY2OTg1MjEsImlzcyI6InN1cGFiYXNlIiwicm9sZSI6ImFub24ifQ.9p6GFVRr-ropf6kpjcw9pxwSpU13y2lw_fYGbNbZGMM";
 
   /* ------------------------------------------------------------------------ */
 
