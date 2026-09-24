@@ -471,6 +471,16 @@
     </div>
   </footer>
 
+  <style>
+    .wl-phone { display: flex; gap: 8px; }
+    .wl-phone .wl-input { flex: 1; min-width: 0; }
+    .wl-cc { position: relative; flex: none; display: flex; align-items: center; padding: 0 12px;
+      border-radius: 12px; border: 1px solid var(--border); background: rgba(255,255,255,.04); color: var(--text);
+      font-size: 16px; white-space: nowrap; cursor: pointer; transition: border-color .25s var(--ease); }
+    .wl-cc::after { content: ""; margin-left: 8px; border: 4px solid transparent; border-top-color: #8a8a8a; transform: translateY(2px); }
+    .wl-cc:focus-within { border-color: rgba(var(--gold-fill-rgb),.6); }
+    .wl-cc select { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; font-size: 16px; }
+  </style>
   <!-- ============ WAITLIST MODAL ============ -->
   <div class="wl-modal" id="waitlist" role="dialog" aria-modal="true" aria-labelledby="wlTitle" hidden>
     <div class="wl-overlay" data-wl-close></div>
@@ -483,7 +493,15 @@
         <form class="wl-form" id="wlForm" novalidate>
           <input class="wl-input" id="wlName" type="text" autocomplete="given-name" placeholder="Name (optional)" data-i18n-placeholder="waitlist_name" />
           <input class="wl-input" id="wlEmail" type="email" autocomplete="email" required placeholder="Your email" data-i18n-placeholder="waitlist_email" />
-          <input class="wl-input" id="wlPhone" type="tel" autocomplete="tel" required placeholder="Phone (with country code)" data-i18n-placeholder="waitlist_phone" />
+          <!-- Country picker: flag + dial code, so a bare "0766614655" is stored as
+               "+33766614655" with country "FR" (js/phone-country.js). -->
+          <div class="wl-phone">
+            <label class="wl-cc">
+              <span class="wl-cc-chip" id="wlCountryChip" aria-hidden="true">🇫🇷 +33</span>
+              <select id="wlCountry" aria-label="Country code" data-i18n-aria-label="waitlist_country"></select>
+            </label>
+            <input class="wl-input" id="wlPhone" type="tel" inputmode="tel" autocomplete="tel-national" required placeholder="Phone number" data-i18n-placeholder="waitlist_phone" />
+          </div>
           <button class="btn btn-gold lg wl-submit" type="submit"><span class="magnetic-inner" data-i18n="waitlist_button2">Reserve my spot</span></button>
           <p class="wl-err" id="wlErr" role="alert"></p>
           <p class="wl-fine" data-i18n="waitlist_fine">By joining you agree to be contacted about 2NIGHT. We never sell your data. 18+.</p>
@@ -518,7 +536,8 @@
   <script src="/js/vendor/ScrollTrigger.min.js?v=20260814a"></script>
   <script src="/js/vendor/split-type.min.js?v=20260814a"></script>
   <script src="/js/vendor/lenis.min.js?v=20260814a"></script>
-  <script src="/js/translations.js?v=20260618c"></script>
+  <script src="/js/translations.js?v=20260924a"></script>
+  <script src="/js/phone-country.js?v=20260924a"></script>
 
   <!-- ============ APP ============ -->
   <script type="module" src="/v3/js/main.js?v=20260618c"></script>
@@ -585,10 +604,13 @@
       var err = document.getElementById("wlErr");
       err.textContent = "";
       if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { err.textContent = t("waitlist_err_email", "Please enter a valid email."); return; }
-      if (phone.replace(/[^0-9]/g, "").length < 7) { err.textContent = t("waitlist_err_phone", "Please enter a valid phone number."); return; }
+      // E.164 + ISO country from the picker (js/phone-country.js).
+      var P = window.TN_PHONE, norm = P ? P.normalize(phone, P.country()) : null;
+      if (P ? !norm : phone.replace(/[^0-9]/g, "").length < 7) { err.textContent = t("waitlist_err_phone", "Please enter a valid phone number."); return; }
       var btn = form.querySelector(".wl-submit"); btn.disabled = true; btn.style.opacity = .6;
       var lang = (document.documentElement.getAttribute("lang") || "en");
-      var row = { email: email, phone: phone, lang: lang, source: "web" };
+      var row = { email: email, phone: norm ? norm.e164 : phone, lang: lang, source: "web" };
+      if (norm) row.country = norm.iso;
       if (name) row.name = name;
       if (document.referrer) row.ref = document.referrer.slice(0, 300);
 
